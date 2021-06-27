@@ -1,0 +1,36 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-5 h-200 select-radio-box" [formGroup]="form">
+    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutAlign="center center">
+            <input type="radio" />
+            <h6 class="m-3">{{ title }}</h6>
+        </div>
+        <div *ngIf="isCv">
+            <label fxLayoutAlign="center center" class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm mx-4" for="cv-selector">
+                <input id="cv-selector" type="file" class="d-none" accept="application/pdf" formControlName="cv"
+                    (change)="onCvChange($event)">
+                <div class="d-flex align-items-center">
+                    <span class="ml-2">
+                        Select a file
+                    </span>
+                </div>
+            </label>
+            <span class="ml-2" *ngIf="!cvDownloadUrl">{{ cvFileName }}</span>
+            <a class="ml-2" *ngIf="cvDownloadUrl" target="_blank" [href]="cvDownloadUrl">{{ cvFileName }}</a>
+            <mmb-ui-inline-loader *ngIf="isCvUploading" class="ml-2"></mmb-ui-inline-loader>
+        </div>
+        <div *ngIf="!isCv">
+            <label fxLayoutAlign="center center" class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm mx-4" for="cl-selector">
+                <input id="cl-selector" type="file" class="d-none" accept="application/pdf" formControlName="coverLetter"
+                    (change)="onCoverLetterChange($event)">
+                <div class="d-flex align-items-center">
+                    <span class="ml-2">
+                        Select a file
+                    </span>
+                </div>
+            </label>
+            <span class="ml-2" *ngIf="!coverLetterDownloadUrl">{{ clFileName }}</span>
+            <a class="ml-2" *ngIf="coverLetterDownloadUrl" target="_blank" [href]="coverLetterDownloadUrl">{{ clFileName }}</a>
+            <mmb-ui-inline-loader *ngIf="isCoverLetterUploading" class="ml-2"></mmb-ui-inline-loader>
+        </div> 
+    </div>
+</div>

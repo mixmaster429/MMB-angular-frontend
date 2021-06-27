@@ -1,0 +1,33 @@
+
+.sticky-top {
+    z-index: 100;
+}
+
+.dropdown-menu {
+    border: 1px solid #eee;
+    &:before {
+        border-left: 10px solid #eee;
+        border-right: 10px solid #eee;
+        border-bottom: 10px solid #eee;
+    }
+}
+
+input:active,
+input:focus,
+select:active,
+select:focus {
+    outline: 1px solid $primary;
+}
+
+.single-widget, .search-widget input {
+    background: #fff;
+}
+
+.widget {
+    cursor: pointer;
+}
+
+.widget .single-accordion {
+    border: 1px solid #ddd;
+    background: #fff;
+}

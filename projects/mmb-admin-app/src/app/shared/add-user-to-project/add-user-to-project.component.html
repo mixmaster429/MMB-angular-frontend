@@ -1,0 +1,192 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar matDialogTitle class="mat-accent m-0">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Add user to project</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+
+    <div class="mat-elevation-z1 px-16 py-8">
+        <div fxLayout="row" fxLayoutAlign="start center" *ngIf="selectedUsers && selectedUsers.length > 0">
+            <span fxFlex="130px" class="h4 secondary-text">Selected Users</span>
+            <div class="p-8">
+                <mat-chip-list aria-label="selected users">
+                    <mat-chip class="small" *ngFor="let user of selectedUsers">
+                        <span *ngIf="user._source">{{ user._source.full_name }}</span>
+                        <mat-icon class="ml-8" (click)="removeSelectedUser(user)">close</mat-icon>
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+        </div>
+
+
+        <div fxLayout="row" fxLayoutAlign="start center" *ngIf="selectedProjects && selectedProjects.length > 0">
+            <span fxFlex="130px" class="h4 secondary-text">Selected Projects</span>
+            <div class="p-8">
+                <mat-chip-list aria-label="selected projects">
+                    <mat-chip class="small" *ngFor="let project of selectedProjects">
+                        <span>{{ project.name }}</span>
+                        <mat-icon class="ml-8" (click)="removeSelectedProject(project)">close</mat-icon>
+                    </mat-chip>
+                </mat-chip-list>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" *ngIf="selectedUsers && selectedUsers.length > 1 && projectForm.controls['score'].value">
+            <span fxFlex="130px" class="h4 secondary-text">Generic Score</span>
+            <div class="p-8">
+                {{ getScoreOptionViewValue(projectForm.controls['score'].value) }}
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" *ngIf="selectedUsers && selectedUsers.length > 1 && projectForm.controls['notes'].value">
+            <span fxFlex="130px" class="h4 secondary-text">Generic Note</span>
+            <div class="p-8">
+                {{ projectForm.controls['notes'].value }}
+            </div>
+        </div>
+    </div>
+
+    <div class="px-16 pt-24">
+        <form name="projectForm" [formGroup]="projectForm">
+            <mat-form-field class="w-100-p" appearance="outline">
+                <input matInput placeholder="Search for a project" aria-label="Search for a project"
+                    [matAutocomplete]="auto" formControlName="project">
+                <mmb-admin-app-input-suffix-loader *ngIf="isProjectsLoading"></mmb-admin-app-input-suffix-loader>
+
+                <mat-autocomplete #auto="matAutocomplete" disableRipple="true">
+                    <mat-option *ngFor="let project of filteredProjects | async" [value]="project">
+                        <div class="u-flex" (click)="optionClicked($event, project)">
+                            <mat-checkbox fxFlexFill [checked]="project.isChecked"
+                                (change)="setSelectedProject($event, project)" (click)="$event.stopPropagation()">
+                                <div fxLayout="row" fxLayoutAlign="start center">
+                                    <div fxLayout="row wrap" fxFlex>
+                                        <div class="line-height-20 w-100-p">{{ project.name }}</div>
+                                        <div class="mat-caption line-height-2 secondary-text">
+                                            {{ project.description }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </mat-checkbox>
+                        </div>
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <mat-tab-group *ngIf="selectedUsers && selectedUsers.length > 1">
+        <mat-tab label="Generic">
+            <form name="projectForm" [formGroup]="projectForm">
+                <div mat-dialog-content class="p-24 pb-0 m-0" fusePerfectScrollbar>
+                    <div>
+                        <!-- User search and selection -->
+                        <div class="w-100-p">
+                            <mat-form-field class="w-100-p" appearance="outline">
+                                <mat-select placeholder="Score" formControlName="score">
+                                    <mat-option *ngFor="let option of scoreOptions" [value]="option.value">
+                                        {{option.viewValue}}</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <mat-form-field class="w-100-p" appearance="outline">
+                                <textarea matInput placeholder="Leave a comment" formControlName="notes"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </mat-tab>
+        <mat-tab label="Detailed">
+            <div class="amber-300 px-8 py-4" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon>info</mat-icon>
+                <span class="ml-8">If individual note/score is not provided for a candidate, then general note/score
+                    will apply</span>
+            </div>
+            <div class="px-16 mt-16 border-bottom" *ngFor="let user of selectedUsers">
+                <!-- User search and selection -->
+                <div class="accent-fg">{{ user._source.full_name }}</div>
+                <div class="w-100-p">
+                    <mat-form-field class="w-100-p" appearance="outline">
+                        <mat-select placeholder="Score" [(value)]="user._newScore">
+                            <mat-option *ngFor="let option of scoreOptions" [value]="option.value">
+                                {{option.viewValue}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="w-100-p" appearance="outline">
+                        <textarea matInput placeholder="Leave a comment" [(ngModel)]="user._newNotes"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
+
+    <div *ngIf="selectedUsers && selectedUsers.length <= 1" mat-dialog-content class="px-16 pb-0 m-0"
+        fusePerfectScrollbar>
+        <form name="projectForm" [formGroup]="projectForm">
+            <div>
+                <!-- User search and selection -->
+                <div class="w-100-p">
+                    <mat-form-field class="w-100-p" appearance="outline">
+                        <mat-select placeholder="Score" formControlName="score">
+                            <mat-option *ngFor="let option of scoreOptions" [value]="option.value">
+                                {{option.viewValue}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field class="w-100-p" appearance="outline">
+                        <textarea matInput placeholder="Leave a comment" formControlName="notes"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <mat-accordion class="mt-16">
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Want to add more Users?
+                </mat-panel-title>
+
+            </mat-expansion-panel-header>
+            <ng-template matExpansionPanelContent>
+                <form name="projectForm" [formGroup]="projectForm">
+                    <mat-form-field class="w-100-p" appearance="outline">
+                        <input matInput placeholder="Search for a user by name" aria-label="Search for a user"
+                            [matAutocomplete]="auto" formControlName="user">
+                        <mmb-admin-app-input-suffix-loader *ngIf="isLoading"></mmb-admin-app-input-suffix-loader>
+                        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"
+                            (optionSelected)="setSelectedUser($event.option.value)" disableRipple="true">
+                            <mat-option *ngFor="let user of filteredUsers | async" [value]="user">
+                                <div class="u-flex" (click)="optionClicked($event, user)">
+                                    <mat-checkbox fxFlexFill [checked]="user.isChecked"
+                                        (change)="setSelectedUser($event, user)" (click)="$event.stopPropagation()">
+                                        <div fxFlexFill fxLayout="row" fxLayoutAlign="start center">
+                                            <img class="avatar w-32 h-32" aria-hidden
+                                                [src]="user._source.user_pic_temp_url"
+                                                onerror="this.src='assets/images/avatars/not-found.png';">
+                                            <div fxFlex>
+                                                <div class="line-height-20">{{ user._source.full_name }}</div>
+                                                <div class="mat-caption line-height-2 secondary-text">
+                                                    {{ user._source.professional_title }}</div>
+                                            </div>
+                                        </div>
+                                    </mat-checkbox>
+                                </div>
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </form>
+            </ng-template>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="end center">
+        <button mat-raised-button class="save-button" (click)="addUserToProject()" [disabled]="projectForm.invalid"
+            aria-label="SAVE">
+            ADD
+        </button>
+
+    </div>
+</div>

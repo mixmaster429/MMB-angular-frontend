@@ -1,0 +1,31 @@
+<!-- Single Widget -->
+<div class="single-widget" *ngIf="blogs | async as blogs">
+    <!-- Post Widget -->
+    <div class="accordions widget post-widget" id="post-accordion">
+        <div class="single-accordion">
+            <h5>
+                <a role="button" class="collapse show text-uppercase d-block p-3" data-toggle="collapse"
+                    href="#accordion2">{{ title }}
+                </a>
+            </h5>
+            <!-- Post Widget Content -->
+            <div id="accordion2" class="accordion-content widget-content collapse show" data-parent="#post-accordion">
+                <!-- Post Widget Items -->
+                <ul class="widget-items">
+                    <li *ngFor="let blog of blogs">
+                        <a routerLink="/media/{{ blog.slug }}" class="single-post align-items-center align-items-lg-start media p-3">
+                            <!-- Post Thumb -->
+                            <div class="post-thumb avatar-md">
+                                <img class="align-self-center" src="{{ blog.feed_image }}" alt="">
+                            </div>
+                            <div class="post-content media-body pl-3">
+                                <p class="post-date mb-2">{{ blog.date | date }}</p>
+                                <h6>{{ blog.title }}</h6>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

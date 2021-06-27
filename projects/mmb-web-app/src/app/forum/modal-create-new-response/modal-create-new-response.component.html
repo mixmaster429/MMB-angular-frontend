@@ -1,0 +1,20 @@
+<div class="modal-header">
+    <h4 class="modal-title" i18n="Add response button label|Label for add response button in collaborations@@addResponseButtonTitleCollaborationsRequestsPage">
+        Add New Response
+    </h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <div class="alert alert-light text-center" role="alert" i18n="Subtitle for add response button label|Subtitle for add response in collaborations@@addResponseSubtitleCollaborationsRequestsPage">
+        Responses/Private Proposals are sent <strong class="text-info">privately</strong> to the owner! <br />
+        If its a general response that should be public then please choose <strong class="text-info">answer</strong>
+        option
+    </div>
+    <ckeditor ngbAutofocus [(ngModel)]="newResponse.editorData" [editor]="Editor" data="" [config]="{placeholder: 'Write your proposal here...'}"></ckeditor>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss()" i18n="Cancel button label|Label for cancel in collaborations response@@cancelButtonCollaborationsResponsePage">Cancel</button>
+    <button type="button" class="btn btn-danger" (click)="onSubmit()" i18n="Submit button label|Label for Submit in collaborations response@@submitButtonCollaborationsResponsePage">Submit</button>
+</div>

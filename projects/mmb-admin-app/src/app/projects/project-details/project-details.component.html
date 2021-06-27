@@ -1,0 +1,101 @@
+<div id="project" class="page-layout carded inner-scroll">
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-12" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-xs="row"
+        fxLayoutAlign.gt-xs="space-between center">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+
+            <button mat-icon-button class="mr-0 mr-sm-16" [routerLink]="'/projects'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+
+            <div fxLayout="column" fxLayoutAlign="start start"
+                [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                <div class="logo-text" *ngIf="details">
+                    <span class="secondary-text">Viewing details for</span>
+                    <span class="h2"> {{ details.name }}</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- / APP TITLE -->
+        <!-- SEARCH -->
+        <mmb-admin-app-search-assigned-users fxFlex *ngIf="tabGroup && tabGroup.selectedIndex === 0">
+        </mmb-admin-app-search-assigned-users>
+        <mmb-admin-app-search-user-pool fxFlex [searchInput]="searchInput"
+            *ngIf="tabGroup && tabGroup.selectedIndex === 1">
+        </mmb-admin-app-search-user-pool>
+        <!-- / SEARCH -->
+    </div>
+    <!-- / HEADER -->
+
+    <!-- Toolbar -->
+    <!-- <div class="py-8 px-24 mat-elevation-z1 text-right">
+        <button class="mx-8" mat-stroked-button color="accent">
+            <mat-icon>email</mat-icon>
+            Send bulk email
+        </button>
+    </div> -->
+    <!--/ Toolbar -->
+    <div fusePerfectScrollbar infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="150"
+        (scrolled)="onScroll()" [scrollWindow]="false">
+        <mat-tab-group #tabGroup>
+            <mat-tab label="Assigned Users">
+                <div class="content">
+                    <div fxLayout="row" fxLayoutGap="16px" class="px-32 pb-16"
+                        *ngIf="candidates | async as candidatesList; else emptyUsersPlaceholder">
+                        <fuse-sidebar *ngIf="candidatesList && candidatesList.length !== 0"
+                            class="my-16 mat-elevation-z1" name="filters-sidebar" position="left" lockedOpen="gt-md">
+                            <div>
+                                <mmb-admin-app-sidebar-filters [isProjectMode]="true">
+                                </mmb-admin-app-sidebar-filters>
+                            </div>
+                        </fuse-sidebar>
+                        <div fxFlex>
+                            <mmb-admin-app-users-list-detailed *ngFor="let candidate of candidatesList"
+                                [userId]="candidate.candidate.id" [user]="candidate.candidate" [projectId]="details.id"
+                                [notes]="candidate.notes" [score]="candidate.relevance"
+                                [isUserAssignedScreenActive]="true" (unassignUser)="onUnassignUser($event)"
+                                [projectCandidateRecordId]="candidate.uuid"
+                                (saveUserRelevanceDetails)="onSaveUserRelevanceDetails($event, candidate)">
+                            </mmb-admin-app-users-list-detailed>
+
+                            <mmb-admin-app-no-user-assigned-placeholder
+                                *ngIf="!candidatesList || candidatesList.length === 0">
+                            </mmb-admin-app-no-user-assigned-placeholder>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+
+            <mat-tab label="Users Pool">
+                <div class="content">
+                    <div fxLayout="row" class="px-32 py-16">
+                        <!-- Filters -->
+                        <fuse-sidebar class="my-8 mat-elevation-z1" name="filters-sidebar-user-pool" position="left"
+                            lockedOpen="gt-md">
+                            <div>
+                                <mmb-admin-app-sidebar-filters [separatorKeysCodes]="separatorKeysCodes">
+                                </mmb-admin-app-sidebar-filters>
+                            </div>
+                        </fuse-sidebar>
+                        <div class="ml-8" fxFlex *ngIf="details">
+                            <mmb-admin-app-users-list [isSelectAllEnabled]="isSelectAllEnabled" [page]="page"
+                                [searchInput]="searchInput" (selectedUsersUpdated)="onSelectedUsersUpdated($event)"
+                                (usersListUpdated)="onUsersListUpdated(ev)" [project]="details"
+                                [projectId]="details.id">
+                            </mmb-admin-app-users-list>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>
+
+<ng-template #emptyUsersPlaceholder>
+    <div class="p-24">
+        <mmb-admin-app-progress-spinner></mmb-admin-app-progress-spinner>
+    </div>
+</ng-template>

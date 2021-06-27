@@ -1,0 +1,36 @@
+<div class="mb-5" [formGroup]="form">
+  <h6 class="mmb-perm-title mb-3 text-transform-inherit font-size-18 mb-4">
+    Describe your opportunity
+  </h6>
+  <div class="p-4 bg-white border-radius-8">
+    <div class="w-50 mb-4">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="mb-2">Short title</div>
+        <div class="small text-dark-600" *ngIf="form.controls['summary'] as summary">
+          {{ getOpportunitySummaryCharCount }} / {{ opportunitySettings.MAX_CHAR_COUNT_SUMMARY }}
+          characters
+        </div>
+      </div>
+      <div class="input-group input-group--secondary bg-white border border-radius-8">
+        <input formControlName="summary" class="form-control mmb-text-input mmb-text-input--sm pl-3"
+          placeholder="Start typing..." type="text">
+      </div>
+    </div>
+
+    <div class="">
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div class="mb-2">Brief description</div>
+        <div class="small text-dark-600" *ngIf="form.controls['description'] as description">
+          <span *ngIf="description.invalid">
+            <span class="text-danger">*</span>
+            Minimum of {{ getOpportunityDescriptionCharCount }} more characters required
+          </span>
+        </div>
+      </div>
+      <div class="input-group input-group--secondary bg-white border border-radius-8">
+        <textarea formControlName="description" placeholder="Start typing..."
+          class="form-control mmb-text-input mmb-text-input--sm pl-3"></textarea>
+      </div>
+    </div>
+  </div>
+</div>

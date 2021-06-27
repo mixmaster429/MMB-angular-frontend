@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let card of value">
+        <div class="single-blog">
+            <div class="blog-thumb" *ngIf="card.image">
+                <img [src]="card.image.large" alt="">
+            </div>
+            <div class="blog-content p-2">
+                <p [innerHTML]="card.text"></p>
+            </div>
+        </div>
+    </div>
+</div>

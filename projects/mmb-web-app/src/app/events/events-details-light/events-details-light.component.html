@@ -1,0 +1,24 @@
+<div class="col-lg-8 offset-lg-2 py-4" *ngIf="selectedEventDetails">
+    <mmb-web-app-item-navigation-panel next="/events/{{selectedEventDetails.navigation.next}}"
+        previous="/events/{{selectedEventDetails.navigation.previous}}" [listPageUrl]="'/events'"></mmb-web-app-item-navigation-panel>
+
+    <img class="border-radius-8 mt-4 mx-h-300 w-100 object-fit-cover mb-4" [src]="selectedEventDetails.cover" onerror="this.src='assets/img/mmb-placeholder.jpg'"/>
+
+    <div class="row">
+        <div class="col-8">
+            <mmb-web-app-event-summary-info [event]="selectedEventDetails" (register)="onExternalApply()">
+            </mmb-web-app-event-summary-info>
+            <mmb-web-app-event-description [event]="selectedEventDetails"></mmb-web-app-event-description>
+        </div>
+        <div class="col-4">
+            <mmb-web-app-event-extra-details [event]="selectedEventDetails"></mmb-web-app-event-extra-details>
+            <mmb-web-app-event-posted-by [event]="selectedEventDetails"></mmb-web-app-event-posted-by>
+        </div>
+    </div>
+</div>
+
+<div class="bg-primary-900" *ngIf="selectedEventDetails">
+    <div class="col-lg-8 offset-lg-2 py-5">
+        <mmb-web-app-similar-events [slug]="selectedEventDetails.slug"></mmb-web-app-similar-events>
+    </div>
+</div>

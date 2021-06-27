@@ -1,0 +1,13 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-5" [formGroup]="form">
+    <div *ngFor="let question of details.question_group.questions" class="m-3">
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="mb-2">{{ question.question.question }}</div>
+        </div>
+        <div class="input-group input-group--secondary bg-white border border-radius-8">
+            <textarea *ngIf="!isDisabled" placeholder="Type your answer …"
+                class="form-control mmb-text-input mmb-text-input--sm pl-3" formControlName="questions"></textarea>
+            <textarea *ngIf="isDisabled" [value]="'placeholder'"
+                class="form-control mmb-text-input mmb-text-input--sm pl-3 bg-gray--900" formControlName="questions" [disabled]="true"></textarea>
+        </div>
+    </div>
+</div>

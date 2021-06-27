@@ -1,0 +1,70 @@
+<div id="board" class="page-layout simple">
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-12" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-xs="row"
+        fxLayoutAlign.gt-xs="space-between center">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="sidebar-toggle mr-8" fxHide.gt-md>
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    apps
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Applications
+                </span>
+            </div>
+
+        </div>
+        <!-- / APP TITLE -->
+
+        <!-- SEARCH -->
+        <div class="ml-sm-32" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+
+            <div class="search-wrapper mt-16 mt-sm-0">
+
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>search</mat-icon>
+                    <input matInput placeholder="Search for a job / person" [formControl]="searchInput">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- / SEARCH -->
+
+    </div>
+    <!-- / HEADER -->
+
+    <!-- CONTENT CARD -->
+    <!-- <div class="content py-4"> -->
+    <div fxFlex class="board-content-wrapper p-16">
+        <div class="board-content" fxLayout="row" fxLayoutGap="30px" [@animateStagger]="{value:'50'}">
+            <div class="scrumboard-board-list list-wrapper" [@animate]="{value:'*',params:{duration:'350ms',x:'100%'}}"
+                fxFlex *ngFor="let application of applications">
+                <div class="list mat-elevation-z1" fxLayout="column">
+                    <div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="center center"
+                        class="text-center border-bottom p-8 fuse-navy-50">
+                        <h4 class="my-0">{{ application.name  }}</h4>
+                    </div>
+                    <div class="list-content px-16 grey-50" fxLayout="column" fusePerfectScrollbar>
+                        <div class="list-cards ngx-dnd-container" ngxDroppable="card"
+                            (drop)="onDrop($event, application.name)">
+                            <div class="scrumboard-board-card ngx-dnd-item mat-elevation-z1 fuse-white" ngxDraggable
+                                (drag)="onDrag($event, application.name, item)"
+                                *ngFor="let item of application.applications"
+                                (click)="onCandidateSelected(item, application.applications, application.name)">
+                                <mmb-org-app-user-application-tile [item]="item"></mmb-org-app-user-application-tile>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- / CONTENT CARD -->
+</div>

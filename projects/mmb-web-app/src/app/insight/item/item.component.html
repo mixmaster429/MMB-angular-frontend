@@ -1,0 +1,153 @@
+<section id="blog" class="section blog-area my-4">
+    <div class="col-8 offset-2">
+        <div class="row">
+            <div class="col-12 col-lg-9 mb-5">
+                <article class="single-blog-details bg-white border shadow-sm" *ngIf="blog | async as blog">
+                    <div class="blog-content sApp-blog">
+                        <div class="meta-info d-flex flex-wrap align-items-center py-2">
+                            <ul class="px-3">
+                                <li class="d-inline-block">{{ blog.date }}</li>
+                            </ul>
+                        </div>
+                        <div class="blog-details px-3">
+                            <h3 class="blog-title py-2 py-sm-3">{{ blog.title }}</h3>
+                            <!-- <p class="d-sm-block word-break" [innerHTML]="blog.rendered_intro"></p> -->
+                        </div>
+
+                        <div class="blog-thumb"><a href="#"><img [src]="blog.feed_image_url" alt=""></a></div>
+
+                    </div>
+                    <!-- Body -->
+                    <div *ngFor="let item of blog.body" class="px-3">
+                        <mmb-web-app-item-renderer [value]="item.value" [type]="item.type"></mmb-web-app-item-renderer>
+                    </div>
+
+                    <div class="px-3 admin media py-4" *ngFor="let author of blog.page_authors">
+                        <div class="admin-thumb avatar-lg">
+                            <img [src]="author.profile_url" onerror="this.src='assets/images/avatars/not-found.png';"
+                                alt="" class="rounded-circle img-lg">
+                        </div>
+                        <div class="admin-content media-body pl-3 pl-sm-4">
+                            <h4 class="admin-name mb-2">{{ author.name }}</h4>
+                            <p>{{ author.short_description }}</p>
+
+                        </div>
+                    </div>
+                    <hr class="mt-0" />
+                    <div>
+                        <mmb-web-app-interaction-tools [reactions]="blog.reactions_summary?.total"
+                            [reacted]="blog.reacted" [isReactionsEnabled]="true" [comments]="blog.comments"
+                            (reactionUpdated)="onReactionUpdated(blog, $event)"
+                            (commentAdded)="onCommentAdded(blog, $event)">
+                        </mmb-web-app-interaction-tools>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-lg-3">
+                <aside class="sidebar">
+                    <div class="single-widget">
+                        <div id="cat-accordion" class="accordions widget catagory-widget">
+                            <div class="single-accordion blog-accordion">
+                                <h5><a role="button" data-toggle="collapse" href="#accordion1"
+                                        class="collapse show text-uppercase d-block p-3">Categories
+                                    </a></h5>
+                                <div id="accordion1" data-parent="#cat-accordion"
+                                    class="accordion-content widget-content collapse show">
+                                    <ul class="widget-items">
+                                        <li><a href="#" class="d-flex p-3"><span>Web Design</span><span
+                                                    class="ml-auto">(14)</span></a></li>
+                                        <li><a href="#" class="d-flex p-3"><span>App Landing</span><span
+                                                    class="ml-auto">(32)</span></a></li>
+                                        <li><a href="#" class="d-flex active p-3"><span>Wordpress</span><span
+                                                    class="ml-auto">(27)</span></a></li>
+                                        <li><a href="#" class="d-flex p-3"><span>UI Design</span><span
+                                                    class="ml-auto">(18)</span></a></li>
+                                        <li><a href="#" class="d-flex p-3"><span>Bootstrap</span><span
+                                                    class="ml-auto">(15)</span></a></li>
+                                        <li><a href="#" class="d-flex p-3"><span>Web Template</span><span
+                                                    class="ml-auto">(29)</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-widget">
+                        <div id="post-accordion" class="accordions widget post-widget">
+                            <div class="single-accordion">
+                                <h5><a role="button" data-toggle="collapse" href="#accordion2"
+                                        class="collapse show text-uppercase d-block p-3">Popular Post
+                                    </a></h5>
+                                <div id="accordion2" data-parent="#post-accordion"
+                                    class="accordion-content widget-content collapse show">
+                                    <ul class="widget-items">
+                                        <li><a href="#"
+                                                class="single-post align-items-center align-items-lg-start media p-3">
+                                                <div class="post-thumb avatar-md"><img src="assets/img/avatar-1.png"
+                                                        alt="" class="align-self-center"></div>
+                                                <div class="post-content media-body pl-3">
+                                                    <p class="post-date mb-2">05 Feb, 2018</p>
+                                                    <h6>Promote Your Apps With sApp</h6>
+                                                </div>
+                                            </a></li>
+                                        <li><a href="#"
+                                                class="single-post align-items-center align-items-lg-start media p-3">
+                                                <div class="post-thumb avatar-md"><img src="assets/img/avatar-2.png"
+                                                        alt="" class="align-self-center"></div>
+                                                <div class="post-content media-body pl-3">
+                                                    <p class="post-date mb-2">09 Apr, 2018</p>
+                                                    <h6>Sell Your Product Like Never Before</h6>
+                                                </div>
+                                            </a></li>
+                                        <li><a href="#"
+                                                class="single-post align-items-center align-items-lg-start media p-3">
+                                                <div class="post-thumb avatar-md"><img src="assets/img/avatar-3.png"
+                                                        alt="" class="align-self-center"></div>
+                                                <div class="post-content media-body pl-3">
+                                                    <p class="post-date mb-2">13 Jul, 2018</p>
+                                                    <h6>Built For Passionate People</h6>
+                                                </div>
+                                            </a></li>
+                                        <li><a href="#"
+                                                class="single-post align-items-center align-items-lg-start media p-3">
+                                                <div class="post-thumb avatar-md"><img src="assets/img/avatar-4.png"
+                                                        alt="" class="align-self-center"></div>
+                                                <div class="post-content media-body pl-3">
+                                                    <p class="post-date mb-2">03 Oct, 2018</p>
+                                                    <h6>Get Unlimited Offers &amp; Plans</h6>
+                                                </div>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-widget">
+                        <div id="tags-accordion" class="accordions widget tags-widget">
+                            <div class="single-accordion blog-accordion">
+                                <h5><a role="button" data-toggle="collapse" href="#accordion3"
+                                        class="collapse show text-uppercase d-block p-3">Popular Tags
+                                    </a></h5>
+                                <div id="accordion3" data-parent="#tags-accordion"
+                                    class="accordion-content widget-content collapse show">
+                                    <div class="widget-content tags-widget-items pt-2"><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">sApp</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Bootstrap</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">IOS</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Android</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Landing Page</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Business</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Fashion</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Media</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Lifestyle</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Wordpress</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Web Design</a><a href="#"
+                                            class="d-inline-block mt-2 mr-1 px-2 py-1">Mobile App</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>

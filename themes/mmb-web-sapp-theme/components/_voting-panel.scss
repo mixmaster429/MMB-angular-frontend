@@ -1,0 +1,10 @@
+.voting-panel {
+    .material-icons {
+        font-size: 56px;
+        transform: scale(1.3);
+        &:hover {
+            transform: scale(1.5);
+            animation: all 0.3s;
+        }
+    }
+}

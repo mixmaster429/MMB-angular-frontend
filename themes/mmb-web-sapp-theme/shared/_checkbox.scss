@@ -1,0 +1,33 @@
+.mmb-filter-menu {
+    input[type=checkbox] {
+        width: 18px;
+        height: 18px;
+    }
+
+    .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+        background-color: $color-muted;
+        border-radius: 0;
+    }
+
+    .custom-control-input:checked~.custom-control-label::before {
+        border-radius: 0;
+        border-color: transparent;
+    }
+
+    .custom-control-label::after {
+        background: no-repeat 100%/100% 70%;
+    }
+
+    .custom-control-input:checked:focus~.custom-control-label::before,
+    .custom-control-input:checked:focus~.custom-control-label::after { 
+        box-shadow: none;
+    }
+
+    .custom-control-input:not(:checked)~.custom-control-label { 
+        text-decoration: line-through;
+    }
+
+    .custom-checkbox .custom-control-label::before {
+        border-radius: 0;
+    }
+}

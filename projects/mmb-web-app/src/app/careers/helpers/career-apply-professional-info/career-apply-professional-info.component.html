@@ -1,0 +1,18 @@
+<div fxLayout="row" fxLayoutGap="20px" [formGroup]="form">
+    <div class="bg-white border-radius-8 p-4 text-dark mb-5" fxFlex="50" fxFlex.xs="100">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <div class="mmb-offset-title"></div>
+            <h3 class="font-size-18 py-2">Professional title</h3>
+        </div>
+        <div>
+            <div class="input-group input-group--secondary bg-white border border-radius-8">
+                <input class="form-control mmb-text-input mmb-text-input--sm pl-3" placeholder="Start typing..."
+                    type="text" formControlName="professionalTitle">
+                </div>
+                <div class="mt-3" *ngIf="form.controls['professionalTitle'].valid">
+                    <input id="saveProfessionalTitle" type="checkbox" class="mr-2" />
+                    <label for="saveProfessionalTitle" class="medium">Update my profile</label>
+                  </div>
+        </div>
+    </div>
+</div>

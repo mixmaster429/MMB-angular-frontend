@@ -1,0 +1,13 @@
+<div class="bg-light p-4 text-dark-100 border-radius-8" fxLayout="row" fxLayoutAlign="space-between center">
+    <div>
+        <h6>Interested in this opportunity?</h6>
+        <div class="medium">You must express your interest before you can respond to this opportunity</div>
+    </div>
+
+    <button *ngIf="!opportunity.interested" class="btn mmb-primary-button stroked-button btn--sm mr-2" (click)="onExpressInterest()">
+        <span>Express interest</span>
+    </button>
+    <button *ngIf="opportunity.interested" class="btn mmb-primary-button btn--sm mr-2 border-radius" (click)="onRemoveInterest()">
+        <span>Expressed interest</span>
+    </button>
+</div>

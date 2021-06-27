@@ -1,0 +1,37 @@
+<div class="py-3" fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="24px">
+        <span class="primary text-white text-uppercase py-1 px-4 small border-rounded"
+            [ngClass]="getRandomSeparatorClass()">
+            <span *ngIf="getOpportunityType(opportunity.category) as opportunityType">
+                {{ opportunityType[0]?.viewValue }}.</span>
+            <span *ngIf="getOpportunityCategory(opportunity.opportunity_type) as opportunityCategory">
+                {{ opportunityCategory[0]?.viewValue }}</span>
+        </span>
+        <div fxLayout="row" fxLayoutAlign="start center" class="small" fxLayoutGap="8px">
+            <i class="material-icons">location_on</i>
+            <span *ngIf="opportunity.city">{{ opportunity?.city?.name }}</span>
+            <span *ngIf="opportunity.city_custom">{{ opportunity.city_custom }}</span>
+            <span>{{ opportunity?.country?.name }}</span>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="small" fxLayoutGap="8px">
+            <i class="material-icons">chat_bubble_outline</i>
+            <span>{{ opportunity?.comments_total }} comments</span>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" class="small" fxLayoutGap="8px"
+            *ngIf="opportunity.end_date && getTimeLeft() as timeLeft">
+            <i class="material-icons">timer</i>
+            <span *ngIf="timeLeft > 0">{{ timeLeft }} days left</span>
+        </div>
+
+        <!-- To be changed later as per binding from api. Temporarily calling it state -->
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" class="text-warning medium font-family-bold">
+            <span>{{ opportunity?.state || 'Active' }}</span>
+        </div>
+    </div>
+
+    <div class="small">
+        Posted {{ opportunity?.created | timeago }}
+    </div>
+</div>

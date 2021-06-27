@@ -1,0 +1,41 @@
+<div *ngIf="!isLoading">
+    <mmb-web-app-org-view-top-banner 
+        [logo]="organisationDetails.logo_small" [name]="organisationDetails.name"
+        (isViewingAsMemberChanged)="isViewingAsMember = $event">
+    </mmb-web-app-org-view-top-banner>
+    <mmb-web-app-customize-page [isAdminViewEnabled]="!isViewingAsMember"></mmb-web-app-customize-page>
+
+    <!-- <div>
+        <ngb-tabset [destroyOnHide]="false">
+            <ngb-tab title="Page">
+                <ng-template ngbTabContent>
+                    <mmb-web-app-customize-page></mmb-web-app-customize-page>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+                <ng-template ngbTabTitle>Jobs</ng-template>
+                <ng-template ngbTabContent>
+                    <mmb-web-app-customize-jobs></mmb-web-app-customize-jobs>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+                <ng-template ngbTabTitle>Events</ng-template>
+                <ng-template ngbTabContent>
+                    <mmb-web-app-customize-events></mmb-web-app-customize-events>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+                <ng-template ngbTabTitle>Initiatives</ng-template>
+                <ng-template ngbTabContent>
+                    <mmb-web-app-customize-initiatives></mmb-web-app-customize-initiatives>
+                </ng-template>
+            </ngb-tab>
+            <ngb-tab>
+                <ng-template ngbTabTitle>Analytics</ng-template>
+                <ng-template ngbTabContent>
+                    <mmb-web-app-company-analytics></mmb-web-app-company-analytics>
+                </ng-template>
+            </ngb-tab>
+        </ngb-tabset>
+    </div> -->
+</div>

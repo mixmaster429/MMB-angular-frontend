@@ -1,0 +1,21 @@
+mmb-web-app-item {
+    .single-blog-details {
+        a {
+
+            color: $primary;
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            padding-left: $spacer * 7;
+            li {
+                list-style: unset;
+            }
+        }
+    }
+
+    mmb-web-app-image .img-thumbnail {
+        padding: 0;
+        border-radius: 2px;   
+    }
+}

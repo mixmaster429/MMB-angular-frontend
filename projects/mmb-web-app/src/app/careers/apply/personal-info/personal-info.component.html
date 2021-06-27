@@ -1,0 +1,189 @@
+<form [formGroup]="personalInfoForm" *ngIf="userProfile as profile">
+    <!-- fake fields are a workaround for chrome autofill getting the wrong fields -->
+    <input style="display:none" type="text" />
+    <!-- END: fake fields are a workaround for chrome autofill getting the wrong fields -->
+
+    <h6 class="text-dark font-weight-light-bold py-2"
+        i18n="Apply Career - label for current role title|Apply career title for current role details@@applyCareerCurrentRoleDetails">
+        Please provide details of your current role
+    </h6>
+    <div class="form-group">
+        <div class="my-2">
+            <label class="mb-0"
+                i18n="Apply Career - current role title placeholder|Apply career placeholder for current role title@@applyCareerCurrentRoleTitlePlaceholder">Current
+                role title</label>
+            <div class="input-group">
+                <input type="text" formControlName="currentRole"
+                    i18n-placeholder="Apply Career - current role title placeholder|Apply career placeholder for current role title@@applyCareerCurrentRoleTitlePlaceholder"
+                    placeholder="Current role title" class="form-control my-1 shadow-none border">
+            </div>
+            <div class="form-group form-check" *ngIf="personalInfoForm.controls['currentRole'].dirty">
+                <input formControlName="updateCurrentRoleToProfile" type="checkbox" id="updateRoleCheckbox"
+                    class="form-check-input">
+                <label for="updateRoleCheckbox" class="form-check-label">
+                    <span class="d-inline-block">
+                        Update my profile with the new role
+                    </span>
+                </label>
+            </div>
+        </div>
+        <div class="row my-2">
+            <div class="col-lg-6">
+                <label class="mb-0"
+                    i18n="Apply Career - current country placeholder|Apply career placeholder for current country@@applyCareerCurrentCountryPlaceholder">Current
+                    Country</label>
+                <div class="input-group">
+                    <input type="text" formControlName="currentCountry" [ngbTypeahead]="currentCountriesSearch"
+                        [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                        i18n-placeholder="Apply Career - current country placeholder|Apply career placeholder for current country@@applyCareerCurrentCountryPlaceholder"
+                        placeholder="Country" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <label class="mb-0"
+                    i18n="Apply Career - current city placeholder|Apply career placeholder for current city@@applyCareerCurrentCityPlaceholder">Current
+                    City</label>
+                <div class="input-group">
+                    <input type="text" autocomplete="off"
+                        [attr.disabled]="isCountryValueExists(personalInfoForm.controls['currentCountry'].value)"
+                        formControlName="currentCity" [ngbTypeahead]="currentCitiesSearch"
+                        [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                        i18n-placeholder="Apply Career - current city placeholder|Apply career placeholder for current city@@applyCareerCurrentCityPlaceholder"
+                        placeholder="City" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+
+            <div class="ml-3 form-group form-check"
+                *ngIf="personalInfoForm.controls['currentCountry'].dirty || personalInfoForm.controls['currentCity'].dirty">
+                <input formControlName="updateCurrentLocationToProfile" type="checkbox" id="updateLocationCheckbox"
+                    class="form-check-input">
+                <label for="updateLocationCheckbox" class="form-check-label">
+                    <span class="d-inline-block">
+                        Update my profile with the new location
+                    </span>
+                </label>
+            </div>
+        </div>
+        <span class="my-2 text-dark py-1 font-weight-light-bold"
+            i18n="Apply Career - label for current annual compensation|Apply career title for current annual compensation@@applyCareerCurrentAnnualCompensationLabel">
+            Your current annual compensation
+        </span>
+        <div class="row mt-2">
+            <div class="col-lg-4">
+                <label class="mb-0"
+                    i18n="Apply Career - current currency placeholder|Apply career placeholder for current currency@@applyCareerCurrentCurrencyPlaceholder">Currency</label>
+                <div class="input-group">
+                    <input type="text" formControlName="currentCurrency" [ngbTypeahead]="currentCurrencySearch"
+                        [resultFormatter]="resultFormatCurrencyValue" [inputFormatter]="inputFormatCurrencyValue"
+                        i18n-placeholder="Apply Career - current currency placeholder|Apply career placeholder for current currency@@applyCareerCurrentCurrencyPlaceholder"
+                        placeholder="Currency" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <label class="mb-0"
+                    i18n="Apply Career - current base salary placeholder|Apply career placeholder for current base salary@@applyCareerCurrentBaseSalaryPlaceholder">Annual
+                    gross base salary</label>
+                <div class="input-group">
+                    <input type="text" formControlName="currentBase"
+                        i18n-placeholder="Apply Career - current base salary placeholder|Apply career placeholder for current base salary@@applyCareerCurrentBaseSalaryPlaceholder"
+                        placeholder="Annual gross base salary" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <label class="mb-0"
+                    i18n="Apply Career - current benefits placeholder|Apply career placeholder for current benefits@@applyCareerCurrentBenefitsPlaceholder">Annual
+                    gross of benefits</label>
+                <div class="input-group">
+                    <input type="text" formControlName="currentBenefits"
+                        i18n-placeholder="Apply Career - current benefits placeholder|Apply career placeholder for current benefits@@applyCareerCurrentBenefitsPlaceholder"
+                        placeholder="Annual gross of benefits" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-check"
+            *ngIf="personalInfoForm.controls['currentCurrency'].dirty || personalInfoForm.controls['currentBase'].dirty || personalInfoForm.controls['currentBenefits'].dirty">
+            <input formControlName="updateCurrentCompensationToProfile" type="checkbox"
+                id="updateCurrentCompensationCheckbox" class="form-check-input">
+            <label for="updateCurrentCompensationCheckbox" class="form-check-label">
+                <span class="d-inline-block">
+                    Update my profile with the new compensation details
+                </span>
+            </label>
+        </div>
+        <h6 class="mt-4 text-dark font-weight-light-bold pb-2"
+            i18n="Apply Career - label for target role title|Apply career title for target role details@@applyCareerTargetRoleDetails">
+            Please specify your preferences for this role
+        </h6>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <label class="mb-0"
+                    i18n="Apply Career - target country placeholder|Apply career placeholder for target country@@applyCareerTargetCountryPlaceholder">Country</label>
+                <div class="input-group">
+                    <input type="text" formControlName="targetCountry" [ngbTypeahead]="targetCountriesSearch"
+                        [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                        i18n-placeholder="Apply Career - target country placeholder|Apply career placeholder for target country@@applyCareerTargetCountryPlaceholder"
+                        placeholder="Country" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <label class="mb-0"
+                    i18n="Apply Career - target city placeholder|Apply career placeholder for target city@@applyCareerTargetCityPlaceholder">City</label>
+                <div class="input-group">
+                    <input type="text" autocomplete="off"
+                        [attr.disabled]="isCountryValueExists(personalInfoForm.controls['targetCountry'].value)"
+                        formControlName="targetCity" [ngbTypeahead]="targetCitiesSearch"
+                        [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                        i18n-placeholder="Apply Career - target city placeholder|Apply career placeholder for target city@@applyCareerTargetCityPlaceholder"
+                        placeholder="City" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+        </div>
+        <h6 class="text-dark py-1 font-weight-light-bold my-2"
+            i18n="Apply Career - label for target annual compensation|Apply career title for target annual compensation@@applyCareerTargetAnnualCompensationLabel">
+            Your target annual compensation
+        </h6>
+        <div class="row">
+            <div class="col-lg-4">
+                <label class="mb-0"
+                    i18n="Apply Career - target currency placeholder|Apply career placeholder for target currency@@applyCareerTargetCurrencyPlaceholder">Currency</label>
+                <div class="input-group">
+                    <input type="text" formControlName="targetCurrency" [ngbTypeahead]="targetCurrencySearch"
+                        [resultFormatter]="resultFormatCurrencyValue" [inputFormatter]="inputFormatCurrencyValue"
+                        i18n-placeholder="Apply Career - target currency placeholder|Apply career placeholder for target currency@@applyCareerTargetCurrencyPlaceholder"
+                        placeholder="Currency" value="" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <label class="mb-0"
+                    i18n="Apply Career - target base salary placeholder|Apply career placeholder for target base salary@@applyCareerTargetBaseSalaryPlaceholder">Annual
+                    gross base salary</label>
+                <div class="input-group">
+                    <input type="text" formControlName="targetBase"
+                        i18n-placeholder="Apply Career - target base salary placeholder|Apply career placeholder for target base salary@@applyCareerTargetBaseSalaryPlaceholder"
+                        placeholder="Annual gross base salary" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <label class="mb-0"
+                    i18n="Apply Career - target benefits placeholder|Apply career placeholder for target benefits@@applyCareerTargetBenefitsPlaceholder">Annual
+                    gross of benefits</label>
+                <div class="input-group">
+                    <input type="text" formControlName="targetBenefits"
+                        i18n-placeholder="Apply Career - target benefits placeholder|Apply career placeholder for target benefits@@applyCareerTargetBenefitsPlaceholder"
+                        placeholder="Annual gross of benefits" class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-check"
+            *ngIf="personalInfoForm.controls['targetCurrency'].dirty || personalInfoForm.controls['targetBase'].dirty || personalInfoForm.controls['targetBenefits'].dirty">
+            <input formControlName="updateTargetCompensationToProfile" type="checkbox"
+                id="updateTargetCompensationCheckbox" class="form-check-input">
+            <label for="updateTargetCompensationCheckbox" class="form-check-label">
+                <span class="d-inline-block">
+                    Update my profile with the new target compensation details
+                </span>
+            </label>
+        </div>
+    </div>
+</form>

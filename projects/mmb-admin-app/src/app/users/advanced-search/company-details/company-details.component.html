@@ -1,0 +1,44 @@
+<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="secondary-text">Education & Experience</div>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div fxLayout="row wrap" fxFlexFill fxLayoutGap="10px grid">
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #currentCompaniesChipList aria-label="Current Companies">
+                <mat-chip *ngFor="let currentCompany of currentCompanies" (removed)="remove(currentCompany, 'currentCompanies')">
+                    {{ currentCompany }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Current Companies" [matChipInputFor]="currentCompaniesChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'currentCompanies')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #companySizesChipList aria-label="Company Sizes">
+                <mat-chip *ngFor="let companySize of companySizes" (removed)="remove(companySize, 'companySizes')">
+                    {{ companySize }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Company Sizes" [matChipInputFor]="companySizesChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'companySizes')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #pastCompaniesChipList aria-label="Past Companies">
+                <mat-chip *ngFor="let pastCompany of pastCompanies" (removed)="remove(pastCompany, 'pastCompanies')">
+                    {{ pastCompany }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Past Companies" [matChipInputFor]="pastCompaniesChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'pastCompanies')">
+            </mat-chip-list>
+        </mat-form-field>
+    </div>
+</mat-expansion-panel>

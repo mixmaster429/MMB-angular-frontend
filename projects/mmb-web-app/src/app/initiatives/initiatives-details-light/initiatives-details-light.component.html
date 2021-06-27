@@ -1,0 +1,49 @@
+<div class="col-lg-8 offset-lg-2 py-4" *ngIf="selectedInitiativeDetails">
+    <mmb-web-app-item-navigation-panel next="/experiences/{{selectedInitiativeDetails.navigation.next}}"
+        previous="/experiences/{{selectedInitiativeDetails.navigation.previous}}" [listPageUrl]="'/experiences'">
+    </mmb-web-app-item-navigation-panel>
+    <img class="border-radius-8 mt-4 mx-h-300 w-100 object-fit-cover mb-4" [src]="selectedInitiativeDetails.cover"
+        onerror="this.src='assets/img/mmb-placeholder.jpg'" />
+
+    <div class="row">
+        <div class="col-md-8">
+            <mmb-web-app-experience-summary-info [experience]="selectedInitiativeDetails"
+                (register)="onExternalApply()">
+            </mmb-web-app-experience-summary-info>
+            <mmb-web-app-experience-description-roles [experience]="selectedInitiativeDetails">
+            </mmb-web-app-experience-description-roles>
+            <mmb-web-app-experience-criteria [experience]="selectedInitiativeDetails"></mmb-web-app-experience-criteria>
+            <mmb-web-app-experience-benefits [experience]="selectedInitiativeDetails"></mmb-web-app-experience-benefits>
+        </div>
+        <div class="col-md-4">
+            <mmb-web-app-experience-posted-by [experience]="selectedInitiativeDetails">
+            </mmb-web-app-experience-posted-by>
+            <mmb-web-app-experience-type-summary-section [experience]="selectedInitiativeDetails">
+            </mmb-web-app-experience-type-summary-section>
+            <mmb-web-app-experience-locations-section [experience]="selectedInitiativeDetails">
+            </mmb-web-app-experience-locations-section>
+            <mmb-web-app-experience-industry-functions-section [experience]="selectedInitiativeDetails">
+            </mmb-web-app-experience-industry-functions-section>
+            <mmb-web-app-experience-skills-section [experience]="selectedInitiativeDetails">
+            </mmb-web-app-experience-skills-section>
+        </div>
+    </div>
+
+    <mmb-web-app-experience-details-org-overview [experience]="selectedInitiativeDetails">
+    </mmb-web-app-experience-details-org-overview>
+
+    <div class="mb-5">
+        <mmb-web-app-item-navigation-panel [isBackToTopVisible]="true"
+            next="/experiences/{{selectedInitiativeDetails.navigation.next}}"
+            previous="/experiences/{{selectedInitiativeDetails.navigation.previous}}" [listPageUrl]="'/experiences'">
+        </mmb-web-app-item-navigation-panel>
+    </div>
+
+</div>
+
+<div class="bg-primary-900" *ngIf="selectedInitiativeDetails">
+    <div class="col-lg-8 offset-lg-2 py-5">
+        <mmb-web-app-similar-experiences [slug]="selectedInitiativeDetails.slug"></mmb-web-app-similar-experiences>
+        <mmb-web-app-suggested-experiences [slug]="selectedInitiativeDetails.slug"></mmb-web-app-suggested-experiences>
+    </div>
+</div>

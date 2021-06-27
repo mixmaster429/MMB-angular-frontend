@@ -1,0 +1,139 @@
+<div id="projects" class="page-layout simple">
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-12" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-xs="row"
+        fxLayoutAlign.gt-xs="space-between center">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="sidebar-toggle mr-8" fxHide.gt-md (click)="toggleSidebar('filters-sidebar')">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    work
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Projects
+                </span>
+            </div>
+
+        </div>
+        <!-- / APP TITLE -->
+
+        <!-- SEARCH -->
+        <div class="ml-sm-32" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+
+            <div class="search-wrapper mt-16 mt-sm-0">
+
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>search</mat-icon>
+                    <input matInput placeholder="Search for a project" [formControl]="searchInput">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- / SEARCH -->
+
+    </div>
+    <!-- / HEADER -->
+    <!-- Toolbar -->
+    <div class="py-8 px-24 mat-elevation-z1 text-right">
+        <button (click)="createNewProject()" class="mx-8" mat-stroked-button color="accent">
+            <mat-icon>add</mat-icon>
+            Create new Project
+        </button>
+    </div>
+    <!--/ Toolbar -->
+
+    <!-- CONTENT CARD -->
+    <div class="content py-4">
+
+        <mat-table *ngIf="projects | async as projects; else emptyProjectPlaceholder" class="projects-table" #table
+            [dataSource]="projects" matSort [@animateStagger]="{value:'50'}" fusePerfectScrollbar>
+
+            <!-- Id Column -->
+            <ng-container matColumnDef="id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>ID</mat-header-cell>
+                <mat-cell *matCellDef="let project">
+                    {{project.id}}
+                </mat-cell>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
+                <mat-cell *matCellDef="let project">
+                    <button mat-button [routerLink]="project.uuid">{{project.name}}</button>
+                </mat-cell>
+            </ng-container>
+
+            <!-- Category Column -->
+            <ng-container matColumnDef="description">
+                <mat-header-cell *matHeaderCellDef fxHide mat-sort-header fxShow.gt-md>Description</mat-header-cell>
+                <mat-cell *matCellDef="let project" fxHide fxShow.gt-md>
+                    <p class="category text-truncate pr-32">
+                        {{project.description}}
+                    </p>
+                </mat-cell>
+            </ng-container>
+
+            <!-- numberOfCandidates Column -->
+            <ng-container matColumnDef="numberOfCandidates">
+                <mat-header-cell *matHeaderCellDef fxHide mat-sort-header fxShow.gt-md>Number of Candidates</mat-header-cell>
+                <mat-cell *matCellDef="let project" fxHide fxShow.gt-md>
+                    <p class="text-center">{{ project.candidate_count }}</p>
+                </mat-cell>
+            </ng-container>
+
+            <!-- Owner Column -->
+            <ng-container matColumnDef="owner">
+                <mat-header-cell *matHeaderCellDef fxHide mat-sort-header fxShow.gt-md>Owner</mat-header-cell>
+                <mat-cell *matCellDef="let project" fxHide fxShow.gt-md>
+                    <p>{{ project.owner }}</p>
+                </mat-cell>
+            </ng-container>
+
+            <!-- Active Column -->
+            <ng-container matColumnDef="numberOfUsers">
+                <mat-header-cell *matHeaderCellDef fxHide mat-sort-header fxShow.gt-md>Number of users
+                </mat-header-cell>
+                <mat-cell *matCellDef="let project" fxHide fxShow.gt-md>
+                    <p>{{ project.numberOfUsers }}</p>
+                </mat-cell>
+            </ng-container>
+
+            <!-- Active Column -->
+            <ng-container matColumnDef="actions">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Actions</mat-header-cell>
+                <mat-cell class="text-center" *matCellDef="let project">
+                    <button mat-icon-button color="accent" (click)="editProject(project)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+
+                    <button mat-icon-button color="warn" (click)="deleteProject(project)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></mat-header-row>
+
+            <mat-row *matRowDef="let project; columns: displayedColumns;" class="project" matRipple>
+            </mat-row>
+
+        </mat-table>
+
+    </div>
+
+
+    <!-- / CONTENT CARD -->
+</div>
+
+<ng-template #emptyProjectPlaceholder>
+    <div class="p-24" *ngIf="isLoading">
+        <mmb-admin-app-progress-spinner></mmb-admin-app-progress-spinner>
+    </div>
+    <mmb-admin-app-no-projects-created-placeholder *ngIf="!isLoading"></mmb-admin-app-no-projects-created-placeholder>
+</ng-template>

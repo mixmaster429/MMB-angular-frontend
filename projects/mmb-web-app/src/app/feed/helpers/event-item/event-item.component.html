@@ -1,0 +1,15 @@
+<div class="p-3" *ngIf="feed.organisation as organisation">
+    <mmb-web-app-user-summary-info [image]="organisation.logo" [name]="organisation.name" [createdOnDate]="feed.created"
+        [popoverSummary]="organisation.summary" [id]="organisation.id" [orgUrl]="organisation.handle">
+    </mmb-web-app-user-summary-info>
+</div>
+<mmb-web-app-feed-card url="/events/{{feed.slug}}" [image]="feed.cover" [icon]="'fas fa-calendar-alt'"
+    [author]="feed.organisation.name" [avatarImage]="feed.organisation.logo" [date]="feed.created" [title]="feed.title"
+    [heading]="feed.owner_title" [summary]="feed.headline" [date]="feed.created"
+    [description]="feed.organisation.description">
+</mmb-web-app-feed-card>
+
+<mmb-web-app-interaction-tools [reactions]="feed.reactions_summary?.total" [reacted]="feed.reacted"
+    [isReactionsEnabled]="true" [comments]="feed.comments" (reactionUpdated)="onEventReactionUpdated(feed, $event)"
+    (commentAdded)="onEventCommentAdded(feed, $event)">
+</mmb-web-app-interaction-tools>

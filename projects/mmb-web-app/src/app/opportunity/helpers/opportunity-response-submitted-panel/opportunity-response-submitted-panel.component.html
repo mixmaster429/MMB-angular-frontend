@@ -1,0 +1,43 @@
+<div class="bg-light p-4 text-dark-100 border-radius-8">
+    <div class="mb-3 w-75" fxLayout="row" fxLayoutAlign="space-between start" *ngIf="!isEditModeActive">
+        <div>
+            <h6 fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons text-success">mail</i>
+                <span>Your response was sent successfully</span>
+            </h6>
+            <div class="medium">
+                Thank you! Your response has been sent. <br /> If the author of this Opportunity likes
+                your response you'll receive an invitation to collaborate via email.
+            </div>
+        </div>
+
+        <button class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+            (click)="onEdit()">Edit</button>
+    </div>
+
+    <div class="mb-3 w-75" *ngIf="isEditModeActive">
+        <div class="mb-3">
+            <h6 fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons text-success">mail</i>
+                <span>Your response to this opportunity</span>
+            </h6>
+            <div class="medium">
+                Thank you! Your response has been sent. <br /> If the author of this Opportunity likes
+                your response you'll receive an invitation to collaborate via email.
+            </div>
+        </div>
+
+        <textarea placeholder="Add response message..." class="form-control border shadow-none" rows="3"></textarea>
+    </div>
+
+    <div class="text-secondary-300 medium" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+        <i class="material-icons">check</i>
+        <span>Responded on 16 Feb 2021 </span>
+    </div>
+
+    <div class="text-right w-75" *ngIf="isEditModeActive">
+        <button class="btn mmb-secondary-light-button btn--sm" (click)="onCancelUpdate()">Cancel</button>
+        <button class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+            (click)="onUpdate()">Update</button>
+    </div>
+</div>

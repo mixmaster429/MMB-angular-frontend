@@ -1,0 +1,75 @@
+<div [formGroup]="form" *ngIf="form">
+    <div class="mt-4">
+        <div class="text-center bg-btn-secondary-500 py-3">
+            <h5 class="mt-3 mb-2 font-size-24">What do you need? What can you give?</h5>
+            <div class="mb-3 text-dark-300 p-3 font-size-16">What specific needs or goals can the Movemeback community
+                help with, and <br>
+                what
+                can you help others with?</div>
+        </div>
+    </div>
+
+    <div class="p-5">
+        <h6 class="mmb-perm-title font-size-18">I'd like support with</h6>
+        <!-- <ng-container *ngIf="form.controls['userNeedsSupportOn'].value as supportItems"> -->
+        <div *ngFor="let supportItem of userSupportItems; let i = index" class="my-4" fxLayout="row"
+            fxLayoutAlign="start start" fxLayoutGap="16px">
+            <div fxLayout="column" fxFlex="100">
+                <input formControlName="userNeedsSupportOn" class="w-100 form-control border" type="text"
+                    placeholder="What help do you need?" aria-describedby="supportBlock"/>
+                <small id="supportBlock" class="form-text text-muted">
+                    {{ form.controls.userNeedsSupportOn.value.length }}/60
+                </small>
+            </div>
+            <button *ngIf="i < userSupportItems.length - 1" class="btn mmb-secondary-light-button btn--sm"
+                (click)="onRemoveSupportItem(i, userSupportItems)">
+                Clear
+            </button>
+            <button *ngIf="i === userSupportItems.length - 1" (click)="onAddSupportItem(userSupportItems)"
+                class="btn mmb-secondary-light-button btn--sm mmb-secondary-light-button--dark"
+                [ngClass]="{'btn--disabled': i === MAX_ALLOWED_ROWS - 1}">
+                Add
+            </button>
+        </div>
+        <!-- </ng-container> -->
+
+    </div>
+
+    <div class="pl-5 pr-5">
+        <h6 class="mmb-perm-title font-size-18">I can help with</h6>
+        <!-- <ng-container *ngIf="form.controls['userNeedsSupportOn'].value as supportItems"> -->
+        <div *ngFor="let supportItem of userHelpItems; let i = index" class="my-4" fxLayout="row"
+            fxLayoutAlign="start start" fxLayoutGap="16px">
+            <div fxLayout="column" fxFlex="100">
+                <input formControlName="userNeedsHelpOn" class="w-100 form-control border" type="text"
+                    placeholder="What help can you offer?" aria-describedby="helpBlock"/>
+                <small id="helpBlock" class="form-text text-muted">
+                    {{ form.controls.userNeedsHelpOn.value.length }}/60
+                </small>
+            </div>
+            <button *ngIf="i < userHelpItems.length - 1" class="btn mmb-secondary-light-button btn--sm"
+                (click)="onRemoveHelpItem(i, userHelpItems)">
+                Clear
+            </button>
+            <button *ngIf="i === userHelpItems.length - 1" (click)="onAddHelpItem(userHelpItems)"
+                class="btn mmb-secondary-light-button btn--sm mmb-secondary-light-button--dark"
+                [ngClass]="{'btn--disabled': i === MAX_ALLOWED_ROWS - 1}">
+                Add
+            </button>
+        </div>
+        <!-- </ng-container> -->
+
+    </div>
+
+    <hr />
+
+    <div class="px-20">
+        <button (click)="onNextStep()"
+            class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm">
+            Next
+        </button>
+        <button (click)="onBackStep()" class="mt-3 w-100 btn mmb-secondary-light-button btn--sm">
+            Back
+        </button>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-3 row mx-0">
+    <div class="col-lg-8">
+        <div class="mb-4" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+            <img class="rounded-circle cursor-pointer avatar-sm border"
+                onerror="this.src='assets/images/avatars/not-found.png';" [src]="career.organisation.logo" routerLink="/organisation/profile/{{ career.organisation.slug }}">
+            <div>
+                <div class="text-dark-600 small mb-1">About the organisation</div>
+                <div class="cursor-pointer" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px" routerLink="/organisation/profile/{{ career.organisation.slug }}">
+                    <i class="material-icons">work_outline</i>
+                    <h6 class="mb-0">{{ career.organisation.name }}</h6>
+                </div>
+            </div>
+        </div>
+        <div class="admin-panel-html-renderer medium text-dark-300" [innerHTML]="career.organisation.description">
+        </div>
+    </div>
+
+    <div class="col-lg-4">
+        <h6 class="mmb-perm-title mb-5 mt-1">Other Careers</h6>
+
+        <mmb-web-app-career-details-org-job-card class="cursor-pointer" [career]="career" *ngFor="let career of careers | async | slice:0:3" routerLink="/careers/{{career.slug}}">
+        </mmb-web-app-career-details-org-job-card>
+
+        <div fxLayout="row" fxLayoutAlign="end center">
+            <button mat-flat-button class="bg-white text-primary">
+                <span>See all Careers</span>
+                <mat-icon>arrow_forward</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+.switch {
+  .toggle {
+    .toggle-control {
+      transition: 0.1s linear;
+      width: $em-spacer*2;
+      height: $em-spacer + 0.3;
+      display: block;
+      border: $spacer/2 solid $gray-600;
+      border-radius: $em-spacer;
+      background-color: rgba($black-200, 0.06);
+      position: relative;
+      top: $spacer/2;
+      &:after {
+        transition: 0.1s linear;
+        content: "";
+        width: $em-spacer;
+        height: $em-spacer;
+        display: block;
+        background-color: $white;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+    input {
+      display: none;
+      &:checked + .toggle-control {
+        border-color: $success;
+        background-color: $success;
+        &:after {
+          left: $em-spacer;
+        }
+      }
+    }
+  }
+  label {
+    margin: 0;
+  }
+}

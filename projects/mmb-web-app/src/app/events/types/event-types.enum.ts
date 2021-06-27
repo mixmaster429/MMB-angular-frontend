@@ -1,0 +1,55 @@
+export const EVENT_TYPES = [{
+    value: '15',
+    viewValue: 'Appearance'
+}, {
+    value: '4',
+    viewValue: 'Class'
+}, {
+    value: '1',
+    viewValue: 'Conference'
+}, {
+    value: '8',
+    viewValue: 'Convention'
+}, {
+    value: '9',
+    viewValue: 'Festival'
+}, {
+    value: '12',
+    viewValue: 'Expo'
+}, {
+    value: '10',
+    viewValue: 'Game'
+}, {
+    value: '11',
+    viewValue: 'Gala'
+}, {
+    value: '18',
+    viewValue: 'Other'
+}, {
+    value: '2',
+    viewValue: 'Networking'
+}, {
+    value: '6',
+    viewValue: 'Performance'
+}, {
+    value: '17',
+    viewValue: 'Race'
+}, {
+    value: '14',
+    viewValue: 'Retreat'
+}, {
+    value: '5',
+    viewValue: 'Screening'
+}, {
+    value: '7',
+    viewValue: 'Seminar'
+}, {
+    value: '3',
+    viewValue: 'Social'
+}, {
+    value: '13',
+    viewValue: 'Tour'
+}, {
+    value: '16',
+    viewValue: 'Tournament'
+}];

@@ -1,0 +1,35 @@
+<mmb-web-app-event-subbar (textSearchUpdated)="onSearchUpdated($event)"></mmb-web-app-event-subbar>
+
+<div>
+    <div class="row offset-lg-2 col-lg-8 py-4">
+        <mmb-web-app-top-level-filters [entityType]="'event'" [filters]="filters" (filtersUpdated)="onFiltersUpdated($event)"></mmb-web-app-top-level-filters>
+    </div>
+</div>
+
+<div class="row offset-lg-2 col-lg-8 mb-4 px-2" ngClass.lt-md="mx-0">
+    <div class="w-100 px-4 mb-4" fxLayout="row" fxLayoutAlign="space-between center">
+        <div *ngIf="events">Available <strong class="font-family-bold">{{ count }} Events</strong></div>
+        <div [ngbTooltip]="'Coming soon'">Grid / List / Archived</div>
+    </div>
+
+    <div class="mt-6 px-5 py-0 w-100" infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="150"
+        (scrolled)="onScroll()">
+        <div class="row" *ngIf="events">
+            <div class="col-lg-3 col-md-4 col-sm-12 mb-2" *ngFor="let event of events">
+                <mmb-web-app-event-card [event]="event" [isSaved]="event.saved" (addToFavoritesClicked)="onAddToFavorites(event)"
+                    (removeFromFavoritesClicked)="onRemoveFromFavorites(event)" [image]="event.organisation.logo"
+                    [coverImage]="event.cover" url="/events/{{event.slug}}" [title]="event.title" [heading]="event.name"
+                    [location]="event.location_summary" [author]="event.organisation.name"
+                    [date]="event.start_date | date:'fullDate'"></mmb-web-app-event-card>
+            </div>
+        </div>
+
+        <div *ngIf="count === 0">No events available</div>
+
+        <div class="col-12 text-center py-4" *ngIf="isLoading">
+            <mmb-ui-inline-loader text="More exciting events will be with you in just a second..."
+                i18n-text="Events all inline loader text|Title for events all inline loader text@@eventssAllInlineLoaderText">
+            </mmb-ui-inline-loader>
+        </div>
+    </div>
+</div>

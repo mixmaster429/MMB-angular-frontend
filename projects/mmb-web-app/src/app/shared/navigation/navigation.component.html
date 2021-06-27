@@ -1,0 +1,90 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top z-idx-1050">
+    <a class="navbar-brand mx-10" href="#">LOGO</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#"><span i18n="Navbar Home Link@@navbarHomeLink">Home</span> <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false" i18n="Navbar Careers Link@@navbarCareersLink">Careers</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="'careers'" i18n="Navbar All Careers Link@@navbarAllCareersLink">All
+                        Careers</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Careers by Organisation Link@@navbarCareersByOrganisationLink">Careers
+                        by Organisation</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Careers by Location Link@@navbarCareersByLocationLink">Careers
+                        by Location</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'collaborations'" i18n="Navbar Collaborations Link@@navbarCollaborationsLink">Collaborations</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'initiatives'" i18n="Navbar Initiatives Link@@navbarInitiativesLink">Initiatives</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'events'" i18n="Navbar Events Link@@navbarEventsLink">Events</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" [routerLink]="'media'" i18n="Navbar Events Link@@navbarMediaLink">Media</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false" i18n="Navbar Community Link@@navbarCommunityLink">Community</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" i18n="Navbar Experiences Link@@navbarExperiencesLink">Experiences</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Insights Link@@navbarInsightsLink">Insights</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Events Link@@navbarEventsLink">Events</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Advice Link@@navbarAdviceLink">Advice & Guides</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Refer Link@@navbarReferLink">Refer Others</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false" i18n="Navbar MyMovemeback Link@@navbarMyMovemebackLink">My Movemeback</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" i18n="Navbar MyProfile Link@@navbarMyProfileLink">My Profile</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar MyCareers Link@@navbarMyCareersLink">My Careers</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar MyEvents Link@@navbarMyEventsLink">My Events</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Contacts Link@@navbarContactsLink">Contacts &
+                        Requests</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                    aria-expanded="false" i18n="Navbar About Link@@navbarAboutLink">About</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" [routerLink]="'about'" i18n="Navbar AboutUs Link@@navbarAboutUsLink">About
+                        Us</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Partner Link@@navbarPartnerLink">Partner & Friends</a>
+                    <a class="dropdown-item" [routerLink]="'companies'" i18n="Navbar Companies Link@@navbarCompaniesLink">Companies/Recruiters</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Socialise Link@@navbarSocialiseLink">Socialise</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Howitworks Link@@navbarHowitworksLink">How it works</a>
+                    <a class="dropdown-item" href="#" i18n="Navbar Faqs Link@@navbarFaqsLink">Faqs</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle p-0 mr-4" data-toggle="dropdown" href="#" role="button"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img class="align-self-center mw-40p border rounded-circle" [src]="image" alt="User image" onerror="this.src='assets/placeholders/not-found.png';">
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" [routerLink]="'profile'" i18n="Navbar My Profile Link@@navbarMyProfileLink">
+                        My Profile
+                    </a>
+                    <a class="dropdown-item" [routerLink]="'login'" i18n="Navbar My Profile Link@@navbarLogoutLink">
+                        Logout
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>

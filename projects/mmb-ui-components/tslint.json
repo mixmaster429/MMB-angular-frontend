@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "mmbUi",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "mmb-ui",
+      "kebab-case"
+    ]
+  }
+}

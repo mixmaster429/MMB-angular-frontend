@@ -1,0 +1,33 @@
+mmb-wep-app-navbar {
+    height: 76px;
+}
+
+.search-filters {
+    input, select {
+        background-color: #f7f7f7;
+        border: 1px solid #eee;
+        color: #444;
+        height: 45px;
+        padding: 10px 15px;
+        transition: -webkit-box-shadow 1s ease 0s;
+        transition: box-shadow 1s ease 0s;
+        transition: box-shadow 1s ease 0s, -webkit-box-shadow 1s ease 0s;
+    }
+}
+
+.career-detail-container-scroll {
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: calc(100vh - 215px);
+}
+
+.apply-modal-container .modal-dialog {
+    .modal-content {
+        height: 90vh;
+    }
+
+    .apply-modal-container-body {
+        height: calc(90vh - 250px);
+        overflow-y: auto;
+    }
+}

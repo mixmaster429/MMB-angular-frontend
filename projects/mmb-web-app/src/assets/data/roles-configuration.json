@@ -1,0 +1,79 @@
+{
+    "roles": [
+        {
+            "role": "anonymous",
+            "permissions": [
+                {
+                    "career": {
+                        "canViewJobs": true,
+                        "canFilter": true,
+                        "canApply": false,
+                        "canSave": false,
+                        "canBookmark": false,
+                        "canManageJobs": false
+                    }
+                }
+            ]
+        },
+        {
+            "role": "user",
+            "permissions": [
+                {
+                    "career": {
+                        "canViewJobs": true,
+                        "canFilter": true,
+                        "canApply": true,
+                        "canSave": true,
+                        "canBookmark": true,
+                        "canManageJobs": false
+                    }
+                }
+            ]
+        },
+        {
+            "role": "orgAdmin",
+            "permissions": [
+                {
+                    "career": {
+                        "canViewJobs": true,
+                        "canFilter": true,
+                        "canApply": true,
+                        "canSave": true,
+                        "canBookmark": true,
+                        "canManageJobs": true
+                    }
+                }
+            ]
+        },
+        {
+            "role": "customerSupport",
+            "permissions": [
+                {
+                    "career": {
+                        "canViewJobs": true,
+                        "canFilter": true,
+                        "canApply": true,
+                        "canSave": true,
+                        "canBookmark": true,
+                        "canManageJobs": true
+                    }
+                }
+            ]
+        },
+        {
+            "role": "superAdmin",
+            "permissions": [
+                {
+                    "career": {
+                        "canViewJobs": true,
+                        "canFilter": true,
+                        "canApply": true,
+                        "canSave": true,
+                        "canBookmark": true,
+                        "canManageJobs": true
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+<div *ngIf="!loading">
+    <div class="modal-header">
+        <h4 class="modal-title"
+            i18n="Add question button label|Label for add question button in collaborations@@addQuestionButtonTitleCollaborationsRequestsPage">
+            Add New Question
+        </h4>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+            (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="newQuestionForm">
+            <label class="text-dark"
+                i18n="Question label|Label for question in collaborations@@questionLabelCollaborationsRequestsPage">Question</label>
+            <textarea ngbAutofocus formControlName="title" placeholder="Enter question here..."
+                i18n-placeholder="enter question text placeholder|Placeholder for question in collaborations@@questionTitlePlaceholderCollaborationsRequestsPage"
+                class="form-control shadow-none border"></textarea>
+            <br />
+            <label class="text-dark"
+                i18n="Description label|Label for Description in collaborations@@SummaryLabelCollaborationsRequestsPage">Description</label>
+            <textarea ngbAutofocus formControlName="request" placeholder="Enter description here..."
+                i18n-placeholder="enter description text placeholder|Placeholder for description in collaborations@@descriptionTitlePlaceholderCollaborationsRequestsPage"
+                class="form-control shadow-none border"></textarea>
+            <br />
+            <!-- <h6 class="text-secondary"
+            i18n="Tags label|Label for Tags in collaborations@@tagsLabelCollaborationsRequestsPage">Tags</h6>
+        <tag-input inputClass="form-control shadow-none border" formControlName="tags"></tag-input> -->
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary sApp-btn btn-sm" (click)="modal.dismiss()"
+            i18n="Cancel button label|Label for cancel in collaborations@@cancelButtonCollaborationsRequestsPage">Cancel</button>
+        <button type="button" class="btn btn-danger sApp-btn btn-sm" (click)="onAdd()"
+            i18n="Add button label|Label for add in collaborations@@addButtonCollaborationsRequestsPage" [disabled]="!newQuestionForm.valid">Add</button>
+    </div>
+</div>
+<div class="text-center p-5" *ngIf="loading">
+    <mmb-ui-inline-loader text="We are processing your question...">
+    </mmb-ui-inline-loader>
+</div>

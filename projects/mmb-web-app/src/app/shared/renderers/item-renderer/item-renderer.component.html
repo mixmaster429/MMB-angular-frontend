@@ -1,0 +1,9 @@
+<mmb-web-app-heading *ngIf="type === 'heading'" [value]="value"></mmb-web-app-heading>
+<mmb-web-app-subheading *ngIf="type === 'sub_heading'" [value]="value"></mmb-web-app-subheading>
+<mmb-web-app-text *ngIf="type === 'text'" [value]="value"></mmb-web-app-text>
+<mmb-web-app-paragraph *ngIf="type === 'paragraph'" [value]="value"></mmb-web-app-paragraph>
+<mmb-web-app-cards *ngIf="type === 'cards'" [value]="value"></mmb-web-app-cards>
+<mmb-web-app-embed *ngIf="type === 'embed'" [value]="value"></mmb-web-app-embed>
+<div *ngIf="type === 'image' && value" class="my-2">
+    <mmb-web-app-image [value]="value.large"></mmb-web-app-image>
+</div>

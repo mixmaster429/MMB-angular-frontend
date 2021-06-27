@@ -1,0 +1,45 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="addExperienceModalTitle" *ngIf="!isEditMode">Add skill</h5>
+        <h5 class="modal-title" id="addExperienceModalTitle" *ngIf="isEditMode">Edit skill</h5>
+        <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="addSkillForm">
+            <div class="row mb-5">
+                <div class="col">
+                    <label>Title</label>
+                    <!-- <input type="text" class="form-control" formControlName="skill"> -->
+                    <input type="text" formControlName="skill" [ngbTypeahead]="currentCountriesSearch"
+                    [resultFormatter]="resultFormatSkillValue" [inputFormatter]="inputFormatSkillValue"
+                    placeholder="Skill" class="form-control my-1 shadow-none border" (keydown.enter)="addSkillToArray()">
+                </div>
+            </div>
+            <div class="d-flex flex-wrap">
+            <div *ngFor="let item of listOfSkills">
+                <span class="badge badge-pill badge-primary p-2 m-1 d-flex align-items-center justify-content-between" *ngIf="item.name">
+                    {{ item.name }}
+                    <span class="material-icons icon-font-sm mx-1 link--pointer" (click)="removeSkillFromArray(item)">
+                        remove_circle_outline
+                        </span>
+                </span>
+                <span class="badge badge-pill badge-primary p-2 m-1 d-flex align-items-center justify-content-between" *ngIf="!item.name">
+                    {{ item.skill_custom }}
+                    <span class="material-icons icon-font-sm mx-1 link--pointer" (click)="removeSkillFromArray(item)">
+                        remove_circle_outline
+                        </span>
+                </span>
+            </div>
+        </div>
+        </form>
+    </div>
+    <div class="modal-footer" *ngIf="!isEditMode">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="createSkill()" *ngIf="!isEditMode" [disabled]="!addSkillForm.valid">Save</button>
+    </div>
+    <div class="modal-footer justify-content-between" *ngIf="isEditMode">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="deleteSkill()">Delete</button>
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="editSkill()" [disabled]="!addSkillForm.valid">Save</button>
+    </div>
+</div>

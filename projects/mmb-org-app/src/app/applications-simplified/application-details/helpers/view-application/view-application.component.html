@@ -1,0 +1,180 @@
+<div fxFlex class="p-16" *ngIf="!isOpenedInModal">
+    <ng-container *ngTemplateOutlet="application"></ng-container>
+</div>
+
+<ng-template #application>
+    <div fxFlex>
+        <div fxFlex="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <mat-card *ngIf="isApplicationsLoading || (applications && applications.length > 0)" infiniteScroll
+                [infiniteScrollDistance]="10" [infiniteScrollThrottle]="150" (scrolled)="onScroll()"
+                [scrollWindow]="false" class="u-min-height-modal-content p-0 grey-50 border mat-elevation-z0"
+                fxFlex="360px" fusePerfectScrollbar>
+                <ng-container *ngIf="!isApplicationsLoading && applications && applications.length > 0">
+                    <div [ngClass]="{'accent mat-elevation-z1': application.uuid === applicationUuidParam }"
+                        role="button" class="my-8 mat-elevation-z0 border-top border-bottom fuse-white"
+                        *ngFor="let application of applications | filter: filterTerm"
+                        (click)="updateSelectedApplication(application)">
+                        <mmb-org-app-user-application-tile [item]="application" [isDetailsEnabled]="false"
+                            [isInterestedTabActive]="isInterestedTabActive">
+                        </mmb-org-app-user-application-tile>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngIf="isApplicationsLoading">
+                    <ng-content *ngTemplateOutlet="loadingApplications"></ng-content>
+                </ng-container>
+                <ng-container *ngIf="isLoadingMore">
+                    <ng-content *ngTemplateOutlet="loadMore"></ng-content>
+                </ng-container>
+            </mat-card>
+            <mat-card *ngIf="selectedApplication && !isApplicationLoading" fxFlex
+                class="p-16 u-min-height-modal-content mat-elevation-z4" fusePerfectScrollbar>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutGap="10px" fxLayout="start center">
+                        <div>
+                            <img class="avatar avatar-xl"
+                                onerror="this.src='assets/images/avatars/avatar-placeholder.webp';"
+                                [src]="selectedApplication.user.profile_image">
+                        </div>
+                        <div>
+                            <h2 class="mb-0 mt-4">{{ selectedApplication.user.first_name }}
+                                {{ selectedApplication.user.last_name }}</h2>
+                            <div class="secondary-text">{{ selectedApplication.user.professional_title }}</div>
+                            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                                <div *ngIf="getStageName(selectedApplication.stage) as stage" class="secondary-text">
+                                    Stage -
+                                    {{
+                                    stage.text }}
+                                </div>
+                                <span *ngIf="selectedApplication.status_employee">|</span>
+                                <div *ngIf="selectedApplication.status_employee && getEmployeeStatus(selectedApplication.status_employee) as status"
+                                    class="secondary-text">
+                                    {{ selectedApplication.career.organisation.name }} Status -
+                                    {{ status.viewValue }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="10px" fxLayout="start center">
+                        <div *ngIf="activeFilter.name !== 'Interested'">
+                            <mmb-org-app-employee-rating-control
+                                [suitability]="selectedApplication.suitability_profile_employee"
+                                [isMinimalViewActive]="true" (valueChanged)="updateFeedback($event)">
+                            </mmb-org-app-employee-rating-control>
+                        </div>
+                        <button ngxClipboard matTooltip="Copy link to profile page" mat-icon-button color="primary"
+                            (click)="onCopyLink()">
+                            <mat-icon>link</mat-icon>
+                        </button>
+
+                        <a mat-icon-button matTooltip="Linkedin" color="primary"
+                            [href]="selectedApplication.user.linkedin" target="_blank">
+                            <i class="ri-linkedin-fill ri-lg primary--fg"></i>
+                        </a>
+
+                        <a *ngIf="!isInterestedTabActive" mat-icon-button matTooltip="Download portfolio"
+                            color="primary" [href]="selectedApplication.portfolio" target="_blank">
+                            <i class="ri-file-download-line ri-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="p-8" *ngIf="!isInterestedTabActive">
+                    <mat-tab-group #tabGroup>
+                        <mat-tab label="CV" *ngIf="selectedApplication.cv_pdf">
+                            <ngx-extended-pdf-viewer *ngIf="checkIfCvAssigned(tabGroup)" [zoom]="'page-actual'"
+                                [src]="selectedApplication.cv_pdf" useBrowserLocale="true" height="55vh"
+                                [showSidebarButton]="false" [showSecondaryToolbarButton]="false"
+                                [showRotateButton]="false" [showPrintButton]="false" [showOpenFileButton]="false"
+                                [showBookmarkButton]="false" [showDownloadButton]="false">
+                            </ngx-extended-pdf-viewer>
+                        </mat-tab>
+                        <mat-tab label="Cover Letter" *ngIf="selectedApplication.cover_letter_pdf">
+                            <ngx-extended-pdf-viewer *ngIf="checkIfCoverLetterAssigned(tabGroup)" [zoom]="'page-actual'"
+                                [src]="selectedApplication.cover_letter_pdf" useBrowserLocale="true" height="55vh"
+                                [showSidebarButton]="false" [showSecondaryToolbarButton]="false"
+                                [showRotateButton]="false" [showPrintButton]="false" [showOpenFileButton]="false"
+                                [showBookmarkButton]="false" [showDownloadButton]="false">
+                            </ngx-extended-pdf-viewer>
+                        </mat-tab>
+                        <mat-tab label="Applications Details">
+                            <mmb-org-app-user-feedbacks [activeFilter]="activeFilter"
+                                (feedbackUpdated)="updateFeedback($event)" [questions]="selectedApplication.answers"
+                                [feedback]="selectedApplication">
+                            </mmb-org-app-user-feedbacks>
+                        </mat-tab>
+                        <mat-tab label="Give Feedback" *ngIf="activeFilter.name !== 'Interested'">
+                            <mmb-org-app-employee-info [feedbacks]="selectedApplication.feedback_employee"
+                                [candidate]="selectedApplication.user" [selectedApplication]="selectedApplication"
+                                (updated)="update()" (feedbackUpdated)="updateFeedback($event)">
+                            </mmb-org-app-employee-info>
+                        </mat-tab>
+                    </mat-tab-group>
+
+                </div>
+
+                <div *ngIf="isInterestedTabActive">
+                    <mmb-org-app-user-feedbacks [isInterestedTabActive]="isInterestedTabActive"
+                        [activeFilter]="activeFilter" (feedbackUpdated)="updateFeedback($event)"
+                        [questions]="selectedApplication.answers" [feedback]="selectedApplication">
+                    </mmb-org-app-user-feedbacks>
+                </div>
+            </mat-card>
+
+            <ng-container *ngIf="!selectedApplication && !isApplicationLoading">
+                <ng-content *ngTemplateOutlet="emptyApplications"></ng-content>
+            </ng-container>
+
+            <ng-container *ngIf="isApplicationLoading">
+                <ng-content *ngTemplateOutlet="loading"></ng-content>
+            </ng-container>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #emptyApplications>
+    <div class="h-500" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+        <mat-icon class="s-128 mb-8 select-message-icon hint-text">
+            ballot
+        </mat-icon>
+        <span class="select-message-text hint-text">
+            <span>No applications available</span>
+        </span>
+    </div>
+</ng-template>
+
+<ng-template #loadingApplications>
+    <div class="p-16">
+        <div class="h-100" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+            <mat-spinner color="accent" diameter="20"></mat-spinner>
+
+            <span class="mt-16 select-message-text hint-text">
+                <span>Loading applications...</span>
+            </span>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #loadMore>
+    <div class="p-16">
+        <div class="h-50" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+            <mat-spinner color="accent" diameter="20"></mat-spinner>
+
+            <span class="mt-16 select-message-text hint-text">
+                <span>Loading...</span>
+            </span>
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #loading>
+    <div fxFlex class="p-16">
+        <div class="h-500" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+            <mat-spinner color="accent" diameter="40"></mat-spinner>
+
+            <span class="mt-16 select-message-text hint-text">
+                <span>Loading application details...</span>
+            </span>
+        </div>
+    </div>
+</ng-template>

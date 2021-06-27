@@ -1,0 +1,35 @@
+<mat-card class="p-relative o-hidden my-8 p-0" [ngClass]="{'my-16': projectId}" *ngIf="user">
+
+    <div class="p-8" *ngIf="user._source">
+        <mmb-admin-app-user-tile [fullUser]="user" [projectCandidateRecordId]="projectCandidateRecordId"
+            [user]="user._source" [isChecked]="isChecked" [userId]="userId" [projectId]="projectId" [project]="project"
+            [isUserAssignedScreenActive]="isUserAssignedScreenActive" (selectionUpdated)="onSelectionUpdated($event)"
+            (unassignUser)="onUnassignUser($event)" (usersListUpdated)="onUserListUpdated($event)">
+        </mmb-admin-app-user-tile>
+    </div>
+
+    <div class="p-8" *ngIf="!user._source">
+        <mmb-admin-app-user-tile [user]="user" [projectCandidateRecordId]="projectCandidateRecordId" [userId]="userId"
+            [projectId]="projectId" [project]="project" [isUserAssignedScreenActive]="isUserAssignedScreenActive"
+            (unassignUser)="onUnassignUser($event)" (usersListUpdated)="onUserListUpdated($event)">
+        </mmb-admin-app-user-tile>
+    </div>
+
+    <!-- In a project - enable scoring and notes -->
+    <div class="full-width border-top" *ngIf="projectId && isUserAssignedScreenActive">
+        <div class="py-8 px-16" fxLayout="column" fxLayoutGap="24px" fxLayoutAlign="start" fxLayout.gt-xs="row"
+            fxLayoutAlign.gt-xs="space-between center">
+            <mat-select placeholder="Score" fxFlex="200px" [(value)]="score">
+                <mat-option *ngFor="let option of scoreOptions" [value]="option.value">
+                    {{ option.viewValue }}
+                </mat-option>
+            </mat-select>
+            <div fxFlex>
+                <textarea [(ngModel)]="notes" rows="1" matInput placeholder="Leave a comment"></textarea>
+            </div>
+            <div>
+                <button mat-stroked-button color="accent" (click)="onSaveUserRelevanceDetails()">Save</button>
+            </div>
+        </div>
+    </div>
+</mat-card>

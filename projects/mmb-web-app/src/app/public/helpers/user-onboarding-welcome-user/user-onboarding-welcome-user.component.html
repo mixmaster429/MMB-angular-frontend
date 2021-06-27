@@ -1,0 +1,21 @@
+<div class="p-relative mmb-background onboarding-welcome-bg d-flex justify-content-center align-items-center h-100vh w-100">
+    <div class="text-dark-100 bg-white border-radius-12 col-lg-3 col-md-6 col-sm-12">
+        <img class="top-n10 left-auto p-absolute z-index-100 top-0" src="assets/images/avatars/avatar-not-found.svg" />
+        <div class="p-5">
+            <div class="text-center">
+                <div class="mt-3 mb-3">Hello {{ userName }}</div>
+                <h5 class="mb-3">Welcome to Movemeback!</h5>
+            </div>
+            <div class="separator m-auto pt-2"></div>
+
+            <div class="text-center my-4 text-dark-300">
+                <div class="mb-3">Thank you for accepting our invitation to join Movemeback! You are just a step away
+                    from gaining full access to Movemeback opportunities, resources and your new community.</div>
+                <div>Please answer a few questions, so that we can customise your experience.</div>
+            </div>
+
+            <button class="mt-3 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm" (click)="onGetStarted()">Get
+                started</button>
+        </div>
+    </div>
+</div>

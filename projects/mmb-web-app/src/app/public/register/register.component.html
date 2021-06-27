@@ -1,0 +1,65 @@
+<div class="mmb-background register-page-bg d-flex justify-content-center align-items-center h-100vh-navbar-adjust w-100">
+    <div class="bg-white border-radius-12 col-lg-3 col-md-6 col-sm-12 p-5">
+        <form name="loginForm" [formGroup]="registerForm">
+            <h3 class="font-size-24 mb-5">Sign up to Movemeback</h3>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <div class="input-group" [ngClass]="{'ng-invalid': errors && errors.email}">
+                            <input type="email" class="form-control border" name="password" formControlName="email">
+                        </div>
+                        <ul class="text-danger text-left pl-3" *ngIf="errors && errors.email">
+                            <li class="list-style--unset" *ngFor="let error of errors.email">{{ error }}</li>
+                        </ul>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-6">
+                                <label for="first_name">First name</label>
+                                <div class="input-group" [ngClass]="{'ng-invalid': errors && errors.first_name}">
+                                    <input type="text" class="form-control border" name="first_name"
+                                        formControlName="first_name">
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <label for="last_name">Last name</label>
+                                <div class="input-group" [ngClass]="{'ng-invalid': errors && errors.last_name}">
+                                    <input type="text" class="form-control border" name="last_name"
+                                        formControlName="last_name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Create Password</label>
+                        <div class="input-group" [ngClass]="{'ng-invalid': errors && errors.password1}">
+                            <input type="password" formControlName="password" class="form-control border"
+                                name="password">
+                        </div>
+                        <ul class="text-danger text-left pl-3" *ngIf="errors && errors.password1">
+                            <li class="list-style--unset" *ngFor="let error of errors.password1">{{ error }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button [disabled]="registerForm.invalid" class="btn border-radius-28 w-100 mt-3 mt-sm-4"
+                        type="submit" (click)="onRegister()">Create account</button>
+                    <div class="my-3 text-center font-size-14">- or -</div>
+                    <div class="mt-4">
+                        <button type="button" (click)="signInWithGoogle()" class="btn w-100 sApp-btn btn-sm">
+                            <img src="assets/logos/google-logo.png" class="w-50px" />
+                            <span>Sign up with Google</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <span class="d-block pt-2 mt-4 text-center font-size-16">By creating a new account, you accept our <br>
+                        <a class="font-size-16 text-primary-500" [routerLink]="'/register'">Terms of Use</a> and <a
+                            class="font-size-16 text-primary-500" [routerLink]="'/register'">Privacy Policy</a>.</span>
+                </div>
+            </div>
+        </form>
+        <p class="form-message"></p>
+    </div>
+</div>

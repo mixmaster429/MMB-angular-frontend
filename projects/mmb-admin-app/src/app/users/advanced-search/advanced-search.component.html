@@ -1,0 +1,19 @@
+<div class="page-layout simple fullwidth">
+    <!-- CONTENT -->
+    <div class="content p-24">
+        <div fxLayout="row" class="px-32 py-16">
+            <!-- Filters -->
+            <div class="p-8" fxFlex="25">
+                <mmb-admin-app-sidebar-filters [separatorKeysCodes]="separatorKeysCodes"></mmb-admin-app-sidebar-filters>
+            </div>
+            <div fxFlex class="p-8">
+                <mat-accordion [multi]="true">
+                    <mmb-admin-app-candidate-details [separatorKeysCodes]="separatorKeysCodes"></mmb-admin-app-candidate-details>
+                    <mmb-admin-app-education-experience-details [separatorKeysCodes]="separatorKeysCodes"></mmb-admin-app-education-experience-details>
+                    <mmb-admin-app-company-details [separatorKeysCodes]="separatorKeysCodes"></mmb-admin-app-company-details>
+                </mat-accordion>
+            </div>
+        </div>
+    </div>
+    <!-- / CONTENT -->
+</div>

@@ -1,0 +1,41 @@
+<div class="col-lg-8 offset-lg-2 py-4" *ngIf="selectedCareerDetails">
+    <mmb-web-app-item-navigation-panel next="/careers/{{selectedCareerDetails.navigation.next}}"
+        previous="/careers/{{selectedCareerDetails.navigation.previous}}" [listPageUrl]="'/careers'"></mmb-web-app-item-navigation-panel>
+    <img class="border-radius-8 mt-4 mx-h-300 w-100 object-fit-cover mb-4" [src]="selectedCareerDetails.cover" onerror="this.src='assets/img/mmb-placeholder.jpg'"/>
+
+    <div class="row">
+        <div class="col-8">
+            <mmb-web-app-career-summary-info [career]="selectedCareerDetails"></mmb-web-app-career-summary-info>
+            <mmb-web-app-career-description-roles [career]="selectedCareerDetails">
+            </mmb-web-app-career-description-roles>
+            <mmb-web-app-career-criteria [career]="selectedCareerDetails"></mmb-web-app-career-criteria>
+            <mmb-web-app-career-benefits [career]="selectedCareerDetails"></mmb-web-app-career-benefits>
+        </div>
+        <div class="col-4">
+            <mmb-web-app-career-posted-by [career]="selectedCareerDetails"></mmb-web-app-career-posted-by>
+            <mmb-web-app-career-type-summary-section [career]="selectedCareerDetails">
+            </mmb-web-app-career-type-summary-section>
+            <mmb-web-app-career-locations-section [career]="selectedCareerDetails">
+            </mmb-web-app-career-locations-section>
+            <mmb-web-app-career-industry-functions-section [career]="selectedCareerDetails">
+            </mmb-web-app-career-industry-functions-section>
+            <mmb-web-app-career-skills-section [career]="selectedCareerDetails"></mmb-web-app-career-skills-section>
+        </div>
+    </div>
+
+    <mmb-web-app-career-details-org-overview [career]="selectedCareerDetails"></mmb-web-app-career-details-org-overview>
+
+    <div class="mb-5">
+        <mmb-web-app-item-navigation-panel [isBackToTopVisible]="true"
+            next="/careers/{{selectedCareerDetails.navigation.next}}"
+            previous="/careers/{{selectedCareerDetails.navigation.previous}}"></mmb-web-app-item-navigation-panel>
+    </div>
+
+</div>
+
+<div class="bg-primary-900" *ngIf="selectedCareerDetails">
+    <div class="col-lg-8 offset-lg-2 py-5">
+        <mmb-web-app-similar-careers [showSimilarCareersButton]="false" [slug]="selectedCareerDetails.slug"></mmb-web-app-similar-careers>
+        <mmb-web-app-suggested-careers [slug]="selectedCareerDetails.slug"></mmb-web-app-suggested-careers>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<div>
+    <div class="mt-n2">
+        <div class="text-center pt-3">
+            <h5 class="mb-1">Profile picture</h5>
+            <div class="text-dark-600 medium">This can also be updated in your profile page</div>
+
+            <div class="p-5">
+                <div class="mmb-drag-drop border border-radius-8 p-4">
+                    <ngx-file-drop accept=".jpeg,.png" [multiple]="false" dropZoneLabel="Drop files here"
+                        (onFileDrop)="dropped($event)">
+                        <ng-template ngx-file-drop-content-tmp let-openFileSelector="openFileSelector">
+                            <div class="p-3">
+                                <button (click)="openFileSelector()"
+                                    class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm">
+                                    Select a new file
+                                </button>
+
+                                <div class="mt-2 text-dark-600 medium" *ngIf="!files || files.length === 0">
+                                    No file selected
+                                </div>
+
+                                <div *ngIf="files && files[0] as file">
+                                    <div class="mt-2 text-success medium" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="12px">
+                                        <i class="ri-profile-line"></i>
+                                        <span>{{ file.relativePath }}</span>
+                                    </div>
+                                </div>
+
+                                <div class="my-4" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="20px">
+                                    <div class="horizontal-separator"></div>
+                                    <div class="medium text-dark-100">or</div>
+                                    <div class="horizontal-separator"></div>
+                                </div>
+
+                                <div class="text-dark-600 medium">Drag & drop your file here</div>
+                            </div>
+                        </ng-template>
+                    </ngx-file-drop>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="px-20">
+        <button class="mt-2 w-100 btn mmb-secondary-light-button btn--sm" (click)="onNext()">
+            I’m looking good
+        </button>
+        <button class="mt-3 w-100 btn mmb-primary-button stroked-button btn--sm" (click)="onBack()">
+            Back
+        </button>
+    </div>
+</div>

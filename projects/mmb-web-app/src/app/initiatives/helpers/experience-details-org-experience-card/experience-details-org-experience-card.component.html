@@ -1,0 +1,21 @@
+<div class="bg-lightest border-radius-8 px-4 py-2 text-dark mb-3">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="mb-2">
+        <h6 class="mb-0">
+            {{ experience.title }}
+        </h6>
+
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="bg-lightest" [ngbTooltip]="'Coming soon'">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <button mat-icon-button class="bg-lightest" *ngIf="!experience.saved">
+                <mat-icon>bookmark_border</mat-icon>
+            </button>
+            <button mat-icon-button class="bg-lightest" *ngIf="experience.saved">
+                <mat-icon class="bg-primary">bookmark</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div [innerHTML]="experience.summary" class="medium"></div>
+</div>

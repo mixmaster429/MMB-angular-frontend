@@ -1,0 +1,33 @@
+<!-- Single Item -->
+<div class="single-blog res-margin mb-2">
+    <img [src]="coverImage" onerror="this.src='assets/img/mmb-placeholder.jpg'"
+        class="h-125px w-100 border-radius--top object-fit-cover" />
+        
+    <!-- Item Content -->
+    <div class="blog-content p-3">
+        <div class="d-flex justify-content-between">
+            <a [routerLink]="url">
+                <img class="mb-2 card-img card-img-top w-60" [src]="image" alt=""
+                    onerror="this.src='assets/img/mmb-placeholder.jpg';">
+            </a>
+
+            <div>
+                <i role="button" (click)="onAddToFavorites()" *ngIf="!isSaved" class="material-icons">star_outline</i>
+                <i role="button" (click)="onRemoveFromFavorites()" *ngIf="isSaved"
+                    class="material-icons text-primary">star</i>
+            </div>
+        </div>
+        <a [routerLink]="url">
+
+            <h6 class="font-weight-strong">{{ title }}</h6>
+            <p class="text-dark">{{ author }}</p>
+            <p class="mt-n2 text-muted">{{ location }}</p>
+
+            <!-- Meta Info -->
+            <ul class="mt-2 pt-2 border-top meta-info d-flex justify-content-between">
+                <li>{{ date | timeago}}</li>
+            </ul>
+        </a>
+
+    </div>
+</div>

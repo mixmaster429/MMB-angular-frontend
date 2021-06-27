@@ -1,0 +1,37 @@
+<div class="p-4 bg-secondary-1000 text-dark-100">
+    <h4>
+        Register for {{ experienceName }}
+    </h4>
+    <div>
+        Please complete the below steps to be redirected to the {{ orgName }} site to register for this event.
+    </div>
+</div>
+<div class="modal-body">
+    <form [formGroup]="externalApplyForm" class="px-4 pt-4">
+        <h6 class="mmb-perm-title mb-3 text-transform-inherit">What would you like to do next?</h6>
+
+        <div class="form-check mb-2" *ngFor="let option of options; let i = index">
+            <input class="form-check-input outline-none" type="radio" id="intent{{i}}" [value]="option.value"
+                formControlName="intent">
+            <label class="form-check-label pl-2" for="intent{{i}}">{{ option.viewValue }}</label>
+        </div>
+
+        <div class="my-5">
+            <div class="mb-3">
+                <span class="mmb-perm-title text-transform-inherit">Is there anything else you need?</span>
+                <span class="ml-1 small text-dark-600">(optional)</span>
+            </div>
+
+            <div class="mt-3">
+                <textarea placeholder="Start a message ..." formControlName="yourRequests"
+                    class="form-control shadow-none border"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn mmb-primary-button stroked-button btn--sm"
+        (click)="modal.dismiss()">Cancel</button>
+    <button type="button" class="btn mmb-primary-button btn--sm" [disabled]="externalApplyForm.invalid"
+        (click)="onContinue()">Submit</button>
+</div>

@@ -1,0 +1,31 @@
+<div class="py-8 px-16" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px">
+    <div fxLayoutAlign="center center">
+        <div class="w-50">
+            <img class="avatar avatar-lg" onerror="this.src='assets/images/avatars/avatar-placeholder.webp';"
+                [src]="item.user.profile_image">
+        </div>
+        <div class="pl-12">
+            <div>{{ item.user.first_name }} {{ item.user.last_name }}</div>
+            <div class="secondary-text">
+                <span>{{ item.user.professional_title }}</span>
+            </div>
+            <div class="secondary-text" *ngIf="item.stage && getStageName(item.stage).viewValue as stageName"
+                matTooltip="The person is in {{ stageName}} stage">
+                {{ stageName }}
+            </div>
+            <div class="secondary-text" *ngIf="!item.stage" matTooltip="The person is in pending stage">
+                Pending
+            </div>
+        </div>
+    </div>
+    <div fxLayout="column">
+        <a matTooltip="Linkedin" mat-icon-button color="primary" [href]="item.user.linkedin" target="_blank">
+            <i class="ri-linkedin-fill ri-lg"></i>
+        </a>
+
+        <a *ngIf="!isInterestedTabActive" matTooltip="Download portfolio" mat-icon-button color="primary"
+            [href]="item.portfolio" target="_blank">
+            <i class="ri-file-download-line ri-lg"></i>
+        </a>
+    </div>
+</div>

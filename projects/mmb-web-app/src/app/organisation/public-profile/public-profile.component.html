@@ -1,0 +1,38 @@
+<div class="col-lg-8 offset-lg-2 pt-4" *ngIf="organisationDetails">
+    <div class="medium" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="2px" class="mb-3">
+        <div class="text-secondary-300" ngbTooltip="Coming soon">Organisations</div>
+        <i class="material-icons font-size-12">keyboard_arrow_right</i>
+        <span>{{ organisationDetails.name }}</span>
+    </div>
+
+    <img class="border-radius-8 mx-h-300 w-100 object-fit-cover mb-3" [src]="organisationDetails.cover"
+        onerror="this.src='assets/img/mmb-placeholder.jpg'" />
+
+    <div class="mb-3">
+        <mmb-web-app-organisation-summary-panel [organisation]="organisationDetails" (follow)="onFollowOrganisation()" (unfollow)="onUnfollowOrganisation()">
+        </mmb-web-app-organisation-summary-panel>
+        <!-- <mmb-web-app-organisation-meta-info-panel [organisation]="organisationDetails">
+        </mmb-web-app-organisation-meta-info-panel> -->
+    </div>
+
+    <div class="mb-3">
+        <mmb-web-app-organisation-about-info-panel [organisation]="organisationDetails">
+        </mmb-web-app-organisation-about-info-panel>
+    </div>
+
+    <!-- <div class="mb-3">
+        <mmb-web-app-organisation-culture-info-panel [organisation]="organisationDetails">
+        </mmb-web-app-organisation-culture-info-panel>
+    </div> -->
+
+    <div class="mb-3">
+        <mmb-web-app-organisation-item-selector-panel (selectedTabUpdated)="onSelectedItemUpdated($event)">
+        </mmb-web-app-organisation-item-selector-panel>
+    </div>
+
+    <div class="mb-5" *ngIf="organisationDetails">
+        <mmb-web-app-organisation-careers [organisation]="organisationDetails" *ngIf="selectedView === 0"></mmb-web-app-organisation-careers>
+        <mmb-web-app-organisation-events [organisation]="organisationDetails" *ngIf="selectedView === 1"></mmb-web-app-organisation-events>
+        <mmb-web-app-organisation-experiences [organisation]="organisationDetails" *ngIf="selectedView === 2"></mmb-web-app-organisation-experiences>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<section class="section breadcrumb-area breadcrumb-area--auto bg-overlay overflow-hidden ptb_50">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <!-- Work Content -->
+                <div class="work-content text-center">
+                    <h3 class="text-white pt-5">{{ title }}</h3>
+                    <div class="text-white my-3 mt-sm-4">
+                        <div class="subscribe-form d-flex align-items-center">
+                            <input [(ngModel)]="searchInput" type="text" class="form-control" [placeholder]="searchPlaceholder">
+                            <button type="submit" class="btn btn-bordered" (click)="onSearchClicked()">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

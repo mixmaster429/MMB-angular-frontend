@@ -1,0 +1,227 @@
+<div class="mt-4 bg-btn-secondary-500 p-5 mmb-stepper-small" [formGroup]="form">
+    <div class="text-center py-3">
+        <div class="mb-3 text-dark-300 text-uppercase">Map of you</div>
+        <h5 class="mt-3 mb-2">Your World</h5>
+    </div>
+    <div class="p-3 bg-white border-radius-12 mmb-perm-border" *ngIf="activeStep === 1">
+        <div class="mmb-perm-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="column">
+                <h6 class="font-size-18">What's your current location?</h6>
+                <div class="text-dark-300 font-size-14">Match with people and opportunities near you</div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" *ngIf="activeStep <= 3">
+                <ng-container *ngFor="let i of [1,2,3]">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="step-number-small"
+                        [ngClass]="{'step-number-small--active': i === activeStep, 'step-number-small--done': i < activeStep }">
+                        <div *ngIf="i >= activeStep">{{ i }}</div>
+                        <i class="ri-check-line text-white" *ngIf="i < activeStep"></i>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="my-5" fxLayout="row" fxLayoutAlign="space-between end" fxLayoutGap="20px">
+            <div class="w-100">
+                <div class="mb-2">Country</div>
+                <div class="input-group input-group--secondary bg-white border border-radius-8">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <img src="assets/images/icon-grey-search.svg">
+                        </span>
+                    </div>
+                    <input class="form-control mmb-text-input mmb-text-input--sm" type="text" formControlName="country"
+                        [ngbTypeahead]="currentCountriesSearch" [resultFormatter]="resultFormatCountryValue"
+                        [inputFormatter]="inputFormatCountryValue" placeholder="Search country">
+                </div>
+            </div>
+            <div class="w-100">
+                <div class="mb-2">City</div>
+                <div class="input-group input-group--secondary bg-white border border-radius-8"
+                    [ngClass]="{'input-group--disabled': form.controls['country'].invalid}">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <img src="assets/images/icon-grey-search.svg">
+                        </span>
+                    </div>
+                    <input class="form-control mmb-text-input mmb-text-input--sm" [ngbTypeahead]="currentCitiesSearch"
+                        [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                        placeholder="Search city" formControlName="city" type="text">
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayoutGap="15px" fxLayoutAlign="start center">
+                <i class="ri-question-line font-size-20 text-secondary-300"></i>
+                <div fxFlex="70" class="font-size-12">
+                    This data is protected and used internally to improve your experience and connection within the MMB
+                    community.</div>
+            </div>
+            <div fxFlex="15">
+                <button fxLayoutAlign="center center"
+                    class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+                    (click)="onNextLocationStep()">
+                    Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="p-3 bg-white border-radius-12 mmb-perm-border" *ngIf="activeStep === 2">
+        <div class="mmb-perm-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="column">
+                <h6 class="font-size-18">What countries do you associate with?</h6>
+                <div class="text-dark-300 font-size-14">Feel at home and ensure you hear about opportunities
+                    specifically for nationals or those with heritage</div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" *ngIf="activeStep <= 3">
+                <ng-container *ngFor="let i of [1,2,3]">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="step-number-small"
+                        [ngClass]="{'step-number-small--active': i === activeStep, 'step-number-small--done': i < activeStep }">
+                        <div *ngIf="i >= activeStep">{{ i }}</div>
+                        <i class="ri-check-line text-white" *ngIf="i < activeStep"></i>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <div *ngFor="let supportItem of userConnectionItems; let i = index" class="my-4" fxLayout="row"
+            fxLayoutAlign="space-between end" fxLayoutGap="16px">
+            <div fxLayout="column">
+                <div class="mb-2">Country</div>
+                <div class="input-group input-group--secondary bg-white border border-radius-8" fxFlex="50">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <img src="assets/images/icon-grey-search.svg">
+                        </span>
+                    </div>
+                    <input class="form-control mmb-text-input mmb-text-input--sm" type="text" formControlName="country"
+                        [ngbTypeahead]="currentCountriesSearch" [resultFormatter]="resultFormatCountryValue"
+                        [inputFormatter]="inputFormatCountryValue" placeholder="Search country">
+                </div>
+            </div>
+            <div fxFlex="40">
+                <div class="mb-2">Connection</div>
+                <div class="input-group input-group--secondary bg-white border border-radius-8"
+                    [ngClass]="{'input-group--disabled': form.controls['country'].invalid}">
+                    <select class="form-control border shadow-none mmb-select" placeholder="Select option"
+                        formControlName="connection">
+                        <option>National</option>
+                        <option>Heritage</option>
+                    </select>
+                </div>
+            </div>
+            <button *ngIf="i < userConnectionItems.length - 1" class="btn mmb-secondary-light-button btn--sm"
+                (click)="onRemoveConnectionItem(i, userConnectionItems)">
+                Clear
+            </button>
+            <button *ngIf="i === userConnectionItems.length - 1" (click)="onAddConnectionItem(userConnectionItems)"
+                class="btn mmb-secondary-light-button btn--sm mmb-secondary-light-button--dark"
+                [ngClass]="{'btn--disabled': i === MAX_ALLOWED_ROWS - 1}">
+                Add
+            </button>
+        </div>
+        <hr />
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayoutGap="15px" fxLayoutAlign="start center">
+                <i class="ri-question-line font-size-20 text-secondary-300"></i>
+                <div fxFlex="70" class="font-size-12">
+                    This data is protected and used internally to improve your experience and connection within the MMB
+                    community.</div>
+            </div>
+            <div fxFlex="15">
+                <button fxLayoutAlign="center center"
+                    class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+                    (click)="onBackLocationStep()">
+                    Previous</button>
+                <button fxLayoutAlign="center center"
+                    class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+                    (click)="onNextLocationStep()">
+                    Next</button>
+            </div>
+        </div>
+    </div>
+    <div class="p-3 bg-white border-radius-12 mmb-perm-border" *ngIf="activeStep === 3">
+        <div class="mmb-perm-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="column">
+                <h6 class="font-size-18">What other countries / regions are you interested in any why?</h6>
+                <div class="text-dark-300 font-size-14">Get the most relevant opportunities based on your interest</div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" *ngIf="activeStep <= 3">
+                <ng-container *ngFor="let i of [1,2,3]">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="step-number-small"
+                        [ngClass]="{'step-number-small--active': i === activeStep, 'step-number-small--done': i < activeStep }">
+                        <div *ngIf="i >= activeStep">{{ i }}</div>
+                        <i class="ri-check-line text-white" *ngIf="i < activeStep"></i>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <div *ngFor="let supportItem of userExperienceItems; let i = index" class="my-4" fxLayout="row"
+            fxLayoutAlign="space-between end" fxLayoutGap="16px">
+            <div fxLayout="column">
+                <div class="mb-2">Country</div>
+                <div class="input-group input-group--secondary bg-white border border-radius-8" fxFlex="50">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <img src="assets/images/icon-grey-search.svg">
+                        </span>
+                    </div>
+                    <input class="form-control mmb-text-input mmb-text-input--sm" type="text" formControlName="country"
+                        [ngbTypeahead]="currentCountriesSearch" [resultFormatter]="resultFormatCountryValue"
+                        [inputFormatter]="inputFormatCountryValue" placeholder="Search country">
+                </div>
+            </div>
+            <div fxFlex="40">
+                <div class="mb-2">Experience</div>
+                <div class="input-group input-group--secondary bg-white border border-radius-8"
+                    [ngClass]="{'input-group--disabled': form.controls['country'].invalid}">
+                    <select class="form-control border shadow-none mmb-select" placeholder="Select option"
+                        formControlName="experience">
+                        <option>I lived there!</option>
+                        <option>Work Right</option>
+                        <option>Just curious</option>
+                        <option>I worked there</option>
+                    </select>
+                </div>
+            </div>
+            <button *ngIf="i < userExperienceItems.length - 1" class="btn mmb-secondary-light-button btn--sm"
+                (click)="onRemoveExperienceItem(i, userExperienceItems)">
+                Clear
+            </button>
+            <button *ngIf="i === userExperienceItems.length - 1" (click)="onAddExperienceItem(userExperienceItems)"
+                class="btn mmb-secondary-light-button btn--sm mmb-secondary-light-button--dark"
+                [ngClass]="{'btn--disabled': i === MAX_ALLOWED_ROWS - 1}">
+                Add
+            </button>
+        </div>
+        <hr />
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayoutGap="15px" fxLayoutAlign="start center">
+                <i class="ri-question-line font-size-20 text-secondary-300"></i>
+                <div fxFlex="70" class="font-size-12">
+                    This data is protected and used internally to improve your experience and connection within the MMB
+                    community.</div>
+            </div>
+            <div fxFlex="15">
+                <button fxLayoutAlign="center center"
+                    class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+                    (click)="onBackLocationStep()">
+                    Previous</button>
+                <button fxLayoutAlign="center center"
+                    class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+                    (click)="onNextLocationStep()">
+                    Next</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="px-20">
+    <button (click)="onNextStep()"
+        class="mt-2 w-100 btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm">
+        Next
+    </button>
+    <button (click)="onBackStep()" class="mt-3 w-100 btn mmb-secondary-light-button btn--sm">
+        Back
+    </button>
+</div>

@@ -1,0 +1,16 @@
+.comment-wrapper {
+  max-height: 1050px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: $spacer * 2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-600;
+    border-radius: $spacer * 2;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: $spacer * 2;
+  }
+}

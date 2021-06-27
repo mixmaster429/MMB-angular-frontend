@@ -1,0 +1,11 @@
+<div fxLayout="row" fxLayoutAlign="start center" *ngIf="user">
+    <img fxFlex class="avatar w-72 h-72" [alt]="user.name" [src]="user.avatar"
+    onerror="this.src='assets/images/avatars/profile.jpg';"/>
+    <div class="px-8 py-4" fxFlex>
+        <div class="h2" data-role="button">{{ user.name }} </div>
+        <div class="mat-caption secondary-text">{{ user.professionalTitle }}</div>
+        <div class="mat-caption secondary-text">
+            <span *ngIf="user.currentLocation">{{ user.currentLocation }}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+<mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            <div class="secondary-text">Education & Experience</div>
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div fxLayout="row wrap" fxFlexFill fxLayoutGap="10px grid">
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #yearsOfExperiencesChipList aria-label="Years of experience selection">
+                <mat-chip *ngFor="let yearsOfExperience of yearsOfExperiences" (removed)="remove(yearsOfExperience, 'yearsOfExperiences')">
+                    {{ yearsOfExperience }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Years of Experience" [matChipInputFor]="yearsOfExperiencesChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'yearsOfExperiences')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #fieldsOfStudyChipList aria-label="Fields of study selection">
+                <mat-chip *ngFor="let fieldOfStudy of fieldsOfStudy" (removed)="remove(fieldOfStudy, 'fieldsOfStudy')">
+                    {{ fieldOfStudy }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Fields of Study" [matChipInputFor]="fieldsOfStudyChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'fieldsOfStudy')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #yearsInCurrentCompanyChipList aria-label="Years in current company">
+                <mat-chip *ngFor="let yearInCurrentCompany of yearsInCurrentCompany" (removed)="remove(yearInCurrentCompany, 'yearsInCurrentCompany')">
+                    {{ yearInCurrentCompany }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Years in current company" [matChipInputFor]="yearsInCurrentCompanyChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'yearsInCurrentCompany')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #degreesChipList aria-label="Degrees">
+                <mat-chip *ngFor="let degree of degrees" (removed)="remove(degree, 'degrees')">
+                    {{ degree }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Degrees" [matChipInputFor]="degreesChipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                    [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event, 'degrees')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #yearsInCurrentPositionChipList aria-label="Years in current position">
+                <mat-chip *ngFor="let yearInCurrentPosition of yearsInCurrentPosition" (removed)="remove(yearInCurrentPosition, 'yearsInCurrentPosition')">
+                    {{ yearInCurrentPosition }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Years in current position" [matChipInputFor]="yearsInCurrentPositionChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'yearsInCurrentPosition')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #senioritiesChipList aria-label="Seniority">
+                <mat-chip *ngFor="let seniority of seniorities" (removed)="remove(seniority, 'seniorities')">
+                    {{ seniority }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Seniority" [matChipInputFor]="senioritiesChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'seniorities')">
+            </mat-chip-list>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50">
+            <mat-chip-list #militaryVeteransChipList aria-label="Military Veterans">
+                <mat-chip *ngFor="let militaryVeteran of militaryVeterans" (removed)="remove(militaryVeteran, 'militaryVeterans')">
+                    {{ militaryVeteran }}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="+ Military Veterans" [matChipInputFor]="militaryVeteransChipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                    (matChipInputTokenEnd)="add($event, 'militaryVeterans')">
+            </mat-chip-list>
+        </mat-form-field>
+    </div>
+</mat-expansion-panel>

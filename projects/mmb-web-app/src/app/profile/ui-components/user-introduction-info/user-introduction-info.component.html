@@ -1,0 +1,18 @@
+<div class="widget" *ngIf="user">
+    <div class="media p-3 p-lg-4 single-accordion">
+        <div class="avatar-lg">
+            <mmb-web-app-image-upload [isEditMode]="isEditMode" [id]="'user-intro-image-avatar'" [user]="user"></mmb-web-app-image-upload>
+        </div>
+        <div class="media-body pl-3">
+            <h4 class="text-darker">{{ user?.first_name }} {{ user?.last_name }}</h4>
+            <div>{{ user?.credentials?.professional_title }}</div>
+            <div> {{ user?.details?.city_signup }} {{ user?.details?.country_signup }}</div>
+        </div>
+        <div *ngIf="isEditMode">
+            <button type="button" class="btn btn-outline-primary icon-button text-primary"
+                (click)="onProfileInfoEdit()">
+                <i class="material-icons">edit</i>
+            </button>
+        </div>
+    </div>
+</div>

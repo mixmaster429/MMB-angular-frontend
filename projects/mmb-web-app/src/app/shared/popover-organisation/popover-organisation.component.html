@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="20px">
+    <img class="rounded-circle border object-fit-contain img-lg cursor-pointer" [src]="orgImage" alt=""
+        onerror="this.src='assets/img/mmb-placeholder.jpg';" (click)="onRedirect(orgHandle)"/>
+
+        <button class="btn sApp-btn btn-sm mt-2" *ngIf="!userOrgMapper" (click)="onFollowOrganisation()">Follow</button>
+        <button class="btn sApp-btn btn-sm mt-2" *ngIf="userOrgMapper" (click)="onUnfollowOrganisation()">Unfollow</button>
+</div>
+<h5 class="pt-3 pb-2 cursor-pointer" (click)="onRedirect(orgHandle)">{{name}}</h5>
+
+<div [innerHTML]="summary"></div>

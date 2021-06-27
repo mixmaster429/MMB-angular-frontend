@@ -1,0 +1,631 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "mmb-web-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/mmb-web-app",
+      "sourceRoot": "projects/mmb-web-app/src",
+      "prefix": "mmb-web-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mmb-web-app",
+            "index": "projects/mmb-web-app/src/index.html",
+            "main": "projects/mmb-web-app/src/main.ts",
+            "polyfills": "projects/mmb-web-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-web-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/mmb-web-app/src/favicon.ico",
+              "projects/mmb-web-app/src/assets",
+              "projects/mmb-web-app/src/robots.txt"
+            ],
+            "styles": [
+              "themes/mmb-web-v1-theme/main.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/medium-editor/dist/js/medium-editor.js",
+              "node_modules/jquery-sortable/source/js/jquery-sortable-min.js",
+              "node_modules/blueimp-file-upload/js/vendor/jquery.ui.widget.js",
+              "node_modules/blueimp-file-upload/js/jquery.iframe-transport.js",
+              "node_modules/blueimp-file-upload/js/jquery.fileupload.js",
+              "node_modules/medium-editor-insert-plugin/dist/js/medium-editor-insert-plugin.min.js",
+              "node_modules/medium-editor-tables/dist/js/medium-editor-tables.js",
+              "node_modules/medium-editor-multi-placeholders-plugin/dist/medium-editor-multi-placeholders-plugin.min.js",
+              "node_modules/intro.js/intro.js"
+            ]
+          },
+          "configurations": {
+            "en": {
+              "aot": true,
+              "outputPath": "dist/mmb-web-app/",
+              "i18nFile": "projects/mmb-web-app/src/locale/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
+            },
+            "staging": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mmb-web-app/src/environments/environment.ts",
+                  "with": "projects/mmb-web-app/src/environments/environment.staging.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mmb-web-app/src/environments/environment.ts",
+                  "with": "projects/mmb-web-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mmb-web-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mmb-web-app:build:production"
+            },
+            "en": {
+              "browserTarget": "mmb-web-app:build:en"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mmb-web-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mmb-web-app/src/test.ts",
+            "polyfills": "projects/mmb-web-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-web-app/tsconfig.spec.json",
+            "karmaConfig": "projects/mmb-web-app/karma.conf.js",
+            "assets": [
+              "projects/mmb-web-app/src/favicon.ico",
+              "projects/mmb-web-app/src/assets",
+              "projects/mmb-web-app/src/robots.txt"
+            ],
+            "styles": ["projects/mmb-web-app/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mmb-web-app/tsconfig.app.json",
+              "projects/mmb-web-app/tsconfig.spec.json",
+              "projects/mmb-web-app/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/mmb-web-app/e2e/protractor.conf.js",
+            "devServerTarget": "mmb-web-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mmb-web-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "mmb-admin-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/mmb-admin-app",
+      "sourceRoot": "projects/mmb-admin-app/src",
+      "prefix": "mmb-admin-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mmb-admin-app",
+            "index": "projects/mmb-admin-app/src/index.html",
+            "main": "projects/mmb-admin-app/src/main.ts",
+            "polyfills": "projects/mmb-admin-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-admin-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/mmb-admin-app/src/favicon.ico",
+              "projects/mmb-admin-app/src/assets",
+              "projects/mmb-admin-app/src/robots.txt"
+            ],
+            "styles": [
+              "themes/mmb-admin-theme/main.scss",
+              "projects/mmb-admin-app/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mmb-admin-app/src/environments/environment.ts",
+                  "with": "projects/mmb-admin-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mmb-admin-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mmb-admin-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mmb-admin-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mmb-admin-app/src/test.ts",
+            "polyfills": "projects/mmb-admin-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-admin-app/tsconfig.spec.json",
+            "karmaConfig": "projects/mmb-admin-app/karma.conf.js",
+            "assets": [
+              "projects/mmb-admin-app/src/favicon.ico",
+              "projects/mmb-admin-app/src/assets"
+            ],
+            "styles": ["projects/mmb-admin-app/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mmb-admin-app/tsconfig.app.json",
+              "projects/mmb-admin-app/tsconfig.spec.json",
+              "projects/mmb-admin-app/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/mmb-admin-app/e2e/protractor.conf.js",
+            "devServerTarget": "mmb-admin-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mmb-admin-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "mmb-org-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/mmb-org-app",
+      "sourceRoot": "projects/mmb-org-app/src",
+      "prefix": "mmb-org-app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mmb-org-app",
+            "index": "projects/mmb-org-app/src/index.html",
+            "main": "projects/mmb-org-app/src/main.ts",
+            "polyfills": "projects/mmb-org-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-org-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/mmb-org-app/src/favicon.ico",
+              "projects/mmb-org-app/src/assets",
+              "projects/mmb-org-app/src/robots.txt",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/"
+              }
+            ],
+            "styles": [
+              "themes/mmb-org-theme/main.scss",
+              "projects/mmb-org-app/src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mmb-org-app/src/environments/environment.ts",
+                  "with": "projects/mmb-org-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            },
+            "release": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mmb-org-app/src/environments/environment.ts",
+                  "with": "projects/mmb-org-app/src/environments/environment.release.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mmb-org-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mmb-org-app:build:production"
+            },
+            "release": {
+              "browserTarget": "mmb-org-app:build:release"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mmb-org-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mmb-org-app/src/test.ts",
+            "polyfills": "projects/mmb-org-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-org-app/tsconfig.spec.json",
+            "karmaConfig": "projects/mmb-org-app/karma.conf.js",
+            "assets": ["projects/mmb-org-app/src/favicon.ico", "projects/mmb-org-app/src/assets"],
+            "styles": ["projects/mmb-org-app/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mmb-org-app/tsconfig.app.json",
+              "projects/mmb-org-app/tsconfig.spec.json",
+              "projects/mmb-org-app/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/mmb-org-app/e2e/protractor.conf.js",
+            "devServerTarget": "mmb-org-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mmb-org-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "mmb-styleguide-app": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/mmb-styleguide-app",
+      "sourceRoot": "projects/mmb-styleguide-app/src",
+      "prefix": "mmb-styleguide",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mmb-styleguide-app",
+            "index": "projects/mmb-styleguide-app/src/index.html",
+            "main": "projects/mmb-styleguide-app/src/main.ts",
+            "polyfills": "projects/mmb-styleguide-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-styleguide-app/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/mmb-styleguide-app/src/favicon.ico",
+              "projects/mmb-styleguide-app/src/assets"
+            ],
+            "styles": [
+              "themes/material-bootstrap/main.scss",
+              "node_modules/ngx-toastr/toastr.css",
+              "projects/mmb-styleguide-app/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mmb-styleguide-app/src/environments/environment.ts",
+                  "with": "projects/mmb-styleguide-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mmb-styleguide-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mmb-styleguide-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mmb-styleguide-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mmb-styleguide-app/src/test.ts",
+            "polyfills": "projects/mmb-styleguide-app/src/polyfills.ts",
+            "tsConfig": "projects/mmb-styleguide-app/tsconfig.spec.json",
+            "karmaConfig": "projects/mmb-styleguide-app/karma.conf.js",
+            "assets": [
+              "projects/mmb-styleguide-app/src/favicon.ico",
+              "projects/mmb-styleguide-app/src/assets"
+            ],
+            "styles": ["projects/mmb-styleguide-app/src/styles.scss"],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mmb-styleguide-app/tsconfig.app.json",
+              "projects/mmb-styleguide-app/tsconfig.spec.json",
+              "projects/mmb-styleguide-app/e2e/tsconfig.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/mmb-styleguide-app/e2e/protractor.conf.js",
+            "devServerTarget": "mmb-styleguide-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mmb-styleguide-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "mmb-ui-components": {
+      "projectType": "library",
+      "root": "projects/mmb-ui-components",
+      "sourceRoot": "projects/mmb-ui-components/src",
+      "prefix": "mmb-ui",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mmb-ui-components/tsconfig.lib.json",
+            "project": "projects/mmb-ui-components/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mmb-ui-components/src/test.ts",
+            "tsConfig": "projects/mmb-ui-components/tsconfig.spec.json",
+            "karmaConfig": "projects/mmb-ui-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mmb-ui-components/tsconfig.lib.json",
+              "projects/mmb-ui-components/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
+    "mmb-universal": {
+      "projectType": "library",
+      "root": "projects/mmb-universal",
+      "sourceRoot": "projects/mmb-universal/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mmb-universal/tsconfig.lib.json",
+            "project": "projects/mmb-universal/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mmb-universal/src/test.ts",
+            "tsConfig": "projects/mmb-universal/tsconfig.spec.json",
+            "karmaConfig": "projects/mmb-universal/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mmb-universal/tsconfig.lib.json",
+              "projects/mmb-universal/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "mmb-web-app"
+}

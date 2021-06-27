@@ -1,0 +1,14 @@
+<div class="bg-light" fxHide.lt-md>
+    <div class="offset-lg-2 col-lg-8 py-4 px-5">
+        <div class="border border-rounded border-muted p-2" fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="space-between center">
+            <div fxShow fxHide.lt-md fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="20px">
+                <div [attr.data-type]="item.class" class="py-1 px-2 filter-item" *ngFor="let item of menuItems" [ngClass]="{'mmb-tab-active': activeItem === item.viewValue }">
+                    <a (click)="onOpportunityClick(item)" class="cursor-pointer">{{ item.viewValue }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<select class="form-control border mb-4 shadow-none mmb-select" fxHide.gt-sm>
+    <option *ngFor="let option of menuItems" [value]="option">{{ option }}</option>
+</select>

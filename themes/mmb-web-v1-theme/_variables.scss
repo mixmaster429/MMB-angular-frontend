@@ -1,0 +1,68 @@
+$small: 375px;
+$medium: 768px;
+$large: 992px;
+$xlarge: 1200px;
+$widescreen: 1400px;
+
+$min: min-width;
+$max: max-width;
+
+@font-face {
+  font-family: 'HelveticaNeue-Bold';
+  src: url(themes/mmb-web-v1-theme/fonts/FreeSansBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Medium';
+  src: url(themes/mmb-web-v1-theme/fonts/PragmaticaMedium.otf);
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Light';
+  src: url(themes/mmb-web-v1-theme/fonts/Nimbus-Sans-D-OT-Light_32752.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Opensans';
+  src: url(themes/mmb-web-v1-theme/fonts/OpenSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Opensans-Semibold';
+  src: url(themes/mmb-web-v1-theme/fonts/OpenSans-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SFProText-Medium';
+  src: url(themes/mmb-web-v1-theme/fonts/FontsFree-Net-SFProText-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SFProText-Regular';
+  src: url(themes/mmb-web-v1-theme/fonts/FontsFree-Net-SFProText-Regular.ttf) format('truetype');
+}
+
+$primary-brand-legacy-brand: #3498db;
+$primary-brand-contrast-section: #293b61;
+$page-text-grey: #666666;
+$page-text-page-background: #f3f4f6;
+$page-text-white: #ffffff;
+$buttons-secondary: #e8f1ff;
+$buttons-disabled: #ebebeb;
+$notification-affirmative: #40a434;
+$notification-attention: #f97f15;
+$notification-error: #e42323;
+$opportunity-co-founder: #ca2e55;
+$opportunity-partnership: #003f91;
+$opportunity-expert-advise: #f8971d;
+$opportunity-mentor: #833fff;
+$opportunity-connection: #0197f6;
+$opportunity-investment: #34ba92;
+$opportunity-volunteer: #cd44db;
+$opportunity-other: #b9beca;
+$buttons-primary: #106fff;
+$opportunity-other: #b9beca;
+$grey-bg-light-eb: #ebebeb;
+$white-bg-fff: #ffffff;
+$white-bg-fff: #ffffff;
+$text-black: #111111;

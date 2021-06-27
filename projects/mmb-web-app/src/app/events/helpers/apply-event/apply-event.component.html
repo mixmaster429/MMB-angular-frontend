@@ -1,0 +1,20 @@
+<mmb-web-app-interaction-tools [reactions]="selectedEventDetails.reactions_summary?.total"
+    [reacted]="selectedEventDetails.reacted" [isReactionsEnabled]="true" (commentAdded)="onCommentAdded($event)"
+    [comments]="selectedEventDetails.comments" (reactionUpdated)="onReactionUpdated($event)">
+</mmb-web-app-interaction-tools>
+
+<div class="mt-2">
+    <button
+    *ngIf="!selectedEventDetails.applied && !selectedEventDetails.applied_external && !selectedEventDetails.interested.interested"
+    type="button" class="btn sApp-btn btn-sm mb-3" (click)="onExpressInterest()">I'm Interested!</button>
+<button type="button" class="btn btn-sm mb-3 border-radius" (click)="onRemoveInterest()" ngbTooltip="Expressed Interest {{ selectedEventDetails.interested.created | timeago }}"
+    *ngIf="selectedEventDetails.interested.interested && !selectedEventDetails.applied && !selectedEventDetails.applied_external">
+    Expressed Interest
+</button>
+    <a *ngIf="!isExternal(selectedEventDetails.listing_type)" type="button" class="btn sApp-btn btn-sm mb-3 ml-2">
+        <img src="assets/logos/mmb-logo.png" class="logo-icon" />
+        Easy Apply
+    </a>
+    <a *ngIf="isExternal(selectedEventDetails.listing_type)" type="button" class="btn sApp-btn btn-sm mb-3 ml-2"
+        (click)="onExternalApply()">Apply</a>
+</div>

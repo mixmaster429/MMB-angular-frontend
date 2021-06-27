@@ -1,0 +1,15 @@
+<div class="p-3" *ngIf="feed.organisation as user">
+    <mmb-web-app-user-summary-info [image]="user.logo" [name]="user.name"
+        [createdOnDate]="feed.created" [popoverSummary]="user.summary" [id]="user.id" [orgUrl]="user.handle">
+    </mmb-web-app-user-summary-info>
+</div>
+<mmb-web-app-feed-card url="/careers/{{feed.slug}}" [image]="feed.cover"
+    [icon]="'fas fa-briefcase'" [author]="feed.organisation.name" [date]="feed.created"
+    [title]="feed.title" [heading]="feed.owner_title" [summary]="feed.summary">
+</mmb-web-app-feed-card>
+
+<mmb-web-app-interaction-tools [reactions]="feed.reactions_summary?.total"
+    [reacted]="feed.reacted" [isReactionsEnabled]="true" [comments]="feed.comments"
+    (reactionUpdated)="onCareerReactionUpdated(feed, $event)"
+    (commentAdded)="onCareerCommentAdded(feed, $event)">
+</mmb-web-app-interaction-tools>

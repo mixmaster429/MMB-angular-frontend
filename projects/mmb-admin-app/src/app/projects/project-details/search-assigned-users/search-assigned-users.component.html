@@ -1,0 +1,10 @@
+<div class="ml-sm-32 w-100-p" fxLayout="row" fxLayoutAlign="center center" >
+    <div class="search-wrapper mt-16 mt-sm-0">
+        <form [formGroup]="userForm" class="w-100-p">
+            <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon>search</mat-icon>
+                <input [formControl]="searchInput" placeholder="Search for a user" formControlName="searchInput">
+            </div>
+        </form>
+    </div>
+</div>

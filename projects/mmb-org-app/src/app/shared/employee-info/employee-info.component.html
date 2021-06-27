@@ -1,0 +1,33 @@
+<form [formGroup]="form" class="pt-16">
+    <div fxLayout="column">
+        <div class="mt-16 secondary-text mb-8">Leave a rating</div>
+        <div>
+            <mmb-org-app-employee-rating-control (valueChanged)="setValue($event)">
+            </mmb-org-app-employee-rating-control>
+        </div>
+        <div class="pt-16" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="40px" *ngIf="showTextarea">
+            <mat-form-field fxFlex class="w-100-p" appearance="outline">
+                <textarea matInput placeholder="Feedback private" formControlName="feedbackPrivate"></textarea>
+            </mat-form-field>
+        </div>
+
+        <div class="pb-20" fxLayoutAlign="end center" *ngIf="showTextarea">
+            <button mat-flat-button color="accent" (click)="postFeedback()" [disabled]="!form.valid">Leave
+                feedback
+            </button>
+        </div>
+
+        <div class="mt-24">
+            <div class="secondary-text mb-4">Employee Status</div>
+
+            <div *ngIf="selectedApplication?.status_employee && getStatus(selectedApplication?.status_employee) as feedbackStatus">
+                {{ feedbackStatus[0]?.viewValue }}</div>
+        </div>
+    </div>
+    <div class="mt-16" *ngIf="feedbacks && feedbacks.length > 0">
+        <div class="py-16 mb-8 border-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="h2">Feedback history</div>
+        </div>
+        <mmb-org-app-feedbacks [feedbacks]="feedbacks"></mmb-org-app-feedbacks>
+    </div>
+</form>

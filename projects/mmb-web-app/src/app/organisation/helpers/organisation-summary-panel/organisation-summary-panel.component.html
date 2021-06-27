@@ -1,0 +1,51 @@
+<div class="bg-white border-radius--top p-4">
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="24px">
+        <div>
+            <img class="avatar border" [src]="organisation.logo_small"
+                onerror="this.src='assets/img/mmb-placeholder.jpg'" />
+        </div>
+        <div class="w-100">
+            <h4 class="font-family-bold text-dark-100">{{ organisation.name }}</h4>
+            <div fxLayout="row" fxLayoutAlign="space-between start">
+                <div>
+                    <div fxLayout="row" fxLayoutGap="30px">
+                        <div fxLayout="column" class="mmb-perm-line" fxLayoutGap="10px">
+                            <div class="font-family-light medium text-dark-200 " fxLayout="row"
+                                fxLayoutAlign="start center" fxLayoutGap="8px">
+                                <i class="material-icons">place</i>
+                                <span>{{ organisation.city.name }},</span>
+                                <span>{{ organisation.country.name }}</span>
+                            </div>
+                            <div class="font-family-light medium text-dark-200 mb-2 " fxLayout="row"
+                                fxLayoutAlign="start center" fxLayoutGap="8px">
+                                <i class="material-icons">work_outline</i>
+                                <span>{{ organisation.industry.industry_primary }}, {{ getOrgCategory(organisation.category)[0].viewValue }}</span>
+                            </div>
+                        </div>
+                        <div fxLayout="column" fxLayoutGap="10px">
+                            <div class="font-family-light medium text-dark-200" fxLayout="row"
+                                fxLayoutAlign="start center" fxLayoutGap="8px">
+                                <i class="material-icons">library_books</i>
+                                <span>Type: {{ getOrgPrimaryType(organisation.type_primary)[0].viewValue }} </span>
+                            </div>
+                            <a [href]="organisation.website_url" target="_blank">
+                            <div class="font-family-light medium text-primary mb-2" fxLayout="row"
+                                fxLayoutAlign="start center" fxLayoutGap="8px">
+                                <i class="material-icons">exit_to_app</i>
+                                <span>{{ organisation.website_url }}</span>
+                            </div>
+                        </a>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button class="btn btn--sm mmb-secondary-light-button mr-3" disabled
+                            [ngbTooltip]="'Coming soon'">Share profile</button>
+                        <button class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm mr-3" *ngIf="!organisation.followed" (click)="onFollow()">Follow</button>
+                        <button class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm mr-3" *ngIf="organisation.followed"(click)="onUnfollow()">Unfollow</button>
+                        <span class="medium pr-5">{{ organisation.followers_total }} followers</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

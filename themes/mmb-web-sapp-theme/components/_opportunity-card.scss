@@ -1,0 +1,51 @@
+$types: ("co-founder": $co-founder, "connection": $connection, "expert-advice": $expert-advice, "investment": $investment, 
+    "mentor": $mentor, "partnership": $partnership, "volunteer": $volunteer, "other": $other);
+
+@mixin opportunity-card-hover($color) {
+    border: 2px solid $color;
+    transform: translateY(-5px);
+    transition: transform 0.6s;
+    @extend .shadow-md;
+}
+
+@each $type, $color in $types {
+    .#{$type} {
+        background-color: #{$color};
+    }
+    
+    [data-type="#{$type}"].opportunity-type-card {
+        height: 200px;
+        .card-selector {
+            opacity: 0;
+        }
+
+        &.opportunity-card--active {
+            background-color: #{$color} !important;
+            color: $white;
+
+            .category-icon {
+                background-color: #{$color} !important;
+            }
+
+            .card-selector {
+                opacity: 1;
+                filter: brightness(120%);
+            }
+        }
+        
+        &:hover {
+            @include opportunity-card-hover(#{$color});
+    
+            .card-selector {
+                opacity: 1;
+                filter: brightness(110%);
+            }
+        }
+    }
+}
+
+.card-item {
+    &:hover {
+        @include opportunity-card-hover('transparent');
+    }
+}

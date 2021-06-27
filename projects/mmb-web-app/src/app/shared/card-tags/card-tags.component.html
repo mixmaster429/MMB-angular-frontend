@@ -1,0 +1,6 @@
+<span class="primary text-white text-uppercase py-1 px-4 small my-4 border-rounded" [attr.data-type]="bgClass" class="filter-item mmb-tab-active">
+    <span *ngFor="let item of items; let i=index">
+        <span>{{ item }}</span>
+        <span *ngIf="items.length > 1 && i < items.length - 1 "> . </span>
+    </span>
+</span>

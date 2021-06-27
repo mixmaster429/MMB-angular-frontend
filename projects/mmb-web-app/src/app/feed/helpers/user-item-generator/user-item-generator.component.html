@@ -1,0 +1,23 @@
+<div class="shadow-sm bg-white border text-dark">
+    <div class="px-4 py-3" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <div (click)="onCreatePost()" class="btn btn-light text-left px-0 py-2 w-100" fxLayout="row" fxLayoutAlign="start center"  fxLayoutGap="10px">
+            <i class="material-icons">edit</i>
+            <h5 class="text-dark">Write a Post</h5>
+        </div>
+    </div>
+    <hr class="m-0"/>
+    <div class="px-4 py-3" fxLayout="row" fxLayoutAlign="space-between">
+        <div (click)="onCreateOpportunity()" class="btn btn-light text-left px-0 py-2" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <i class="material-icons text-info">assignment</i>
+            <span>Create opportunity</span>
+        </div>
+        <div (click)="onCreateQuestion()" class="btn btn-light text-left px-0 py-2" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <i class="material-icons text-success">question_answer</i>
+            <span>Ask question</span>
+        </div>
+        <a class="btn btn-light text-left px-0 py-2" [routerLink]="'create-article'" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <i class="material-icons text-danger">article</i>
+            <span>Write article</span>
+        </a>
+    </div>
+</div>

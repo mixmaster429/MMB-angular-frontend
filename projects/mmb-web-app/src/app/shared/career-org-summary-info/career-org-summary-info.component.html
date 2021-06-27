@@ -1,0 +1,40 @@
+<div class="mt-2">
+    <div class="media" fxLayout="row" fxLayoutAlign="center start">
+        <div class="admin-content media-body pl-2 pt-1">
+            <div class="mb-0 small text-dark cursor-pointer" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px"
+                routerLink="/organisation/profile/{{ careerOrg.slug }}">
+                <i class="material-icons">business</i>
+                <span>{{ name }}</span>
+            </div>
+            <div class="mb-0 small text-dark" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons">location_on</i>
+                <span>{{ location }}</span>
+            </div>
+            <!-- <div class="small text-muted" *ngIf="location" fxLayout="row" fxLayoutAlign="start center">
+                <i class="material-icons icon--sm">location_on</i>
+                <span>{{ location }}</span>
+            </div> -->
+        </div>
+        <div ngbDropdown>
+            <i *ngIf="!isSaved" class="material-icons text-dark cursor-pointer"
+                (click)="onBookmark($event)">bookmark_border</i>
+
+            <i *ngIf="isSaved" class="material-icons cursor-pointer text-primary-500"
+                (click)="onRemoveBookmark($event)">bookmark</i>
+
+            <i [ngbTooltip]="'Coming soon'" class="material-icons dropdown-toggle--hide text-dark ml-2"
+                id="moreActions" ngbDropdownToggle>more_vert</i>
+
+            <!-- <div ngbDropdownMenu aria-labelledby="moreActions">
+                <button ngbDropdownItem>Save</button>
+                <button ngbDropdownItem>Share</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<ng-template #organisationPopover>
+    <mmb-web-app-popover-organisation *ngIf="!isUser" [id]="id" [name]="name" [orgImage]="image"
+        [summary]="popoverSummary" [orgHandle]="orgUrl">
+    </mmb-web-app-popover-organisation>
+</ng-template>

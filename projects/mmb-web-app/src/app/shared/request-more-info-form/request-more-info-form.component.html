@@ -1,0 +1,65 @@
+<form class="px-5 text-dark font-weight-bold card" [formGroup]="newRequestInfoForm">
+  <h3 class="mt-5 mb-5" i18n="Companies Movemeback form title|Form title for companies movemeback@@companiesMovemebackFormTitle">Request More Information</h3>
+  <div class="row">
+    <div class="form-group col-lg-6">
+      <label i18n="Companies Movemeback form first name|Form first name for companies movemeback@@companiesMovemebackFormFirstName">Fist name</label>
+      <input type="text" formControlName="firstName" class="form-control" placeholder="First name" i18n-placeholder="Companies Movemeback form first name placeholder|Form first name placeholder for companies movemeback@@companiesMovemebackFormFirstNamePlaceholder">
+    </div>
+
+    <div class="form-group col-lg-6">
+      <label i18n="Companies Movemeback form last name|Form last name for companies movemeback@@companiesMovemebackFormLastName">Last name</label>
+      <input type="text" formControlName="lastName" class="form-control" placeholder="Last name" i18n-placeholder="Companies Movemeback form last name placeholder|Form last name for companies movemeback@@companiesMovemebackFormLastNamePlaceholder">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form role title|Form role title for companies movemeback@@companiesMovemebackFormRoleTitle">Role Title</label>
+    <input type="text" formControlName="roleTitle" class="form-control" placeholder="Role Title" i18n-placeholder="Companies Movemeback form role title placeholder|Form role title for companies movemeback@@companiesMovemebackFormRoleTitlePlaceholder">
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form email|Form email for companies movemeback@@companiesMovemebackFormEmail">Email</label>
+    <input type="email" formControlName="email" class="form-control" placeholder="Email" i18n-placeholder="Companies Movemeback form email placeholder|Form email for companies movemeback@@companiesMovemebackFormEmailPlaceholder">
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form phone|Form phone for companies movemeback@@companiesMovemebackFormPhone">Phone</label>
+    <input type="tel" formControlName="phone" class="form-control" placeholder="Phone" i18n-placeholder="Companies Movemeback form phone placeholder|Form phone for companies movemeback@@companiesMovemebackFormPhonePlaceholder">
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form organisation name|Form organisation name for companies movemeback@@companiesMovemebackFormOrganisationName">Organisation Name</label>
+    <input type="text" formControlName="organisationName" class="form-control" placeholder="Organisation Name" i18n-placeholder="Companies Movemeback form organisation name placeholder|Form organisation name for companies movemeback@@companiesMovemebackFormOrganisationNamePlaceholder">
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form location|Form location for companies movemeback@@companiesMovemebackFormLocation">Location</label>
+    <select formControlName="location" class="custom-select custom-select-sm">
+      <option [value]="country.value" *ngFor="let country of countries$ | async">{{ country.name }}</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form query type|Form query type for companies movemeback@@companiesMovemebackFormQueryType">Query Type</label>
+    <select formControlName="queryType" class="custom-select custom-select-sm">
+      <option value="1" i18n="Companies Movemeback form recruiting|Form recruiting for companies movemeback@@companiesMovemebackFormRecruiting">Recruiting & Careers</option>
+      <option value="2" i18n="Companies Movemeback form projects|Form projects for companies movemeback@@companiesMovemebackFormProjects">Projects & Initiatives</option>
+      <option value="3" i18n="Companies Movemeback form collaborations|Form collaborations for companies movemeback@@companiesMovemebackFormCollaborations">Collaborations</option>
+      <option value="4" i18n="Companies Movemeback form events|Form events for companies movemeback@@companiesMovemebackFormEvents">Events</option>
+      <option value="5" i18n="Companies Movemeback form media|Form media for companies movemeback@@companiesMovemebackFormMedia">Media & Content</option>
+      <option value="6" i18n="Companies Movemeback form community|Form community for companies movemeback@@companiesMovemebackFormCommunity">Community</option>
+      <option value="7" i18n="Companies Movemeback form investment|Form investment for companies movemeback@@companiesMovemebackFormInvestment">Investment & Fundraising</option>
+      <option value="8" i18n="Companies Movemeback form consulting|Form consulting for companies movemeback@@companiesMovemebackFormConsulting">Consulting / Support Services</option>
+      <option value="9" i18n="Companies Movemeback form individual services|Form individual services for companies movemeback@@companiesMovemebackFormIndividualServices">Individual Services</option>
+      <option value="10" i18n="Companies Movemeback form partnerships|Form partnerships for companies movemeback@@companiesMovemebackFormPartnerships">Partnerships</option>
+      <option value="11" i18n="Companies Movemeback form other|Form other for companies movemeback@@companiesMovemebackFormOther">Other / Various</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label i18n="Companies Movemeback form additional details|Form additional details for companies movemeback@@companiesMovemebackFormAdditionalDetails">Additional Details</label>
+    <textarea type="text" formControlName="additionalDetails" class="form-control" placeholder="Additional Details" i18n-placeholder="Companies Movemeback form additional details placeholder|Form additional details for companies movemeback@@companiesMovemebackFormRoleAdditionalDetailsPlaceholder"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-secondary w-100 rounded-pill font-weight-bold mb-4" (click)="sendFormData()">Submit</button>
+</form>

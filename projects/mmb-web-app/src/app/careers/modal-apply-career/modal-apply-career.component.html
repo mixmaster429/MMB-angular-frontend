@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title d-flex">
+        <span>Apply for Job</span>
+    </h4>
+    <div>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+            (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+        <button type="button" class="close opacity-1" aria-label="Save button" aria-describedby="modal-title" placement="bottom"
+            ngbTooltip="Save for later">
+            <i class="material-icons icon-font-sm text-primary">save</i>
+        </button>
+    </div>
+</div>
+<mmb-web-app-apply (applicationSubmitted)="onApplicationSubmitted($event)" *ngIf="selectedCareerDetails" [selectedCareerDetails]="selectedCareerDetails"></mmb-web-app-apply>

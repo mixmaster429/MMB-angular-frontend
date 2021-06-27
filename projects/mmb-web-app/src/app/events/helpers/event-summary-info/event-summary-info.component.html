@@ -1,0 +1,35 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-3">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="text-dark-600 mb-4">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+                <i class="material-icons">location_on</i>
+                <span class="medium">{{ event.location_summary }}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+                <i class="material-icons">calendar_today</i>
+                <span class="medium">{{ event.deadline_date | date }}</span>
+            </div>
+            <div>
+                <span class="medium">Posted {{ event.created | timeago }}</span>
+            </div>
+        </div>
+        <div class="text-dark" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">more_vert</i>
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">share</i>
+            <i *ngIf="!event.saved" class="material-icons cursor-pointer" (click)="onAddToFavorites(event)">bookmark_border</i>
+            <i *ngIf="event.saved" class="material-icons text-primary cursor-pointer" (click)="onRemoveFromFavorites(event)">bookmark</i>
+        </div>
+    </div>
+    <h4 class="text-dark-100">{{ event.title }}</h4>
+    <div [innerHTML]="event.summary" class="pr-4 mt-2"></div>
+    <div class="mt-4">
+        <button *ngIf="!event.applied_external" class="btn mmb-primary-button bg-black btn--sm" (click)="onRegister()">
+            <span>Register</span>
+        </button>
+
+        <div class="text-success" *ngIf="event.applied_external" fxLayout="row" fxLayoutAlign="sart center" fxLayoutGap="8px">
+            <i class="material-icons">check</i>
+            <span>Applied externally</span>
+        </div>
+    </div>
+</div>

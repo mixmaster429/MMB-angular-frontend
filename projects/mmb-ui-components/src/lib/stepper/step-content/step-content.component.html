@@ -1,0 +1,25 @@
+<div>
+    <div class="apply-modal-container-body">
+        <ng-content *ngIf="template then template"></ng-content>
+    </div>
+    <hr />
+    <div class="d-flex">
+        <div class="ml-auto d-flex">
+            <button type="button" class="btn btn-primary sApp-btn btn-sm mx-2 d-flex" *ngIf="currentStep > 1"
+                (click)="onPrev()">
+                <i class="material-icons">keyboard_arrow_left</i>
+                <span class="align-self-center">Prev</span>
+            </button>
+            <button type="button" class="btn btn-primary sApp-btn btn-sm d-flex" *ngIf="currentStep < totalSteps"
+                (click)="onNext()">
+                <span class="align-self-center">Next</span>
+                <i class="material-icons">keyboard_arrow_right</i>
+            </button>
+            <button type="button" class="btn btn-primary sApp-btn btn-sm d-flex" *ngIf="currentStep === totalSteps"
+                (click)="onConfirm()">
+                <span class="align-self-center">Confirm</span>
+                <i class="material-icons">check</i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="mb-5">
+    <h5 class="mmb-perm-title mb-4 text-white">Suggested Experiences</h5>
+
+    <div class="my-4" ngClass.lt-md="mx-0">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 px-2" *ngFor="let experience of experiences | async | slice:0:3">
+                <mmb-web-app-experience-card [experience]="experience">
+                </mmb-web-app-experience-card>
+            </div>
+        </div>
+    </div>
+</div>

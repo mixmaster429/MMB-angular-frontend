@@ -1,0 +1,65 @@
+<!-- Feed view -->
+<div [ngClass]="{'p-2': title, 'px-2 pt-4': !title}" *ngIf="!isDetailsView && type !== 'opportunity'">
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <div class="h-180">
+            <div fxLayout="row" fxLayoutAlign="space-between" *ngIf="title">
+                <h5 *ngIf="type !== 'opportunity'">
+                    <span class="text-dark small">{{ title | truncate: 60 }}</span>
+                </h5>
+            </div>
+            <div [ngClass]="{'my-2': title}">
+                <img class="mb-2" [src]="coverImage" *ngIf="coverImage">
+                <div class="mb-0" *ngIf="summary" [innerHTML]="summary | truncate: 230"></div>
+                <div *ngIf="!summary">
+                    <p class="mb-3" *ngIf="description" [innerHTML]="description"></p>
+                    <p *ngIf="!description">-- No description provided --</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" *ngIf="authorProfessionalTitle">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+            <div fxFlex="150px" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons">work_outline</i>
+                <span class="small mh-24" [ngbTooltip]="authorProfessionalTitle">{{ authorProfessionalTitle }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Opportunity view -->
+<div [ngClass]="{'p-2': title, 'px-2 pt-4': !title}" *ngIf="!isDetailsView && type === 'opportunity'">
+    <div fxLayout="row" fxLayoutAlign="start start">
+        <div>
+            <div fxLayout="row" fxLayoutAlign="space-between" *ngIf="title" class="h-55">
+                <h5>
+                    <span class="text-dark small">{{ title | truncate: 60 }}</span>
+                </h5>
+            </div>
+            <div class="px-1 text-dark-300 h-80">
+                <div class="mb-1 small" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                    <i class="material-icons">location_on</i>
+                    <span>{{ getLocation }}</span>
+                </div>
+                <div class="mb-1 small" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" *ngIf="endDate && getTimeLeft() as timeLeft">
+                    <i class="material-icons">timer</i>
+                    <span *ngIf="timeLeft > 0">{{ timeLeft }} days left</span>
+                </div>
+                <div class="mb-1 small" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                    <i class="material-icons">chat_bubble_outline</i>
+                    <span>{{ totalComments || 0 }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" *ngIf="authorProfessionalTitle">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+            <div fxFlex="150px" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons">work_outline</i>
+                <span class="small mh-24" [ngbTooltip]="authorProfessionalTitle">{{ authorProfessionalTitle }}</span>
+            </div>
+        </div>
+    </div>
+</div>

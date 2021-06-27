@@ -1,0 +1,102 @@
+@mixin at-query($constraint, $viewport1, $viewport2: null) {
+  @if $constraint == $min {
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+  } @else if $constraint == $max {
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+  } @else {
+    @media screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  }
+}
+
+@mixin bluetriangle() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid $buttons-primary;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+@mixin bluetriangle-up() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 7px solid $buttons-primary;
+  position: absolute;
+  left: unset;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+@mixin bluetriangle-down() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid $text-black;
+  position: absolute;
+  left: unset;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+@mixin whitetriangle() {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid $page-text-white;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+@mixin sectiondescription() {
+  font-family: Opensans-Semibold;
+  font-size: 18px;
+
+  @include at-query($max, $xlarge) {
+    font-size: 16px;
+  }
+
+  @include at-query($max, $medium) {
+    font-family: Opensans;
+    font-size: 14px;
+  }
+}
+
+@mixin sectionsubtitle() {
+  font-family: HelveticaNeue-Light;
+  font-size: 24px;
+
+  @include at-query($max, $xlarge) {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  @include at-query($max, $medium) {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}

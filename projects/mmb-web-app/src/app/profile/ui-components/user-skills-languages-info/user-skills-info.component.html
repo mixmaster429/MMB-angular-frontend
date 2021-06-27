@@ -1,0 +1,41 @@
+<div class="my-2 widget">
+    <div class="single-accordion">
+        <h5 class="row justify-content-between px-1 collapse show border-bottom">
+            <div class="text-uppercase d-block p-3" data-toggle="collapse" role="button"
+                i18n="Skills title|Title for skills in user's profile page@@userProfileSkillsTitle">Skills</div>
+            <button *ngIf="isEditMode" type="button" class="btn btn-outline-primary icon-button text-primary mx-3">
+                <i class="material-icons" (click)="onSkillAdd()">add</i>
+            </button>
+        </h5>
+        <div class="d-flex flex-wrap">
+        <div class="collapse show p-2 justify-content-between" *ngFor="let skill of skills">
+            <span class="badge badge-pill badge-primary p-2 d-flex align-items-center link--pointer" (click)="onSkillEdit(skill)">{{ skill.skill.name }}
+            </span>
+        </div>
+        <div class="p-3" *ngIf="skills && skills.length === 0">
+            No skills added yet
+        </div>
+    </div>
+    </div>
+</div>
+        <div class="my-2 widget">
+            <div class="single-accordion">
+        <h5 class="row justify-content-between px-1 collapse show border-bottom">
+            <div class="text-uppercase d-block p-3" data-toggle="collapse" role="button"
+                i18n="Languages title|Title for languages in user's profile page@@userProfileLanguagesTitle">Languages</div>
+            <button *ngIf="isEditMode" type="button" class="btn btn-outline-primary icon-button text-primary mx-3">
+                <i class="material-icons" (click)="onLanguageAdd()">add</i>
+            </button>
+        </h5>
+
+        <div class="d-flex flex-wrap">
+            <div class="collapse show p-2 justify-content-between" *ngFor="let language of languages">
+                <span class="badge badge-pill badge-primary p-2 d-flex align-items-center link--pointer" (click)="onLanguageEdit(language)">{{ language.language.name }}
+                </span>
+            </div>
+            <div class="p-3" *ngIf="languages && languages.length === 0">
+                No languages added yet
+            </div>
+        </div>
+    </div>
+</div>

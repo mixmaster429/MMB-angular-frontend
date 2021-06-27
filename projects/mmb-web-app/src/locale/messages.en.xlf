@@ -1,0 +1,2150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template" target-language="en">
+    <body>
+      <trans-unit id="navbarHomeLink" datatype="html">
+        <source>Home</source><target state="final">Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Home Link</note>
+      </trans-unit>
+      <trans-unit id="navbarCareersLink" datatype="html">
+        <source>Careers</source><target state="final">Careers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Careers Link</note>
+      </trans-unit>
+      <trans-unit id="navbarAllCareersLink" datatype="html">
+        <source>All
+                        Careers</source><target state="final">All
+                        Careers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Navbar All Careers Link</note>
+      </trans-unit>
+      <trans-unit id="navbarCareersByOrganisationLink" datatype="html">
+        <source>Careers
+                        by Organisation</source><target state="final">Careers
+                        by Organisation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Careers by Organisation Link</note>
+      </trans-unit>
+      <trans-unit id="navbarCareersByLocationLink" datatype="html">
+        <source>Careers
+                        by Location</source><target state="final">Careers
+                        by Location</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Careers by Location Link</note>
+      </trans-unit>
+      <trans-unit id="navbarCollaborationsLink" datatype="html">
+        <source>Collaborations</source><target state="final">Collaborations</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Collaborations Link</note>
+      </trans-unit>
+      <trans-unit id="navbarInitiativesLink" datatype="html">
+        <source>Initiatives</source><target state="final">Initiatives</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Initiatives Link</note>
+      </trans-unit>
+      <trans-unit id="navbarEventsLink" datatype="html">
+        <source>Events</source><target state="final">Events</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Events Link</note>
+      </trans-unit>
+      <trans-unit id="navbarMediaLink" datatype="html">
+        <source>Media</source><target state="final">Media</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Events Link</note>
+      </trans-unit>
+      <trans-unit id="navbarCommunityLink" datatype="html">
+        <source>Community</source><target state="final">Community</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Community Link</note>
+      </trans-unit>
+      <trans-unit id="navbarExperiencesLink" datatype="html">
+        <source>Experiences</source><target state="final">Experiences</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Experiences Link</note>
+      </trans-unit>
+      <trans-unit id="navbarInsightsLink" datatype="html">
+        <source>Insights</source><target state="final">Insights</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Insights Link</note>
+      </trans-unit>
+      <trans-unit id="navbarAdviceLink" datatype="html">
+        <source>Advice &amp; Guides</source><target state="final">Advice &amp; Guides</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Advice Link</note>
+      </trans-unit>
+      <trans-unit id="navbarReferLink" datatype="html">
+        <source>Refer Others</source><target state="final">Refer Others</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Refer Link</note>
+      </trans-unit>
+      <trans-unit id="navbarMyMovemebackLink" datatype="html">
+        <source>My Movemeback</source><target state="final">My Movemeback</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">Navbar MyMovemeback Link</note>
+      </trans-unit>
+      <trans-unit id="navbarMyProfileLink" datatype="html">
+        <source>My Profile</source><target state="final">My Profile</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <note priority="1" from="description">Navbar MyProfile Link</note>
+      </trans-unit>
+      <trans-unit id="navbarMyCareersLink" datatype="html">
+        <source>My Careers</source><target state="final">My Careers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Navbar MyCareers Link</note>
+      </trans-unit>
+      <trans-unit id="navbarMyEventsLink" datatype="html">
+        <source>My Events</source><target state="final">My Events</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Navbar MyEvents Link</note>
+      </trans-unit>
+      <trans-unit id="navbarContactsLink" datatype="html">
+        <source>Contacts &amp;
+                        Requests</source><target state="final">Contacts &amp;
+                        Requests</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Contacts Link</note>
+      </trans-unit>
+      <trans-unit id="navbarAboutLink" datatype="html">
+        <source>About</source><target state="final">About</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Navbar About Link</note>
+      </trans-unit>
+      <trans-unit id="navbarAboutUsLink" datatype="html">
+        <source>About
+                        Us</source><target state="final">About
+                        Us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <note priority="1" from="description">Navbar AboutUs Link</note>
+      </trans-unit>
+      <trans-unit id="navbarPartnerLink" datatype="html">
+        <source>Partner &amp; Friends</source><target state="final">Partner &amp; Friends</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Partner Link</note>
+      </trans-unit>
+      <trans-unit id="navbarCompaniesLink" datatype="html">
+        <source>Companies/Recruiters</source><target state="final">Companies/Recruiters</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Companies Link</note>
+      </trans-unit>
+      <trans-unit id="navbarSocialiseLink" datatype="html">
+        <source>Socialise</source><target state="final">Socialise</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Socialise Link</note>
+      </trans-unit>
+      <trans-unit id="navbarHowitworksLink" datatype="html">
+        <source>How it works</source><target state="final">How it works</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Howitworks Link</note>
+      </trans-unit>
+      <trans-unit id="navbarFaqsLink" datatype="html">
+        <source>Faqs</source><target state="final">Faqs</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Navbar Faqs Link</note>
+      </trans-unit>
+      <trans-unit id="navbarLogoutLink" datatype="html">
+        <source>
+                        Logout
+                    </source><target state="final">
+                        Logout
+                    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/navigation/navigation.component.html</context>
+          <context context-type="linenumber">83</context>
+        </context-group>
+        <note priority="1" from="description">Navbar My Profile Link</note>
+      </trans-unit>
+      <trans-unit id="seniorityLevelJuniorTitle" datatype="html">
+        <source>J</source><target state="final">J</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../mmb-ui-components/src/lib/badge-seniority-level/badge-seniority-level.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title for Junior in seniory level badge component</note>
+        <note priority="1" from="meaning">Seniory level component Junior title</note>
+      </trans-unit>
+      <trans-unit id="seniorityLevelMediorTitle" datatype="html">
+        <source>M</source><target state="final">M</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../mmb-ui-components/src/lib/badge-seniority-level/badge-seniority-level.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Title for Medior in seniory level badge component</note>
+        <note priority="1" from="meaning">Seniory level component Medior title</note>
+      </trans-unit>
+      <trans-unit id="seniorityLevelSeniorTitle" datatype="html">
+        <source>S</source><target state="final">S</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../mmb-ui-components/src/lib/badge-seniority-level/badge-seniority-level.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title for Senior in seniory level badge component</note>
+        <note priority="1" from="meaning">Seniory level component Senior title</note>
+      </trans-unit>
+      <trans-unit id="seniorityLevelExecutiveTitle" datatype="html">
+        <source>E</source><target state="final">E</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../mmb-ui-components/src/lib/badge-seniority-level/badge-seniority-level.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <note priority="1" from="description">Title for Executive in seniory level badge component</note>
+        <note priority="1" from="meaning">Seniory level component Executive title</note>
+      </trans-unit>
+      <trans-unit id="readMoreTitleSummaryDetailsPage" datatype="html">
+        <source>
+        Read more...
+    </source><target state="final">
+        Read more...
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/summary-details/summary-details.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Title for read more in summary details</note>
+        <note priority="1" from="meaning">Summary details component Read more title</note>
+      </trans-unit>
+      <trans-unit id="readLessTitleSummaryDetailsPage" datatype="html">
+        <source>
+        Read less...
+    </source><target state="final">
+        Read less...
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/summary-details/summary-details.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">Title for read less in summary details</note>
+        <note priority="1" from="meaning">Summary details component Read less title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormTitle" datatype="html">
+        <source>Request More Information</source><target state="final">Request More Information</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Form title for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormFirstName" datatype="html">
+        <source>Fist name</source><target state="final">Fist name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Form first name for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form first name</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormFirstNamePlaceholder" datatype="html">
+        <source>First name</source><target state="final">First name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Form first name placeholder for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form first name placeholder</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormLastName" datatype="html">
+        <source>Last name</source><target state="final">Last name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Form last name for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form last name</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormLastNamePlaceholder" datatype="html">
+        <source>Last name</source><target state="final">Last name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <note priority="1" from="description">Form last name for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form last name placeholder</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormRoleTitle" datatype="html">
+        <source>Role Title</source><target state="final">Role Title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Form role title for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form role title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormRoleTitlePlaceholder" datatype="html">
+        <source>Role Title</source><target state="final">Role Title</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Form role title for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form role title placeholder</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormEmail" datatype="html">
+        <source>Email</source><target state="final">Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Form email for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form email</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormEmailPlaceholder" datatype="html">
+        <source>Email</source><target state="final">Email</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Form email for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form email placeholder</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormPhone" datatype="html">
+        <source>Phone</source><target state="final">Phone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Form phone for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form phone</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormPhonePlaceholder" datatype="html">
+        <source>Phone</source><target state="final">Phone</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Form phone for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form phone placeholder</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormOrganisationName" datatype="html">
+        <source>Organisation Name</source><target state="final">Organisation Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Form organisation name for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form organisation name</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormOrganisationNamePlaceholder" datatype="html">
+        <source>Organisation Name</source><target state="final">Organisation Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Form organisation name for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form organisation name placeholder</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormLocation" datatype="html">
+        <source>Location</source><target state="final">Location</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+        <note priority="1" from="description">Form location for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form location</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormQueryType" datatype="html">
+        <source>Query Type</source><target state="final">Query Type</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+        <note priority="1" from="description">Form query type for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form query type</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormRecruiting" datatype="html">
+        <source>Recruiting &amp; Careers</source><target state="final">Recruiting &amp; Careers</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Form recruiting for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form recruiting</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormProjects" datatype="html">
+        <source>Projects &amp; Initiatives</source><target state="final">Projects &amp; Initiatives</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Form projects for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form projects</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormCollaborations" datatype="html">
+        <source>Collaborations</source><target state="final">Collaborations</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Form collaborations for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form collaborations</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormEvents" datatype="html">
+        <source>Events</source><target state="final">Events</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <note priority="1" from="description">Form events for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form events</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormMedia" datatype="html">
+        <source>Media &amp; Content</source><target state="final">Media &amp; Content</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <note priority="1" from="description">Form media for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form media</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormCommunity" datatype="html">
+        <source>Community</source><target state="final">Community</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">Form community for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form community</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormInvestment" datatype="html">
+        <source>Investment &amp; Fundraising</source><target state="final">Investment &amp; Fundraising</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Form investment for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form investment</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormConsulting" datatype="html">
+        <source>Consulting / Support Services</source><target state="final">Consulting / Support Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Form consulting for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form consulting</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormIndividualServices" datatype="html">
+        <source>Individual Services</source><target state="final">Individual Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Form individual services for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form individual services</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormPartnerships" datatype="html">
+        <source>Partnerships</source><target state="final">Partnerships</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Form partnerships for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form partnerships</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormOther" datatype="html">
+        <source>Other / Various</source><target state="final">Other / Various</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">Form other for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form other</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormAdditionalDetails" datatype="html">
+        <source>Additional Details</source><target state="final">Additional Details</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <note priority="1" from="description">Form additional details for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form additional details</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFormRoleAdditionalDetailsPlaceholder" datatype="html">
+        <source>Additional Details</source><target state="final">Additional Details</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/request-more-info-form/request-more-info-form.component.html</context>
+          <context context-type="linenumber">61</context>
+        </context-group>
+        <note priority="1" from="description">Form additional details for companies movemeback</note>
+        <note priority="1" from="meaning">Companies Movemeback form additional details placeholder</note>
+      </trans-unit>
+      
+      
+      
+      
+      <trans-unit id="upvoteButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+            Upvote</source><target state="final">
+            Upvote</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <note priority="1" from="description">Label for Upvote in collaborations</note>
+        <note priority="1" from="meaning">Upvote button label</note>
+      </trans-unit>
+      <trans-unit id="downvoteButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+            Downvote</source><target state="final">
+            Downvote</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Label for Downvote in collaborations</note>
+        <note priority="1" from="meaning">Downvote button label</note>
+      </trans-unit>
+      <trans-unit id="commentButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+            Comment</source><target state="final">
+            Comment</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Label for Comment in collaborations</note>
+        <note priority="1" from="meaning">Comment button label</note>
+      </trans-unit>
+      <trans-unit id="answerButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+            Answer</source><target state="final">
+            Answer</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Label for answer in collaborations</note>
+        <note priority="1" from="meaning">Answer button label</note>
+      </trans-unit>
+      <trans-unit id="followButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+            Follow</source><target state="final">
+            Follow</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Label for follow in collaborations</note>
+        <note priority="1" from="meaning">Follow button label</note>
+      </trans-unit>
+      <trans-unit id="privateResponseButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+            Private Response</source><target state="final">
+            Private Response</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <note priority="1" from="description">Label for Private response in collaborations</note>
+        <note priority="1" from="meaning">Private response button label</note>
+      </trans-unit>
+      <trans-unit id="submitButtonCollaborationsDetailsPage" datatype="html">
+        <source>
+        Submit
+    </source><target state="final">
+        Submit
+    </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/interaction-tools/tools-panel/tools-panel.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <note priority="1" from="description">Button for submit in collaborations</note>
+        <note priority="1" from="meaning">Submit button label</note>
+      </trans-unit>
+      <trans-unit id="firstResponderTitleCollaborationsPage" datatype="html">
+        <source>Be the first to respond to this</source><target state="final">Be the first to respond to this</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/shared/placeholder-no-responses/placeholder-no-responses.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Label for first responder in collaborations</note>
+        <note priority="1" from="meaning">Be the first to respond label</note>
+      </trans-unit>
+      
+      
+      
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source><target state="final">Close</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/alert/alert.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source><target state="final">Previous</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source><target state="final">Next</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/carousel/carousel.d.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source><target state="final">Previous month</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source><target state="final">Next month</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation.d.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source><target state="final">Select month</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source><target state="final">Select year</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/datepicker/datepicker-navigation-select.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source><target state="final">««</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source><target state="final">«</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source><target state="final">»</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source><target state="final">»»</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source><target state="final">First</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source><target state="final">Previous</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context><context context-type="linenumber">24</context></context-group></trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source><target state="final">Next</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context><context context-type="linenumber">44</context></context-group></trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source><target state="final">Last</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/pagination/pagination.d.ts</context><context context-type="linenumber">53</context></context-group></trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</source><target state="final"><x id="INTERPOLATION" equiv-text="{{getPercentValue()}}"/>%</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/progressbar/progressbar.d.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source><target state="final">Increment hours</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source><target state="final">HH</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">13</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source><target state="final">Hours</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">15</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source><target state="final">Decrement hours</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">23</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source><target state="final">Increment minutes</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">32</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source><target state="final">MM</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">35</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source><target state="final">Minutes</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">37</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source><target state="final">Decrement minutes</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">45</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source><target state="final">Increment seconds</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">54</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source><target state="final">SS</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">57</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source><target state="final">Seconds</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">59</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source><target state="final">Decrement seconds</target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">67</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getAfternoonPeriod() }}"/></source><target state="final"><x id="INTERPOLATION" equiv-text="{{ i18n.getAfternoonPeriod() }}"/></target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">75</context></context-group></trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="{{ i18n.getMorningPeriod() }}"/></source><target state="final"><x id="INTERPOLATION" equiv-text="{{ i18n.getMorningPeriod() }}"/></target>
+        
+      <context-group purpose="location"><context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/timepicker/timepicker.d.ts</context><context context-type="linenumber">76</context></context-group></trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source><target state="final">Close</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">../../node_modules/@ng-bootstrap/ng-bootstrap/toast/toast.d.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="careersAllInlineLoaderText" datatype="html">
+        <source>More exciting African opportunities will be with you in just a second...</source><target state="final">More exciting African opportunities will be with you in just a second...</target>
+        
+        
+        
+        
+        
+        
+        
+        <note priority="1" from="description">Title for career all inline loader text</note>
+        <note priority="1" from="meaning">Careers all inline loader text</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/all/all.component.html</context><context context-type="linenumber">36</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/organisation/helpers/organisation-careers/organisation-careers.component.html</context><context context-type="linenumber">16</context></context-group></trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <trans-unit id="applyCareerDocsStepTitle" datatype="html">
+        <source>CV &amp; Cover Letter</source><target state="final">CV &amp; Cover Letter</target>
+        
+        <note priority="1" from="description">Apply career step title for cv and cover letter</note>
+        <note priority="1" from="meaning">Apply Career - step title for CV and cover letter</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">6</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">6</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerPersonalInfoTitle" datatype="html">
+        <source>Personal Info</source><target state="final">Personal Info</target>
+        
+        <note priority="1" from="description">Apply career step title for personal info</note>
+        <note priority="1" from="meaning">Apply Career - step title for personal info</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">14</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">14</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerQuestionsTitle" datatype="html">
+        <source>Relevant Questions</source><target state="final">Relevant Questions</target>
+        
+        <note priority="1" from="description">Apply career step title for questions</note>
+        <note priority="1" from="meaning">Apply Career - step title for questions</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">10</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerConfirmationTitle" datatype="html">
+        <source>Confirmation</source><target state="final">Confirmation</target>
+        
+        <note priority="1" from="description">Apply career step title for confirmation</note>
+        <note priority="1" from="meaning">Apply Career - step title for confirmation</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">18</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/apply.component.html</context><context context-type="linenumber">18</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCvExistTitle" datatype="html">
+        <source>
+        Ensure we have your latest CV - either use your existing CV attached to your profile or upload a new one
+    </source><target state="final">
+        Ensure we have your latest CV - either use your existing CV attached to your profile or upload a new one
+    </target>
+        
+        <note priority="1" from="description">Title for application ensure cv exists title</note>
+        <note priority="1" from="meaning">Apply Career CV title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/docs-upload/docs-upload.component.html</context><context context-type="linenumber">6</context></context-group></trans-unit>
+      <trans-unit id="applyCareerUploadCvButton" datatype="html">
+        <source>
+                    Upload CV
+                </source><target state="final">
+                    Upload CV
+                </target>
+        
+        <note priority="1" from="description">Apply career page label for upload button</note>
+        <note priority="1" from="meaning">Apply Career Upload button</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/docs-upload/docs-upload.component.html</context><context context-type="linenumber">17</context></context-group></trans-unit>
+      <trans-unit id="applyCareerCurrentRoleDetails" datatype="html">
+        <source>
+        Please provide details of your current role
+    </source><target state="final">
+        Please provide details of your current role
+    </target>
+        
+        <note priority="1" from="description">Apply career title for current role details</note>
+        <note priority="1" from="meaning">Apply Career - label for current role title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit>
+      <trans-unit id="applyCareerCurrentRoleTitlePlaceholder" datatype="html">
+        <source>Current
+                role title</source><target state="final">Current
+                role title</target>
+        
+        <note priority="1" from="description">Apply career placeholder for current role title</note>
+        <note priority="1" from="meaning">Apply Career - current role title placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">18</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">96</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">102</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">13</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">18</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">96</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">102</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCurrentCountryPlaceholder" datatype="html">
+        <source>Current
+                    Country</source><target state="final">Current
+                    Country</target>
+        
+        <note priority="1" from="description">Apply career placeholder for current country</note>
+        <note priority="1" from="meaning">Apply Career - current country placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">33</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">39</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">109</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">115</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/profile/ui-components/edit-profile-info-modal/edit-profile-info-modal.component.html</context><context context-type="linenumber">36</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">33</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">39</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">109</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">115</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCurrentCityPlaceholder" datatype="html">
+        <source>Current
+                    City</source><target state="final">Current
+                    City</target>
+        
+        <note priority="1" from="description">Apply career placeholder for current city</note>
+        <note priority="1" from="meaning">Apply Career - current city placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">44</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">52</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">121</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">127</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">44</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">52</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">121</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">127</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCurrentAnnualCompensationLabel" datatype="html">
+        <source>
+            Your current annual compensation
+        </source><target state="final">
+            Your current annual compensation
+        </target>
+        
+        <note priority="1" from="description">Apply career title for current annual compensation</note>
+        <note priority="1" from="meaning">Apply Career - label for current annual compensation</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">68</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">133</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">68</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">133</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCurrentCurrencyPlaceholder" datatype="html">
+        <source>Currency</source><target state="final">Currency</target>
+        
+        <note priority="1" from="description">Apply career placeholder for current currency</note>
+        <note priority="1" from="meaning">Apply Career - current currency placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">74</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">79</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">139</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">144</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">74</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">79</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">139</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">144</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCurrentBaseSalaryPlaceholder" datatype="html">
+        <source>Annual
+                    gross base salary</source><target state="final">Annual
+                    gross base salary</target>
+        
+        <note priority="1" from="description">Apply career placeholder for current base salary</note>
+        <note priority="1" from="meaning">Apply Career - current base salary placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">84</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">89</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">150</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">156</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">84</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">89</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">150</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">156</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerCurrentBenefitsPlaceholder" datatype="html">
+        <source>Annual
+                    gross of benefits</source><target state="final">Annual
+                    gross of benefits</target>
+        
+        <note priority="1" from="description">Apply career placeholder for current benefits</note>
+        <note priority="1" from="meaning">Apply Career - current benefits placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">94</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">99</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">162</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">168</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">94</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">99</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">162</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">168</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetRoleDetails" datatype="html">
+        <source>
+            Please specify your preferences for this role
+        </source><target state="final">
+            Please specify your preferences for this role
+        </target>
+        
+        <note priority="1" from="description">Apply career title for target role details</note>
+        <note priority="1" from="meaning">Apply Career - label for target role title</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">114</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">174</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">114</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">174</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetCountryPlaceholder" datatype="html">
+        <source>Country</source><target state="final">Country</target>
+        
+        <note priority="1" from="description">Apply career placeholder for target country</note>
+        <note priority="1" from="meaning">Apply Career - target country placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">121</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">126</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">181</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">186</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">121</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">126</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">181</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">186</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetCityPlaceholder" datatype="html">
+        <source>City</source><target state="final">City</target>
+        
+        <note priority="1" from="description">Apply career placeholder for target city</note>
+        <note priority="1" from="meaning">Apply Career - target city placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">131</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">138</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">192</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">197</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">131</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">138</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">192</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">197</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetAnnualCompensationLabel" datatype="html">
+        <source>
+            Your target annual compensation
+        </source><target state="final">
+            Your target annual compensation
+        </target>
+        
+        <note priority="1" from="description">Apply career title for target annual compensation</note>
+        <note priority="1" from="meaning">Apply Career - label for target annual compensation</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">143</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">203</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">143</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">203</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetCurrencyPlaceholder" datatype="html">
+        <source>Currency</source><target state="final">Currency</target>
+        
+        <note priority="1" from="description">Apply career placeholder for target currency</note>
+        <note priority="1" from="meaning">Apply Career - target currency placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">149</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">154</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">209</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">214</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">149</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">154</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">209</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">214</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetBaseSalaryPlaceholder" datatype="html">
+        <source>Annual
+                    gross base salary</source><target state="final">Annual
+                    gross base salary</target>
+        
+        <note priority="1" from="description">Apply career placeholder for target base salary</note>
+        <note priority="1" from="meaning">Apply Career - target base salary placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">159</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">164</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">220</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">226</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">159</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">164</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">220</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">226</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerTargetBenefitsPlaceholder" datatype="html">
+        <source>Annual
+                    gross of benefits</source><target state="final">Annual
+                    gross of benefits</target>
+        
+        <note priority="1" from="description">Apply career placeholder for target benefits</note>
+        <note priority="1" from="meaning">Apply Career - target benefits placeholder</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">169</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">174</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">232</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">238</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">169</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/personal-info/personal-info.component.html</context><context context-type="linenumber">174</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">232</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">238</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="applyCareerOptionalLabel" datatype="html">
+        <source>
+                        (optional)
+                    </source><target state="final">
+                        (optional)
+                    </target>
+        
+        <note priority="1" from="description">Apply career label for optional</note>
+        <note priority="1" from="meaning">Apply Career - label for optional label</note>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/questions/questions.component.html</context><context context-type="linenumber">8</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">61</context></context-group></trans-unit>
+=======
+      <context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/questions/questions.component.html</context><context context-type="linenumber">8</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/careers/apply/confirmation/confirmation.component.html</context><context context-type="linenumber">61</context></context-group>
+>>>>>>> 4d900484cb69e0ea7b4cd6ac33e0ec45afd33169
+      <trans-unit id="initiativesAllInlineLoaderText" datatype="html">
+        <source>More awesome initiatives will be with you in just a second...</source><target state="final">More awesome initiatives will be with you in just a second...</target>
+        
+        <note priority="1" from="description">Title for initiatives all inline loader text</note>
+        <note priority="1" from="meaning">Initiatives all inline loader text</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/initiatives/all/all.component.html</context><context context-type="linenumber">31</context></context-group></trans-unit>
+      <trans-unit id="initiativesModalTitle" datatype="html">
+        <source>You are
+        about to leave Movemeback</source><target state="final">You are
+        about to leave Movemeback</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/initiatives/modal-confirm-apply/modal-confirm-apply.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Title for initiatives modal</note>
+        <note priority="1" from="meaning">Initiatives modal title</note>
+      </trans-unit>
+      <trans-unit id="initiativesModalBodyPrefix" datatype="html">
+        <source>Select
+        continue to proceed to</source><target state="final">Select
+        continue to proceed to</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/initiatives/modal-confirm-apply/modal-confirm-apply.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">Body text prefix for initiatives modal</note>
+        <note priority="1" from="meaning">Initiatives modal body text</note>
+      </trans-unit>
+      <trans-unit id="initiativesModalBodySuffix" datatype="html">
+        <source>website.</source><target state="final">website.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/initiatives/modal-confirm-apply/modal-confirm-apply.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">Body text suffix for initiatives modal</note>
+        <note priority="1" from="meaning">Initiatives modal body text</note>
+      </trans-unit>
+      <trans-unit id="initiativesModalCancelButton" datatype="html">
+        <source>Cancel</source><target state="final">Cancel</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/initiatives/modal-confirm-apply/modal-confirm-apply.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Cancel button for initiatives modal</note>
+        <note priority="1" from="meaning">Initiatives modal body cancel button</note>
+      </trans-unit>
+      <trans-unit id="initiativesModalContinueButton" datatype="html">
+        <source>Continue</source><target state="final">Continue</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/initiatives/modal-confirm-apply/modal-confirm-apply.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Continue button for initiatives modal</note>
+        <note priority="1" from="meaning">Initiatives modal body continue button</note>
+      </trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <trans-unit id="eventssAllInlineLoaderText" datatype="html">
+        <source>More exciting events will be with you in just a second...</source><target state="final">More exciting events will be with you in just a second...</target>
+        
+        <note priority="1" from="description">Title for events all inline loader text</note>
+        <note priority="1" from="meaning">Events all inline loader text</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/events/all/all.component.html</context><context context-type="linenumber">30</context></context-group></trans-unit>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <trans-unit id="addQuestionButtonTitleCollaborationsRequestsPage" datatype="html">
+        <source>
+            Add New Question
+        </source><target state="final">
+            Add New Question
+        </target>
+        
+        <note priority="1" from="description">Label for add question button in collaborations</note>
+        <note priority="1" from="meaning">Add question button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">4</context></context-group></trans-unit>
+      <trans-unit id="questionLabelCollaborationsRequestsPage" datatype="html">
+        <source>Question</source><target state="final">Question</target>
+        
+        <note priority="1" from="description">Label for question in collaborations</note>
+        <note priority="1" from="meaning">Question label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">15</context></context-group></trans-unit>
+      <trans-unit id="questionTitlePlaceholderCollaborationsRequestsPage" datatype="html">
+        <source>Enter question here...</source><target state="final">Enter question here...</target>
+        
+        <note priority="1" from="description">Placeholder for question in collaborations</note>
+        <note priority="1" from="meaning">enter question text placeholder</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">16</context></context-group></trans-unit><trans-unit id="SummaryLabelCollaborationsRequestsPage" datatype="html">
+        <source>Description</source><target state="final">Description</target>
+        
+        <note priority="1" from="description">Label for Description in collaborations</note>
+        <note priority="1" from="meaning">Description label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">21</context></context-group></trans-unit><trans-unit id="descriptionTitlePlaceholderCollaborationsRequestsPage" datatype="html">
+        <source>Enter description here...</source><target state="final">Enter description here...</target>
+        
+        <note priority="1" from="description">Placeholder for description in collaborations</note>
+        <note priority="1" from="meaning">enter description text placeholder</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">22</context></context-group></trans-unit>
+      
+      
+      
+      
+      
+      <trans-unit id="cancelButtonCollaborationsRequestsPage" datatype="html">
+        <source>Cancel</source><target state="final">Cancel</target>
+        
+        <note priority="1" from="description">Label for cancel in collaborations</note>
+        <note priority="1" from="meaning">Cancel button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">33</context></context-group></trans-unit>
+      <trans-unit id="addButtonCollaborationsRequestsPage" datatype="html">
+        <source>Add</source><target state="final">Add</target>
+        
+        <note priority="1" from="description">Label for add in collaborations</note>
+        <note priority="1" from="meaning">Add button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">35</context></context-group></trans-unit>
+      <trans-unit id="addResponseButtonTitleCollaborationsRequestsPage" datatype="html">
+        <source>
+        Add New Response
+    </source><target state="final">
+        Add New Response
+    </target>
+        
+        <note priority="1" from="description">Label for add response button in collaborations</note>
+        <note priority="1" from="meaning">Add response button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-response/modal-create-new-response.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="addResponseSubtitleCollaborationsRequestsPage" datatype="html">
+        <source>
+        Responses/Private Proposals are sent <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>privately<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> to the owner! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        If its a general response that should be public then please choose <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>answer<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+        option
+    </source><target state="final">
+        Responses/Private Proposals are sent <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>privately<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/> to the owner! <x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br/>"/>
+        If its a general response that should be public then please choose <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>answer<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+        option
+    </target>
+        
+        <note priority="1" from="description">Subtitle for add response in collaborations</note>
+        <note priority="1" from="meaning">Subtitle for add response button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-response/modal-create-new-response.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit>
+      <trans-unit id="cancelButtonCollaborationsResponsePage" datatype="html">
+        <source>Cancel</source><target state="final">Cancel</target>
+        
+        <note priority="1" from="description">Label for cancel in collaborations response</note>
+        <note priority="1" from="meaning">Cancel button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-response/modal-create-new-response.component.html</context><context context-type="linenumber">18</context></context-group></trans-unit>
+      <trans-unit id="submitButtonCollaborationsResponsePage" datatype="html">
+        <source>Submit</source><target state="final">Submit</target>
+        
+        <note priority="1" from="description">Label for Submit in collaborations response</note>
+        <note priority="1" from="meaning">Submit button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/modal-create-new-response/modal-create-new-response.component.html</context><context context-type="linenumber">19</context></context-group></trans-unit>
+      
+      <trans-unit id="loadingAnswersLabelCollaborationsDetailsPage" datatype="html">
+        <source>Loading answers...</source><target state="final">Loading answers...</target>
+        
+        <note priority="1" from="description">Label for loading answers in collaborations</note>
+        <note priority="1" from="meaning">Loading answers label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/request-details/request-details.component.html</context><context context-type="linenumber">96</context></context-group></trans-unit>
+      <trans-unit id="requestsTitleCollaborationsManagementPage" datatype="html">
+        <source>
+                    Requests</source><target state="final">
+                    Requests</target>
+        
+        <note priority="1" from="description">Title for requests heading in collaboration management</note>
+        <note priority="1" from="meaning">Requests heading</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/requests/requests.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit>
+      <trans-unit id="responsesTitleCollaborationsManagementPage" datatype="html">
+        <source>
+                    Responses</source><target state="final">
+                    Responses</target>
+        
+        <note priority="1" from="description">Title for Responses heading in collaboration management</note>
+        <note priority="1" from="meaning">Responses heading</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/requests/requests.component.html</context><context context-type="linenumber">31</context></context-group></trans-unit>
+      <trans-unit id="editButtonTitleCollaborationsManagementPage" datatype="html">
+        <source>Edit</source><target state="final">Edit</target>
+        
+        <note priority="1" from="description">Label for edit button in collaboration management</note>
+        <note priority="1" from="meaning">Edit button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/management-tools/management-tools.component.html</context><context context-type="linenumber">6</context></context-group></trans-unit>
+      <trans-unit id="deleteButtonTitleCollaborationsManagementPage" datatype="html">
+        <source>Delete</source><target state="final">Delete</target>
+        
+        <note priority="1" from="description">Label for delete button in collaboration management</note>
+        <note priority="1" from="meaning">Delete button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/management-tools/management-tools.component.html</context><context context-type="linenumber">13</context></context-group></trans-unit>
+      <trans-unit id="selectedRequestTitleCollaborationsManagementPage" datatype="html">
+        <source>Selected Request:</source><target state="final">Selected Request:</target>
+        
+        <note priority="1" from="description">Title for selected request in collaboration management</note>
+        <note priority="1" from="meaning">selected request title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/responses/responses.component.html</context><context context-type="linenumber">3</context></context-group></trans-unit>
+      <trans-unit id="totalResponsesButtonTitleCollaborationsManagementPage" datatype="html">
+        <source>
+        Total Responses: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/><x id="INTERPOLATION" equiv-text="{{ responses.length }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+    </source><target state="final">
+        Total Responses: <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/><x id="INTERPOLATION" equiv-text="{{ responses.length }}"/><x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+    </target>
+        
+        <note priority="1" from="description">Label for Total responses in collaboration management</note>
+        <note priority="1" from="meaning">Total responses label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/responses/responses.component.html</context><context context-type="linenumber">6</context></context-group></trans-unit>
+      <trans-unit id="acceptButtonTitleCollaborationsManagementPage" datatype="html">
+        <source>Accept</source><target state="final">Accept</target>
+        
+        <note priority="1" from="description">Label for Accept button in collaboration management</note>
+        <note priority="1" from="meaning">Accept button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/response-reply-tools/response-reply-tools.component.html</context><context context-type="linenumber">2</context></context-group></trans-unit>
+      <trans-unit id="respondButtonTitleCollaborationsManagementPage" datatype="html">
+        <source>Respond</source><target state="final">Respond</target>
+        
+        <note priority="1" from="description">Label for Respond button in collaboration management</note>
+        <note priority="1" from="meaning">Respond button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/response-reply-tools/response-reply-tools.component.html</context><context context-type="linenumber">3</context></context-group></trans-unit>
+      <trans-unit id="rejectButtonTitleCollaborationsManagementPage" datatype="html">
+        <source>Reject</source><target state="final">Reject</target>
+        
+        <note priority="1" from="description">Label for Reject button in collaboration management</note>
+        <note priority="1" from="meaning">Reject button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/forum/management/response-reply-tools/response-reply-tools.component.html</context><context context-type="linenumber">4</context></context-group></trans-unit><trans-unit id="SummaryLabelConnectRequestsPage" datatype="html">
+        <source>Description</source><target state="final">Description</target>
+        
+        <note priority="1" from="description">Label for Description in connect</note>
+        <note priority="1" from="meaning">Description label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/opportunity/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">13</context></context-group></trans-unit><trans-unit id="descriptionTitlePlaceholderConnectRequestsPage" datatype="html">
+        <source>Enter description here...</source><target state="final">Enter description here...</target>
+        
+        <note priority="1" from="description">Placeholder for description in connect</note>
+        <note priority="1" from="meaning">enter description text placeholder</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/opportunity/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">14</context></context-group></trans-unit><trans-unit id="cancelButtonConnectRequestsPage" datatype="html">
+        <source>Cancel</source><target state="final">Cancel</target>
+        
+        <note priority="1" from="description">Label for cancel in connect</note>
+        <note priority="1" from="meaning">Cancel button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/opportunity/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">35</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/feed/helpers/modal-create-post/modal-create-post.component.html</context><context context-type="linenumber">39</context></context-group></trans-unit><trans-unit id="addButtonConnectRequestsPage" datatype="html">
+        <source>Add</source><target state="final">Add</target>
+        
+        <note priority="1" from="description">Label for add in connect</note>
+        <note priority="1" from="meaning">Add button label</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/opportunity/modal-create-new-question/modal-create-new-question.component.html</context><context context-type="linenumber">38</context></context-group></trans-unit>
+      <trans-unit id="userProfileSummaryTitle" datatype="html">
+        <source>Summary</source><target state="final">Summary</target>
+        
+        <note priority="1" from="description">Title for summary in user's profile page</note>
+        <note priority="1" from="meaning">Summary title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/profile/ui-components/user-summary-info/user-summary-info.component.html</context><context context-type="linenumber">5</context></context-group></trans-unit>
+      <trans-unit id="userProfileDashboardTitle" datatype="html">
+        <source>Your
+                Dashboard</source><target state="final">Your
+                Dashboard</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/profile/ui-components/user-dashboard-info/user-dashboard-info.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">Title for dashboard in user's profile page</note>
+        <note priority="1" from="meaning">Your dashboard title</note>
+      </trans-unit>
+      <trans-unit id="userProfileDashboardSubTitle" datatype="html">
+        <source>
+            Private to you</source><target state="final">
+            Private to you</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/profile/ui-components/user-dashboard-info/user-dashboard-info.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">Subtitle for dashboard in user's profile page</note>
+        <note priority="1" from="meaning">dashboard subtitle</note>
+      </trans-unit>
+      <trans-unit id="userProfileExperienceTitle" datatype="html">
+        <source>
+                Experience
+            </source><target state="final">
+                Experience
+            </target>
+        
+        <note priority="1" from="description">Title for experience in user's profile page</note>
+        <note priority="1" from="meaning">Experience title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/profile/ui-components/user-experience-info/user-experience-info.component.html</context><context context-type="linenumber">5</context></context-group></trans-unit>
+      <trans-unit id="userProfileEducationTitle" datatype="html">
+        <source>Education
+            </source><target state="final">Education
+            </target>
+        
+        <note priority="1" from="description">Title for education in user's profile page</note>
+        <note priority="1" from="meaning">Education title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/profile/ui-components/user-education-info/user-education-info.component.html</context><context context-type="linenumber">5</context></context-group></trans-unit><trans-unit id="userProfileSkillsTitle" datatype="html">
+        <source>Skills</source><target state="final">Skills</target>
+        
+        <note priority="1" from="description">Title for skills in user's profile page</note>
+        <note priority="1" from="meaning">Skills title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/profile/ui-components/user-skills-languages-info/user-skills-info.component.html</context><context context-type="linenumber">5</context></context-group></trans-unit><trans-unit id="userProfileLanguagesTitle" datatype="html">
+        <source>Languages</source><target state="final">Languages</target>
+        
+        <note priority="1" from="description">Title for languages in user's profile page</note>
+        <note priority="1" from="meaning">Languages title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/profile/ui-components/user-skills-languages-info/user-skills-info.component.html</context><context context-type="linenumber">25</context></context-group></trans-unit><trans-unit id="eventsAllInlineLoaderText" datatype="html">
+        <source>More exciting African opportunities will be with you in just a second...</source><target state="final">More exciting African opportunities will be with you in just a second...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/organisation/helpers/organisation-events/organisation-events.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Title for event all inline loader text</note>
+        <note priority="1" from="meaning">Events all inline loader text</note>
+      </trans-unit><trans-unit id="experiencesAllInlineLoaderText" datatype="html">
+        <source>More exciting African opportunities will be with you in just a second...</source><target state="final">More exciting African opportunities will be with you in just a second...</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/organisation/helpers/organisation-experiences/organisation-experiences.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Title for experience all inline loader text</note>
+        <note priority="1" from="meaning">Experience all inline loader text</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackPromoBannerTitle" datatype="html">
+        <source>About Movemeback</source><target state="final">About Movemeback</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback promotion banner</note>
+        <note priority="1" from="meaning">About Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackPromoBannerDescription" datatype="html">
+        <source>Shaping &amp; accelerating social &amp; economic development on the Continent</source><target state="final">Shaping &amp; accelerating social &amp; economic development on the Continent</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback promotion banner</note>
+        <note priority="1" from="meaning">About Movemeback description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionVisionTitle" datatype="html">
+        <source>The movemeback vision</source><target state="final">The movemeback vision</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionVisionDescription" datatype="html">
+        <source>Movemeback aspires to drive positive economic and social growth in Africa by providing an internationally trusted platform through which individuals, organisations and institutions across the world interact and partner with Africa. We’re making Africa’s most exciting and unique opportunities accessible to talented professionals, students, leaders and influencers, whilst providing a platform to empower and enable those individuals to contribute to Africa's economic and social growth and development story. Movemeback's founders, Oyin Solebo &amp; Charles Sekwalor, share a commitment and passion for realising tangible and positive change in Africa, through the application of business, talent, entrepreneurial problem-solving, and increased access to information and knowledge.</source><target state="final">Movemeback aspires to drive positive economic and social growth in Africa by providing an internationally trusted platform through which individuals, organisations and institutions across the world interact and partner with Africa. We’re making Africa’s most exciting and unique opportunities accessible to talented professionals, students, leaders and influencers, whilst providing a platform to empower and enable those individuals to contribute to Africa's economic and social growth and development story. Movemeback's founders, Oyin Solebo &amp; Charles Sekwalor, share a commitment and passion for realising tangible and positive change in Africa, through the application of business, talent, entrepreneurial problem-solving, and increased access to information and knowledge.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionWhatWeDoTitle" datatype="html">
+        <source>What we do</source><target state="final">What we do</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionWhatWeDoDescription" datatype="html">
+        <source>Movemeback is a members-only community, connecting overseas leaders, influencers, talent and organisations to unique, exclusive and exciting high potential opportunities on the African continent. We focus on distinctive and non-cliché opportunities from senior leadership roles with Africa’s most influential organisations through to unique investments, creative and entrepreneurial partnerships, nation shaping, social impact and more. We’re structured to enable talent relocation - including internships, secondments or remote engagements - and the facilitation of investment and advisory relationships. We're also focused on supporting the move to the continent through services, insights, content and access to a collaborative community.</source><target state="final">Movemeback is a members-only community, connecting overseas leaders, influencers, talent and organisations to unique, exclusive and exciting high potential opportunities on the African continent. We focus on distinctive and non-cliché opportunities from senior leadership roles with Africa’s most influential organisations through to unique investments, creative and entrepreneurial partnerships, nation shaping, social impact and more. We’re structured to enable talent relocation - including internships, secondments or remote engagements - and the facilitation of investment and advisory relationships. We're also focused on supporting the move to the continent through services, insights, content and access to a collaborative community.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionProblemsTitle" datatype="html">
+        <source>The problems we are addressing</source><target state="final">The problems we are addressing</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionProblemsDescription" datatype="html">
+        <source>Through our delivery of Movemeback we are seeking to address four main areas of opportunity and challenge:</source><target state="final">Through our delivery of Movemeback we are seeking to address four main areas of opportunity and challenge:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailAfricansOrganisationTitle" datatype="html">
+        <source>1. African organisation’s face challenges accessing relevant talent and partners for growth</source><target state="final">1. African organisation’s face challenges accessing relevant talent and partners for growth</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsAfricansOrganisationSummary" datatype="html">
+        <source>We are enabling progressive African organisations and companies to access top talent, leaders and influencers living abroad who maintain a genuine interest and readiness for operating on the continent:</source><target state="final">We are enabling progressive African organisations and companies to access top talent, leaders and influencers living abroad who maintain a genuine interest and readiness for operating on the continent:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary detailn</note>
+        <note priority="1" from="meaning">About Movemeback summary details summary</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSummaryDetailsAfricansOrganisationDescription" datatype="html">
+        <source>The growth of African economies not only hinges on governments and infrastructure but equally-so on the growth of private sector companies and organisation. When surveyed, African organisations failed to cite ‘customer/consumer demand’ as a point of concern. On the contrary - satisfying existing demand majored as a primary consideration, with access to suitable talent and finance for sustenance and growth being two of the biggest underlying barriers. Whilst Africa has and is building a formidable, young workforce that will rival the most revered labour-markets from India to China to US in years to come – there currently remains a challenge in locally sourcing the volumes of highly skilled and experienced labour required to continually deliver on Africa’s growth potential and its current trajectory. Similarly, African financial markets do not offer the liquidity to small and medium size businesses afforded in other regions.
+                    To that end, the sheer volume of African originated talent, experience and wealth residing overseas cannot and should not be ignored. With 3.5 million diaspora in Europe and ~40m in North America, the diaspora are a nation in their own right. In the USA, Africans are classed as the most educated group, with the percentage of African immigrants with bachelor degrees 1.5x that of native born Americans. Viewed from another perspective 1/3 of the highly skilled global African population reside in the diaspora; whilst in Ghana, almost 50 % of the tertiary skilled are living outside of the country. Spending power and wealth are also of note – with US$51.8bn (£34bn) estimated as the net sum of African diaspora remittance to the continent in 2010. These combined statistics cannot be ignored, and with the African diaspora forming an obvious part of the full-sea of resource that is ready, willing and authentically committed to engaging with the continent, Movemeback’s mission of enabling greater access can only benefit the continent in the long-term.</source><target state="final">The growth of African economies not only hinges on governments and infrastructure but equally-so on the growth of private sector companies and organisation. When surveyed, African organisations failed to cite ‘customer/consumer demand’ as a point of concern. On the contrary - satisfying existing demand majored as a primary consideration, with access to suitable talent and finance for sustenance and growth being two of the biggest underlying barriers. Whilst Africa has and is building a formidable, young workforce that will rival the most revered labour-markets from India to China to US in years to come – there currently remains a challenge in locally sourcing the volumes of highly skilled and experienced labour required to continually deliver on Africa’s growth potential and its current trajectory. Similarly, African financial markets do not offer the liquidity to small and medium size businesses afforded in other regions.
+                    To that end, the sheer volume of African originated talent, experience and wealth residing overseas cannot and should not be ignored. With 3.5 million diaspora in Europe and ~40m in North America, the diaspora are a nation in their own right. In the USA, Africans are classed as the most educated group, with the percentage of African immigrants with bachelor degrees 1.5x that of native born Americans. Viewed from another perspective 1/3 of the highly skilled global African population reside in the diaspora; whilst in Ghana, almost 50 % of the tertiary skilled are living outside of the country. Spending power and wealth are also of note – with US$51.8bn (£34bn) estimated as the net sum of African diaspora remittance to the continent in 2010. These combined statistics cannot be ignored, and with the African diaspora forming an obvious part of the full-sea of resource that is ready, willing and authentically committed to engaging with the continent, Movemeback’s mission of enabling greater access can only benefit the continent in the long-term.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsAfricanOpportunitiesTitle" datatype="html">
+        <source>2. The full wealth of african opportunities are not visible to overseas talent and leaders</source><target state="final">2. The full wealth of african opportunities are not visible to overseas talent and leaders</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsAfricanOpportunitiesSummary" datatype="html">
+        <source>We are enabling leaders, influencers and top-talent to discover and engage with the full diversity of African opportunities:</source><target state="final">We are enabling leaders, influencers and top-talent to discover and engage with the full diversity of African opportunities:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary detailn</note>
+        <note priority="1" from="meaning">About Movemeback summary details summary</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSummaryDetailsAfricanOpportunitiesDescription" datatype="html">
+        <source>Anecdotally, the level of interest in African opportunities is at an all-time high. There is an ever-increasing focus on African opportunities overseas, and it is of no coincidence that corporate websites have also started to evolve, affording Africa its own section as opposed a bullet point grouped within ‘the rest of EMEA’. This is progressive, yet when we look more closely, it appears that it is modern-day Western lenses which are being primarily employed to contextualise the scope of the opportunity on the continent (both within and outside of the region). Based on observations from our own network of leaders, professionals and influencers as well as our personal experiences, the most visible and accessible opportunities represent those which require the least imagination and local context to conjure: investment banking roles, oil trading and strategy consulting are to name a few. Whilst the influx of fantastic professional roles are encouraging, the scope of the real opportunities that lies beneath are arguably multiple times more exciting yet harder to find and engage with.
+                    More specifically, the full story is compelling. We have the makings of a ~30 trillion dollar collective economy by 2050, the largest and youngest global workforce by 2035, a US$75 billion ecommerce sector by 2020. This reflects against the backdrop of the world’s 2nd fastest growing region where only 28% are in stable wage-paying jobs, where there are just 1.1 doctors to every 1000 patients, where on average the largest retailers own no more than 4-5% of their respective markets vs 47% (for the market leader) in South America, where (using Nigeria as an example) 90% of energy demand is unmet, where only 10-12% of trade is intra-continental (vs. 60% EU), and where 75% of the population are unbanked. These are the platforms for the opportunities that will shape the continent and in due course shape the world; this also represents the starting point for Movemeback in delivering opportunities to our members in the form of jobs, internships, partnerships or investments. We are continually discovering and bringing exciting opportunities that will ultimately write contribute to the next chapter in the global story, and bring them to the forefront for our members and partners.</source><target state="final">Anecdotally, the level of interest in African opportunities is at an all-time high. There is an ever-increasing focus on African opportunities overseas, and it is of no coincidence that corporate websites have also started to evolve, affording Africa its own section as opposed a bullet point grouped within ‘the rest of EMEA’. This is progressive, yet when we look more closely, it appears that it is modern-day Western lenses which are being primarily employed to contextualise the scope of the opportunity on the continent (both within and outside of the region). Based on observations from our own network of leaders, professionals and influencers as well as our personal experiences, the most visible and accessible opportunities represent those which require the least imagination and local context to conjure: investment banking roles, oil trading and strategy consulting are to name a few. Whilst the influx of fantastic professional roles are encouraging, the scope of the real opportunities that lies beneath are arguably multiple times more exciting yet harder to find and engage with.
+                    More specifically, the full story is compelling. We have the makings of a ~30 trillion dollar collective economy by 2050, the largest and youngest global workforce by 2035, a US$75 billion ecommerce sector by 2020. This reflects against the backdrop of the world’s 2nd fastest growing region where only 28% are in stable wage-paying jobs, where there are just 1.1 doctors to every 1000 patients, where on average the largest retailers own no more than 4-5% of their respective markets vs 47% (for the market leader) in South America, where (using Nigeria as an example) 90% of energy demand is unmet, where only 10-12% of trade is intra-continental (vs. 60% EU), and where 75% of the population are unbanked. These are the platforms for the opportunities that will shape the continent and in due course shape the world; this also represents the starting point for Movemeback in delivering opportunities to our members in the form of jobs, internships, partnerships or investments. We are continually discovering and bringing exciting opportunities that will ultimately write contribute to the next chapter in the global story, and bring them to the forefront for our members and partners.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsContinentTitle" datatype="html">
+        <source>3. There are both real and perceived challenges associated with moving to or operating on the continent</source><target state="final">3. There are both real and perceived challenges associated with moving to or operating on the continent</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsContinentSummary" datatype="html">
+        <source>We are offering soft and tangible support for individuals and organisations interested in operating on the continent:</source><target state="final">We are offering soft and tangible support for individuals and organisations interested in operating on the continent:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary detailn</note>
+        <note priority="1" from="meaning">About Movemeback summary details summary</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSummaryDetailsContinentDescription" datatype="html">
+        <source>Countries and cities in Africa can be hugely rewarding arenas in which to operate, from the perspective of business potential, cultural richness and depth, diversity of experience and proximity to nature. However in parts, the terrain can also be very unforgiving; Sub-Saharan Africans are the first to confess that their arch-nemesis – which comes in a form several hundred orders of magnitude smaller than a human, with wings, an annoying night-time buzz and an unhygienic yet deadly habit for consuming humans – typically maintain the upper-hand. Similarly, Nigerians will educate you comprehensively on the generator market and war-stories involving depleting diesel after 10pm, whilst Londoners’ complaining of 1 month rent deposits and 6 month tenancies will be humbled by comparisons of 2 year tenancies paid in-full upfront. Nonetheless, whilst significant adjustments are required and tricks to be learnt on arrival, general misconceptions resulting in fear and despair misrepresent the reality on the ground.
+                    In recognition of these dynamics, Movemeback will support individuals and parties in moving to and operating on the continent with a set of practically targetted services and information insights which will evolve and expand over-time, whilst working to quash via transparency, common misconceptions creating false or soft barriers. Of equal importance, the Movemeback community will be brought to task, contributing in peer-to-peer knowledge exchange and local community building to provide an extended arm of support and further opportunity to those who need it.</source><target state="final">Countries and cities in Africa can be hugely rewarding arenas in which to operate, from the perspective of business potential, cultural richness and depth, diversity of experience and proximity to nature. However in parts, the terrain can also be very unforgiving; Sub-Saharan Africans are the first to confess that their arch-nemesis – which comes in a form several hundred orders of magnitude smaller than a human, with wings, an annoying night-time buzz and an unhygienic yet deadly habit for consuming humans – typically maintain the upper-hand. Similarly, Nigerians will educate you comprehensively on the generator market and war-stories involving depleting diesel after 10pm, whilst Londoners’ complaining of 1 month rent deposits and 6 month tenancies will be humbled by comparisons of 2 year tenancies paid in-full upfront. Nonetheless, whilst significant adjustments are required and tricks to be learnt on arrival, general misconceptions resulting in fear and despair misrepresent the reality on the ground.
+                    In recognition of these dynamics, Movemeback will support individuals and parties in moving to and operating on the continent with a set of practically targetted services and information insights which will evolve and expand over-time, whilst working to quash via transparency, common misconceptions creating false or soft barriers. Of equal importance, the Movemeback community will be brought to task, contributing in peer-to-peer knowledge exchange and local community building to provide an extended arm of support and further opportunity to those who need it.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsAfricaStoryTitle" datatype="html">
+        <source>4. The africa story is out of date and needs rewritting</source><target state="final">4. The africa story is out of date and needs rewritting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">74</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackSummaryDetailsAfricaStorySummary" datatype="html">
+        <source>Movemeback is committed to crowd-sourcing the updated, more insightful version of Africa’s story and contributing to writing its next chapter</source><target state="final">Movemeback is committed to crowd-sourcing the updated, more insightful version of Africa’s story and contributing to writing its next chapter</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback summary detailn</note>
+        <note priority="1" from="meaning">About Movemeback summary details summary</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSummaryDetailsAfricaStoryDescription" datatype="html">
+        <source>Even today with increased political and economic attention, the story is uninspiringly black and white. On one side everyone is familiar with the default – ‘Africa: the troubled ‘country’ of the poor, needy and under-developed’ – and we’re reminded today with fears of an impending pandemic that stories of growth and prosperity are easily submerged by the default historic narrative.
+                    On the other side, we hear of ‘Africa rising’, the next frontier, the land of rich resource and untapped potential – we like this story however like its historic predecessor it lacks the depth which goes beyond presenting the obvious. The continent has so much diversity, unmet and undiscovered need but even more interestingly untapped and uninitiated talent. The story is colourful, it’s multifaceted and through the process of the crowd we intend to share it in high definition.</source><target state="final">Even today with increased political and economic attention, the story is uninspiringly black and white. On one side everyone is familiar with the default – ‘Africa: the troubled ‘country’ of the poor, needy and under-developed’ – and we’re reminded today with fears of an impending pandemic that stories of growth and prosperity are easily submerged by the default historic narrative.
+                    On the other side, we hear of ‘Africa rising’, the next frontier, the land of rich resource and untapped potential – we like this story however like its historic predecessor it lacks the depth which goes beyond presenting the obvious. The continent has so much diversity, unmet and undiscovered need but even more interestingly untapped and uninitiated talent. The story is colourful, it’s multifaceted and through the process of the crowd we intend to share it in high definition.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback summary details</note>
+        <note priority="1" from="meaning">About Movemeback summary details description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionFoundersTitle" datatype="html">
+        <source>Our founders</source><target state="final">Our founders</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppSectionFoundersDescription" datatype="html">
+        <source>The Movemeback founders are McKinsey &amp; Goldman Sachs alumni who have returned to the continent as entrepreneurs; we are creating the service we once craved, for people to whom we highly relate</source><target state="final">The Movemeback founders are McKinsey &amp; Goldman Sachs alumni who have returned to the continent as entrepreneurs; we are creating the service we once craved, for people to whom we highly relate</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">88</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback app section</note>
+        <note priority="1" from="meaning">About Movemeback section description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppProfileIntroFirstFounderTitle" datatype="html">
+        <source>Oyin Solebo</source><target state="final">Oyin Solebo</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback app profile intro</note>
+        <note priority="1" from="meaning">About Movemeback profile intro title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppProfileIntroFirstFounderSubheading" datatype="html">
+        <source>Founder</source><target state="final">Founder</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+        <note priority="1" from="description">Subheading for about movemeback app profile intro</note>
+        <note priority="1" from="meaning">About Movemeback profile intro description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppProfileIntroFirstFounderDescription" datatype="html">
+        <source>Previously an Investment Associate at Goldman Sachs and a Strategy Consultant for Roland Berger's Sub-Saharan Africa, Financial Services Team. Executive MBA with distinction from London Business School and BSc Hons in Economics from The London School of Economics &amp; Political Science. Cake-addict and lover of all things musical</source><target state="final">Previously an Investment Associate at Goldman Sachs and a Strategy Consultant for Roland Berger's Sub-Saharan Africa, Financial Services Team. Executive MBA with distinction from London Business School and BSc Hons in Economics from The London School of Economics &amp; Political Science. Cake-addict and lover of all things musical</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback app profile intro</note>
+        <note priority="1" from="meaning">About Movemeback profile intro description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppProfileIntroSecondFounderTitle" datatype="html">
+        <source>Charles Sekwalor</source><target state="final">Charles Sekwalor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+        <note priority="1" from="description">Title for about movemeback app profile intro</note>
+        <note priority="1" from="meaning">About Movemeback profile intro title</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppProfileIntroSecondFounderSubheading" datatype="html">
+        <source>Founder</source><target state="final">Founder</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">109</context>
+        </context-group>
+        <note priority="1" from="description">Subheading for about movemeback app profile intro</note>
+        <note priority="1" from="meaning">About Movemeback profile intro description</note>
+      </trans-unit>
+      <trans-unit id="aboutMovemebackAppProfileIntroSecondFounderDescription" datatype="html">
+        <source>Previously a Strategy Consultant at McKinsey &amp; Company, Supply Chain project manager at Tesco and Consultant at Accenture. MEng Hons in Electrical &amp; Electronic Engineering &amp; Management from Imperial College, London. F1 fanatic with ambitions to own a team and bring F1 to West Africa</source><target state="final">Previously a Strategy Consultant at McKinsey &amp; Company, Supply Chain project manager at Tesco and Consultant at Accenture. MEng Hons in Electrical &amp; Electronic Engineering &amp; Management from Imperial College, London. F1 fanatic with ambitions to own a team and bring F1 to West Africa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/about-us/about-us.component.html</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+        <note priority="1" from="description">Description for about movemeback app profile intro</note>
+        <note priority="1" from="meaning">About Movemeback profile intro description</note>
+      </trans-unit><trans-unit id="forgotPasswordMovemebackTitle" datatype="html">
+        <source>Forgot your password?</source><target state="final">Forgot your password?</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <note priority="1" from="description">Forgot password movemeback title</note>
+        <note priority="1" from="meaning">Forgot Password Movemeback title</note>
+      </trans-unit><trans-unit id="forgotPasswordSuccessMovemebackTitle" datatype="html">
+        <source>Check your E-Mail</source><target state="final">Check your E-Mail</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Forgot password success movemeback title</note>
+        <note priority="1" from="meaning">Forgot Password Success Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="resetPasswordMovemebackTitle" datatype="html">
+        <source>Provide new credentials</source><target state="final">Provide new credentials</target>
+        
+        <note priority="1" from="description">Reset password movemeback title</note>
+        <note priority="1" from="meaning">Reset Password Movemeback title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context><context context-type="linenumber">7</context></context-group></trans-unit><trans-unit id="resetPasswordSuccessMovemebackTitle" datatype="html">
+        <source>We changed your password!</source><target state="final">We changed your password!</target>
+        
+        <note priority="1" from="description">Reset password success movemeback title</note>
+        <note priority="1" from="meaning">Reset Password Success Movemeback title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context><context context-type="linenumber">8</context></context-group></trans-unit><trans-unit id="resetPasswordMovemebackFormPassword" datatype="html">
+        <source>New Password</source><target state="final">New Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Reset password movemeback form password</note>
+        <note priority="1" from="meaning">Reset Password Movemeback form password</note>
+      </trans-unit><trans-unit id="resetPasswordConfirmMovemebackFormPassword" datatype="html">
+        <source>Confirm Password</source><target state="final">Confirm Password</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Reset password confirm movemeback form password</note>
+        <note priority="1" from="meaning">Reset Password Confirm Movemeback form password</note>
+      </trans-unit>
+      <trans-unit id="enterEmailMovemebackTitle" datatype="html">
+        <source>Enter your email address to reset your password</source><target state="final">Enter your email address to reset your password</target>
+        
+        <note priority="1" from="description">Enter email movemeback title</note>
+        <note priority="1" from="meaning">Enter email Movemeback title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context><context context-type="linenumber">9</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context><context context-type="linenumber">9</context></context-group></trans-unit><trans-unit id="enterEmailSuccessMovemebackTitle" datatype="html">
+        <source>We sent you link to reset your password</source><target state="final">We sent you link to reset your password</target>
+        
+        <note priority="1" from="description">Enter email success movemeback title</note>
+        <note priority="1" from="meaning">Enter email success Movemeback title</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context><context context-type="linenumber">10</context></context-group><context-group purpose="location"><context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context><context context-type="linenumber">10</context></context-group></trans-unit><trans-unit id="forgotPasswordMovemebackFormEmail" datatype="html">
+        <source>your@email.com</source><target state="final">your@email.com</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Forgot password movemeback form email</note>
+        <note priority="1" from="meaning">Forgot Password Movemeback form email</note>
+      </trans-unit><trans-unit id="forgotPasswordMovemebackForgotPasswordButton" datatype="html">
+        <source>
+                    Reset Password
+                  </source><target state="final">
+                    Reset Password
+                  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">Forgot password movemeback forgot password button</note>
+        <note priority="1" from="meaning">Forgot Password Movemeback forgot password button</note>
+      </trans-unit><trans-unit id="forgotPasswordMovemebackForgotPasswordSuccessButton" datatype="html">
+        <source>
+                  Go back to Login
+                </source><target state="final">
+                  Go back to Login
+                </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/forgot-password/forgot-password.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">Forgot password success movemeback forgot password button</note>
+        <note priority="1" from="meaning">Forgot Password success Movemeback forgot password button</note>
+      </trans-unit>
+      
+      <trans-unit id="resetPasswordMovemebackResetPasswordButton" datatype="html">
+        <source>
+                    Reset Password
+                  </source><target state="final">
+                    Reset Password
+                  </target>
+        
+        <note priority="1" from="description">Reset password movemeback reset password button</note>
+        <note priority="1" from="meaning">Reset Password Movemeback reset password button</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context><context context-type="linenumber">22</context></context-group></trans-unit><trans-unit id="resetPasswordMovemebackResetPasswordSuccessButton" datatype="html">
+        <source>
+                  Go back to Login
+                </source><target state="final">
+                  Go back to Login
+                </target>
+        
+        <note priority="1" from="description">Reset password success movemeback reset password button</note>
+        <note priority="1" from="meaning">Reset Password success Movemeback reset password button</note>
+      <context-group purpose="location"><context context-type="sourcefile">src/app/public/reset-password/reset-password.component.html</context><context context-type="linenumber">28</context></context-group></trans-unit>
+      
+      <trans-unit id="companiesMovemebackTitle" datatype="html">
+        <source>FIND
+            OUT
+            HOW <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>MOVEMEBACK<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+            CAN SUPPORT YOUR ORGANISATION
+        </source><target state="final">FIND
+            OUT
+            HOW <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong>"/>MOVEMEBACK<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong>"/>
+            CAN SUPPORT YOUR ORGANISATION
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback title</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackText" datatype="html">
+        <source>
+            Movemeback support leading organisations do more in Africa, by proving unprecedented exposure to a highly
+            curated
+            community of professionals,
+            entrepreneurs and leaders
+        </source><target state="final">
+            Movemeback support leading organisations do more in Africa, by proving unprecedented exposure to a highly
+            curated
+            community of professionals,
+            entrepreneurs and leaders
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">Text for companies movemeback icons text</note>
+        <note priority="1" from="meaning">Companies Movemeback text</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersTalentTitle" datatype="html">
+        <source>Talent Sourcing</source><target state="final">Talent Sourcing</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersTalentText" datatype="html">
+        <source>Find your next hire from a community of professionals, entrepreneurs and leaders from 150 countries, across seniority, function and industries</source><target state="final">Find your next hire from a community of professionals, entrepreneurs and leaders from 150 countries, across seniority, function and industries</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">Text for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersBrandTitle" datatype="html">
+        <source>Brand Engagement</source><target state="final">Brand Engagement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersBrandText" datatype="html">
+        <source>Increase brand awareness by tapping in to a highly concentrated pool of professionals, entrepreneurs and leaders</source><target state="final">Increase brand awareness by tapping in to a highly concentrated pool of professionals, entrepreneurs and leaders</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <note priority="1" from="description">Text for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersMarketTitle" datatype="html">
+        <source>Market Entry</source><target state="final">Market Entry</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersMarketText" datatype="html">
+        <source>Utilise our consultancy services, tools, insights and community to support your entry into / expansion across Africa</source><target state="final">Utilise our consultancy services, tools, insights and community to support your entry into / expansion across Africa</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+        <note priority="1" from="description">Text for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersEventsTitle" datatype="html">
+        <source>Events</source><target state="final">Events</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersEventsText" datatype="html">
+        <source>Increase event participation and engagement, and convert participants' enthusiasm for Africa into tangible engagement with opportunities</source><target state="final">Increase event participation and engagement, and convert participants' enthusiasm for Africa into tangible engagement with opportunities</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">Text for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersInsightTitle" datatype="html">
+        <source>Insight</source><target state="final">Insight</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackIconsHeadersInsightText" datatype="html">
+        <source>Leverage an engaged community and engagement with our platform for market knowledge and company / opportunity insights</source><target state="final">Leverage an engaged community and engagement with our platform for market knowledge and company / opportunity insights</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <note priority="1" from="description">Text for companies movemeback icons headers</note>
+        <note priority="1" from="meaning">Companies Movemeback title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackSupportedTitle" datatype="html">
+        <source>Organizations we've supported</source><target state="final">Organizations we've supported</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback Supported header</note>
+        <note priority="1" from="meaning">Companies Supported title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFacebookLogo" datatype="html">
+        <source>Facebook</source><target state="final">Facebook</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies facebook logo</note>
+        <note priority="1" from="meaning">Companies logos facebook title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackUberLogo" datatype="html">
+        <source>Uber</source><target state="final">Uber</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies uber logo</note>
+        <note priority="1" from="meaning">Companies logos uber title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackDalbergLogo" datatype="html">
+        <source>Dalberg</source><target state="final">Dalberg</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies dalberg logo</note>
+        <note priority="1" from="meaning">Companies logos dalberg title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackJumiaLogo" datatype="html">
+        <source>Jumia</source><target state="final">Jumia</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies jumia logo</note>
+        <note priority="1" from="meaning">Companies logos jumia title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackEcobankLogo" datatype="html">
+        <source>Ecobank</source><target state="final">Ecobank</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies ecobank logo</note>
+        <note priority="1" from="meaning">Companies logos ecobank title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackAspenLogo" datatype="html">
+        <source>The Aspen Institute</source><target state="final">The Aspen Institute</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies aspen logo</note>
+        <note priority="1" from="meaning">Companies logos aspen title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackMestLogo" datatype="html">
+        <source>Mest</source><target state="final">Mest</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies mest logo</note>
+        <note priority="1" from="meaning">Companies logos facebook title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackAndelaLogo" datatype="html">
+        <source>Andela</source><target state="final">Andela</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies andela logo</note>
+        <note priority="1" from="meaning">Companies logos andela title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackOneAcreFundLogo" datatype="html">
+        <source>One Acre Fund</source><target state="final">One Acre Fund</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies OneAcreFund logo</note>
+        <note priority="1" from="meaning">Companies logos OneAcreFund title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackGlobalHealthCorpsLogo" datatype="html">
+        <source>Global Health Corps</source><target state="final">Global Health Corps</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies GlobalHealthCorps logo</note>
+        <note priority="1" from="meaning">Companies logos GlobalHealthCorps title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackNewsTitle" datatype="html">
+        <source>Movemeback in the News</source><target state="final">Movemeback in the News</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">62</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback News header</note>
+        <note priority="1" from="meaning">Companies News title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackBBCLogo" datatype="html">
+        <source>BBC</source><target state="final">BBC</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies bbc logo</note>
+        <note priority="1" from="meaning">Companies logos bbc title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackQuartzLogo" datatype="html">
+        <source>Quartz</source><target state="final">Quartz</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies quartz logo</note>
+        <note priority="1" from="meaning">Companies logos quartz title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackHuffingtonLogo" datatype="html">
+        <source>Huffington Post</source><target state="final">Huffington Post</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies huffington logo</note>
+        <note priority="1" from="meaning">Companies logos huffington title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackLondonStockExchangeLogo" datatype="html">
+        <source>London Stock Exchange</source><target state="final">London Stock Exchange</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies LondonStockExchange logo</note>
+        <note priority="1" from="meaning">Companies logos LondonStockExchange title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackMckinseyAndCompanyLogo" datatype="html">
+        <source>Mckinsey and Company</source><target state="final">Mckinsey and Company</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies MckinseyAndCompany logo</note>
+        <note priority="1" from="meaning">Companies logos MckinseyAndCompany title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackFinancialTimesLogo" datatype="html">
+        <source>Financial Times</source><target state="final">Financial Times</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies FinancialTimes logo</note>
+        <note priority="1" from="meaning">Companies logos FinancialTimes title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackAwsLogo" datatype="html">
+        <source>AWS Amazon Web Services</source><target state="final">AWS Amazon Web Services</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies aws logo</note>
+        <note priority="1" from="meaning">Companies logos aws title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackAppSectionTalentTitle" datatype="html">
+        <source>
+            Are you in search of top talent, expert advisors, investors or other international partners?
+        </source><target state="final">
+            Are you in search of top talent, expert advisors, investors or other international partners?
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">75</context>
+        </context-group>
+        <note priority="1" from="description">Title for companies movemeback app section</note>
+        <note priority="1" from="meaning">Companies Movemeback section title</note>
+      </trans-unit>
+      <trans-unit id="companiesMovemebackAppSectionTalentDescription" datatype="html">
+        <source>
+            Are you an African organisation in search of top talent, or a company seeking expert advisors,
+            investors or other international partners? Movemeback is a members-only community comprised of
+            accomplished individuals and organisations with proven track-records of professional, leadership and
+            academic excellence. We have a high concentration of African diasporans, as well as other Africa
+            advocates, interested in opportunities, ranging from relocation for jobs and business through to
+            investments and partnerships on the continent We’re partnering with the most influential and
+            forward-thinking companies, organisations and causes in Africa to source high calibre talent from
+            across the diaspora and beyond. Our remit also includes facilitating access to the international
+            partnerships that are critical to their growth and impact – from investors to advisors
+        </source><target state="final">
+            Are you an African organisation in search of top talent, or a company seeking expert advisors,
+            investors or other international partners? Movemeback is a members-only community comprised of
+            accomplished individuals and organisations with proven track-records of professional, leadership and
+            academic excellence. We have a high concentration of African diasporans, as well as other Africa
+            advocates, interested in opportunities, ranging from relocation for jobs and business through to
+            investments and partnerships on the continent We’re partnering with the most influential and
+            forward-thinking companies, organisations and causes in Africa to source high calibre talent from
+            across the diaspora and beyond. Our remit also includes facilitating access to the international
+            partnerships that are critical to their growth and impact – from investors to advisors
+        </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/public/companies/companies.component.html</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <note priority="1" from="description">Description for companies movemeback app section</note>
+        <note priority="1" from="meaning">Companies Movemeback section description</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

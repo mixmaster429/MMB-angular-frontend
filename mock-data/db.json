@@ -1,0 +1,2110 @@
+{
+  "owners": [
+    {
+      "id": "oNkem",
+      "name": "Omolayo Nkem",
+      "professionalTitle": "Member",
+      "company": "Movemeback",
+      "image": "https://s3-eu-west-1.amazonaws.com/movemeback-media-temp/profile/omolayo-nkem-ojo-b9313e8b0b0e4420.jpeg"
+    },
+    {
+      "id": "deo",
+      "name": "Deo",
+      "professionalTitle": "Member",
+      "company": "Movemeback",
+      "image": "assets/user-profile-square-small.jpg"
+    },
+    {
+      "id": "dolapo",
+      "name": "Dolapo",
+      "professionalTitle": "CEO",
+      "company": "The Continent Realty",
+      "image": "assets/user-profile-square-small.jpg"
+    },
+    {
+      "id": "varun.goel",
+      "name": "V. Goel",
+      "professionalTitle": "CEO",
+      "company": "Estate Builders",
+      "image": "assets/user-profile-square-small.jpg"
+    },
+    {
+      "id": "admin.mest-africa",
+      "name": "Africa Fintech Summit",
+      "professionalTitle": "Admin",
+      "company": "Africa Fintech",
+      "image": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/cosvuploading/photo/photo/6b2acb07833a41d8./c443192d57a201eb5c7e4f8be0c36fca.jpg"
+    },
+    {
+      "id": "admin.commonwealth-africa",
+      "name": "Commonwealth Africa",
+      "professionalTitle": "Admin",
+      "company": "Commonwealth Africa Initiative",
+      "image": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/cosvuploading/photo/photo/0730b98a80574001./7056b13a1cdd944047ca1836d32b99b7.jpg"
+    },
+    {
+      "id": "admin.alpha-code",
+      "name": "Alpha Code",
+      "professionalTitle": "Admin",
+      "company": "Alpha Code",
+      "image": "https://d3t1rrq9fohtv1.cloudfront.net/initiative/image_logo/alpha_code.jpg"
+    },
+    {
+      "id": "connor-hoffman",
+      "name": "Connor Hoffman",
+      "professionalTitle": "Staff Editor",
+      "company": "Car and Driver",
+      "image": "https://hips.hearstapps.com/rover/profile_photos/9638b625-b580-439f-a88a-cd41757f534b_1571687075.file?fill=1:1&resize=80:*"
+    },
+    {
+      "id": "isabella-steger",
+      "name": "Isabella Steger",
+      "professionalTitle": "Reporter and Editor",
+      "company": "Quartz",
+      "image": "https://cms.qz.com/wp-content/uploads/2016/10/pa010177-e1476460081125.jpg?quality=75&strip=all&w=164&h=164&crop=1"
+    },
+    {
+      "id": "john-wave",
+      "name": "John Doe",
+      "professionalTitle": "HR",
+      "company": "Wave",
+      "image": "https://www.urbanpedaltours.com/wp-content/uploads/2019/04/team.png"
+    },
+    {
+      "id": "admin-open-capital-advisors",
+      "name": "Admin",
+      "professionalTitle": "HR",
+      "company": "Open Capital Advisors",
+      "image": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/companies/4f80d964ffff43e8./b7f51ef9ea95ad907e246482001fa333.jpg"
+    }
+  ],
+  "requests": [
+    {
+      "id": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:09:45.900Z",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "oNkem",
+      "title": "I would like to build a new hotel in Mozambique to add to my collection",
+      "background": {
+        "color": "#ffa500"
+      },
+      "tags": [
+        "Advice",
+        "Mozambique"
+      ]
+    },
+    {
+      "id": "deo-seeking-seed-funding-investor",
+      "createdOn": "2019-12-01T15:09:45.901Z",
+      "slug": "deo-seeking-seed-funding-investor",
+      "ownerId": "deo",
+      "title": "I am looking for seed funding angel investor",
+      "background": {
+        "color": "#1100aa"
+      },
+      "tags": [
+        "Advice",
+        "Mozambique"
+      ]
+    },
+    {
+      "id": "dolapo-seeking-partner-real-estate-uk",
+      "createdOn": "2019-12-01T15:09:45.902Z",
+      "slug": "dolapo-seeking-partner-real-estate-uk",
+      "ownerId": "dolapo",
+      "title": "Seeking Partner for a Real Estate Agency in the UK",
+      "background": {
+        "image": "assets/banners/events-header.jpg"
+      },
+      "tags": [
+        "Advice",
+        "Mozambique"
+      ]
+    },
+    {
+      "createdOn": "2019-12-01T15:09:45.906Z",
+      "ownerId": "varun.goel",
+      "slug": "my-question-comes-here",
+      "title": "my question comes here",
+      "tags": [
+        {
+          "display": "tag1",
+          "value": "tag1"
+        }
+      ],
+      "background": {
+        "color": "#2C3E50",
+        "image": ""
+      },
+      "id": "my-question-comes-here"
+    },
+    {
+      "createdOn": "2019-12-01T15:15:19.949Z",
+      "ownerId": "varun.goel",
+      "slug": "what-are-the-uses-of-search-engines?",
+      "title": "What are the uses of search engines?",
+      "tags": [],
+      "background": {
+        "color": "#1fc837",
+        "image": ""
+      },
+      "id": "what-are-the-uses-of-search-engines?"
+    },
+    {
+      "createdOn": "2019-12-01T15:18:28.043Z",
+      "ownerId": "varun.goel",
+      "slug": "what-is-the-purpose-of-search-",
+      "title": "What is the purpose of search engine optimization",
+      "tags": [],
+      "background": {
+        "color": "#c48f1a",
+        "image": ""
+      },
+      "id": "what-is-the-purpose-of-search-"
+    },
+    {
+      "createdOn": "2019-12-01T15:23:30.185Z",
+      "ownerId": "varun.goel",
+      "slug": "another-question-1",
+      "title": "Another question",
+      "tags": [],
+      "background": {
+        "color": "#2C3E50",
+        "image": ""
+      },
+      "id": "another-question-1"
+    },
+    {
+      "createdOn": "2019-12-01T15:24:27.449Z",
+      "ownerId": "varun.goel",
+      "slug": "one-more-question",
+      "title": "One more question",
+      "tags": [],
+      "background": {
+        "color": "#257dd6",
+        "image": ""
+      },
+      "id": "one-more-question"
+    },
+    {
+      "createdOn": "2019-12-01T15:34:31.263Z",
+      "ownerId": "varun.goel",
+      "slug": "what-are-some-good-freelance-sites-in-2019-other-t",
+      "title": "What are some good freelance sites in 2019 other than Upwork, Fiverr and Freelancer?",
+      "tags": [
+        {
+          "display": "tag",
+          "value": "tag"
+        },
+        {
+          "display": "tag2",
+          "value": "tag2"
+        }
+      ],
+      "background": {
+        "color": "#8de245",
+        "image": ""
+      },
+      "id": "what-are-some-good-freelance-sites-in-2019-other-t"
+    },
+    {
+      "createdOn": "2019-12-01T16:15:19.941Z",
+      "ownerId": "varun.goel",
+      "slug": "my-new-question",
+      "title": "My new question",
+      "tags": [],
+      "background": {
+        "color": "#c5dec7",
+        "image": ""
+      },
+      "id": "my-new-question"
+    },
+    {
+      "createdOn": "2019-12-01T19:06:42.522Z",
+      "ownerId": "varun.goel",
+      "slug": "why-do-so-many-professional-athletes,-who-make-a-c",
+      "title": "Why do so many professional athletes, who make a considerable salary, wind up broke?",
+      "tags": [
+        {
+          "display": "sports",
+          "value": "sports"
+        },
+        {
+          "display": "bankrupt",
+          "value": "bankrupt"
+        }
+      ],
+      "background": {
+        "color": "#50382c",
+        "image": "https://qph.fs.quoracdn.net/main-qimg-e721b89a4b4fd1d06a2fb487dc78e54d"
+      },
+      "id": "why-do-so-many-professional-athletes,-who-make-a-c"
+    },
+    {
+      "createdOn": "2019-12-02T10:08:23.319Z",
+      "ownerId": "varun.goel",
+      "slug": "this-is-my-new-question-where-i-need-help",
+      "title": "This is my new question where I need help",
+      "tags": [
+        {
+          "display": "tag",
+          "value": "tag"
+        },
+        {
+          "display": "tag2",
+          "value": "tag2"
+        }
+      ],
+      "background": {
+        "color": "#58b323",
+        "image": ""
+      },
+      "id": "this-is-my-new-question-where-i-need-help"
+    },
+    {
+      "createdOn": "2019-12-02T18:34:06.955Z",
+      "ownerId": "varun.goel",
+      "slug": "another-question-2",
+      "title": "Another question",
+      "tags": [],
+      "background": {
+        "color": "#5687b8",
+        "image": ""
+      },
+      "id": "another-question-2"
+    },
+    {
+      "createdOn": "2019-12-03T13:40:17.389Z",
+      "ownerId": "varun.goel",
+      "slug": "how-do-i-learn-angular",
+      "title": "How do I learn Angular?",
+      "tags": [
+        {
+          "display": "tag",
+          "value": "tag"
+        }
+      ],
+      "background": {
+        "color": "#9d1dd0",
+        "image": ""
+      },
+      "id": "how-do-i-learn-angular"
+    },
+    {
+      "createdOn": "2019-12-03T20:28:01.919Z",
+      "ownerId": "varun.goel",
+      "slug": "something-that-i-want-to-ask",
+      "title": "Something that I want to ask",
+      "tags": [],
+      "background": {
+        "color": "#077e08",
+        "image": ""
+      },
+      "id": "something-that-i-want-to-ask"
+    },
+    {
+      "createdOn": "2019-12-05T15:30:14.518Z",
+      "ownerId": "varun.goel",
+      "slug": "can-someone-please-help-me-to-learn-react-and-rxjs1575559814518",
+      "title": "Can someone please help me to learn React + RXJS",
+      "tags": [],
+      "background": {
+        "color": "#2C3E50",
+        "image": ""
+      },
+      "id": "can-someone-please-help-me-to-learn-react-and-rxjs1575559814518"
+    },
+    {
+      "createdOn": "2019-12-05T19:11:43.228Z",
+      "ownerId": "varun.goel",
+      "slug": "how-is-lifestyle-in-netherlands1575573103228",
+      "title": "How is lifestyle in Netherlands",
+      "tags": [],
+      "background": {
+        "color": "#3d1ac8",
+        "image": ""
+      },
+      "id": "how-is-lifestyle-in-netherlands1575573103228"
+    },
+    {
+      "createdOn": "2019-12-05T21:33:04.056Z",
+      "ownerId": "varun.goel",
+      "slug": "new-question-for-demo1575581584056",
+      "title": "New question for demo",
+      "tags": [],
+      "background": {
+        "color": "#2C3E50",
+        "image": ""
+      },
+      "id": "new-question-for-demo1575581584056"
+    },
+    {
+      "createdOn": "2019-12-06T15:43:22.917Z",
+      "ownerId": "varun.goel",
+      "id": "testing-question-creation1575647002917",
+      "slug": "testing-question-creation1575647002917",
+      "title": "Testing question creation",
+      "tags": [],
+      "background": {
+        "color": "#502c2c",
+        "image": ""
+      }
+    }
+  ],
+  "promo-categories": [
+    {
+      "slug": "internet-startups",
+      "value": "Internet Startups"
+    },
+    {
+      "slug": "technology-events",
+      "value": "Current Events in Technology"
+    },
+    {
+      "slug": "www",
+      "value": "World Wide Web"
+    },
+    {
+      "slug": "smartphones",
+      "value": "Smart Phones"
+    },
+    {
+      "slug": "internet",
+      "value": "The Internet"
+    },
+    {
+      "slug": "tech-trends",
+      "value": "Technology Trends"
+    }
+  ],
+  "answers": [
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T10:54:27.849Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Test paragraph</p>"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T10:57:43.205Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Another comment to show my <strong>interest</strong></p>"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T10:58:11.908Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>This is in <strong>bold</strong></p>"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "createdOn": "2019-12-01T14:29:21.317Z",
+      "ownerId": "varun.goel",
+      "id": 4
+    },
+    {
+      "createdOn": "2019-12-01T14:43:48.116Z",
+      "ownerId": "varun.goel",
+      "id": 5
+    },
+    {
+      "createdOn": "2019-12-01T14:58:31.038Z",
+      "ownerId": "varun.goel",
+      "id": 6
+    },
+    {
+      "requestId": "one-more-question",
+      "createdOn": "2019-12-01T15:27:13.105Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>My answer to the question</p>"
+        }
+      ],
+      "id": 7
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:43:38.585Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Hey Thanks for A2A,</p><p>I am little late to answer this question you may find out your <a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\">best freelancer marketplace</a> still i want to share you my picks in this list of good freelancing sites in 2019 other than Upwork, Fiverr and Freelancer.</p><p>Here is the list:</p><p><a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\"><strong>Truelancer</strong></a><a href=\"https://www.truelancer.com/?utm_campaign=UpworkAlternatives&amp;utm_medium=QuoraIpsa&amp;utm_source=danish\"> </a>is an Online Platform for Employers to Hire Professionals to get their work done and Freelancers and Professionals can Search Jobs and Earn money by working with real clients across the world.</p><p><a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\">Truelancer</a> is comparatively new platform and is having a great potential to rule out the Market soon as the Marketplace is growing too fast with some great initiative on the way.</p><p>Customers can find Developers, Designers, Content Writers, Virtual Assistants, Mobile App Developer and many other professionals.</p><p>Projects on various categories like IT &amp; Programming, Graphic Design, Content Writing, Data Entry, Finance, Sales, Marketing and many more can be posted and found on <a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\">Truelancer</a>.</p><p><a href=\"http://guru.com/\"><strong>Guru</strong></a><strong>: </strong><a href=\"http://guru.com/\">Guru</a> provides businesses with the ability to find and hire talented freelancers all over the world. The platform offers freelancers the opportunity to earn some decent cash.</p><figure class=\"media\"><oembed url=\"https://www.youtube.com/watch?v=H08tGjXNHO4\"></oembed></figure>"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:46:54.983Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<h3>Headings</h3><p>Some paragraph in <strong>bold</strong></p><ul><li>some other text</li></ul><blockquote><p>quote text</p></blockquote>"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:47:42.830Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<figure class=\"image\"><img src=\"https://cdn.vox-cdn.com/thumbor/bSTk8WcbM2GtJttReLLsHnudFqg=/0x0:4962x3308/1200x800/filters:focal(1577x516:2369x1308)/cdn.vox-cdn.com/uploads/chorus_image/image/65753143/1189031820.jpg.0.jpg\" alt=\"Image result for nba images&quot;\"><figcaption>My basketball image</figcaption></figure><p>Some text comes here</p><p>&nbsp;</p>"
+        }
+      ],
+      "id": 10
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:50:34.626Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test</p>"
+        }
+      ],
+      "id": 11
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:50:37.137Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test2</p>"
+        }
+      ],
+      "id": 12
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:50:39.647Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test3</p>"
+        }
+      ],
+      "id": 13
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:50:41.255Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>4</p>"
+        }
+      ],
+      "id": 14
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T15:50:42.563Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>5</p>"
+        }
+      ],
+      "id": 15
+    },
+    {
+      "requestId": "what-are-some-good-freelance-sites-in-2019-other-t",
+      "createdOn": "2019-12-01T15:51:56.646Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test</p>"
+        }
+      ],
+      "id": 16
+    },
+    {
+      "requestId": "what-are-some-good-freelance-sites-in-2019-other-t",
+      "createdOn": "2019-12-01T18:55:44.596Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Hey Thanks for A2A,</p><p>I am little late to answer this question you may find out your <a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\">best freelancer marketplace</a> still i want to share you my picks in this list of good freelancing sites in 2019 other than Upwork, Fiverr and Freelancer.</p><p>Here is the list:</p><p><a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\"><strong>Truelancer</strong></a><a href=\"https://www.truelancer.com/?utm_campaign=UpworkAlternatives&amp;utm_medium=QuoraIpsa&amp;utm_source=danish\"> </a>is an Online Platform for Employers to Hire Professionals to get their work done and Freelancers and Professionals can Search Jobs and Earn money by working with real clients across the world.</p><p><a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\">Truelancer</a> is comparatively new platform and is having a great potential to rule out the Market soon as the Marketplace is growing too fast with some great initiative on the way.</p><p>Customers can find Developers, Designers, Content Writers, Virtual Assistants, Mobile App Developer and many other professionals.</p><p>Projects on various categories like IT &amp; Programming, Graphic Design, Content Writing, Data Entry, Finance, Sales, Marketing and many more can be posted and found on <a href=\"https://www.truelancer.com/?utm_campaign=Freelancsite2019&amp;utm_medium=Quora&amp;utm_source=Jagrati\">Truelancer</a>.</p><p><a href=\"http://guru.com/\"><strong>Guru</strong></a><strong>: </strong><a href=\"http://guru.com/\">Guru</a> provides businesses with the ability to find and hire talented freelancers all over the world. The platform offers freelancers the opportunity to earn some decent cash.</p><p><a href=\"http://wegrowth.com/\"><strong>WeGrowth</strong></a><strong>: </strong>Marketplace for growth marketers with a proven track record! Connects marketers and startups.</p>"
+        }
+      ],
+      "id": 17
+    },
+    {
+      "requestId": "what-are-some-good-freelance-sites-in-2019-other-t",
+      "createdOn": "2019-12-01T18:56:18.796Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Mentioned below are some popular freelance websites apart from Fiverr &amp; Upwork:-</p><ol><li><a href=\"https://croogster.com/\"><strong>Croogster</strong></a></li></ol><p>Croogster is an online marketplace that provides you with an opportunity to turn knowledge, talent or hobby into a permanent source of income! It is safe because it provides security, privacy, and timely payments, so you can keep doing what you love the most.</p><figure class=\"image\"><img src=\"https://qph.fs.quoracdn.net/main-qimg-d5845dbf8a2e79bdd80a3a7f41d48131\"></figure><p>2. <a href=\"http://toptal.com/\"><strong>Toptal</strong></a></p><p>Toptal has a different approach than the other services on this list, there is a screening process that a freelancer has to undergo, in order to gain access to great clients with substantive projects along with fair compensation.</p><figure class=\"image\"><img src=\"https://qph.fs.quoracdn.net/main-qimg-03b9215a4b1cd1433072ee0a06503376.webp\"></figure>"
+        }
+      ],
+      "id": 18
+    },
+    {
+      "requestId": "what-are-some-good-freelance-sites-in-2019-other-t",
+      "createdOn": "2019-12-01T18:57:36.765Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>There are a lot to choose from. Clearly define your needs to make the right choice.</p><p>Here are some you should pay attention to.</p><p>1) <a href=\"https://hire.codementor.io/?_ga=2.107988738.1426538002.1552070733-1437174208.1552070733\">CodementorX</a></p><p>2) <a href=\"https://www.guru.com/\">Guru</a></p><p>3) <a href=\"https://gigster.com/\">Gigster</a></p><p>4) <a href=\"https://www.peopleperhour.com/\">PeoplePerHour</a></p><p>5) <a href=\"https://www.devteam.space/\">DevTeam.Space</a></p><p>I may be biased when I say this but DevTeam.Space is the go-to if you have a complex (or not so) project that requires an experienced team of developers!</p><p><a href=\"https://www.devteam.space/process\"><i><strong>Here is how it works.</strong></i></a></p><p><strong>TELL US ABOUT YOUR CHALLENGE</strong></p><p>After you submit your project request, we'll reach out to you to discuss the details</p><p><strong>GET A PERFECT MATCH DEV TEAM &amp; THE PROJECT ROLL-OUT WITHIN DAYS</strong></p>"
+        }
+      ],
+      "id": 19
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-02T10:11:36.149Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p><strong>Hmm.. having travelled</strong> in about 54 countries, I might be qualified to compare my native upbringing with that of other places.</p><p>There is in my view no right or wrong, just efficiency. I found that many cultures have this feeling of immortality that is bewildering to a Dutch. We tend to die in about 80 years and a lot has to happen before that moment. In other countries entire families wait to discuss very important matters till next century.</p><blockquote><p>An example. My ex got raped by her brother. Nobody in the family said a word. The walls were thin, the house barely 20 meter square, and for years the entire family enjoyed one brother having his moments of pleasure.</p></blockquote><p>It so happened that I arrived in the place a week before my then wife. I told the mother and the brother I wanted to have a chat. This was right after hi, hello, nice to meet. I suggested he had two choices. Either apologize to his sister or I would let the entire neighborhood know. Her mother was shaking as if this was her last hour. He nearly wet his pants. And we finished the chat 5 minutes later.</p><p>&nbsp;</p><figure class=\"image\"><img src=\"https://qph.fs.quoracdn.net/main-qimg-85a7e341938b517baffcf78e0ff07773\"><figcaption>my image caption</figcaption></figure>"
+        }
+      ],
+      "id": 20
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-02T10:13:40.954Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<figure class=\"media\"><oembed url=\"https://youtu.be/mnh5OGwcWB0\"></oembed></figure>"
+        }
+      ],
+      "id": 21
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-02T18:33:46.543Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test</p><p>&nbsp;</p>"
+        }
+      ],
+      "id": 22
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-02T18:57:09.937Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>some item</p>"
+        }
+      ],
+      "id": 23
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-02T18:58:33.569Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>testing post of comment</p>"
+        }
+      ],
+      "id": 24
+    },
+    {
+      "requestId": "how-do-i-learn-angular",
+      "createdOn": "2019-12-03T13:40:45.781Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<h2>My heading</h2><p>My paragraph</p>"
+        }
+      ],
+      "id": 25
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-04T14:10:16.873Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p><strong>Hmm.. having travelled</strong> in about 54 countries, I might be qualified to compare my native upbringing with that of other places.</p><p>There is in my view no right or wrong, just efficiency. I found that many cultures have this feeling of immortality that is bewildering to a Dutch.&nbsp;</p><p>W<i>e tend to die in about 80 years and a lot has to happen </i>before that moment. In other countries entire families wait to discuss very important matters till next century.</p>"
+        }
+      ],
+      "id": 26
+    },
+    {
+      "requestId": "something-that-i-want-to-ask",
+      "createdOn": "2019-12-05T14:22:33.743Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test answer</p>"
+        }
+      ],
+      "id": 27
+    },
+    {
+      "requestId": "something-that-i-want-to-ask",
+      "createdOn": "2019-12-05T14:24:54.255Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p><strong>My heading</strong></p><p>some comment</p>"
+        }
+      ],
+      "id": 28
+    },
+    {
+      "requestId": "can-someone-please-help-me-to-learn-react-and-rxjs1575559814518",
+      "createdOn": "2019-12-05T15:32:42.195Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>My main answer comes here</p>"
+        }
+      ],
+      "id": 29
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-05T15:41:09.263Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>my new answer</p>"
+        }
+      ],
+      "id": 30
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-05T15:42:18.165Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>new comment after removing details</p>"
+        }
+      ],
+      "id": 31
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-05T20:13:12.309Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Another answer</p>"
+        }
+      ],
+      "id": 32
+    },
+    {
+      "requestId": "how-is-lifestyle-in-netherlands1575573103228",
+      "createdOn": "2019-12-05T21:11:15.326Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Test answer</p>"
+        }
+      ],
+      "id": 33
+    },
+    {
+      "requestId": "new-question-for-demo1575581584056",
+      "createdOn": "2019-12-05T21:33:29.173Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>1st answer to this</p>"
+        }
+      ],
+      "id": 34
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-05T21:38:27.059Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Answering more</p>"
+        }
+      ],
+      "id": 35
+    },
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-05T21:38:29.197Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test</p>"
+        }
+      ],
+      "id": 36
+    },
+    {
+      "requestId": "new-question-for-demo1575581584056",
+      "createdOn": "2019-12-06T09:13:21.402Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>1 more answer</p>"
+        }
+      ],
+      "id": 37
+    },
+    {
+      "id": "testing-question-creation1575647002917",
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-06T15:43:34.500Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test answer</p><p>&nbsp;</p>"
+        }
+      ]
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-06T15:55:07.649Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>1 more answer</p>"
+        }
+      ],
+      "id": 38
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-06T18:22:02.993Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test answer</p>"
+        }
+      ],
+      "id": 39
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-06T18:22:46.858Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>test</p>"
+        }
+      ],
+      "id": 40
+    }
+  ],
+  "feeds": [
+    {
+      "type": "collaboration",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "oNkem",
+      "content": [
+        {
+          "type": "text",
+          "value": "I would like to build a new hotel in Mozambique to add to my collection"
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.900Z"
+    },
+    {
+      "type": "collaboration",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "oNkem",
+      "content": [
+        {
+          "type": "text",
+          "value": "Why do so many professional athletes, who make a considerable salary, wind up broke?"
+        },
+        {
+          "type": "image",
+          "value": "https://qph.fs.quoracdn.net/main-qimg-e721b89a4b4fd1d06a2fb487dc78e54d"
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.901Z"
+    },
+    {
+      "type": "collaboration",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "varun.goel",
+      "content": [
+        {
+          "type": "text",
+          "value": "What are some good freelance sites in 2019 other than Upwork, Fiverr and Freelancer?"
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.902Z"
+    },
+    {
+      "type": "event",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "admin.mest-africa",
+      "content": [
+        {
+          "type": "heading",
+          "value": "2019 Africa Fintech Summit - Addis Ababa"
+        },
+        {
+          "type": "text",
+          "value": "<strong>The premiere global initiative dedicated to fintech in Africa is coming to Addis Ababa, Ethiopia.</strong> <br/> Twice a year, the Africa Fintech Summit (AFTS) brings the issues, entrepreneurs, and opportunities revolutionising finance in Africa to the world stage - each April in Washington, DC and each November in a different African city. We're excited to annouce <strong>Addis Ababa</strong> as the 2019 AFTS host city!"
+        },
+        {
+          "type": "image",
+          "value": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/cosvuploading/photo/photo/6b2acb07833a41d8./43579ebc8563f4056458d1f76098c4bd.jpg"
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.909Z"
+    },
+    {
+      "type": "event",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "admin.commonwealth-africa",
+      "content": [
+        {
+          "type": "text",
+          "value": "The Africa Forum London 2019 <br /> <br /> The Africa Forum is a premier event for those curious and excited about Africa. It is an excellent opportunity to learn about the challenges and opportunities on the continent. Come listen to distinguished speakers who are helping to shape the future and trajectory of this abundant continent."
+        },
+        {
+          "type": "image",
+          "value": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/cosvuploading/photo/photo/5788ebbf1f4a4d16./930fbe57b315e298b0dbe33c2f49eb63.jpg"
+        },
+        {
+          "type": "text",
+          "value": "The Africa Forum is a platform for eminent and emerging leaders from different sections of society from around Africa and the Commonwealth to deliberate on the role of leadership in creating a more sustainable continent and future. ALEF serves a platform for intergenerational exchange of ideas and opinions about practical challenges facing the continent, and an opportunity to enable the next generation of African leaders.<br /> TAF is intended to be a multi-stakeholder gathering, aiming to integrate different African communities to talk about the current issues in Africa and provide them a platform to share their advice and experience."
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.920Z"
+    },
+    {
+      "type": "initiative",
+      "slug": "omolayo-build-new-hotelmozambique",
+      "ownerId": "admin.alpha-code",
+      "content": [
+        {
+          "type": "heading",
+          "value": "Fintech Accelerator"
+        },
+        {
+          "type": "text",
+          "value": "Give yourself the best shot at success and accelerate your fintech career by applying now for AlphaCode’s EXPLORE programme"
+        },
+        {
+          "type": "image",
+          "value": "https://d3t1rrq9fohtv1.cloudfront.net/initiative/image/banner-img.jpg"
+        },
+        {
+          "type": "text",
+          "value": "AlphaCode are looking for exceptional individuals with a passion for fintech, innovation and disruption. You’ll need to be focused, driven and committed to make an impact on South Africa’s fintech industry. An open mind, a willingness to learn and a capacity for original, visionary thinking will be advantageous.<br /> <br />You will be asked to: <ul><li> Submit Your CV </li><li> A 750-word essay describing your fintech business idea and how the world will be a better place with your business in it</li></ul>"
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.925Z"
+    },
+    {
+      "type": "trending",
+      "slug": "2021-ford-mustang-mach-e-will-please-ev-fans-perplex-mustang-loyalists",
+      "ownerId": "connor-hoffman",
+      "content": [
+        {
+          "type": "heading",
+          "value": "2021 Ford Mustang Mach-E Will Please EV Fans, Perplex Mustang Loyalists"
+        },
+        {
+          "type": "embed",
+          "value": "https://hmg.h-cdn.co/videos/mache-studioshoot-3-1574018605.mp4"
+        },
+        {
+          "type": "text",
+          "value": "To prove that it is serious about moving into the coming electric era, Ford wants its new EV to be as desirable as a hot dog at a baseball game, or, let's face it, a Tesla. And what's the coolest thing Ford currently offers? The Mustang. So, instead of easing into the electric field with another battery-powered hatchback like the Focus Electric, Ford is aggressively entering into the EV market by leveraging the Mustang name and applying it to this all-electric five-passenger crossover. Whether that was a smart move or damaging to the Mustang's legendary status remains to be seen and tested."
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.935Z"
+    },
+    {
+      "type": "trending",
+      "slug": "the-nba-may-have-just-thrown-hong-kongs-protesters-a-new-lifeline",
+      "ownerId": "isabella-steger",
+      "content": [
+        {
+          "type": "heading",
+          "value": "The NBA may have just thrown Hong Kong’s protesters a new lifeline"
+        },
+        {
+          "type": "embed",
+          "value": "https://www.youtube.com/embed/4VAd4QdXusM"
+        },
+        {
+          "type": "text",
+          "value": "The Hong Kong protests are benefiting from China’s latest effort to quash speech about them—which involved starting a full-blown spat with the NBA.<br /> <br />It’s unlikely many basketball fans in the US were paying close attention to the months-long protests in Hong Kong. But the deepening fallout between the league and Beijing, stemming from a now-deleted tweet by Houston Rockets general manager Daryl Morey last week expressing support for Hong Kong’s protests, has put the issue front and center of American basketball, and even arguably America’s news cycle."
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.940Z"
+    },
+    {
+      "type": "career",
+      "slug": "sendwave-country-launcher",
+      "ownerId": "john-wave",
+      "content": [
+        {
+          "type": "heading",
+          "value": "Country Launcher"
+        },
+        {
+          "type": "text",
+          "value": "Launch and grow new markets throughout the continent for the VC-backed fintech company making Africa the first cashless continent"
+        },
+        {
+          "type": "image",
+          "value": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/media/careers/cover/Wave_Banner/1e45450094830b6c727937fbf5260c06.jpg"
+        },
+        {
+          "type": "text",
+          "value": "As the new Country Launcher, you’ll start by working with someone who has successfully launched Wave in new places before, but the goal will be for you to then take the lead in launching subsequent countries. You would be required to relocate to one of Wave's current operating countries (likely Côte d'Ivoire) for the first 2-6 months to learn about how Wave launch new countries. Afterwards, you would move every 6 months to 1 year as Wave grows. This will not be a typical 9 - 5 role, on some days you will be at a port early in the morning speaking to fishermen. On other days you'll be visiting offices to rent or carrying out phone interviews. That being said, it's a marathon not a sprint! Wave care deeply about their  employees and want to make sure you take the time off you need and take care of yourself so you can be your happiest and most productive."
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.945Z"
+    },
+    {
+      "type": "career",
+      "isSponsored": true,
+      "slug": "sendwave-country-launcher",
+      "ownerId": "admin-open-capital-advisors",
+      "content": [
+        {
+          "type": "heading",
+          "value": "Head of Capital Markets"
+        },
+        {
+          "type": "text",
+          "value": "Partner-path opportunity to lead a high impact team of experts in financial structuring, capital raising and financial advisory, at a pan-African financial advisory and management consulting firm"
+        },
+        {
+          "type": "image",
+          "value": "https://d3t1rrq9fohtv1.cloudfront.net/CACHE/images/media/careers/cover/OCA_Banner/fda899f079231e56d83b081288a098e5.jpg"
+        }
+      ],
+      "createdOn": "2019-12-01T15:09:45.935Z"
+    }
+  ],
+  "careers-feed": [
+    {
+      "slug": "viamo-country-manager",
+      "value": "Country Manager (Various Locations)"
+    },
+    {
+      "slug": "jacaranda-health-director-of-programs-and-operations-814",
+      "value": "Director of Programs and Operations"
+    }
+  ],
+  "collaborations-feed": [
+    {
+      "slug": "dolapo-seeking-partner-real-estate-uk",
+      "value": "Seeking Partner for a Real Estate Agency in the UK"
+    },
+    {
+      "slug": "omolayo-build-new-hotelmozambique",
+      "value": "I would like to build a new hotel in Mozambique to add to my collection"
+    }
+  ],
+  "events-feed": [
+    {
+      "slug": "2019-ufm-women-business-forum",
+      "value": "2019 UfM Women Business Forum"
+    },
+    {
+      "slug": "2019-africa-fintech-summit-addis-ababa",
+      "value": "2019 Africa Fintech Summit - Addis Ababa"
+    }
+  ],
+  "initiatives-feed": [
+    {
+      "slug": "mest-africa-training-program",
+      "value": "The MEST Training Program"
+    },
+    {
+      "slug": "obama-foundation-obama-foundation-scholars-program",
+      "value": "Obama Foundation Scholars Program"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "ownerId": "connor-hoffman",
+      "value": "This is 1st comment. This is 1st comment This is 1st commentThis is 1st commentThis is 1st commentThis is 1st commentThis is 1st commentThis is 1st commentThis is 1st commentThis is 1st commentThis is 1st comment",
+      "slug": "comment-2019-12-01T15:09:45.900Z",
+      "createdOn": "2019-12-01T15:09:45.900Z",
+      "answerId": 26,
+      "owner": {
+        "id": "connor-hoffman",
+        "name": "Connor Hoffman",
+        "professionalTitle": "Staff Editor",
+        "company": "Car and Driver",
+        "image": "https://hips.hearstapps.com/rover/profile_photos/9638b625-b580-439f-a88a-cd41757f534b_1571687075.file?fill=1:1&resize=80:*"
+      }
+    },
+    {
+      "id": 2,
+      "ownerId": "varun.goel",
+      "value": "This is 2nd comment",
+      "slug": "comment-2019-12-01T15:09:45.905Z",
+      "createdOn": "2019-12-01T15:09:45.905Z",
+      "answerId": 1,
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "ownerId": "isabella-steger",
+      "value": "This is another comment",
+      "slug": "comment-2019-12-01T15:09:45.910Z",
+      "createdOn": "2019-12-01T15:09:45.910Z",
+      "answerId": 26,
+      "owner": {
+        "id": "isabella-steger",
+        "name": "Isabella Steger",
+        "professionalTitle": "Reporter and Editor",
+        "company": "Quartz",
+        "image": "https://cms.qz.com/wp-content/uploads/2016/10/pa010177-e1476460081125.jpg?quality=75&strip=all&w=164&h=164&crop=1"
+      }
+    },
+    {
+      "value": "My comment",
+      "slug": "comment-1575539757207",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "createdOn": "2019-12-05T09:55:57.207Z",
+      "ownerId": "varun.goel",
+      "id": 5
+    },
+    {
+      "value": "Another comment",
+      "slug": "comment-1575539974882",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "createdOn": "2019-12-05T09:59:34.883Z",
+      "ownerId": "varun.goel",
+      "id": 6
+    },
+    {
+      "value": "test comment",
+      "slug": "comment-1575539982850",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 24,
+      "createdOn": "2019-12-05T09:59:42.851Z",
+      "ownerId": "varun.goel",
+      "id": 7
+    },
+    {
+      "value": "1 more comment",
+      "slug": "comment-1575540004767",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 1,
+      "createdOn": "2019-12-05T10:00:04.767Z",
+      "ownerId": "varun.goel",
+      "id": 8
+    },
+    {
+      "value": "test comment",
+      "slug": "comment-1575540118947",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 2,
+      "createdOn": "2019-12-05T10:01:58.947Z",
+      "ownerId": "varun.goel",
+      "id": 9
+    },
+    {
+      "value": "1 more",
+      "slug": "comment-1575540162936",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 1,
+      "createdOn": "2019-12-05T10:02:42.936Z",
+      "ownerId": "varun.goel",
+      "id": 10
+    },
+    {
+      "value": "lets add another comment",
+      "slug": "comment-1575540389275",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 1,
+      "createdOn": "2019-12-05T10:06:29.275Z",
+      "ownerId": "varun.goel",
+      "id": 11
+    },
+    {
+      "value": "testing more comment",
+      "slug": "comment-1575540570214",
+      "createdOn": "2019-12-05T10:09:30.214Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 1,
+      "id": 12
+    },
+    {
+      "value": "test 5",
+      "slug": "comment-1575551536952",
+      "createdOn": "2019-12-05T13:12:16.952Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 15,
+      "id": 13
+    },
+    {
+      "value": "test",
+      "slug": "comment-1575552692424",
+      "createdOn": "2019-12-05T13:31:32.424Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "id": 14
+    },
+    {
+      "value": "another comment",
+      "slug": "comment-1575552778130",
+      "createdOn": "2019-12-05T13:32:58.130Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "id": 15
+    },
+    {
+      "value": "yet anothe",
+      "slug": "comment-1575552794748",
+      "createdOn": "2019-12-05T13:33:14.748Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "id": 16
+    },
+    {
+      "value": "comment comment",
+      "slug": "comment-1575552829008",
+      "createdOn": "2019-12-05T13:33:49.008Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "id": 17
+    },
+    {
+      "value": "woohoo",
+      "slug": "comment-1575552835234",
+      "createdOn": "2019-12-05T13:33:55.234Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 26,
+      "id": 18
+    },
+    {
+      "value": "Not interested, sorry!",
+      "slug": "comment-1575555910970",
+      "createdOn": "2019-12-05T14:25:10.970Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 28,
+      "id": 25
+    },
+    {
+      "value": "Why are you not interested?",
+      "slug": "comment-1575555952039",
+      "createdOn": "2019-12-05T14:25:52.039Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 28,
+      "id": 26
+    },
+    {
+      "value": "test comment",
+      "slug": "comment-1575581642220",
+      "createdOn": "2019-12-05T21:34:02.221Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 34,
+      "id": 43
+    },
+    {
+      "value": "test comment 2",
+      "slug": "comment-1575581649648",
+      "createdOn": "2019-12-05T21:34:09.648Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 34,
+      "id": 44
+    },
+    {
+      "value": "3rd comment",
+      "slug": "comment-1575581663620",
+      "createdOn": "2019-12-05T21:34:23.620Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "answerId": 34,
+      "id": 45
+    },
+    {
+      "value": "test comment",
+      "slug": "comment-1575646764544",
+      "createdOn": "2019-12-06T15:39:24.544Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "requestId": "new-question-for-demo1575581584056",
+      "id": 54
+    },
+    {
+      "value": "another comment",
+      "slug": "comment-1575646775215",
+      "createdOn": "2019-12-06T15:39:35.215Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "requestId": "new-question-for-demo1575581584056",
+      "id": 55
+    },
+    {
+      "value": "another",
+      "slug": "comment-1575646776832",
+      "createdOn": "2019-12-06T15:39:36.832Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "requestId": "new-question-for-demo1575581584056",
+      "id": 56
+    },
+    {
+      "value": "another",
+      "slug": "comment-1575646777977",
+      "createdOn": "2019-12-06T15:39:37.977Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "requestId": "new-question-for-demo1575581584056",
+      "id": 57
+    },
+    {
+      "value": "test comment",
+      "slug": "comment-1575647040297",
+      "createdOn": "2019-12-06T15:44:00.297Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "requestId": "testing-question-creation1575647002917",
+      "id": 58
+    },
+    {
+      "value": "another comment",
+      "slug": "comment-1575659297911",
+      "createdOn": "2019-12-06T19:08:17.911Z",
+      "ownerId": "varun.goel",
+      "owner": {
+        "id": "varun.goel",
+        "name": "V. Goel",
+        "professionalTitle": "CEO",
+        "company": "Estate Builders",
+        "image": "assets/user-profile-square-small.jpg"
+      },
+      "requestId": "testing-question-creation1575647002917",
+      "id": 59
+    }
+  ],
+  "upvotes": [
+    {
+      "requestId": "new-question-for-demo1575581584056",
+      "ownerId": "varun.goel",
+      "id": 16
+    },
+    {
+      "requestId": "new-question-for-demo1575581584056",
+      "ownerId": "varun.goel",
+      "id": 17
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 18
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 19
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 20
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 21
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 22
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 23
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 24
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 25
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 26
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 27
+    }
+  ],
+  "downvotes": [
+    {
+      "requestId": "new-question-for-demo1575581584056",
+      "ownerId": "varun.goel",
+      "id": 6
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 7
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 8
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "ownerId": "varun.goel",
+      "id": 9
+    },
+    {
+      "requestId": 89,
+      "ownerId": "varun.goel",
+      "id": 10
+    },
+    {
+      "requestId": 89,
+      "ownerId": "varun.goel",
+      "id": 11
+    }
+  ],
+  "responses": [
+    {
+      "requestId": "omolayo-build-new-hotelmozambique",
+      "createdOn": "2019-12-01T10:54:27.849Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Test paragraph</p>"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-06T18:32:09.625Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>First comment by <strong>ckeditor</strong></p>"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-06T19:05:57.119Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>I can help with this</p><p>I am an <strong>Expert </strong>in the field</p>"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-07T14:28:02.790Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Send a new <strong>Proposal</strong></p>"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "requestId": "testing-question-creation1575647002917",
+      "createdOn": "2019-12-08T09:36:37.538Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>An outfield player has hundred of chances to show his capability in a game.</p><p>Striker is always the superstar of the team.</p><p>Midfielders are the mastermind, scoring some assisting lot.</p><p>Defenders are the leaders in the game.</p><p>Goalkeepers….. Well they are Goalkeepers.</p><p>I play as a Winger, and still you ask me which position is hardest to play? It's definitely not Wing (It's the Easiest).</p><p>&nbsp;</p><figure class=\"image\"><img src=\"https://qph.fs.quoracdn.net/main-qimg-7064914af65fd15d5251416df1524c62\"></figure><p>For me there are 2 positions that are hardest to play -</p><ol><li>THE <strong>Goalkeeper </strong>- Agree it or not. Goalkeepers are the players that make difference in a team. You may have an excellent team on field but thinking that you won't get attacked once in goal in 90′ is not at all possible. You'll get attacked and that's were Goalkeepers make the difference And the biggest difference between a keeper and other player is that the blame on conceding is always on keeper because he's the last man! A Goalkeeper needs to have high level of attentiveness, if he switches off in the wrong minute he concedes. He has to lead a whole pack of 4 defenders in front of him(Extremaly difficult for a young lad). He needs to have amazing reflex and skill and distribution. Without any doubt, it's the position only special people can play in.</li><li>CDM - Central Defensive Midfielder : A CDM role is very clear to see. He needs to Defend, Chase, distribute, construct an Attack, support midfield and Defence, win headers…. Okay do everything. CDM role one can say is the most versatile role to play. You need to have everything in a lot quantity in you to be a CDM. That's why I've never witnessed a perfect CDM since Mekelele. Its a role that demands physically too. You need to have Strength to hold of attackers in first place. You need to have speed to chase. Need perfect passing skills to continue distribution. You need to be calm because 2 lines, attack and Defence are instructing you what you do. You need to have Stamina because you're going everything!</li></ol><p><strong>Not only because of skill these are the two most difficult, because of the fact that the blame of a team conceding is directly put on these players. </strong>And even if you perform brilliantly these players don't get credit, because in the end it's all bout who scored a goal (Sad truth of Football).</p>"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "requestId": "what-is-the-purpose-of-search-",
+      "createdOn": "2019-12-08T10:40:33.140Z",
+      "ownerId": "varun.goel",
+      "answer": [
+        {
+          "type": "text",
+          "value": "<p>Sending 1st proposal for SEO</p>"
+        }
+      ],
+      "id": 6
+    }
+  ],
+  "users-details": [
+    {
+      "id": 1,
+      "details": {
+        "coverImage": "https://media.licdn.com/dms/image/C4D16AQHPgsIdgH4uFw/profile-displaybackgroundimage-shrink_350_1400/0?e=1581552000&v=beta&t=Tc0F44Uq7_O2u3afoq-RF9KcFYdPWumT8zQ6eSdHIps",
+        "image": "assets/images/avatars/Abbott.jpg",
+        "name": "Abbott Keitch",
+        "phone": "+1-234567890",
+        "email": "abbott@keitch.com",
+        "company": "Movemeback",
+        "professionalTitle": "Senior Developer",
+        "location": "Amsterdam, Netherlands"
+      },
+      "aboutMe": "Web Software engineer and project lifecycle manager with a total of 6+ years of experience in software development, 2+ years in planning and managing medium scale web projects. I have lead team of 25 people over various projects and roles. Also, responsible for presales, requirement understanding, analysis / research, risk estimation, project planning, project coordination and delivery.",
+      "experiences": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQF6WyGiMrerFQ/company-logo_200_200/0?e=1583971200&v=beta&t=nZoCmx2gFrm97qlHynHvGfC80KveuN6Aww73BzRFk-k",
+          "professionalTitle": "Senior Developer",
+          "companyName": "Movemeback",
+          "duration": {
+            "start": "July 2017",
+            "end": "present"
+          },
+          "location": "Amsterdam, Netherlands",
+          "summary": "The Backbase Omni-Channel Digital Banking Platform empowers financial institutions to accelerate their digital transformation and effectively compete in a digital-first world. Backbase software is used by global financial institutions such as ABN AMRO, Barclays, CheBanca!, Sberbank, Fidelity, Hiscox, Legal & General, Bank Hapoalim, PZU, Postfinance, Al Rajhi Bank, HSBC, Lloyds and many more. At Backbase Academy, I am responsible for: - Delivering in-house and on-site trainings all around the world to internal team, partners and clients. - Discussions with R&D team on architectures - Deliver Widget Architecture 3 trainings (Angular + Typescript + rxJS based) - Deliver Widget Architecture 2 trainings (Angular JS based)"
+        },
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQErMHnt7DANbQ/company-logo_100_100/0?e=1583971200&v=beta&t=8AZhqlAcE3_WIxI4jEzbclxT1A_VSsGvHDPFAbQjSEQ",
+          "professionalTitle": "Senior Frontend Developer",
+          "companyName": "Earthlink",
+          "duration": {
+            "start": "Feb 2017",
+            "end": "June 2017"
+          },
+          "location": "Dubai, UAE",
+          "summary": "EarthLink Telecommunication started in 2005 as Internet service provider. It is a renowned company in Dubai, UAE. At Earthlink, I was responsible for: - Developing new features in various web apps developed in Angular - Share learnings with the team - Created a custom solution for File Uploader to support the team\"s needs (involving high amount of data transfer)"
+        }
+      ],
+      "educations": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQEGlAPQBQxDhQ/company-logo_100_100/0?e=1583971200&v=beta&t=xyIwQ2KCcM5yCh9GhZBh4Xu238GtDls5fjVkXjvSBrw",
+          "courseTitle": "MS Computer Science",
+          "instituteName": "University of Northumbria",
+          "duration": {
+            "start": "2009",
+            "end": "2010"
+          },
+          "location": "Newcastle, United Kingdom",
+          "summary": "MS in Computer Science:<br />- Dissertation on Digital Image Processing to find any changes done in image using differentials <br />- Maze Robot Path Finder: A program that was capable of finding its way out of any maze through different algorithms. <br />- British Airways Document Management System: Conversion of existing manual system to automated module"
+        },
+        {
+          "logo": "https://images.static-collegedunia.com/public/college_data/images/logos/1499941019logo.png",
+          "instituteName": "Krishna Engineering College",
+          "courseTitle": "BTech. Computer Science",
+          "duration": {
+            "start": "2005",
+            "end": "2009"
+          },
+          "location": "Ghaziabad, India",
+          "summary": "B Tech in Computer Science<br />- Completed final year project on Security (Multiple algorithms stacked on each other for multiple levels of security)"
+        }
+      ],
+      "languages": "English, Italian"
+    },
+    {
+      "id": 2,
+      "details": {
+        "coverImage": "https://media.licdn.com/dms/image/C4D16AQHPgsIdgH4uFw/profile-displaybackgroundimage-shrink_350_1400/0?e=1581552000&v=beta&t=Tc0F44Uq7_O2u3afoq-RF9KcFYdPWumT8zQ6eSdHIps",
+        "image": "assets/images/avatars/Arnold.jpg",
+        "name": "Arnold Matlock",
+        "phone": "+1-234567890",
+        "email": "arnold@gmail.com",
+        "company": "Movemeback",
+        "professionalTitle": "Developer at Movemeback",
+        "location": "Amsterdam, Netherlands"
+      },
+      "aboutMe": "Web Software engineer and project lifecycle manager with a total of 6+ years of experience in software development, 2+ years in planning and managing medium scale web projects. I have lead team of 25 people over various projects and roles. Also, responsible for presales, requirement understanding, analysis / research, risk estimation, project planning, project coordination and delivery.",
+      "experiences": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQF6WyGiMrerFQ/company-logo_200_200/0?e=1583971200&v=beta&t=nZoCmx2gFrm97qlHynHvGfC80KveuN6Aww73BzRFk-k",
+          "professionalTitle": "Senior Developer",
+          "companyName": "Movemeback",
+          "duration": {
+            "start": "July 2017",
+            "end": "present"
+          },
+          "location": "Amsterdam, Netherlands",
+          "summary": "The Backbase Omni-Channel Digital Banking Platform empowers financial institutions to accelerate their digital transformation and effectively compete in a digital-first world. Backbase software is used by global financial institutions such as ABN AMRO, Barclays, CheBanca!, Sberbank, Fidelity, Hiscox, Legal & General, Bank Hapoalim, PZU, Postfinance, Al Rajhi Bank, HSBC, Lloyds and many more. At Backbase Academy, I am responsible for: - Delivering in-house and on-site trainings all around the world to internal team, partners and clients. - Discussions with R&D team on architectures - Deliver Widget Architecture 3 trainings (Angular + Typescript + rxJS based) - Deliver Widget Architecture 2 trainings (Angular JS based)"
+        },
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQErMHnt7DANbQ/company-logo_100_100/0?e=1583971200&v=beta&t=8AZhqlAcE3_WIxI4jEzbclxT1A_VSsGvHDPFAbQjSEQ",
+          "professionalTitle": "Senior Frontend Developer",
+          "companyName": "Earthlink",
+          "duration": {
+            "start": "Feb 2017",
+            "end": "June 2017"
+          },
+          "location": "Dubai, UAE",
+          "summary": "EarthLink Telecommunication started in 2005 as Internet service provider. It is a renowned company in Dubai, UAE. At Earthlink, I was responsible for: - Developing new features in various web apps developed in Angular - Share learnings with the team - Created a custom solution for File Uploader to support the team\"s needs (involving high amount of data transfer)"
+        }
+      ],
+      "educations": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQEGlAPQBQxDhQ/company-logo_100_100/0?e=1583971200&v=beta&t=xyIwQ2KCcM5yCh9GhZBh4Xu238GtDls5fjVkXjvSBrw",
+          "courseTitle": "MS Computer Science",
+          "instituteName": "University of Northumbria",
+          "duration": {
+            "start": "2009",
+            "end": "2010"
+          },
+          "location": "Newcastle, United Kingdom",
+          "summary": "MS in Computer Science:<br />- Dissertation on Digital Image Processing to find any changes done in image using differentials <br />- Maze Robot Path Finder: A program that was capable of finding its way out of any maze through different algorithms. <br />- British Airways Document Management System: Conversion of existing manual system to automated module"
+        },
+        {
+          "logo": "https://images.static-collegedunia.com/public/college_data/images/logos/1499941019logo.png",
+          "instituteName": "Krishna Engineering College",
+          "courseTitle": "BTech. Computer Science",
+          "duration": {
+            "start": "2005",
+            "end": "2009"
+          },
+          "location": "Ghaziabad, India",
+          "summary": "B Tech in Computer Science<br />- Completed final year project on Security (Multiple algorithms stacked on each other for multiple levels of security)"
+        }
+      ],
+      "languages": "English, Italian"
+    },
+    {
+      "id": 3,
+      "details": {
+        "coverImage": "https://media.licdn.com/dms/image/C4D16AQHPgsIdgH4uFw/profile-displaybackgroundimage-shrink_350_1400/0?e=1581552000&v=beta&t=Tc0F44Uq7_O2u3afoq-RF9KcFYdPWumT8zQ6eSdHIps",
+        "image": "assets/images/avatars/Barrera.jpg",
+        "name": "Barrera Bradbury",
+        "phone": "+1-234567890",
+        "email": "barrera@gmail.com",
+        "company": "Movemeback",
+        "professionalTitle": "Developer",
+        "location": "Amsterdam, Netherlands"
+      },
+      "aboutMe": "Web Software engineer and project lifecycle manager with a total of 6+ years of experience in software development, 2+ years in planning and managing medium scale web projects. I have lead team of 25 people over various projects and roles. Also, responsible for presales, requirement understanding, analysis / research, risk estimation, project planning, project coordination and delivery.",
+      "experiences": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQF6WyGiMrerFQ/company-logo_200_200/0?e=1583971200&v=beta&t=nZoCmx2gFrm97qlHynHvGfC80KveuN6Aww73BzRFk-k",
+          "professionalTitle": "Senior Developer",
+          "companyName": "Movemeback",
+          "duration": {
+            "start": "July 2017",
+            "end": "present"
+          },
+          "location": "Amsterdam, Netherlands",
+          "summary": "The Backbase Omni-Channel Digital Banking Platform empowers financial institutions to accelerate their digital transformation and effectively compete in a digital-first world. Backbase software is used by global financial institutions such as ABN AMRO, Barclays, CheBanca!, Sberbank, Fidelity, Hiscox, Legal & General, Bank Hapoalim, PZU, Postfinance, Al Rajhi Bank, HSBC, Lloyds and many more. At Backbase Academy, I am responsible for: - Delivering in-house and on-site trainings all around the world to internal team, partners and clients. - Discussions with R&D team on architectures - Deliver Widget Architecture 3 trainings (Angular + Typescript + rxJS based) - Deliver Widget Architecture 2 trainings (Angular JS based)"
+        },
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQErMHnt7DANbQ/company-logo_100_100/0?e=1583971200&v=beta&t=8AZhqlAcE3_WIxI4jEzbclxT1A_VSsGvHDPFAbQjSEQ",
+          "professionalTitle": "Senior Frontend Developer",
+          "companyName": "Earthlink",
+          "duration": {
+            "start": "Feb 2017",
+            "end": "June 2017"
+          },
+          "location": "Dubai, UAE",
+          "summary": "EarthLink Telecommunication started in 2005 as Internet service provider. It is a renowned company in Dubai, UAE. At Earthlink, I was responsible for: - Developing new features in various web apps developed in Angular - Share learnings with the team - Created a custom solution for File Uploader to support the team\"s needs (involving high amount of data transfer)"
+        }
+      ],
+      "educations": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQEGlAPQBQxDhQ/company-logo_100_100/0?e=1583971200&v=beta&t=xyIwQ2KCcM5yCh9GhZBh4Xu238GtDls5fjVkXjvSBrw",
+          "courseTitle": "MS Computer Science",
+          "instituteName": "University of Northumbria",
+          "duration": {
+            "start": "2009",
+            "end": "2010"
+          },
+          "location": "Newcastle, United Kingdom",
+          "summary": "MS in Computer Science:<br />- Dissertation on Digital Image Processing to find any changes done in image using differentials <br />- Maze Robot Path Finder: A program that was capable of finding its way out of any maze through different algorithms. <br />- British Airways Document Management System: Conversion of existing manual system to automated module"
+        },
+        {
+          "logo": "https://images.static-collegedunia.com/public/college_data/images/logos/1499941019logo.png",
+          "instituteName": "Krishna Engineering College",
+          "courseTitle": "BTech. Computer Science",
+          "duration": {
+            "start": "2005",
+            "end": "2009"
+          },
+          "location": "Ghaziabad, India",
+          "summary": "B Tech in Computer Science<br />- Completed final year project on Security (Multiple algorithms stacked on each other for multiple levels of security)"
+        }
+      ],
+      "languages": "English, Italian"
+    },
+    {
+      "id": 4,
+      "details": {
+        "coverImage": "https://media.licdn.com/dms/image/C4D16AQHPgsIdgH4uFw/profile-displaybackgroundimage-shrink_350_1400/0?e=1581552000&v=beta&t=Tc0F44Uq7_O2u3afoq-RF9KcFYdPWumT8zQ6eSdHIps",
+        "image": "assets/images/avatars/Blair.jpg",
+        "name": "Blair Strangeway",
+        "phone": "+1-234567890",
+        "email": "blair@gmail.com",
+        "company": "Movemeback",
+        "professionalTitle": "Developer",
+        "location": "Amsterdam, Netherlands"
+      },
+      "aboutMe": "Web Software engineer and project lifecycle manager with a total of 6+ years of experience in software development, 2+ years in planning and managing medium scale web projects. I have lead team of 25 people over various projects and roles. Also, responsible for presales, requirement understanding, analysis / research, risk estimation, project planning, project coordination and delivery.",
+      "experiences": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQF6WyGiMrerFQ/company-logo_200_200/0?e=1583971200&v=beta&t=nZoCmx2gFrm97qlHynHvGfC80KveuN6Aww73BzRFk-k",
+          "professionalTitle": "Senior Developer",
+          "companyName": "Movemeback",
+          "duration": {
+            "start": "July 2017",
+            "end": "present"
+          },
+          "location": "Amsterdam, Netherlands",
+          "summary": "The Backbase Omni-Channel Digital Banking Platform empowers financial institutions to accelerate their digital transformation and effectively compete in a digital-first world. Backbase software is used by global financial institutions such as ABN AMRO, Barclays, CheBanca!, Sberbank, Fidelity, Hiscox, Legal & General, Bank Hapoalim, PZU, Postfinance, Al Rajhi Bank, HSBC, Lloyds and many more. At Backbase Academy, I am responsible for: - Delivering in-house and on-site trainings all around the world to internal team, partners and clients. - Discussions with R&D team on architectures - Deliver Widget Architecture 3 trainings (Angular + Typescript + rxJS based) - Deliver Widget Architecture 2 trainings (Angular JS based)"
+        },
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQErMHnt7DANbQ/company-logo_100_100/0?e=1583971200&v=beta&t=8AZhqlAcE3_WIxI4jEzbclxT1A_VSsGvHDPFAbQjSEQ",
+          "professionalTitle": "Senior Frontend Developer",
+          "companyName": "Earthlink",
+          "duration": {
+            "start": "Feb 2017",
+            "end": "June 2017"
+          },
+          "location": "Dubai, UAE",
+          "summary": "EarthLink Telecommunication started in 2005 as Internet service provider. It is a renowned company in Dubai, UAE. At Earthlink, I was responsible for: - Developing new features in various web apps developed in Angular - Share learnings with the team - Created a custom solution for File Uploader to support the team\"s needs (involving high amount of data transfer)"
+        },
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQErMHnt7DANbQ/company-logo_100_100/0?e=1583971200&v=beta&t=8AZhqlAcE3_WIxI4jEzbclxT1A_VSsGvHDPFAbQjSEQ",
+          "professionalTitle": "Tech Lead",
+          "companyName": "Optimus Information",
+          "duration": {
+            "start": "Oct 2013",
+            "end": "Jan 2017"
+          },
+          "location": "Dubai, UAE",
+          "summary": "EarthLink Telecommunication started in 2005 as Internet service provider. It is a renowned company in Dubai, UAE. At Earthlink, I was responsible for: - Developing new features in various web apps developed in Angular - Share learnings with the team - Created a custom solution for File Uploader to support the team\"s needs (involving high amount of data transfer)"
+        }
+      ],
+      "educations": [
+        {
+          "logo": "https://media.licdn.com/dms/image/C560BAQEGlAPQBQxDhQ/company-logo_100_100/0?e=1583971200&v=beta&t=xyIwQ2KCcM5yCh9GhZBh4Xu238GtDls5fjVkXjvSBrw",
+          "courseTitle": "MS Computer Science",
+          "instituteName": "University of Northumbria",
+          "duration": {
+            "start": "2009",
+            "end": "2010"
+          },
+          "location": "Newcastle, United Kingdom",
+          "summary": "MS in Computer Science:<br />- Dissertation on Digital Image Processing to find any changes done in image using differentials <br />- Maze Robot Path Finder: A program that was capable of finding its way out of any maze through different algorithms. <br />- British Airways Document Management System: Conversion of existing manual system to automated module"
+        },
+        {
+          "logo": "https://images.static-collegedunia.com/public/college_data/images/logos/1499941019logo.png",
+          "instituteName": "Krishna Engineering College",
+          "courseTitle": "BTech. Computer Science",
+          "duration": {
+            "start": "2005",
+            "end": "2009"
+          },
+          "location": "Ghaziabad, India",
+          "summary": "B Tech in Computer Science<br />- Completed final year project on Security (Multiple algorithms stacked on each other for multiple levels of security)"
+        }
+      ],
+      "languages": "English, Italian"
+    }
+  ],
+  "projects": [
+    {
+      "id": 2,
+      "name": "Project 2",
+      "description": "Description for project 2",
+      "numberOfUsers": 0,
+      "owner": "varun.goel"
+    },
+    {
+      "id": 3,
+      "name": "Project 3",
+      "description": "Description for project 3",
+      "numberOfUsers": 2,
+      "owner": "johnDoe"
+    },
+    {
+      "name": "testing edit functionality",
+      "description": "edited from the form",
+      "numberOfUsers": 0,
+      "owner": "varun.goel",
+      "id": 4
+    },
+    {
+      "name": "Another project",
+      "description": "some description\n",
+      "numberOfUsers": 0,
+      "owner": "varun.goel",
+      "id": 5
+    }
+  ],
+  "project-details": [
+    {
+      "id": 1,
+      "projectId": 2,
+      "users-detailsId": 1
+    },
+    {
+      "id": 2,
+      "projectId": 2,
+      "users-detailsId": 2
+    },
+    {
+      "id": 3,
+      "projectId": 3,
+      "users-detailsId": 1
+    },
+    {
+      "id": 4,
+      "projectId": 2,
+      "users-detailsId": 3
+    }
+  ],
+  "user-profile": {
+    "details": {
+      "coverImage": "https://media.licdn.com/dms/image/C4D16AQHPgsIdgH4uFw/profile-displaybackgroundimage-shrink_350_1400/0?e=1581552000&v=beta&t=Tc0F44Uq7_O2u3afoq-RF9KcFYdPWumT8zQ6eSdHIps",
+      "image": "https://media.licdn.com/dms/image/C4D03AQEMWwBudH5Law/profile-displayphoto-shrink_200_200/0?e=1581552000&v=beta&t=ZlxueGkAVaMH3-aP2yvzNAA70_uCRXZJh2agl6OUKOo",
+      "name": "Varun Goel",
+      "company": "Movemeback",
+      "professionalTitle": "Senior Developer",
+      "location": "Amsterdam, Netherlands"
+    },
+    "aboutMe": "Web Software engineer and project lifecycle manager with a total of 6+ years of experience in software development, 2+ years in planning and managing medium scale web projects. I have lead team of 25 people over various projects and roles. Also, responsible for presales, requirement understanding, analysis / research, risk estimation, project planning, project coordination and delivery.",
+    "analyticsInfo": [
+      {
+        "label": "Who viewed your profile",
+        "value": "73"
+      },
+      {
+        "label": "Search apperances",
+        "value": "95"
+      }
+    ],
+    "experiences": [
+      {
+        "logo": "https://media.licdn.com/dms/image/C560BAQF6WyGiMrerFQ/company-logo_200_200/0?e=1583971200&v=beta&t=nZoCmx2gFrm97qlHynHvGfC80KveuN6Aww73BzRFk-k",
+        "professionalTitle": "Senior Developer",
+        "companyName": "Movemeback",
+        "duration": {
+          "start": "July 2017",
+          "end": "present"
+        },
+        "location": "Amsterdam, Netherlands",
+        "summary": "The Backbase Omni-Channel Digital Banking Platform empowers financial institutions to accelerate their digital transformation and effectively compete in a digital-first world. Backbase software is used by global financial institutions such as ABN AMRO, Barclays, CheBanca!, Sberbank, Fidelity, Hiscox, Legal & General, Bank Hapoalim, PZU, Postfinance, Al Rajhi Bank, HSBC, Lloyds and many more. At Backbase Academy, I am responsible for: - Delivering in-house and on-site trainings all around the world to internal team, partners and clients. - Discussions with R&D team on architectures - Deliver Widget Architecture 3 trainings (Angular + Typescript + rxJS based) - Deliver Widget Architecture 2 trainings (Angular JS based)"
+      },
+      {
+        "logo": "https://media.licdn.com/dms/image/C560BAQErMHnt7DANbQ/company-logo_100_100/0?e=1583971200&v=beta&t=8AZhqlAcE3_WIxI4jEzbclxT1A_VSsGvHDPFAbQjSEQ",
+        "professionalTitle": "Senior Frontend Developer",
+        "companyName": "Earthlink",
+        "duration": {
+          "start": "Feb 2017",
+          "end": "June 2017"
+        },
+        "location": "Dubai, UAE",
+        "summary": "EarthLink Telecommunication started in 2005 as Internet service provider. It is a renowned company in Dubai, UAE. At Earthlink, I was responsible for: - Developing new features in various web apps developed in Angular - Share learnings with the team - Created a custom solution for File Uploader to support the team\"s needs (involving high amount of data transfer)"
+      }
+    ],
+    "educations": [
+      {
+        "logo": "https://media.licdn.com/dms/image/C560BAQEGlAPQBQxDhQ/company-logo_100_100/0?e=1583971200&v=beta&t=xyIwQ2KCcM5yCh9GhZBh4Xu238GtDls5fjVkXjvSBrw",
+        "courseTitle": "MS Computer Science",
+        "instituteName": "University of Northumbria",
+        "duration": {
+          "start": "2009",
+          "end": "2010"
+        },
+        "location": "Newcastle, United Kingdom",
+        "summary": "MS in Computer Science:<br />- Dissertation on Digital Image Processing to find any changes done in image using differentials <br />- Maze Robot Path Finder: A program that was capable of finding its way out of any maze through different algorithms. <br />- British Airways Document Management System: Conversion of existing manual system to automated module"
+      },
+      {
+        "logo": "https://images.static-collegedunia.com/public/college_data/images/logos/1499941019logo.png",
+        "instituteName": "Krishna Engineering College",
+        "courseTitle": "BTech. Computer Science",
+        "duration": {
+          "start": "2005",
+          "end": "2009"
+        },
+        "location": "Ghaziabad, India",
+        "summary": "B Tech in Computer Science<br />- Completed final year project on Security (Multiple algorithms stacked on each other for multiple levels of security)"
+      }
+    ]
+  },
+  "analytics": [
+    {
+      "id": 1,
+      "userId": 1,
+      "shortlisting": {
+        "total": 20,
+        "movemebackTeam": 7,
+        "scores": [
+          {
+            "type": "Perfect",
+            "value": 5,
+            "field": "Development"
+          },
+          {
+            "type": "Good",
+            "value": 8,
+            "field": "Team Lead"
+          }
+        ]
+      },
+      "visits": {
+        "total": 10,
+        "last6Months": 2,
+        "recent": [
+          "Lagos",
+          "Cairo"
+        ]
+      },
+      "applications": {
+        "total": 15,
+        "status": "Actively Looking",
+        "jobs": [
+          {
+            "value": 10,
+            "type": "MNC companies (>1000 employees)"
+          },
+          {
+            "value": 8,
+            "type": "London"
+          }
+        ]
+      },
+      "profileSettings": {
+        "current": 50000,
+        "target": 75000,
+        "currency": "EUR",
+        "location": "Amsterdam"
+      }
+    }
+  ]
+}

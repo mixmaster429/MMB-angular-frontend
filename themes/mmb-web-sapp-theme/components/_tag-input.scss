@@ -1,0 +1,16 @@
+tag-input {
+    div.ng2-tag-input {
+        border-bottom: none !important;
+    }
+
+    tag {
+        padding: 0 $spacer !important;
+    }
+
+    input.form-control.ng2-tag-input__text-input {
+        padding: $spacer * 3;
+        height: 50px;
+        font-family: $font-family-light;
+        font-size: 15px;
+    }
+}

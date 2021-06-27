@@ -1,0 +1,8 @@
+<div [ngClass]="loaderContainerClass" fxLayout="row" fxLayoutAlign="center center">
+    <div class="text-center">
+        <div class="spinner-border text-info page-loader" role="status" [ngClass]="loaderClass">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="mt-1">{{ text }}</div>
+    </div>
+</div>

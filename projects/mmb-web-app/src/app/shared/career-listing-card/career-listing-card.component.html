@@ -1,0 +1,46 @@
+<div class="card-item">
+    <img [src]="career.cover" onerror="this.src='assets/img/mmb-placeholder.jpg'"
+        class="h-125px w-100 border-radius--top object-fit-cover cursor-pointer" [routerLink]="career.slug"/>
+
+    <div class="p-relative">
+        <div class="p-absolute bg-white listing-card--logo">
+            <!-- <div class="avatar-thumb-container" triggers="mouseenter" [ngbPopover]="organisationPopover" openDelay="200"> -->
+            <img [src]="career.organisation.logo" alt="" class="rounded-circle cursor-pointer avatar-sm border"
+                onerror="this.src='assets/images/avatars/not-found.png';"
+                routerLink="/organisation/profile/{{ career.organisation.slug }}">
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="bg-white shadow-sm p-2 mb-4 border-radius--bottom cursor-pointer" [routerLink]="career.slug">
+        <div class="p-2 mt-3" *ngIf="career.organisation as organisation">
+            <mmb-web-app-career-org-summary-info [careerOrg]="organisation" [image]=" organisation.logo" [name]="organisation.name"
+                [redirect]="organisation.slug" [createdOnDate]="career.created" [location]="career.location_summary"
+                [isSaved]="career.saved" (bookmark)="onBookmark()" (removeBookmark)="onRemoveBookmark()">
+            </mmb-web-app-career-org-summary-info>
+        </div>
+
+        <mmb-web-app-card-summary [summary]="career.headline" [title]="career.title" [coverImage]="career.image_cover"
+            [authorName]="career.organisation.name" [createdOnDate]="career.created"
+            [authorImage]="career.organisation.image_logo_medium" [slug]="career.slug"
+            [location]="career.location_summary">
+        </mmb-web-app-card-summary>
+
+        <div class="p-2" fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <button *ngIf="!career.interested" class="btn mmb-primary-button stroked-button btn--sm"
+                    (click)="onExpressInterest()">
+                    <span>Express interest</span>
+                </button>
+
+                <button *ngIf="career.interested" class="btn mmb-primary-button btn--sm" [routerLink]="career.slug">
+                    <span>Apply</span>
+                </button>
+            </div>
+            <div>
+                <div class="small">
+                    {{ career.created | timeago }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

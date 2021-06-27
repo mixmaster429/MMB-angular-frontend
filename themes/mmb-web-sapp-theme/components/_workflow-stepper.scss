@@ -1,0 +1,61 @@
+.mmb-stepper {
+    .step-number {
+        @extend .small;
+        @extend .text-dark-600;
+        text-align: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        padding: $spacer;
+        background-color: $bg-gray-disabled;
+    }
+
+    .step-number--active {
+        @extend .text-secondary-300;
+        font-family: $font-family-bold;
+        font-weight: 600;
+        width: 32px;
+        height: 32px;
+        background-color: $white;
+        border: 2px solid $secondary-300;
+    }
+
+    .step-number--done {
+        background-color: $notification-affirmative;
+    }
+
+    .horizontal-separator {
+        border-bottom: 1px solid $other;
+        width: $spacer * 3;
+    }
+
+    .empty-separator {
+        width: $spacer * 3;
+    }
+}
+.mmb-stepper-small {
+    .step-number-small {
+        @extend .small;
+        @extend .text-dark-600;
+        text-align: center;
+        width: 22px;
+        height: 22px;
+        border-radius: 100%;
+        padding: $spacer;
+        background-color: $bg-gray-disabled;
+    }
+
+    .step-number-small--active {
+        @extend .text-secondary-300;
+        font-family: $font-family-bold;
+        font-weight: 600;
+        width: 22px;
+        height: 22px;
+        background-color: $white;
+        border: 2px solid $secondary-300;
+    }
+
+    .step-number-small--done {
+        background-color: $notification-affirmative;
+    }
+}

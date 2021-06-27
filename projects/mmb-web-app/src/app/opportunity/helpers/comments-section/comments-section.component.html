@@ -1,0 +1,51 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+    <i class="material-icons">chat_bubble_outline</i>
+    <span class="medium">{{ comments?.count }} Comments</span>
+</div>
+
+<div class="mt-4 p-relative mb-4 w-75">
+    <textarea rows="2" class="form-control shadow-none border" (keypress)="onCommentKeyPress($event)"
+        placeholder="Add a public comment ..." [(ngModel)]="comment"></textarea>
+    <img class="rounded-circle avatar-xs input--suffix" [src]="user.profile_image"
+        onerror="this.src='assets/images/avatars/not-found.png';" />
+</div>
+
+<div class="comment-wrapper" infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="150" (scrolled)="onScroll()" [scrollWindow]="false">
+    <div *ngFor="let item of comments?.results" class="mb-4 w-75">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px">
+            <img class="rounded-circle cursor-pointer avatar-xs" [src]="item.user.profile_image"
+                onerror="this.src='assets/images/avatars/not-found.png';" />
+            <div>
+                <span class="font-family-bold">{{ item.user.name }}</span>
+                <span class="pl-2 medium">{{ item.created | date:'fullDate' }}</span>
+            </div>
+        </div>
+        <div class="pl-4 ml-3 py-3">
+            <div class="border border--light px-5 py-3">
+                <div class="mb-3" [innerHTML]="item.comment"></div>
+
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="24px">
+                        <div fxLayout="row" fxLayoutAlign="start center">
+                            <button class="btn mmb-rounded-icon-btn btn--muted">
+                                <i class="material-icons">arrow_upward</i>
+                            </button>
+                            <div class="pl-1 medium" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="4px"
+                                (click)="onUpvote(item)">
+                                <span>Upvote</span>
+                                <span class="pb-2">.</span>
+                                <span>{{ item.votes_total }}</span>
+                            </div>
+                        </div>
+
+                        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" ngbTooltip="Coming soon">
+                            <i class="material-icons">reply</i>
+                            <span>Reply</span>
+                        </div>
+                    </div>
+                    <i ngbTooltip="Coming soon" class="material-icons">more_vert</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

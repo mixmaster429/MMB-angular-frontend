@@ -1,0 +1,49 @@
+<div class="col-lg-8 offset-lg-2 py-4">
+    <section id="blog" class="section blog-area">
+        <div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <mmb-web-app-featured-categories></mmb-web-app-featured-categories>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row" *ngIf="page">
+                        <div infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="150"
+                            (scrolled)="onScroll()">
+                            <div class="col-12 mb-4" *ngFor="let blog of page.pages">
+                                <div class="bg-white border shadow-sm">
+                                    <mmb-web-app-blog-card [author]="blog.author" [date]="blog.date"
+                                        [title]="blog.title" [description]="blog.intro" [coverImage]="blog.feed_image"
+                                        [authorName]="blog.author" [createdOnDate]="blog.date"
+                                        [authorImage]="blog.author" [authorProfessionalTitle]="blog.author"
+                                        [slug]="blog.slug">
+                                    </mmb-web-app-blog-card>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <mmb-web-app-interaction-tools [reactions]="blog.reactions_summary?.total"
+                                                [reacted]="blog.reacted" [isReactionsEnabled]="true"
+                                                [comments]="blog.comments"
+                                                (reactionUpdated)="onReactionUpdated(blog, $event)"
+                                                (commentAdded)="onCommentAdded(blog, $event)">
+                                            </mmb-web-app-interaction-tools>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center p-5">
+                        <mmb-ui-inline-loader text="Loading community posts..." *ngIf="isLoading">
+                        </mmb-ui-inline-loader>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <aside class="sidebar sticky-top t-navbar-height">
+                        <mmb-web-app-popular-post></mmb-web-app-popular-post>
+                        <mmb-web-app-popular-tags></mmb-web-app-popular-tags>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

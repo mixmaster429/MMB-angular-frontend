@@ -1,0 +1,87 @@
+<div id="dashboard-project" class="page-layout simple">
+    <!-- HEADER -->
+    <div class="header accent p-24 pb-0" fxLayout="column" fxLayoutAlign="space-between">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <!-- <button mat-icon-button class="sidebar-toggle mr-8" fxHide.gt-md (click)="toggleSidebar('filters-sidebar')">
+                <mat-icon>menu</mat-icon>
+            </button> -->
+
+            <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Career Applications - {{ selectedCareer?.organisation?.name }}
+                </span>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="ml-sm-32" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+
+
+                <div class="search-wrapper mt-16 mt-sm-0">
+
+                    <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                        <mat-icon>search</mat-icon>
+                        <input matInput placeholder="Search for an application" [(ngModel)]="filterTerm">
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- / SEARCH -->
+        </div>
+
+        <div class="pt-16">
+            <div fxLayout="row" *ngIf="careers">
+                <div class="selected-career">{{selectedCareer.title}}</div>
+
+                <button mat-icon-button class="career-selector" [matMenuTriggerFor]="careersMenu"
+                    aria-label="Select project">
+                    <mat-icon>more_horiz</mat-icon>
+                </button>
+
+                <mat-menu #careersMenu="matMenu" class="my-class">
+                    <button mat-menu-item *ngFor="let career of careers"
+                        routerLink="/careers/interests/{{career.slug}}">
+                        <span>{{career.title}} ({{ career.application_count.total }})</span>
+                    </button>
+                </mat-menu>
+
+            </div>
+        </div>
+    </div>
+    <!-- / HEADER -->
+
+    <nav mat-tab-nav-bar [backgroundColor]="background">
+        <a mat-tab-link [active]="true"
+            matTooltip="Candidates who indicated interest, but have not completed their application">
+            <span>Interests</span>
+            <span class="pl-4" *ngIf="selectedCareer && selectedCareer.interest_count">({{
+                selectedCareer.interest_count.interested }})</span>
+        </a>
+    </nav>
+
+    <mmb-org-app-view-application *ngIf="!isPageLoading" [isInterestedTabActive]="true" [isLoadingMore]="isLoadingMore"
+        [isApplicationsLoading]="isApplicationsLoading" [applicationUuidParam]="applicationUuid"
+        [activeFilter]="activeFilter" [isApplicationLoading]="isApplicationLoading"
+        (selectedApplicationUpdated)="onSelectedApplicationUpdated($event)" [selectedApplication]="selectedApplication"
+        [applications]="applications" [career]="careers" [filterTerm]="filterTerm" (scroll)="onScroll()"
+        (feedbackUpdated)="updateFeedback($event)">
+    </mmb-org-app-view-application>
+
+    <ng-container *ngIf="isPageLoading">
+        <ng-content *ngTemplateOutlet="loading"></ng-content>
+    </ng-container>
+</div>
+
+<ng-template #loading>
+    <div fxFlex class="p-16">
+        <div class="h-500" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+            <mat-spinner color="accent" diameter="40"></mat-spinner>
+
+            <span class="mt-16 select-message-text hint-text">
+                <span>{{ loaderMessage }}</span>
+            </span>
+        </div>
+    </div>
+</ng-template>

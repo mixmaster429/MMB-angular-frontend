@@ -1,0 +1,70 @@
+.mmb-text-input {
+    border-radius: 5px;
+    height: auto;
+    box-shadow: none;
+    padding: 15px 5px;
+
+
+    &.mmb-text-input--sm {
+        padding: 10px 5px;
+    }
+}
+
+.input-group-text {
+    background: $white;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-group--secondary {
+    border-radius: 0;
+    background: transparent;
+    color: $white;
+    
+    .mmb-text-input, .input-group-text {
+        background: transparent;
+    }
+
+    &.bg-secondary-500 {
+        background-color: $secondary-500;
+    }
+
+
+    &.border-radius {
+        @extend .border-radius;
+    }
+
+    &.border-radius-8 {
+        @extend .border-radius-8;
+    }
+}
+
+.bg-secondary-500  {
+    &.input-group--secondary {
+        border: none;
+        .mmb-text-input, .input-group-text {
+            color: $white;
+            &::placeholder {
+                color: $white;
+                @extend .font-family-light;
+            }
+        }
+    }
+}
+
+.input--suffix {
+    position: absolute;
+    right: $spacer * 2;
+    top: calc(50% - 24px);
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+    border: 1px solid $danger;
+}
+
+.input-group--disabled {
+    pointer-events: none;
+    background-color: $bg-gray-disabled !important;
+    color: $text-gray-disabled !important;
+}

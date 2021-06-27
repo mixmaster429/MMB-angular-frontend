@@ -1,0 +1,18 @@
+<div class="my-2 widget">
+    <div class="single-accordion">
+        <h5 class="row justify-content-between px-1 border-bottom">
+            <div class="text-uppercase d-block p-3" data-toggle="collapse"
+                i18n="Summary title|Title for summary in user's profile page@@userProfileSummaryTitle">Summary</div>
+            <button *ngIf="isEditMode" type="button" class="btn btn-outline-primary icon-button text-primary mx-3"
+                (click)="onSummaryEdit()">
+                <i class="material-icons">edit</i>
+            </button>
+        </h5>
+        <div class="p-3" *ngIf="aboutMe">
+            {{ aboutMe }}
+        </div>
+        <div class="p-3" *ngIf="!aboutMe">
+            No summary provided
+        </div>
+    </div>
+</div>

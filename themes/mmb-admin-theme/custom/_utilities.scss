@@ -1,0 +1,108 @@
+.bg-white {
+    background: #fff;
+}
+
+.border-0 {
+    .mat-form-field-infix {
+        border: 0;
+    }
+}
+
+.fab-panel-button {
+    position: sticky !important;
+    top: calc(100vh - 132px);
+    bottom: auto;
+    padding: 0;
+    z-index: 99;
+    height: 80px;
+    right: 24px;
+
+    &.right-2 {
+        right: 84px;
+    }
+
+    &.right-3 {
+        right: 144px;
+    }
+}
+
+.multi-icon-button {
+    .icon-xs {
+        position: absolute;
+        top: 23px;
+        left: 0px;
+        font-size: 16px;
+    }
+}
+
+.hide {
+    display: none;
+}
+
+[data-role="button"] {
+    cursor: pointer;
+}
+
+.mat-caption {
+    mat-icon {
+        font-size: 16px;
+        width: 16px;
+        min-width: 16px;
+        height: 16px;
+        min-height: 16px;
+    }
+}
+
+.mt-n4 {
+    margin-top: -4px;
+}
+
+.small span {
+    font-size: 12px;
+}
+
+
+
+body.theme-default {
+    .mat-badge-success {
+        .mat-badge-content {
+           background: #006400;
+       }
+   }
+
+   .mat-badge-success-200 {
+        .mat-badge-content {
+            background: #32CD32;
+        }
+    }
+
+    .mat-badge-yellow {
+        .mat-badge-content {
+            background: $yellow;
+        }
+    }
+
+    .mat-badge-warn-200 {
+        .mat-badge-content {
+            background: #FF6347;
+        }
+    }
+
+    .mat-badge-warn {
+        .mat-badge-content {
+            background: #FF0000;
+        }
+    }
+}
+
+.z-index-10000 {
+    z-index: 10000;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.o-hidden {
+    overflow: hidden;
+}

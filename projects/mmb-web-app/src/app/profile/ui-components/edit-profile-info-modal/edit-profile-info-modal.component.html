@@ -1,0 +1,49 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Edit your profile</h5>
+        <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="editProfileForm">
+            <div class="row mb-3">
+                <div class="avatar-lg ml-3 mt-3">
+                    <mmb-web-app-image-upload [isEditMode]="isEditMode" [id]="'user-intro-image-avatar-edit'" [user]="user">
+                    </mmb-web-app-image-upload>
+                </div>
+                <div class="col">
+                    <label>First Name</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="firstName">
+                </div>
+                <div class="col">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="lastName">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label>Professional title</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="professionalTitle">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <label>Country</label>
+                    <input type="text" formControlName="country" [ngbTypeahead]="currentCountriesSearch"
+                        [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                        i18n-placeholder="Apply Career - current country placeholder|Apply career placeholder for current country@@applyCareerCurrentCountryPlaceholder"
+                        placeholder="Country" class="form-control my-1 shadow-none border">
+                </div>
+                <div class="col">
+                    <label>City</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="city">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="editUserPersonalInfo()">Save
+            changes</button>
+    </div>
+</div>

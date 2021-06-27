@@ -1,0 +1,50 @@
+<div class="bg-secondary text-white">
+    <div class="offset-lg-2 col-lg-8 px-5 py-5">
+        <div fxLayout="space-between center">
+            <div fxFlex>
+                <div fxFlexLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                    <i class="material-icons color-secondary-900 font-size-32">explore</i>
+                    <h2 class="font-family-light mb-0">Experiences</h2>
+                </div>
+                <div class="mt-2">Achieve more with programs, scholarships and competitions</div>
+            </div>
+            <div fxFlex>
+                <div class="input-group input-group--secondary w-75 bg-secondary-500" ngClass.lt-md="w-100">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <img src="assets/images/icon-grey-search.svg" />
+                        </span>
+                    </div>
+                    <input (change)="onSearchUpdated()" [(ngModel)]="searchInput" class="form-control mmb-text-input"
+                        type="text" placeholder="Search Experiences" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white" fxHide.lt-md>
+    <div class="offset-lg-2 col-lg-8 py-4 px-4">
+        <div fxLayout="row wrap" fxLayout.lt-md="column" fxLayoutAlign="space-between center">
+            <div fxShow fxHide.lt-md fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="20px">
+                <div class="py-1 pl-2 px-2 cursor-pointer" (click)="activeTab = 1"
+                    [ngClass]="{'mmb-tab-active': activeTab === 1}">
+                    Browse
+                </div>
+                <div class="py-1 px-2 cursor-pointer" disabled [ngbTooltip]="'Coming soon'"
+                    [ngClass]="{'mmb-tab-active': activeTab === 2}" fxLayout="row" fxLayoutAlign="start center"
+                    fxLayoutGap="10px">
+                    <span>My Experiences</span>
+                    <span class="badge badge-secondary">0</span>
+                </div>
+            </div>
+            <div>
+                <button [ngbTooltip]="'Coming soon'" class="btn mmb-secondary-light-button mr-1" fxLayout="row"
+                    fxLayoutAlign="center center" fxLayoutGap="10px">
+                    <span>Create Experience</span>
+                    <i class="material-icons">explore</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

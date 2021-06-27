@@ -1,0 +1,50 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="addExperienceModalTitle" *ngIf="!isEditMode">Add experience</h5>
+        <h5 class="modal-title" id="addExperienceModalTitle" *ngIf="isEditMode">Edit experience</h5>
+        <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="editProfileForm">
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Title</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="title">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Company</label>
+                    <input type="text" formControlName="organisation" [ngbTypeahead]="currentOrganisationSearch"
+                    [resultFormatter]="resultFormatOrganisationValue" [inputFormatter]="inputFormatOrganisationValue"
+                    class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Start date</label>
+                    <input type="date" class="form-control my-1 shadow-none border" formControlName="startDate">
+                </div>
+                <div class="col">
+                    <label>End date</label>
+                    <input type="date" class="form-control my-1 shadow-none border" formControlName="endDate">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Description</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="summary">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer" *ngIf="!isEditMode">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="createExperience()">Save changes</button>
+    </div>
+    <div class="modal-footer justify-content-between" *ngIf="isEditMode">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="deleteExperience()"data-dismiss="modal">Delete</button>
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="editExperience()" data-dismiss="modal">Save</button>
+    </div>
+</div>

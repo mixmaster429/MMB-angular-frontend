@@ -1,0 +1,36 @@
+<!-- <div class="bg-primary-500 p-2 position-relative z-index-100"></div> -->
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#" [routerLink]="'/'">
+        <img src="assets/logos/mmb-logo.svg" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" (click)="navbarCollapsed = !navbarCollapsed"
+        [attr.aria-expanded]="!navbarCollapsed" aria-controls="navbarSupportedContent" aria-label="Toggle navigation">
+        <img src="assets/images/burger.svg" alt="" srcset="" class="show">
+        <img src="assets/images/cross.svg" alt="" srcset="" class="fold">
+      </button>
+
+      <div class="collapse navbar-collapse" [ngClass]="{'show': !navbarCollapsed}" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Opportunities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Insight</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Organisations</a>
+          </li>
+        </ul>
+        <div class="auth">
+          <a class="nav-link auth-login" href="#" [routerLink]="'login'">Login</a>
+          <a class="nav-link button primary large-button auth-join" href="#" [routerLink]="'register'">Join Now</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

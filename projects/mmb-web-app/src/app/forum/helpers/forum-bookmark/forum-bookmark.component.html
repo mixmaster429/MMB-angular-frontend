@@ -1,0 +1,7 @@
+<div class="text-center my-2">
+    <i role="button" class="material-icons" *ngIf="!request.saved"
+        (click)="onAddToFavorites(request)">star_outline</i>
+    <i role="button" class="material-icons text-primary"
+        (click)="onRemoveFromFavorites(request)"
+        *ngIf="request.saved">star</i>
+</div>

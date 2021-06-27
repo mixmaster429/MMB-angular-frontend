@@ -1,0 +1,18 @@
+<div class="bg-lightest border-radius-8 p-4 text-dark mb-3">
+    <h6 class="medium text-uppercase mb-2">Career Locations ({{ career.locations.length }})</h6>
+    <div class="admin-panel-html-renderer">
+        <div class="mb-1 medium" *ngFor="let location of career.locations">
+            <ng-container *ngIf="location.country">
+                <span class="fp mr-2" [ngClass]="location.country.code"></span>
+                <span *ngIf="location.city">{{ location.city.name_ascii }},</span>
+                <span>{{ location.country.name }}</span>
+            </ng-container>
+
+            <ng-container *ngIf="!location.country">
+                <ul class="mb-0">
+                    <li>{{ location.region.name }}</li>
+                </ul>
+            </ng-container>
+        </div>
+    </div>
+</div>

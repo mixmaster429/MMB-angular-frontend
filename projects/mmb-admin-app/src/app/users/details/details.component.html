@@ -1,0 +1,176 @@
+<div id="user" class="page-layout simple fullwidth">
+    <!-- CENTER -->
+    <div class="center" *ngIf="details | async as user">
+        <!-- HEADER -->
+        <div class="header accent p-16" fxLayout="row" fxLayoutAlign="space-between center">
+
+            <!-- APP TITLE -->
+            <button mat-icon-button class="mr-0 mr-sm-16" [routerLink]="'/users/management'">
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+
+            <div class="mr-8 mr-sm-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                <img class="avatar w-48 h-48" *ngIf="user.first_name" [src]="user.image"
+                    onerror="this.src='assets/images/avatars/not-found.png';">
+            </div>
+
+            <div fxFlex fxLayout="column" fxLayoutAlign="start start"
+                [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                <div class="h2">
+                    {{ user.first_name }} {{ user.last_name }}
+                </div>
+                <div class="subtitle secondary-text mat-caption">
+                    <div class="mt-n4">{{ user.professionalTitle }}</div>
+                    <div class="mt-n4">{{ user.location }}</div>
+                </div>
+                <div class="subtitle secondary-text mat-caption line-height-120">
+                </div>
+            </div>
+
+            <div fxLayout="column" fxLayoutAlign="end end" class="mat-caption secondary-text">
+                <div fxFlex fxLayoutAlign="center center" *ngIf="user.email">
+                    <mat-icon>email</mat-icon>
+                    <label class="ml-8">{{ user.email }}</label>
+                </div>
+                <div fxFlex fxLayoutAlign="center center" *ngIf="user.phone">
+                    <mat-icon>phone</mat-icon>
+                    <label class="ml-8">{{ user.phone }}</label>
+                </div>
+            </div>
+            <!-- / APP TITLE -->
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card p-16">
+
+            <!-- CONTENT -->
+            <div class="content">
+                <div *ngIf="analytics | async as analytics">
+                    <mmb-admin-app-widget-shortlist-analytics *ngIf="analytics.shortlisting"
+                        [shortlistingAnalytics]="analytics.shortlisting" fxLayout="column" fxFlex="50" fxFlex.gt-xs="50"
+                        fxFlex.gt-md="25"></mmb-admin-app-widget-shortlist-analytics>
+
+                    <mmb-admin-app-widget-visits-analytics *ngIf="analytics.visits" [visitsAnalytics]="analytics.visits"
+                        fxLayout="column" fxFlex="50" fxFlex.gt-xs="50" fxFlex.gt-md="25">
+                    </mmb-admin-app-widget-visits-analytics>
+
+                    <mmb-admin-app-widget-applications-analytics *ngIf="analytics.applications"
+                        [applicationsAnalytics]="analytics.applications" fxLayout="column" fxFlex="50" fxFlex.gt-xs="50"
+                        fxFlex.gt-md="25"></mmb-admin-app-widget-applications-analytics>
+
+                    <mmb-admin-app-widget-profile-settings-analytics *ngIf="analytics.profileSettings"
+                        [profileSettings]="analytics.profileSettings" fxLayout="column" fxFlex="50" fxFlex.gt-xs="50"
+                        fxFlex.gt-md="25"></mmb-admin-app-widget-profile-settings-analytics>
+                </div>
+
+                <div class="p-8">
+                    <div fxFlex>
+                        <mat-card class="mb-8" *ngIf="user.aboutMe">
+                            <h3>
+                                About
+                            </h3>
+                            <div [innerHTML]="user.aboutMe"></div>
+                        </mat-card>
+
+                        <mat-card class="mb-8" *ngIf="user.roles && user.roles.length !== 0">
+                            <h3>
+                                Roles
+                            </h3>
+                            <div>
+                                <mat-chip-list aria-label="Roles">
+                                    <button [matBadgeColor]="getBadgeColor(item.alignment)"
+                                        *ngFor="let item of user.roles" matBadge="{{ item.alignment }}"
+                                        matBadgePosition="after" mat-stroked-button
+                                        class="m-8">{{ item.role.name  }}</button>
+                                </mat-chip-list>
+                            </div>
+                        </mat-card>
+
+
+                        <mat-card class="mb-8" *ngIf="user.skills">
+                            <h3>
+                                Skills
+                            </h3>
+                            <mat-chip-list aria-label="Skills">
+                                <mat-chip *ngFor="let item of user.skills">
+                                    <span *ngIf="item.skill">{{ item.skill.name }}</span>
+                                    <span *ngIf="!item.skill && item.skill_custom">{{ item.skill_custom }}</span>
+                                </mat-chip>
+                            </mat-chip-list>
+                        </mat-card>
+
+                        <mat-card class="mb-8" *ngIf="user.experiences">
+                            <h3>
+                                Experience
+                            </h3>
+                            <div *ngFor="let experience of user.experiences">
+                                <div fxLayoutAlign="start start" class="my-8" fxFlex>
+                                    <img fxFlex class="w-72" [src]="experience.logo"
+                                        onerror="this.src='assets/images/avatars/not-found.png';" />
+                                    <div class="mx-16" fxFlex>
+                                        <div class="h3 font-weight-600">{{ experience.title  }}</div>
+                                        <div>{{ experience.companyName }}</div>
+                                        <div class="secondary-text" *ngIf="experience.start_date">
+                                            {{ experience.start_date | date }} -
+                                            <span *ngIf="!experience.end_date">Present</span>
+                                            <span *ngIf="experience.end_date">{{ experience.end_date | date}}</span>
+                                        </div>
+                                        <div class="secondary-text" *ngIf="experience.location">
+                                            {{ experience.location }}
+                                        </div>
+                                        <div [innerHTML]="experience.summary"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </mat-card>
+
+                        <mat-card class="mb-8" *ngIf="user.education">
+                            <h3>
+                                Education
+                            </h3>
+                            <div *ngFor="let education of user.education">
+                                <div fxLayoutAlign="start start" class="my-8" fxFlex>
+                                    <img fxFlex class="w-72" [src]="education.logo"
+                                        onerror="this.src='assets/images/avatars/not-found.png';" />
+                                    <div class="mx-16" fxFlex>
+                                        <div class="h3 font-weight-600">{{ education.field_of_study  }}</div>
+                                        <div>{{ education.degree }}</div>
+                                        <div>{{ education.institute }}</div>
+                                        <div class="secondary-text" *ngIf="education.start_date">
+                                            {{ education.start_date | date }} -
+                                            <span *ngIf="!education.end_date">Present</span>
+                                            <span *ngIf="education.end_date">{{ education.end_date | date }}</span>
+                                        </div>
+                                        <div class="secondary-text" *ngIf="education.location">
+                                            {{ education.location }}
+                                        </div>
+                                        <div [innerHTML]="education.summary"></div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </mat-card>
+
+                        <mat-card class="mb-8" *ngIf="user.languages">
+                            <h3>
+                                Languages
+                            </h3>
+                            <div *ngFor="let item of user.languages">
+                                <span *ngIf="item.language">{{ item.language.name }}</span>
+                                <span *ngIf="!item.language && item.language_custom">{{ item.language_custom }}</span>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+
+</div>

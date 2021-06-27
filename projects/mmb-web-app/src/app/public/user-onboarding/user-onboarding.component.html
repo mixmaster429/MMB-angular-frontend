@@ -1,0 +1,15 @@
+<div *ngIf="!isGettingStarted">
+    <!-- Set password page -->
+    <mmb-web-app-user-onboarding-set-password (passwordSet)="onNewPasswordSet($event)"
+        *ngIf="isGoogleProfile && !isNewPasswordSet">
+    </mmb-web-app-user-onboarding-set-password>
+
+    <!-- Welcome user page -->
+    <mmb-web-app-user-onboarding-welcome-user (getStarted)="onGetStarted($event)"
+        *ngIf="!isGoogleProfile || isNewPasswordSet" [userName]="user.first_name">
+    </mmb-web-app-user-onboarding-welcome-user>
+</div>
+
+<!-- -->
+<mmb-web-app-user-onboarding-set-profile-workflow *ngIf="isGettingStarted">
+</mmb-web-app-user-onboarding-set-profile-workflow>

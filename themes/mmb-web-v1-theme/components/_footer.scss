@@ -1,0 +1,119 @@
+footer {
+  background-color: #222222;
+
+  @include at-query($max, $medium) {
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0), $text-black);
+  }
+
+  .footer-links {
+    padding: 80px 0;
+
+    @include at-query($max, $medium) {
+      padding: 40px 0 0;
+    }
+
+    ul {
+      font-family: Opensans;
+      font-size: 14px;
+      list-style: none;
+      border-left: 2px solid $buttons-primary;
+      padding-left: 2rem;
+
+      li {
+        a {
+          color: $page-text-white;
+          text-decoration: none;
+          line-height: 1.71;
+        }
+      }
+    }
+  }
+
+  .icons-bar {
+    display: none;
+    text-align: center;
+    padding: 25px 0;
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0), $text-black);
+
+    img {
+      width: 25px;
+      margin: 0 17.5px;
+    }
+
+    @include at-query($max, $xlarge) {
+      display: block;
+    }
+
+    @include at-query($max, $medium) {
+      background-color: transparent;
+    }
+  }
+
+  .footer-bar {
+    padding: 10px 0 10px;
+    background-color: $text-black;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include at-query($max, $medium) {
+        text-align: center;
+
+        p {
+          width: 100%;
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          align-items: center;
+
+          .copy-right {
+            margin: 0;
+            margin-bottom: 20px;
+          }
+
+          img {
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .copy-right {
+        margin-left: 20px;
+        font-family: Opensans;
+        font-size: 12px;
+        color: $page-text-white;
+      }
+
+      .quick-links {
+        a {
+          font-family: Opensans;
+          font-size: 12px;
+          color: $page-text-white;
+          margin-right: 50px;
+          text-decoration: none;
+        }
+
+        @include at-query($max, $medium) {
+          display: none;
+        }
+      }
+
+      .social-icons {
+        @include at-query($max, $xlarge) {
+          display: none;
+        }
+
+        img {
+          width: 20px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

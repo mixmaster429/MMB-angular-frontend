@@ -1,0 +1,112 @@
+<div id="projects" class="page-layout simple">
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-12" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-xs="row"
+        fxLayoutAlign.gt-xs="space-between center">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="sidebar-toggle mr-8" fxHide.gt-md>
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    ballot
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    My Opportunities
+                </span>
+            </div>
+
+        </div>
+        <!-- / APP TITLE -->
+
+        <!-- SEARCH -->
+        <div class="ml-sm-32" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+
+            <div class="search-wrapper mt-16 mt-sm-0">
+
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>search</mat-icon>
+                    <input [formControl]="searchInput" placeholder="Search for an opportunity">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- / SEARCH -->
+
+    </div>
+    <!-- / HEADER -->
+    <!-- Toolbar -->
+    <div class="py-8 px-24 mat-elevation-z1" fxLayout="row" fxLayoutAlign="end center">
+        <mmb-org-app-opportunity-filter fxFlex></mmb-org-app-opportunity-filter>
+
+        <button class="mx-8" mat-stroked-button color="accent">
+            <mat-icon>add</mat-icon>
+            Create new Opportunity
+        </button>
+    </div>
+    <!--/ Toolbar -->
+
+    <!-- CONTENT CARD -->
+    <div class="content py-4">
+        <div class="p-16 w-100-p" *ngIf="opportunities | async as opportunities; else emptyOpportunityPlaceholder">
+            <div *ngFor="let opportunity of opportunities">
+                <div class="mb-16 white w-100-p mat-elevation-z2" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="300px" class="border-right">
+                        <mmb-org-app-status-badge [status]="opportunity.status"></mmb-org-app-status-badge>
+
+                        <div class="p-16">
+                            <div class="h2">{{ opportunity.title}}</div>
+                            <div class="h4 secondary-text">{{ opportunity.location}}</div>
+                            <div class="h4 secondary-text" *ngIf="opportunity.postedOn">Posted - {{ opportunity.postedOn | date}}</div>
+                        </div>
+                    </div>
+                    <div class="p-16 w-100-p" fxLayout="row" fxLayoutAlign="space-between center" *ngIf="opportunity.stats">
+                        <div class="text-center mx-8">
+                            <div class="primary-400-fg font-size-36 line-height-36">{{ opportunity.stats.applied }}</div>
+                            <div class="h4 hint-text font-weight-500">Applied</div>
+                        </div>
+                        <div class="text-center mx-24">
+                            <div class="light-blue-fg font-size-36 line-height-36">{{ opportunity.stats.interview }}</div>
+                            <div class="h4 hint-text font-weight-500">Interview</div>
+                        </div>
+                        <div class="text-center mx-24">
+                            <div class="yellow-800-fg font-size-36 line-height-36">{{ opportunity.stats.onHold }}</div>
+                            <div class="h4 hint-text font-weight-500">Hold</div>
+                        </div>
+                        <div class="text-center mx-24">
+                            <div class="red-400-fg font-size-36 line-height-36">{{ opportunity.stats.rejected }}</div>
+                            <div class="h4 hint-text font-weight-500">Rejected</div>
+                        </div>
+                        <div class="text-center mx-24">
+                            <div class="green-400-fg font-size-36 line-height-36">{{ opportunity.stats.hired }}</div>
+                            <div class="h4 hint-text font-weight-500">Hired</div>
+                        </div>
+                    </div>
+
+                    <div fxFlex="200px" class="text-center">
+                        <button class="my-4 w-100-p" [disabled]="opportunity.status === 'closed' || opportunity.status === 'draft'" mat-stroked-button color="primary">View Applications</button>
+                        <button class="my-4 w-100-p" [disabled]="opportunity.status === 'closed'" mat-stroked-button color="primary">Edit Job</button>
+                        <button class="my-4 w-100-p" [disabled]="opportunity.status === 'closed'" mat-stroked-button color="primary">Preview Job</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- / CONTENT CARD -->
+</div>
+
+<ng-template #emptyOpportunityPlaceholder>
+    <div class="h-500" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+        <mat-icon class="s-128 mb-8 select-message-icon hint-text">
+            ballot
+        </mat-icon>
+        <span class="select-message-text hint-text">
+            <span>No opportunities created</span>
+        </span>
+    </div>
+</ng-template>

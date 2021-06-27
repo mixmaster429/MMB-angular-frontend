@@ -1,0 +1,219 @@
+body {
+  background-color: $page-text-white;
+}
+
+.button {
+  font-family: Opensans-Semibold;
+  border-radius: 20px;
+  text-decoration: none;
+  color: $text-black;
+  font-size: 12px;
+  padding: 6px 16px 6px;
+  display: inline-block;
+  border: none;
+
+  &:hover {
+    color: $text-black;
+  }
+
+  &.large-button {
+    padding: 8px 20px 8px;
+    font-size: 14px;
+  }
+
+  &.primary {
+    background-color: $buttons-primary;
+    color: $page-text-white;
+  }
+
+  &.secondary {
+    background-color: $opportunity-investment;
+    color: $page-text-white;
+  }
+
+  &.outline {
+    border: 1px solid $page-text-white;
+    color: $page-text-white;
+  }
+
+  &.contained {
+    background-color: $page-text-white;
+    color: $text-black;
+  }
+}
+
+.hide-mobile {
+  @include at-query($max, $medium) {
+    display: none;
+  }
+}
+
+.text-h1 {
+  font-family: HelveticaNeue-Bold;
+  font-size: 56px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.17;
+  letter-spacing: -1.51px;
+  color: $text-black;
+  margin: 10px 0;
+
+  @include at-query($max, $xlarge) {
+    font-size: 48px;
+  }
+
+  @include at-query($max, $medium) {
+    font-size: 32px;
+  }
+}
+
+.text-h2 {
+  font-family: HelveticaNeue-Bold;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: -0.75px;
+  color: $text-black;
+  margin: 0;
+}
+
+.text-h3 {
+  font-family: HelveticaNeue-Light;
+  font-size: 32px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: $text-black;
+  margin: 0;
+
+  &.small {
+    font-size: 24px;
+    line-height: 1.33;
+
+    @include at-query($max, $xlarge) {
+      font-size: 22px;
+    }
+
+    @include at-query($max, $medium) {
+      font-size: 16px;
+    }
+  }
+}
+
+.text-h4 {
+  font-family: Opensans-Semibold;
+  font-size: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $text-black;
+  margin: 0;
+}
+
+.text-h5 {
+  font-family: Opensans;
+  font-size: 24px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $text-black;
+  margin: 0;
+}
+
+.text-h6 {
+  font-family: Opensans;
+  font-size: 18px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: $text-black;
+  margin: 0;
+
+  &.small {
+    font-size: 16px;
+  }
+}
+
+.section-slider {
+  text-align: left;
+
+  img {
+    width: 100%;
+  }
+
+  .slider-content {
+    padding: 50px 0 0 50px;
+
+    @include at-query($max, $medium) {
+      padding: 20px 0 0 20px;
+    }
+
+    .title {
+      margin-bottom: 20px;
+    }
+
+    .content {
+      font-size: 18px;
+      font-family: Opensans-Semibold;
+
+      @include at-query($max, $xlarge) {
+        font-size: 16px;
+      }
+
+      @include at-query($max, $medium) {
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      content: '';
+      height: 4px;
+      width: 108px;
+      background-color: $buttons-primary;
+    }
+
+    .slick-dots {
+      bottom: -50px;
+      text-align: left;
+
+      li {
+        margin: 0;
+
+        button {
+          &::before {
+            content: '';
+            background-color: white;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: solid 0.8px #000000;
+          }
+        }
+
+        &.slick-active {
+          button {
+            &::before {
+              background-color: $buttons-primary;
+              border: solid 0.8px $buttons-primary;
+            }
+          }
+        }
+      }
+    }
+
+    @include at-query($max, $xlarge) {
+      padding-left: 0;
+    }
+  }
+}

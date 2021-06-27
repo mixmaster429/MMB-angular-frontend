@@ -1,0 +1,76 @@
+<div class="offset-lg-2 col-lg-8 px-5 text-dark-100" [formGroup]="createOpportunityForm">
+    <!-- Navigate backwards -->
+    <div class="py-4">
+        <button class="btn mmb-secondary-light-button mmb-button--lightest" fxLayout="row" fxLayoutAlign="center center"
+            fxLayoutGap="8px" [routerLink]="'/opportunity'">
+            <div class="icon--primary" fxLayour="row" fxLayoutAlign="center center">
+                <i class="material-icons">arrow_back</i>
+            </div>
+            <span class="medium text-dark-100">Back to opportunities</span>
+        </button>
+    </div>
+
+    <!-- Header and buttons -->
+    <div class="mb-5" fxLayout="row" fxLayoutAlign="space-between center">
+        <h3 class="font-family-light">Create an opportunity</h3>
+        <div>
+            <button class="btn mmb-primary-button stroked-button btn--sm" (click)="onSave()"
+                [ngClass]="{'btn--disabled': createOpportunityForm.pristine}"
+                [disabled]="createOpportunityForm.pristine">Save</button>
+            <button class="btn mmb-primary-button flat-button btn--sm ml-2" (click)="onCancel()">Cancel</button>
+        </div>
+    </div>
+
+    <mmb-web-app-create-opportunity-type-panel [form]="createOpportunityForm">
+    </mmb-web-app-create-opportunity-type-panel>
+
+    <mmb-web-app-create-opportunity-category-panel [form]="createOpportunityForm">
+    </mmb-web-app-create-opportunity-category-panel>
+
+    <mmb-web-app-create-opportunity-location-panel [form]="createOpportunityForm">
+    </mmb-web-app-create-opportunity-location-panel>
+
+    <mmb-web-app-create-opportunity-more-info-panel [form]="createOpportunityForm"
+        [opportunitySettings]="opportunitySettings">
+    </mmb-web-app-create-opportunity-more-info-panel>
+
+    <mmb-web-app-create-opportunity-timeframe-panel [form]="createOpportunityForm">
+    </mmb-web-app-create-opportunity-timeframe-panel>
+
+    <mmb-web-app-create-opportunity-relevant-tags-panel [form]="createOpportunityForm">
+    </mmb-web-app-create-opportunity-relevant-tags-panel>
+
+    <hr />
+    <div class="medium" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px"
+            ngbTooltip="In the spirit of the community we like to include names and professional titles on Opportunities. However if want to go incognito, please choose the option below.">
+            <i class="material-icons font-size-18 text-secondary-300">help</i>
+        </div>
+        <span>Publish anonymously</span>
+        <span class="switch">
+            <div class="display">
+                <label class="label toggle">
+                  <input type="checkbox" class="toggle_input" formControlName="isAnonymously" />
+                  <div class="toggle-control"></div>
+                </label>
+              </div>
+        </span>
+    </div>
+    <hr />
+
+    <div class="my-5" fxLayout="row wrap" fxLayoutAlign="space-between center">
+        <div>
+            <button class="btn mmb-primary-button flat-button btn--sm ml-2" (click)="onCancel()">Cancel</button>
+        </div>
+        <div fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutGap="12px">
+            <button class="btn mmb-primary-button stroked-button btn--sm" (click)="onSave()"
+                [ngClass]="{'btn--disabled': createOpportunityForm.pristine}"
+                [disabled]="createOpportunityForm.pristine">Save</button>
+            <button [ngClass]="{'btn--disabled': createOpportunityForm.invalid}"
+                [disabled]="createOpportunityForm.invalid" (click)="onSubmit()"
+                class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm">
+                Publish
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="text-darker my-2">
+    <div class="row px-4 my-1" *ngFor="let comment of comments | slice:0:commentsLimit">
+        <div class="d-flex bg-light col-12 p-1 rounded border">
+            <img class="align-self-start mr-2 mw-50p border circle" [src]="comment.owner.image" alt="User image"
+                onerror="this.src='assets/placeholders/not-found.png';">
+            <div class="align-self-center media-body">
+                <div class="small font-weight-bold text-secondary">{{ comment.owner.name }}</div>
+                <div class="small text-muted">{{ comment.owner.professionalTitle }} @ {{
+                    comment.owner.company
+                    }}
+                </div>
+                <div class="my-2">
+                    {{ comment.value }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="comments && comments.length > DEFAULT_COMMENTS_LIMIT && commentsLimit < comments.length">
+        <a data-role="button" class="text-muted border-bottom" (click)="viewAllComments()">View all comments...</a>
+    </div>
+</div>

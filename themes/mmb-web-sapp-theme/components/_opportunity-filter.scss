@@ -1,0 +1,24 @@
+$types: (
+    "co-founder": $co-founder,
+    "connection": $connection,
+    "expert-advice": $expert-advice,
+    "investment": $investment,
+    "mentor": $mentor,
+    "partnership": $partnership,
+    "volunteer": $volunteer,
+    "other": $other,
+    "all": $all,
+);
+
+@each $type, $color in $types {
+    [data-type="#{$type}"].filter-item.mmb-tab-active {
+        @if $type == "all" {
+            color: $black-400;
+        } @else {
+            color: $white;
+        }
+        background-color: $color;
+        border-radius: 1rem;
+        padding: 5px 20px !important;
+    }
+}

@@ -1,0 +1,14 @@
+<div class="mb-5">
+    <h6 class="mmb-perm-title mb-3 text-transform-inherit font-size-18 mb-4">
+        Are you Offering or Seeking an opportunity?
+    </h6>
+
+    <div class="btn-group bg-white p-2 border-radius-28" role="group">
+        <button type="button" class="btn mmb-secondary-light-button btn--sm"
+            [ngClass]="{'btn--active': form.controls['type'].value === 1}"
+            (click)="setOpportunityType(1)">Offering</button>
+        <button type="button" class="btn mmb-secondary-light-button btn--sm"
+            [ngClass]="{'btn--active': form.controls['type'].value === 2}"
+            (click)="setOpportunityType(2)">Seeking</button>
+    </div>
+</div>

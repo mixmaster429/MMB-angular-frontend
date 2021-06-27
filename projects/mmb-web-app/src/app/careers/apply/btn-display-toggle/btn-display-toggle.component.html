@@ -1,0 +1,11 @@
+<div class="my-2 text-dark" *ngIf="!isExpanded" [innerHTML]="summary"></div>
+<div class="my-2 text-dark" *ngIf="isExpanded" [innerHTML]="description"></div>
+<div (click)="isExpanded=!isExpanded"
+    class="btn-display-toggle mx-auto position-absolute bg-primary text-white round border shadow-lg" data-role="btn">
+    <i class="material-icons" *ngIf="!isExpanded">
+        keyboard_arrow_down
+    </i>
+    <i class="material-icons" *ngIf="isExpanded">
+        keyboard_arrow_up
+    </i>
+</div>

@@ -1,0 +1,23 @@
+<div class="widget my-2" *ngIf="experiences">
+    <div class="single-accordion">
+        <h5 class="row justify-content-between px-1 collapse show border-bottom">
+            <div class="collapse show text-uppercase d-block p-3" role="button"
+                i18n="Experience title|Title for experience in user's profile page@@userProfileExperienceTitle">
+                Experience
+            </div>
+            <button *ngIf="isEditMode" type="button" class="btn btn-outline-primary mx-3 icon-button text-primary"
+                (click)="addExperience()">
+                <i class="material-icons">add</i>
+            </button>
+        </h5>
+        <div id="experienceSection" class="collapse show p-3" *ngFor="let item of experiences; let i = index">
+            <mmb-web-app-media-item [image]="item.logo" [title]="item.title" [subTitle]="item.organisation"
+                [isEditMode]="isEditMode" [startDate]="item.start_date" [endDate]="item.end_date"
+                [location]="item.location" [details]="item.summary" (onEdit)="editExperience(item)">
+            </mmb-web-app-media-item>
+        </div>
+        <div class="p-3" *ngIf="experiences.length === 0">
+            No experience added yet
+        </div>
+    </div>
+</div>

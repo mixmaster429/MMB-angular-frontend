@@ -1,0 +1,19 @@
+$types: (
+    "open": $open-status,
+    "closed": $closed-status,
+    "in-demand": $in-demand-status,
+    "active": $active-status
+);
+
+@each $type, $color in $types {
+    [data-status="#{$type}"].opportunity-status {
+        @if $type == "in-demand" {
+            color: $in-demand-color;
+        } @else {
+            color: $black-400;
+        }
+        i {
+          color: $color;
+        }
+    }
+}

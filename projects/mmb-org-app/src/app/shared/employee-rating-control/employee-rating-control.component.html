@@ -1,0 +1,37 @@
+<mat-button-toggle-group value="{{suitability}}">
+    <mat-button-toggle class="strong-no" [ngClass]="{'w-50 px-4': isMinimalViewActive, 'w-100': !isMinimalViewActive}"
+        value="5" (change)="onValueChanged($event)" matTooltip="Strong no" matTooltipPosition="above">
+        <span *ngIf="!isMinimalViewActive">Strong no</span>
+        <span *ngIf="isMinimalViewActive">
+            <i class="ri-emotion-sad-line d-block pt-8"></i>
+        </span>
+    </mat-button-toggle>
+    <mat-button-toggle class="no" [ngClass]="{'w-50 px-4': isMinimalViewActive, 'w-100': !isMinimalViewActive}"
+        matTooltip="No" matTooltipPosition="above" value="4" (change)="onValueChanged($event)">
+        <span *ngIf="!isMinimalViewActive">No</span>
+        <span *ngIf="isMinimalViewActive">
+            <i class="ri-emotion-unhappy-line d-block pt-8"></i>
+        </span>
+    </mat-button-toggle>
+    <mat-button-toggle class="undecided" [ngClass]="{'w-50 px-4': isMinimalViewActive, 'w-100': !isMinimalViewActive}"
+        matTooltip="Undecided" matTooltipPosition="above" value="3" (change)="onValueChanged($event)">
+        <span *ngIf="!isMinimalViewActive">Undecided</span>
+        <span *ngIf="isMinimalViewActive" class="mt-8">
+            <i class="ri-emotion-normal-line d-block pt-8"></i>
+        </span>
+    </mat-button-toggle>
+    <mat-button-toggle class="yes" [ngClass]="{'w-50 px-4': isMinimalViewActive, 'w-100': !isMinimalViewActive}" value="2"
+        matTooltip="Yes" matTooltipPosition="above" (change)="onValueChanged($event)">
+        <span *ngIf="!isMinimalViewActive">Yes</span>
+        <span *ngIf="isMinimalViewActive">
+            <i class="ri-emotion-happy-line d-block pt-8"></i>
+        </span>
+    </mat-button-toggle>
+    <mat-button-toggle class="strong-yes" [ngClass]="{'w-50 px-4': isMinimalViewActive, 'w-100': !isMinimalViewActive}"
+        value="1" matTooltip="Strong yes" matTooltipPosition="above" (change)="onValueChanged($event)">
+        <span *ngIf="!isMinimalViewActive">Strong yes</span>
+        <span *ngIf="isMinimalViewActive">
+            <i class="ri-emotion-line d-block pt-8"></i>
+        </span>
+    </mat-button-toggle>
+</mat-button-toggle-group>

@@ -1,0 +1,51 @@
+<div class="d-flex">
+    <button type="button" class="btn btn-outline-primary icon-button mr-1" (click)="onUpVote()">
+        <i class="material-icons-outlined">thumb_up_alt</i>
+        <div class="icon-text"
+            i18n="Upvote button label|Label for Upvote in collaborations@@upvoteButtonCollaborationsDetailsPage">
+            Upvote</div>
+    </button>
+    <button type="button" class="btn btn-outline-primary icon-button mr-1" (click)="onDownVote()">
+        <i class="material-icons-outlined">thumb_down_alt</i>
+        <div i18n="Downvote button label|Label for Downvote in collaborations@@downvoteButtonCollaborationsDetailsPage">
+            Downvote</div>
+    </button>
+    <button (click)="isCommentsViewOpen = !isCommentsViewOpen" type="button"
+        class="btn btn-outline-primary icon-button mr-1">
+        <i class="material-icons-outlined">comment</i>
+        <div i18n="Comment button label|Label for Comment in collaborations@@commentButtonCollaborationsDetailsPage">
+            Comment</div>
+    </button>
+    <button *ngIf="isAnswerEnabled" type="button" class="btn btn-outline-primary icon-button mr-1" (click)="isAnswering = !isAnswering">
+        <i class="material-icons-outlined">edit</i>
+        <div i18n="Answer button label|Label for answer in collaborations@@answerButtonCollaborationsDetailsPage">
+            Answer</div>
+    </button>
+    <button type="button" class="btn btn-outline-primary icon-button mr-1">
+        <i class="material-icons-outlined">rss_feed</i>
+        <div i18n="Follow button label|Label for follow in collaborations@@followButtonCollaborationsDetailsPage">
+            Follow</div>
+    </button>
+    <button type="button" class="btn btn-outline-primary icon-button mr-1" (click)="onResponse()">
+        <i class="material-icons-outlined">question_answer</i>
+        <div
+            i18n="Private response button label|Label for Private response in collaborations@@privateResponseButtonCollaborationsDetailsPage">
+            Private Response</div>
+    </button>
+</div>
+
+<div *ngIf="isAnswering" class="mt-3 text-right">
+    <ckeditor [editor]="Editor" data="" [config]="{placeholder: 'Write your answer here...'}"></ckeditor>
+
+    <button (click)="onAnswer()" type="button" class="btn sApp-btn mt-2"
+        i18n="Submit button label|Button for submit in collaborations@@submitButtonCollaborationsDetailsPage">
+        Submit
+    </button>
+</div>
+
+<div *ngIf="isCommentsViewOpen">
+    <!-- <mmb-web-app-create-new-comment [relationshipType]="'request'"></mmb-web-app-create-new-comment>
+    <hr />
+    <mmb-web-app-comment-view-detail [comments]="details.comments">
+    </mmb-web-app-comment-view-detail> -->
+</div>

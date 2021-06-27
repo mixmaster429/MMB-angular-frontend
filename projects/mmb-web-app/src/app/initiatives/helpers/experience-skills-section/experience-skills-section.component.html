@@ -1,0 +1,8 @@
+<div class="bg-lightest border-radius-8 p-4 text-dark mb-3" *ngIf="experience.skills">
+    <h6 class="medium text-uppercase mb-2">Skills</h6>
+    <div class="medium">
+        <span *ngFor="let item of experience.skills; let i = index">
+            {{ item.skill }}<span *ngIf="i < experience.skills.length-1">, </span>
+        </span>
+    </div>
+</div>

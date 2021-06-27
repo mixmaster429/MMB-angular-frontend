@@ -1,0 +1,48 @@
+<div [formGroup]="onboardingForm"
+    class="mmb-stepper p-relative mmb-background bg-primary-900 d-flex justify-content-center align-items-center minh-100vh-navbar-adjust w-100">
+    <div class="text-dark-100 bg-white border-radius-12 col-md-6 col-sm-12 p-0" [ngClass]="{'col-lg-3': activeStep === 8, 'col-lg-4': activeStep !== 8}">
+        <img class="top-n10 left-auto p-absolute z-index-100 top-0" src="assets/images/avatars/avatar-not-found.svg" />
+        <div class="py-4 mt-5">
+            <div fxLayout="row" fxLayoutAlign="center center" *ngIf="activeStep <= 6">
+                <ng-container *ngFor="let i of [1,2,3,4,5,6]">
+                    <div fxLayout="row" fxLayoutAlign="center center" class="step-number"
+                        [ngClass]="{'step-number--active': i === activeStep, 'step-number--done': i < activeStep }">
+                        <div *ngIf="i >= activeStep">{{ i }}</div>
+                        <i class="ri-check-line text-white" *ngIf="i < activeStep"></i>
+                    </div>
+                    <div class="horizontal-separator" *ngIf="i < activeStep + 1 && i < 6"></div>
+                    <div class="empty-separator" *ngIf="i >= activeStep + 1"></div>
+                </ng-container>
+            </div>
+
+            <mmb-web-app-user-onboarding-step-describe-yourself [form]="onboardingForm" (next)="onNextStep()"
+                *ngIf="activeStep === 1">
+            </mmb-web-app-user-onboarding-step-describe-yourself>
+
+            <mmb-web-app-user-onboarding-step-how-can-we-help [form]="onboardingForm" (back)="onBackStep()"
+                (next)="onNextStep()" *ngIf="activeStep === 2">
+            </mmb-web-app-user-onboarding-step-how-can-we-help>
+
+            <mmb-web-app-user-onboarding-step-user-support [form]="onboardingForm" (back)="onBackStep()"
+                (next)="onNextStep()" *ngIf="activeStep === 3">
+            </mmb-web-app-user-onboarding-step-user-support>
+
+            <mmb-web-app-user-onboarding-step-interested-in [form]="onboardingForm" (back)="onBackStep()"
+                (next)="onNextStep()" *ngIf="activeStep === 4"></mmb-web-app-user-onboarding-step-interested-in>
+
+            <mmb-web-app-user-onboarding-step-location-info [form]="onboardingForm" (back)="onBackStep()" (next)="onNextStep()"
+                *ngIf="activeStep === 5"></mmb-web-app-user-onboarding-step-location-info>
+
+            <mmb-web-app-user-onboarding-step-professional-profile
+                [form]="onboardingForm.controls['professionalProfileForm']" (back)="onBackStep()" (next)="onNextStep()"
+                *ngIf="activeStep === 6"></mmb-web-app-user-onboarding-step-professional-profile>
+
+            <mmb-web-app-user-onboarding-step-profile-picture *ngIf="activeStep === 7" (back)="onBackStep()"
+                (next)="onNextStep()">
+            </mmb-web-app-user-onboarding-step-profile-picture>
+
+            <mmb-web-app-user-onboarding-step-success *ngIf="activeStep === 8">
+            </mmb-web-app-user-onboarding-step-success>
+        </div>
+    </div>
+</div>

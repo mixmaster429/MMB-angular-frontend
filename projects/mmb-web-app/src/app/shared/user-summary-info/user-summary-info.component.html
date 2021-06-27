@@ -1,0 +1,40 @@
+<!-- Blog Thumb -->
+<div class="minh-60px">
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <img [src]="image" alt="" class="rounded-circle cursor-pointer avatar-xs"
+                onerror="this.src='assets/images/avatars/not-found.png';" routerLink="/profile/{{ redirect }}">
+            <div class="pl-3 pt-1 pr-2">
+                <h6 class="mb-1" [ngbTooltip]="name">{{ name | truncate: truncate.name }}</h6>
+                <div class="small" [ngbTooltip]="professionalTitle" *ngIf="professionalTitle">
+                    {{ professionalTitle | truncate: truncate.professionalTitle }}
+                </div>
+            </div>
+        </div>
+
+        <div ngbDropdown fxFlex="100px">
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">share</i>
+            <i *ngIf="!opportunity?.saved" class="material-icons text-dark cursor-pointer ml-3"
+                (click)="onAddToFavorites(opportunity, $event)">bookmark_border</i>
+            <i *ngIf="opportunity?.saved" class="material-icons cursor-pointer text-primary-500 ml-3"
+                (click)="onRemoveFromFavorites(opportunity, $event)">bookmark</i>
+
+            <i [ngbTooltip]="'Coming soon'" class="material-icons ml-2" ngbDropdownToggle>more_vert</i>
+
+            <!-- <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem>Save</button>
+                <button ngbDropdownItem>Share</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<!-- <ng-template #organisationPopover>
+    <mmb-web-app-popover-organisation *ngIf="!isUser" [id]="id" [name]="name" [orgImage]="image"
+        [summary]="popoverSummary" [orgHandle]="orgUrl">
+    </mmb-web-app-popover-organisation>
+
+    <mmb-web-app-popover-user *ngIf="isUser" [id]="id" [name]="name" [userImage]="image" [summary]="popoverSummary"
+        [userHandle]="userUrl">
+    </mmb-web-app-popover-user>
+</ng-template> -->

@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        Add New Opportunity
+    </h5>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+        (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <form [formGroup]="newQuestionForm">
+        <label class="text-dark"
+            i18n="Description label|Label for Description in connect@@SummaryLabelConnectRequestsPage">Description</label>
+        <textarea ngbAutofocus formControlName="request" placeholder="Enter description here..."
+            i18n-placeholder="enter description text placeholder|Placeholder for description in connect@@descriptionTitlePlaceholderConnectRequestsPage"
+            class="form-control border shadow-none"></textarea>
+        <br />
+        <label class="text-dark">Opportunity type</label>
+        <br />
+        <select class="form-control shadow-none border p-2" formControlName="opportunityType">
+            <option [ngValue]="null">---</option>
+            <option *ngFor="let option of opportunityTypes" [value]="option.value">{{ option.viewValue }}</option>
+        </select>
+        <br />
+        <label class="text-dark">Opportunity category</label>
+        <br />
+        <select class="form-control shadow-none border p-2" formControlName="opportunityCategory">
+            <option [ngValue]="null">---</option>
+            <option *ngFor="let option of opportunityCategories" [value]="option.value">{{ option.viewValue }}</option>
+        </select>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary btn-sm sApp-btn" (click)="modal.dismiss()"
+        i18n="Cancel button label|Label for cancel in connect@@cancelButtonConnectRequestsPage">Cancel</button>
+    <button type="button" class="btn btn-danger btn-sm sApp-btn" (click)="onAdd()"
+        i18n="Add button label|Label for add in connect@@addButtonConnectRequestsPage"
+        [disabled]="!newQuestionForm.valid">Add</button>
+</div>

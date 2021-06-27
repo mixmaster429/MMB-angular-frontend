@@ -1,0 +1,84 @@
+<div class="py-4 col-lg-8 offset-lg-2">
+    <section id="blog" class="section blog-area">
+        <div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <mmb-web-app-featured-categories></mmb-web-app-featured-categories>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="single-blog p-3 mb-4" (click)="onAddNewQuestion()">
+                        <div class="blog-content">
+                            <h5 class="text-muted">
+                                Enter your question?
+                            </h5>
+                        </div>
+                    </div>
+
+                    <div class="row" *ngIf="requests">
+                        <div infiniteScroll [infiniteScrollDistance]="5"
+                            [infiniteScrollThrottle]="150" (scrolled)="onScroll()">
+                            <div class="col-12 mb-4" *ngFor="let request of requests">
+                                <div class="bg-white border shadow-sm">
+                                    <div class="px-2 pt-3" *ngIf="request.user as user">
+                                        <mmb-web-app-user-summary-info [image]="user.profile_image" [name]="user.name"
+                                            [professionalTitle]="user.professional_title"
+                                            [createdOnDate]="request.created" [redirect]="user.handle">
+                                        </mmb-web-app-user-summary-info>
+                                    </div>
+
+                                    <div class="px-1" fxLayout="row" fxLayoutAlign="start start">
+                                        <div fxFlex="50px">
+                                            <mmb-web-app-voting-panel (upvote)="onUpvoteClicked($event, request)"
+                                                (downvote)="onDownvoteClicked($event, request)"
+                                                [score]="request.votes_total"
+                                                [isUpvoteSelected]="request.voted && request.voted.vote === 1"
+                                                [isDownvoteSelected]="request.voted && request.voted.vote === -1">
+                                            </mmb-web-app-voting-panel>
+
+                                            <mmb-web-app-forum-bookmark [request]="request">
+                                            </mmb-web-app-forum-bookmark>
+                                        </div>
+                                        <div>
+                                            <mmb-web-app-card-summary [title]="request.title"
+                                                [description]="request.question" [coverImage]="request.cover"
+                                                [authorName]="request.user.name" [createdOnDate]="request.created"
+                                                [authorImage]="request.user.profile_image"
+                                                [authorProfessionalTitle]="request.user.professional_title"
+                                                [slug]="request.slug" [country]="request.country" [cityCustom]="request.city_custom" [city]="request.city">
+                                            </mmb-web-app-card-summary>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <mmb-web-app-interaction-tools
+                                                [reactions]="request.reactions_summary?.total"
+                                                [isReactionsEnabled]="true" [isAnswerEnabled]="true"
+                                                [reacted]="request.reacted" [comments]="request.comments"
+                                                [answers]="request.answers?.length"
+                                                (commentAdded)="onCommentAdded($event, request)"
+                                                (reactionUpdated)="onReactionUpdated($event, request)"
+                                                (answerClicked)="onAnswerClicked(request)">
+                                            </mmb-web-app-interaction-tools>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center p-5">
+                        <mmb-ui-inline-loader text="Loading questions asked around the community..." *ngIf="isLoading">
+                        </mmb-ui-inline-loader>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <aside class="sidebar sticky-top t-navbar-height">
+                        <mmb-web-app-popular-post></mmb-web-app-popular-post>
+                        <mmb-web-app-popular-tags></mmb-web-app-popular-tags>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

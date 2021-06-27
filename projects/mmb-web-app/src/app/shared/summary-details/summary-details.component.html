@@ -1,0 +1,17 @@
+<div class="px-2">
+    <h3 class="text-uppercase mb-2 mt-5 text-secondary">{{ title }}</h3>
+    <h4 class="my-2 text-dark">{{ summary }}</h4>
+
+    <div [ngClass]="{'h-100': isReadingMore, 'h-140 mh-150p overflow-hidden': !isReadingMore}"
+        [innerHTML]="_description">
+    </div>
+
+    <div class="text-secondary" role="button" (click)="isReadingMore=!isReadingMore"
+        *ngIf="isReadMoreEnabled && !isReadingMore" i18n="Summary details component Read more title|Title for read more in summary details@@readMoreTitleSummaryDetailsPage">
+        Read more...
+    </div>
+    <div class="text-secondary" role="button" (click)="isReadingMore=!isReadingMore" i18n="Summary details component Read less title|Title for read less in summary details@@readLessTitleSummaryDetailsPage"
+        *ngIf="isReadMoreEnabled && isReadingMore">
+        Read less...
+    </div>
+</div>

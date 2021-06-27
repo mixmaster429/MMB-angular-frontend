@@ -1,0 +1,51 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h4 class="modal-title" id="exampleModalCenterTitle">{{ user.first_name }} {{ user.last_name }}</h4>
+        <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <h5 class="ml-3 mt-3">Contact info
+        <button type="button" class="btn btn-outline-primary mx-3 icon-button text-primary"
+            *ngIf="!showEditContactContent">
+            <i class="material-icons" (click)="showEditContactContent = true">edit</i>
+        </button>
+    </h5>
+    <div class="modal-body" *ngIf="!showEditContactContent">
+        <div class="media">
+            <i class="material-icons mr-3">
+                mail_outline
+            </i>
+            <div class="media-body">
+                <h5 class="mt-0">E-mail</h5>
+                <p>{{ user.contact[0].emails[0].email }}</p>
+            </div>
+        </div>
+        <div class="media">
+            <i class="material-icons mr-3">
+                phone
+            </i>
+            <div class="media-body">
+                <h5 class="mt-0">Phone</h5>
+                <p>+{{ user.contact[1].phones[0].country_code }} {{ user.contact[1].phones[0].number }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="modal-body" *ngIf="showEditContactContent">
+        <form [formGroup]="editContactForm">
+            <div class="row mb-5">
+                <div class="col">
+                    <label>Email</label>
+                    <input type="text" class="form-control" formControlName="email" [value]="user.contact[0].emails[0].email">
+                </div>
+            </div>
+            <div class="row mb-5">
+                <div class="col">
+                    <label>Phone</label>
+                    <input type="tel" class="form-control" formControlName="phone" [value]="user.contact[1].phones[0].country_code && user.contact[1].phones[0].number">
+                </div>
+            </div>
+            <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="showEditContactContent = false">Save</button>
+        </form>
+    </div>
+</div>

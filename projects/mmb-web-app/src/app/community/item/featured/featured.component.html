@@ -1,0 +1,17 @@
+<div class="d-flex w-100 h-200 mh-400 align-items-center">
+    <a *ngIf="promoTitle" [@simpleFadeAnimation]="'in'" [routerLink]="slug"
+        class="col-12 h-200 background-image background-no-repeat background-size-cover align-items-center"
+        [style.background-image]="'url(' + image + ')'">
+
+        <div>
+            <div class="backdrop"></div>
+            <div class="backdrop--text d-flex w-400p mw-400p align-self-center h-200">
+                <div class="justify-content-center align-self-center">
+                    <h5 class="align-self-center text-secondary ">{{ promoTitle }}</h5>
+                    <h4 class="align-self-center text-white mt-4" [innerHTML]="promoDescription"></h4>
+                    <h5 class="align-self-center text-secondary mt-2">By {{ author }}</h5>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

@@ -1,0 +1,19 @@
+<div class="p-3">
+    <div fxLayoutAlign="center start"><i class="ri-question-fill icon-font-lg text-primary"></i></div>
+    <div>
+        <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title"
+            (click)="modal.dismiss()">
+            <span class="text-primary" aria-hidden="true"><i class="ri-close-line"></i></span>
+        </button>
+    </div>
+    <div class="mt-5" fxLayoutAlign="center center" fxLayout="column">
+        <h1 class="font-size-24 mb-3">Save Application?</h1>
+        <p class="font-size-16">Would you like to save your application before leaving?</p>
+    </div>
+    <div class="mt-5" fxLayout="column" fxLayoutAlign="center center">
+        <button type="button" class="btn mmb-secondary-light-button mmb-secondary-light-button--dark mb-3 w-90p"
+            (click)="modal.dismiss()">Yes, save and leave</button>
+        <button type="button" class="btn mmb-secondary-light-button mb-3 w-90p" (click)="modal.dismiss()">No, delete
+            application</button>
+    </div>
+</div>

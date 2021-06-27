@@ -1,0 +1,16 @@
+<form [formGroup]="locationForm">
+    <div class="input-group">
+        <input type="text" autocomplete="no" formControlName="region" [ngbTypeahead]="regionSearch"
+            [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+            (selectItem)="onRegionSelected($event)" placeholder="Region" class="form-control my-1 shadow-none border"
+            class="shadow-none border p-2 w-500">
+    </div>
+</form>
+<div *ngFor="let region of selectedRegions; let i=index" class="mt-1 d-inline-block mr-1">
+    <span class="badge badge-primary p-1">
+        <span fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="px-2">{{ region.name }}</span>
+            <i class="material-icons icon-font-sm cursor-pointer" (click)="onRemoveRegion(i)">close</i>
+        </span>
+    </span>
+</div>

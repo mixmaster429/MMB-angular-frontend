@@ -1,0 +1,29 @@
+<div class="bg-lightest border-radius-8 p-4 text-dark mb-3">
+    <h6 class="medium text-uppercase mb-2">Industry</h6>
+    <div class="admin-panel-html-renderer mb-2 medium">
+        <ul>
+            <li *ngFor="let item of career.industries"> {{ item.industry }}</li>
+        </ul>
+    </div>
+
+    <h6 class="medium text-uppercase mb-2">Function</h6>
+    <div class="admin-panel-html-renderer mb-2 medium">
+        <ul>
+            <li *ngFor="let item of career.functions"> {{ item.function }}</li>
+        </ul>
+    </div>
+
+    <h6 class="medium text-uppercase mb-2">Compensation</h6>
+    <div class="admin-panel-html-renderer mb-2 medium">
+        <ul>
+            <li *ngFor="let item of career.remunerations"> {{ item.remuneration }}</li>
+        </ul>
+    </div>
+
+    <h6 class="medium text-uppercase mb-2">Language</h6>
+    <div class="admin-panel-html-renderer medium">
+        <ul>
+            <li *ngFor="let item of career.languages"> {{ item.language }}</li>
+        </ul>
+    </div>
+</div>

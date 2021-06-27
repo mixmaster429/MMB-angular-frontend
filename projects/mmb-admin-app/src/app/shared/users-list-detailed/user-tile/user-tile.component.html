@@ -1,0 +1,99 @@
+<div fxLayout="row">
+    <div class="bg-right-triangle">
+        <mat-checkbox class="tile-checkbox" [value]="isChecked" [checked]="isChecked" (change)="onSelectionUpdated($event)">
+        </mat-checkbox>
+    </div>
+
+    <img *ngIf="user.user_pic_temp_url" fxFlex class="avatar w-72 h-72" [alt]="user.full_name"
+        [src]="user.user_pic_temp_url" onerror="this.src='assets/images/avatars/not-found.png';" />
+    <img *ngIf="!user.user_pic_temp_url" fxFlex class="avatar w-72 h-72" [alt]="user.full_name"
+        [src]="user.image_profile" onerror="this.src='assets/images/avatars/not-found.png';" />
+
+    <div class="px-16 py-4" fxFlex>
+        <div *ngIf="user.full_name" class="h2" data-role="button" routerLink="/users/{{userId}}">
+            {{ user.full_name }}</div>
+        <div *ngIf="user.first_name && user.last_name" class="h2" data-role="button" routerLink="/users/{{userId}}">
+            {{ user.first_name }} {{ user.last_name }}</div>
+        <div class="mat-caption secondary-text" *ngIf="user.professional_title">{{ user.professional_title }}</div>
+
+        <div class="mat-caption secondary-text" *ngIf="user.credentials">{{ user.credentials.professional_title }}</div>
+        <div class="mat-caption secondary-text" *ngIf="user.current_country">
+            <span *ngIf="user.current_city">{{ user.current_city }},</span>
+            {{ user.current_country }}
+        </div>
+        <!-- <div class="mat-caption secondary-text" *ngIf="user.details">
+            <span *ngIf="user.details.city_current">{{ user.details.city_current }},</span>
+            {{ user.details.country_current }}
+        </div> -->
+    </div>
+    <div class="p-8 text-right mr-48" fxFlex>
+        <button mat-stroked-button color="accent" *ngIf="!projectId" (click)="addUserToProject()">
+            Save to a Project
+        </button>
+        <button mat-stroked-button color="accent" *ngIf="!isUserAssignedScreenActive && projectId && !isUserAssigned()"
+            (click)="saveToTheProject()">
+            Save to this Project
+        </button>
+        <strong mat-stroked-button color="accent" *ngIf="!isUserAssignedScreenActive && projectId && isUserAssigned()">
+            Already Assigned
+        </strong>
+        <button mat-stroked-button color="warn" *ngIf="isUserAssignedScreenActive" (click)="removeUserFromProject()">
+            Remove from Project
+        </button>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item disabled>
+                <mat-icon>edit</mat-icon>
+                <span>Edit</span>
+            </button>
+            <button mat-menu-item disabled>
+                <mat-icon>delete</mat-icon>
+                <span>Delete</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>
+
+<mmb-admin-app-experience-summary *ngIf="user.career" [experiences]="user.career"></mmb-admin-app-experience-summary>
+<mmb-admin-app-experience-summary *ngIf="user.experiences" [experiences]="user.experiences">
+</mmb-admin-app-experience-summary>
+
+<div class="secondary-text" fxLayout="row" *ngIf="user.education && user.education.length > 0">
+    <div class="p-8 text-right" fxFlex="80px">
+        <div>Education</div>
+    </div>
+    <div class="px-16 py-8" fxFlex>
+        <ng-container *ngFor="let education of user.education">
+            <div>
+                <span *ngIf="education.degree">{{ education.degree }}</span>
+                <span *ngIf="education.institute">at
+                    {{ education.institute }}</span>
+                <span *ngIf="education.start_date && education.end_date">({{ education.start_date }} -
+                    {{ education.end_date}})</span>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<ng-container *ngIf="!user.education || user.education.length === 0">
+    <mmb-admin-app-information-not-available heading="Education"></mmb-admin-app-information-not-available>
+</ng-container>
+
+<div class="secondary-text" fxLayout="row" *ngIf="user.languages && user.languages.length > 0">
+    <div class="p-8 text-right" fxFlex="80px">
+        <div>Languages</div>
+    </div>
+    <div class="px-16 py-8" fxFlex *ngIf="user.languages.length">
+        <span *ngFor="let language of user.languages; let i=index">
+            <span *ngIf="i > 0 && i < user.languages.length">,</span>
+            <span *ngIf="language && language.language_custom">{{language.language_custom}}</span>
+            <span *ngIf="language && !language.language_custom"> {{language}}</span>
+        </span>
+    </div>
+</div>
+
+<ng-container *ngIf="!user.languages || user.languages.length === 0">
+    <mmb-admin-app-information-not-available heading="Languages"></mmb-admin-app-information-not-available>
+</ng-container>

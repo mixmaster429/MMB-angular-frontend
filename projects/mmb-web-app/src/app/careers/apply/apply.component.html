@@ -1,0 +1,199 @@
+<ng-container *ngIf="!applied && selectedCareerDetails">
+    <div class="bg-white h-80">
+        <a href="careers/{{ selectedCareerDetails.slug }}">
+            <div class="container h-100 text-primary" fxLayoutAlign="start center"><i
+                    class="ri-arrow-left-circle-line font-size-24 mr-2"></i> Back to career details</div>
+        </a>
+    </div>
+    <div class="container" [formGroup]="applyForm" *ngIf="selectedCareerDetails">
+        <div class="row justify-content-between mt-5 p-4">
+            <h1 class="font-size-32">Career application</h1>
+            <div class="row">
+                <button class="btn mmb-primary-button stroked-button btn--sm">Save</button>
+                <button class="btn mmb-primary-button flat-button btn--sm ml-2">Cancel</button>
+            </div>
+        </div>
+
+        <mmb-web-app-career-apply-org-details [details]="selectedCareerDetails"></mmb-web-app-career-apply-org-details>
+
+        <hr />
+
+        <mmb-web-app-career-apply-section-title [step]="'1'" [title]="'Select your CV'">
+        </mmb-web-app-career-apply-section-title>
+        <div fxLayout="row" fxLayoutGap="20px">
+            <mmb-web-app-career-apply-select-box [form]="applyForm" [isCv]="true"
+                [selectedCareerDetails]="selectedCareerDetails" fxFlex="50" [title]="'Upload a new CV file'">
+            </mmb-web-app-career-apply-select-box>
+            <mmb-web-app-career-apply-select-box [form]="applyForm" [isCv]="true"
+                [selectedCareerDetails]="selectedCareerDetails" fxFlex="50" [title]="'Use my exisitng profile CV'">
+            </mmb-web-app-career-apply-select-box>
+        </div>
+
+        <hr />
+
+        <mmb-web-app-career-apply-section-title [step]="'2'" [title]="'Add a Cover Letter (optional)'">
+        </mmb-web-app-career-apply-section-title>
+        <div fxLayout="row" fxLayoutGap="20px">
+            <mmb-web-app-career-apply-select-box [form]="applyForm" [isCv]="false"
+                [selectedCareerDetails]="selectedCareerDetails" fxFlex="50" [title]="'Upload a new Cover Letter file'">
+            </mmb-web-app-career-apply-select-box>
+        </div>
+
+        <hr />
+
+        <mmb-web-app-career-apply-section-title [step]="'3'" [title]="'Provide answers to the below questions'">
+        </mmb-web-app-career-apply-section-title>
+        <mmb-web-app-career-apply-questions [isDisabled]="false" [form]="applyForm" [details]="selectedCareerDetails">
+        </mmb-web-app-career-apply-questions>
+
+        <hr />
+
+        <mmb-web-app-career-apply-section-title [step]="'4'" [title]="'Share your preferences for this role'">
+        </mmb-web-app-career-apply-section-title>
+        <mmb-web-app-career-apply-location [form]="applyForm" [details]="selectedCareerDetails" [showLocation]="true"
+            [title]="'Preferred location'" [countryControlName]="'preferredCountry'"
+            [cityControlName]="'preferredCity'">
+        </mmb-web-app-career-apply-location>
+        <mmb-web-app-career-apply-compensation [title]="'Target annual compensation'" [form]="applyForm"
+            [compensationCurrency]="'targetCompensationCurrency'" [compensationSalary]="'targetCompensationSalary'"
+            [compensationBenefits]="'targetCompensationBenefits'"></mmb-web-app-career-apply-compensation>
+
+        <hr />
+
+        <mmb-web-app-career-apply-section-title [step]="'5'" [title]="'Provide details of your current status'">
+        </mmb-web-app-career-apply-section-title>
+        <mmb-web-app-career-apply-professional-info [form]="applyForm"></mmb-web-app-career-apply-professional-info>
+        <mmb-web-app-career-apply-location [showLocation]="false" [form]="applyForm" [title]="'Your current location'"
+            [countryControlName]="'currentCountry'" [cityControlName]="'currentCity'">
+        </mmb-web-app-career-apply-location>
+        <mmb-web-app-career-apply-compensation [title]="'Your current annual compensation'" [form]="applyForm"
+            [compensationCurrency]="'currentCompensationCurrency'" [compensationSalary]="'currentCompensationSalary'"
+            [compensationBenefits]="'currentCompensationBenefits'">
+        </mmb-web-app-career-apply-compensation>
+
+        <hr />
+
+        <div class="row justify-content-between mt-5 p-4">
+            <button class="btn mmb-primary-button flat-button btn--sm ml-2">Cancel</button>
+            <div class="row">
+                <button class="btn mmb-primary-button stroked-button btn--sm">Save</button>
+                <button class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm ml-2"
+                    (click)="submit()">Submit</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="applied && selectedCareerDetails">
+    <div class="container">
+        <div class="my-5">
+            <h1 class="font-size-32">Congratulations!</h1>
+            <h2 fxLayoutAlign="start center" class="font-size-18 text-success mt-3"><i
+                    class="ri-checkbox-circle-fill font-size-32 mr-2"></i> Your application has been received</h2>
+        </div>
+        <mmb-web-app-career-apply-org-details [applied]="true" [details]="selectedCareerDetails">
+        </mmb-web-app-career-apply-org-details>
+
+        <div class="bg-white border-radius-8 p-4 text-dark mb-5">
+            <div class="mmb-title-border-success">
+                <h3 class="font-size-18">What happens next?</h3>
+                <p>Thank you - your application has been successfully submitted. You will receive an email confirming
+                    receipt
+                    and we will be in touch again shortly, once your application has been processed. If you are
+                    shortlisted
+                    by
+                    the hiring organisation, we'll help you to arrange an initial conversation to discuss the role and
+                    your
+                    candidacy.</p>
+            </div>
+            <hr />
+            <div class="mmb-title-border-primary">
+                <h3 class="font-size-18">Speak to Movemeback at any time</h3>
+                <p>We are here to help you through your career journey - from preparation tips, decision-making,
+                    interview
+                    advice, salary guidance and even building a network in a new country. If you have any questions,
+                    please
+                    contact us.</p>
+            </div>
+            <hr />
+            <div class="mt-3">
+                <button class="btn mmb-secondary-light-button mr-3">My Careers</button>
+                <button class="btn mmb-secondary-light-button">Discover other careers</button>
+            </div>
+        </div>
+
+        <h2 class="font-size-24">Your application</h2>
+        <div class="mb-3" fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                <p>Submitted on Saturday, 17th Mar 2021</p>
+                <button class="btn mmb-primary-button flat-button btn--sm" fxLayoutGap="10px"
+                    fxLayoutAlign="center center">
+                    <i class="ri-printer-line"></i><span>Print</span></button>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                <p>Reference: AB-CD-12345678</p>
+                <span class="text-primary">copy</span>
+            </div>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item p-5" fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxLayout="row">
+                    <div class="mr-5">Selected CV</div>
+                    <div>{{ applyForm.controls['cv'].value }}</div>
+                </div>
+                <button class="btn mmb-secondary-light-button mr-3" fxLayoutGap="10px" fxLayoutAlign="center center"> <i
+                        class="ri-external-link-line"></i><span>Preview</span></button>
+            </li>
+            <li class="list-group-item p-5" fxLayout="row" fxLayoutAlign="space-between center">
+                <div fxLayout="row">
+                    <div class="mr-5">Cover Letter</div>
+                    <div>{{ applyForm.controls['coverLetter'].value }}</div>
+                </div>
+                <button class="btn mmb-secondary-light-button mr-3" fxLayoutGap="10px" fxLayoutAlign="center center"> <i
+                        class="ri-external-link-line"></i><span>Preview</span></button>
+            </li>
+            <li class="list-group-item p-5" fxLayout="row">
+                <div fxLayout="row">
+                    <div class="mr-5">Preferred location</div>
+                    <div>{{ applyForm.controls['preferredCity'].value }}, {{ applyForm.controls['preferredCountry'].value }}</div>
+                </div>
+            </li>
+            <li class="list-group-item p-5" fxLayout="row">
+                <div fxLayout="row">
+                    <div class="mr-5">Target salary</div>
+                    <div>{{ applyForm.controls['targetCompensationCurrency'].value }}</div>
+                    <div>{{ applyForm.controls['targetCompensationSalary'].value }}</div>
+                    <div>{{ applyForm.controls['targetCompensationBenefits'].value }}</div>
+                </div>
+            </li>
+            <li class="list-group-item p-5" fxLayout="row">
+                <div fxLayout="row"> 
+                    <div class="mr-5">Professional title</div>
+                    <div>{{ applyForm.controls['professionalTitle'].value }}</div>
+                </div>
+            </li>
+            <li class="list-group-item p-5" fxLayout="row">
+                <div fxLayout="row">
+                    <div class="mr-5">Current location</div>
+                    <div>{{ applyForm.controls['currentCity'].value }}, {{ applyForm.controls['currentCountry'].value }}</div>
+                </div>
+            </li>
+            <li class="list-group-item p-5" fxLayout="row">
+                <div fxLayout="row">
+                    <div class="mr-5">Current salary</div>
+                    <div>{{ applyForm.controls['currentCompensationCurrency'].value }}</div>
+                    <div>{{ applyForm.controls['currentCompensationSalary'].value }}</div>
+                    <div>{{ applyForm.controls['currentCompensationBenefits'].value }}</div>
+                </div>
+            </li>
+        </ul>
+
+        <mmb-web-app-career-apply-questions [isDisabled]="true" [details]="selectedCareerDetails" [form]="applyForm">
+        </mmb-web-app-career-apply-questions>
+
+        <mmb-web-app-similar-careers [showSimilarCareersButton]="true" [slug]="selectedCareerDetails.slug">
+        </mmb-web-app-similar-careers>
+
+    </div>
+</ng-container>

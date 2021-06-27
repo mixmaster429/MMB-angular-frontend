@@ -1,0 +1,16 @@
+<div *ngIf="career" class="border shadow-sm">
+    <div class="position-relative w-100 h-150 mh-150 promo-banner"
+        [style.background-image]="'url(' + career.organisation.image_cover + ')'">
+        <div class="img-thumbnail company-logo h-80 mh-80"
+            [style.background-image]="'url(' + career.organisation.image_logo_medium + ')'"></div>
+    </div>
+
+    <div class="p-2 position-relative">
+        <h5 class="text-primary mt-8">
+            {{ career.title }}
+        </h5>
+
+        <mmb-web-app-btn-display-toggle [summary]="career.public_summary_html" [description]="career.description_html">
+        </mmb-web-app-btn-display-toggle>
+    </div>
+</div>

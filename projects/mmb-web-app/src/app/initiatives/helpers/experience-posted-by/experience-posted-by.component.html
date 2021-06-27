@@ -1,0 +1,18 @@
+<div class="bg-lightest border-radius-8 p-4 text-dark mb-3">
+    <div class="mb-3" fxLayout="row" fxLayoutAlign="space-between center">
+        <div>
+            <div class="medium text-dark-600 mb-2">
+                Experience posted by
+            </div>
+            <div class="cursor-pointer" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" routerLink="/organisation/profile/{{ experience.organisation.slug }}">
+                <i class="material-icons text-dark-600">work_outline</i>
+                <h6 class="mb-0 pr-2">{{ experience.organisation.name }}</h6>
+            </div>
+        </div>
+        <div>
+            <img class="rounded-circle cursor-pointer avatar-sm border"
+                onerror="this.src='assets/images/avatars/not-found.png';" [src]="experience.organisation.logo" routerLink="/organisation/profile/{{ experience.organisation.slug }}">
+        </div>
+    </div>
+    <div class="medium text-dark-300 admin-panel-html-renderer" [innerHTML]="experience.organisation.description"></div>
+</div>

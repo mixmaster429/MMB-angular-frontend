@@ -1,0 +1,19 @@
+<div class="mb-5" [formGroup]="form">
+  <div class="mmb-perm-title mb-3 text-transform-inherit mb-4">
+    <h6 class="font-size-18 mb-1">Timeframe</h6>
+    <div class="medium font-family-light">Your opportunity will be live for a maximum of 30 days</div>
+  </div>
+  <div class="p-4 bg-white border-radius-8" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <div>
+      <div><label for="startDate">Start date</label></div>
+      <input id="startDate" formControlName="startDate" type="date" [min]="startMinDate"
+        class="border pl-3 pr-1 py-2 border-radius" placeholder="Start date" (change)="onDateChange()" />
+    </div>
+    <div>
+      <div><label for="endDate">End date</label></div>
+      <input id="endDate" formControlName="endDate" [min]="endMinDate" [max]="endMaxDate"
+        [attr.disabled]="isEndDateDisabled ? true : null" type="date" class="border pl-3 pr-1 py-2 border-radius"
+        placeholder="End date" />
+    </div>
+  </div>
+</div>

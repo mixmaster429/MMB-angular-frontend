@@ -1,0 +1,20 @@
+<!-- Single Item -->
+<div class="single-blog shadow-none" [ngClass]="{'list-item-selected': isSelected}">
+    <a (click)="onItemSelected()">
+        <!-- Item Content -->
+        <div class="single-comments media p-2 p-lg-2">
+            <div class="avatar-lg">
+                <img [src]="image" alt="" onerror="this.src='assets/img/mmb-placeholder.jpg';">
+            </div>
+            <div class="comments-content media-body pl-3">
+                <div class="mb-2">
+                    <h6 class="font-weight-strong text-primary">{{ title }}</h6>
+                    <p class="text-dark">{{ author }}</p>
+                    <p class="mt-n1 text-muted">{{ location }}</p>
+                    <div class="separator"></div>
+                    <p class="text-muted" *ngIf="date">{{ date | timeago }}</p>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

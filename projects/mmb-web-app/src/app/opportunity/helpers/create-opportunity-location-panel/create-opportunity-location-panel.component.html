@@ -1,0 +1,39 @@
+<div class="mb-5" [formGroup]="form">
+  <h6 class="mmb-perm-title mb-3 text-transform-inherit font-size-18 mb-4">
+    Select a location for this opportunity
+  </h6>
+
+  <div class="bg-white p-4 border-radius-8">
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px">
+      <div class="w-100">
+        <div class="mb-2">Country</div>
+        <div class="input-group input-group--secondary bg-white border border-radius-8">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <img src="assets/images/icon-grey-search.svg">
+            </span>
+          </div>
+          <input class="form-control mmb-text-input mmb-text-input--sm" type="text"
+          formControlName="country" [ngbTypeahead]="currentCountriesSearch"
+          [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+          placeholder="Country name">
+        </div>
+      </div>
+      <div class="w-100">
+        <div class="mb-2">City</div>
+        <div class="input-group input-group--secondary bg-white border border-radius-8"
+          [ngClass]="{'input-group--disabled': form.controls['country'].invalid}">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <img src="assets/images/icon-grey-search.svg">
+            </span>
+          </div>
+          <input class="form-control mmb-text-input mmb-text-input--sm"
+          [ngbTypeahead]="currentCitiesSearch" [resultFormatter]="resultFormatCountryValue"
+          [inputFormatter]="inputFormatCountryValue" placeholder="City name" formControlName="city"
+          type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

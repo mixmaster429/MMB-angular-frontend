@@ -1,0 +1,40 @@
+<div class="bg-white cursor-pointer card-item" (click)="redirectToDetails(request.slug, $event)">
+    <div class="p-2" *ngIf="request.user as user">
+        <mmb-web-app-user-summary-info [professionalTitle]="user.professional_title" [image]="user.profile_image"
+            [name]="user.name" [redirect]="user.handle" [isSaved]="request.saved" [opportunity]="request" [truncate]="truncate" (addBookmark)="onAddBookmark($event)"
+            (removeBookmark)="onRemoveBookmark($event)">
+        </mmb-web-app-user-summary-info>
+    </div>
+
+    <div class="px-3">
+        <mmb-web-app-card-tags [items]="[getOpportunityType, getOpportunityCategory]" [bgClass]="typeClass"></mmb-web-app-card-tags>
+    </div>
+
+    <div class="px-2">
+        <mmb-web-app-card-summary type="opportunity" [title]="request.title"
+            [description]="request.opportunity" [coverImage]="request.image_cover" [createdOnDate]="request.created"
+            [slug]="request.slug" [location]="request.location_summary" [totalComments]="request?.comments_total"
+            [endDate]="request.end_date">
+        </mmb-web-app-card-summary>
+
+        <div class="px-2 pb-3 pt-3" fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <button *ngIf="!request.interested" class="btn mmb-primary-button stroked-button btn--sm"
+                    (click)="onExpressInterest()">
+                    <span>Express interest</span>
+                </button>
+
+                <button *ngIf="request.interested" class="btn mmb-primary-button btn--sm bg-black"
+                    [routerLink]="request.slug">
+                    <span>Respond</span>
+                </button>
+            </div>
+            <div>
+                <span [attr.data-status]="getOpportunityStatus.class" class="text-uppercase fw-6 small d-flex" ngbTooltip="Opportunity {{ getOpportunityStatus.name }}">{{ getOpportunityStatus.name }}<i class="{{ getOpportunityStatus.icon }} ml-1"></i></span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" *ngIf="request.views_total">
+                <span class="p-0 small">640 views</span>
+            </div>
+        </div>
+    </div>
+</div>

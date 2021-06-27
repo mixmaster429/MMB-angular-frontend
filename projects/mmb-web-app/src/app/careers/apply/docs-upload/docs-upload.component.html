@@ -1,0 +1,56 @@
+<div class="py-2 px-1">
+    <h6 class="text-dark font-weight-light-bold">
+        Please upload a CV for this opportunity
+    </h6>
+    <label class="text-muted"
+        i18n="Apply Career CV title|Title for application ensure cv exists title@@applyCareerCvExistTitle">
+        Ensure we have your latest CV - either use your existing CV attached to your profile or upload a new one
+    </label>
+
+    <div>
+        <label class="btn btn-primary sApp-btn btn-sm" for="cv-selector">
+            <input id="cv-selector" type="file" class="d-none" accept="application/pdf"
+                (change)="onCvChange($event)">
+            <div class="d-flex align-items-center">
+                <i class="material-icons">cloud_upload</i>
+                <span class="ml-2"
+                    i18n="Apply Career Upload button|Apply career page label for upload button@@applyCareerUploadCvButton">
+                    Upload CV
+                </span>
+            </div>
+
+
+        </label>
+
+        <span class="ml-2" *ngIf="!cvDownloadUrl">{{ cvFileName }}</span>
+        <a class="ml-2" *ngIf="cvDownloadUrl" target="_blank" [href]="cvDownloadUrl">{{ cvFileName }}</a>
+        <mmb-ui-inline-loader *ngIf="isCvUploading" class="ml-2"></mmb-ui-inline-loader>
+    </div>
+    <br />
+    <h6 class="text-dark font-weight-light-bold">
+        Please upload a cover letter for this opportunity
+    </h6>
+    <label class="text-muted">
+        Providing a cover letter is optional (unless otherwise stated in the description), but may enhance the
+        credibility of your application
+    </label>
+
+    <div>
+        <label class="btn btn-primary sApp-btn btn-sm" for="cl-selector">
+            <input id="cl-selector" type="file" class="d-none" accept="application/pdf"
+                (change)="onCoverLetterChange($event)">
+            <div class="d-flex align-items-center">
+                <i class="material-icons">cloud_upload</i>
+                <span class="ml-2">
+                    Upload Cover Letter
+                </span>
+            </div>
+
+
+        </label>
+
+        <span class="ml-2" *ngIf="!coverLetterDownloadUrl">{{ clFileName }}</span>
+        <a class="ml-2" *ngIf="coverLetterDownloadUrl" target="_blank" [href]="coverLetterDownloadUrl">{{ clFileName }}</a>
+        <mmb-ui-inline-loader *ngIf="isCoverLetterUploading" class="ml-2"></mmb-ui-inline-loader>
+    </div>
+</div>

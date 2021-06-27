@@ -1,0 +1,15 @@
+<form [formGroup]="ticketPriceForm" fxLayout="row">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <div class="input-group">
+            <input type="text" autocomplete="no" formControlName="currency" [ngbTypeahead]="currenciesSearch"
+                [resultFormatter]="resultFormatCurrencyValue" [inputFormatter]="inputFormatCurrencyValue"
+                (selectItem)="onCurrencySelected($event)" placeholder="Currency" class="shadow-none border p-2 w-150">
+        </div>
+        <div class="input-group">
+            <input formControlName="price" type="number" class="shadow-none border p-2 w-150" placeholder="Price" />
+        </div>
+        <div class="input-group">
+            <input formControlName="label" type="text" class="shadow-none border p-2 w-200" placeholder="Label" />
+        </div>
+    </div>
+</form>

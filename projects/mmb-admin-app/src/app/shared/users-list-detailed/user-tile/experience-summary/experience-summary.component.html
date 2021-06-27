@@ -1,0 +1,36 @@
+<ng-container *ngFor="let experience of experiences">
+    <div *ngIf="!experience.end_date" class="secondary-text" fxLayout="row">
+        <div class="p-8 text-right" fxFlex="80px">
+            <div>Current</div>
+        </div>
+        <div class="px-16 py-8" fxFlex>
+            {{ experience.title }} <span *ngIf="experience.company">at {{ experience.company }}</span>
+            ({{ experience.start_date | date }} - Present)
+        </div>
+    </div>
+</ng-container>
+
+<div class="secondary-text" fxLayout="row" *ngIf="experiences && experiences.length > 0">
+    <div class="p-8 text-right" fxFlex="80px">
+        <div>Past</div>
+    </div>
+    <div class="px-16 py-8" fxFlex>
+        <ng-container *ngFor="let experience of experiences">
+            <div *ngIf="experience.end_date">
+                {{ experience.title }} <span *ngIf="experience.company">at {{ experience.company }}</span>
+                ({{ experience.start_date | date}} - {{ experience.end_date | date
+                        }})
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<!-- If experiences do not exist, show empty -->
+<ng-container *ngIf="!experiences || experiences.length === 0">
+    <div class="secondary-text" fxLayout="row">
+        <mmb-admin-app-information-not-available heading="Current"></mmb-admin-app-information-not-available>
+    </div>
+    <div class="secondary-text" fxLayout="row">
+        <mmb-admin-app-information-not-available heading="Past"></mmb-admin-app-information-not-available>
+    </div>
+</ng-container>

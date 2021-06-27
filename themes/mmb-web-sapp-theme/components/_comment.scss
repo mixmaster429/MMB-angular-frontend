@@ -1,0 +1,10 @@
+.comment-view {
+    background: $gray-900;
+    border-radius: 0.1rem 1rem 1rem 1rem;
+}
+
+#votingOptions, #shareOptions, #reactionOptions {
+    &::after {
+        display: none;
+    }
+}

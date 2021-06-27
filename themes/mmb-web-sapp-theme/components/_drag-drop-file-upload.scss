@@ -1,0 +1,10 @@
+.mmb-drag-drop ngx-file-drop {
+    color: $black-100;
+    div.ngx-file-drop__drop-zone {
+        border: none;
+        height: auto;
+        .ngx-file-drop__content {
+            height: auto;
+        }
+    }
+}

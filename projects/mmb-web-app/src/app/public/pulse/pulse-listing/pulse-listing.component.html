@@ -1,0 +1,20 @@
+<div class="d-flex mmb-background w-100 h-330 justify-content-center" [style.background-image]="'url(assets/images/pulse/pulse-header.png)'">
+    <div class="align-self-center text-white text-center text-shadow">
+        <h1>Movemeback Pulse</h1>
+        <h5>Actionable African insight delivered to you on pulse</h5>
+        <button class="btn mmb-primary-button btn--sm mt-3 border-radius">Subscribe</button>
+    </div>
+</div>
+<div class="p-5">
+    <div class="mb-2" *ngFor="let pulse of pulses" fxLayoutAlign="center center">
+        <div class="vertical-card col-md-6" routerLink="/pulse/{{pulse.slug}}">
+            <div class="resources-cell">
+            <img [src]="pulse.image" onerror="assets/placeholders/not-found.png" alt="" class="img-resources-cell">
+            </div>
+            <div fxLayout="column" class="vertical-cards-content">
+                <div class="vertical-card-header">{{ pulse.date }}</div>
+                <div class="vertical-card-subheader">{{ pulse.title }}</div>
+            </div>
+        </div>
+    </div>
+</div>

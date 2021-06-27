@@ -1,0 +1,92 @@
+<!-- Modal view -->
+<div class="dialog-content-wrapper" *ngIf="isModalView">
+    <mat-toolbar matDialogTitle class="mat-accent m-0">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+            Confirm action?
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+<ng-container>
+    <ng-content *ngTemplateOutlet="body"></ng-content>
+</ng-container>
+<div mat-dialog-actions class="m-0 px-16" fxLayout="row" fxLayoutAlign="end center">
+    <button mat-raised-button class="close-button" aria-label="close" color="warn">
+        CANCEL ACTION
+    </button>
+    <button mat-raised-button class="close-button" aria-label="close" color="primary">
+        YES, I CONFIRM
+    </button>
+</div>
+
+<!-- Expansion panel view -->
+<!-- <mat-expansion-panel *ngIf="!isModalView" class="mb-8">
+    <mat-expansion-panel-header>
+        <mat-panel-title>
+            Want to add feedback?
+        </mat-panel-title>
+    </mat-expansion-panel-header>
+    <ng-content *ngTemplateOutlet="body"></ng-content>
+</mat-expansion-panel> -->
+
+<ng-template #body>
+    <div class="px-16" *ngIf="data.item && data.item.candidate">
+        <h3>Are you sure you want to change the status of <span class="accent-fg">{{ data.item.candidate.name }}</span>
+            ?</h3>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="warn-fg" fxFlex="30px">help_outline</mat-icon>
+            <div>
+                Moving <strong class="mx-4">{{ data.item.candidate.name }} </strong> from <strong
+                    class="mx-4">{{ data.previousStage }}</strong> -> <strong class="mx-4">{{ data.newStage }}</strong>
+            </div>
+        </div>
+        <hr />
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span fxFlex="150px">Stage</span>
+            <mat-form-field class="w-300">
+                <mat-select [(ngModel)]="data.newStage">
+                    <mat-option *ngFor="let option of stageOptions" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <span fxFlex="150px">Suitability Profile</span>
+                <mat-form-field class="w-300">
+                    <mat-select>
+                        <mat-option *ngFor="let option of candidateSuitability" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <span fxFlex="150px">Suitability Criteria</span>
+                <mat-form-field class="w-300">
+                    <mat-select>
+                        <mat-option *ngFor="let option of candidateSuitability" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span fxFlex="150px">Public Feedback</span>
+            <mat-form-field fxFlex class="w-100-p" appearance="outline">
+                <textarea matInput placeholder="Leave a feedback (public)"></textarea>
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <span fxFlex="150px">Private Feedback</span>
+            <mat-form-field fxFlex class="w-100-p" appearance="outline">
+                <textarea matInput placeholder="Leave a feedback (private)"></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,66 @@
+<form [formGroup]="jobForm">
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Job title</div>
+        <input formControlName="title" class="shadow-none border px-2 py-1 w-500" type="text"
+            placeholder="Enter job title" />
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Headline</div>
+        <div>
+            <input formControlName="headline" class="shadow-none border px-2 py-1 w-750" type="text"
+                placeholder="Enter job headline" />
+            <div class="small text-muted">Used for listing card and page header summaries</div>
+        </div>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Seniority</div>
+        <select formControlName="seniority" class="shadow-none border w-750 p-2">
+            <option [ngValue]="null">---</option>
+            <option *ngFor="let option of seniorityOptions" [value]="option.value">{{ option.viewValue }}</option>
+        </select>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Locations</div>
+        <mmb-web-app-multi-location (locationsUpdated)="onLocationsUpdated($event)"></mmb-web-app-multi-location>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Hiring regions</div>
+        <mmb-web-app-location-regions (regionSelected)="onRegionSelected($event)"></mmb-web-app-location-regions>
+    </div>
+
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Summary</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="summary" [editor]="Editor" data=""
+            [config]="{placeholder: 'Enter the job summary'}">
+        </ckeditor>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Description</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="description" [editor]="Editor" data=""
+            [config]="{placeholder: 'Enter the job description'}">
+        </ckeditor>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Criteria</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="criteria" [editor]="Editor" data=""
+            [config]="{placeholder: 'What\'s the job criteria'}">
+        </ckeditor>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Benefits</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="benefits" [editor]="Editor" data=""
+            [config]="{placeholder: 'About the benefits offered in the job'}">
+        </ckeditor>
+    </div>
+    <div class="my-4" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px"></div>
+        <div class="w-750 text-right">
+            <button type="button" class="btn sApp-btn btn-sm">
+                Cancel
+            </button>
+            <button (click)="onSave()" [disabled]="jobForm.invalid" type="button" class="btn sApp-btn btn-sm ml-2">
+                Save
+            </button>
+        </div>
+    </div>
+</form>

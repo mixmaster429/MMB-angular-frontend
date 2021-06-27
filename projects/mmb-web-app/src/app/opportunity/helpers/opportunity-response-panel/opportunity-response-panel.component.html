@@ -1,0 +1,24 @@
+<div class="bg-light p-4 text-dark-100 border-radius-8">
+    <div class="mb-3" fxLayout="row" fxLayoutAlign="space-between start">
+        <div>
+            <h6>Respond to this opportunity</h6>
+            <div class="medium">Send a private response to the author of this Opportunity</div>
+        </div>
+
+        <div class="medium text-secondary-300" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+            <i class="material-icons">check</i>
+            <span>You’re interested</span>
+        </div>
+    </div>
+
+    <div class="w-75">
+        <textarea [(ngModel)]="response" placeholder="Add response message..."
+            class="form-control border shadow-none" rows="3"></textarea>
+        <div class="text-right mt-4">
+            <button (click)="onSendResponse()"
+                class="btn mmb-secondary-light-button mmb-secondary-light-button--dark btn--sm"
+                [disabled]="!response || response.trim() === ''"
+                [ngClass]="{'btn--disabled': !response || response.trim() === ''}">Submit</button>
+        </div>
+    </div>
+</div>

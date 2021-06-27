@@ -1,0 +1,25 @@
+<ng-container *ngIf="users; else emptyUsersPlaceholder">
+    <mmb-admin-app-progress-spinner *ngIf="isLoading"></mmb-admin-app-progress-spinner>
+    <ng-container *ngIf="!isLoading">
+        <mmb-admin-app-no-users-placeholder *ngIf="users.length === 0">
+        </mmb-admin-app-no-users-placeholder>
+
+        <div class="text-right">
+            <mat-checkbox class="p-8" *ngIf="users.length !== 0" [value]="isSelectAllEnabled"
+                [checked]="isSelectAllEnabled" (change)="toggleSelectAll($event)">
+                <span class="secondary-text">Selection toggle</span>
+            </mat-checkbox>
+        </div>
+        <mmb-admin-app-users-list-detailed *ngFor="let user of users" [user]="user" [userId]="user._id"
+            [project]="project" [isChecked]="isSelectAllEnabled || user.isChecked" [projectId]="projectId"
+            [isUserAssignedScreenActive]="isUserAssignedScreenActive" (usersListUpdated)="onUsersListUpdated($event)"
+            (selectionUpdated)="onUserSelectionUpdated($event, user)">
+        </mmb-admin-app-users-list-detailed>
+    </ng-container>
+</ng-container>
+
+<ng-template #emptyUsersPlaceholder>
+    <div class="p-24">
+        <mmb-admin-app-progress-spinner></mmb-admin-app-progress-spinner>
+    </div>
+</ng-template>

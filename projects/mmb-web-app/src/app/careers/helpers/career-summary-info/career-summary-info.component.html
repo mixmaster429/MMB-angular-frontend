@@ -1,0 +1,52 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-3">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="text-dark-600 mb-4">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
+            <div class="cursor-pointer" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px"
+                routerLink="/organisation/profile/{{ career.organisation.slug }}">
+                <i class="material-icons">work_outline</i>
+                <span class="medium">{{ career.organisation.name }}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+                <i class="material-icons">location_on</i>
+                <span class="medium">{{ career.location_summary }}</span>
+            </div>
+            <div>
+                <span class="medium">Posted {{ career.created | timeago }}</span>
+            </div>
+        </div>
+        <div class="text-dark" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">more_vert</i>
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">share</i>
+            <i *ngIf="!career.saved" class="material-icons cursor-pointer"
+                (click)="onAddToFavorites(career)">bookmark_border</i>
+            <i *ngIf="career.saved" class="material-icons text-primary cursor-pointer"
+                (click)="onRemoveFromFavorites(career)">bookmark</i>
+        </div>
+    </div>
+    <h4 class="text-dark-100">{{ career.title }}</h4>
+    <div [innerHTML]="career.summary" class="pr-4 mt-2"></div>
+    <div>
+        <button *ngIf="!career.interested && !career.applied_external" class="btn mmb-primary-button stroked-button btn--sm mr-2"
+            (click)="onExpressInterest()">
+            <span>Express interest</span>
+        </button>
+        <button *ngIf="career.interested && !career.applied_external" class="btn mmb-primary-button btn--sm mr-2 border-radius"
+            (click)="onRemoveInterest()">
+            <span>Expressed interest</span>
+        </button>
+
+        <button class="btn mmb-primary-button bg-black btn--sm" [routerLink]="'apply'"
+            *ngIf="!career.website_redirect_url">
+            <span>Apply</span>
+        </button>
+        <button class="btn mmb-primary-button bg-black btn--sm"
+            *ngIf="career.website_redirect_url && !career.applied_external" (click)="onExternalApply()">
+            <span>External Apply</span>
+        </button>
+        <span *ngIf="career.applied_external" class="mb-3 text-success d-flex">
+            <i class="material-icons">check</i>
+            <span class="ml-1 font-weight-light-bold mb-0">Applied externally
+                {{ career.applied_external.created | timeago }}</span>
+        </span>
+    </div>
+</div>

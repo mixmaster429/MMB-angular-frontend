@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Helvetica-Neue-Light';
+    src: url(themes/mmb-web-sapp-theme/fonts/HelveticaNeueLight.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica-Neue-Regular';
+    src: url(themes/mmb-web-sapp-theme/fonts/HelveticaNeueMedium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Helvetica-Neue-Bold';
+    src: url(themes/mmb-web-sapp-theme/fonts/HelveticaNeueMed.ttf) format('truetype');
+}
+
+
+body {
+    font-family: 'Helvetica-Neue-Light';
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 28px;
+}
+
+h1,h2, h3, h4, h5 {
+    font-family: 'Helvetica-Neue-Bold';
+}

@@ -1,0 +1,255 @@
+<div class="col-lg-8 offset-lg-2">
+    <section>
+        <div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <aside class="sidebar sticky-top t-navbar-height">
+                        <div class="single-widget">
+                            <!-- Category Widget -->
+                            <div class="accordions widget catagory-widget" id="cat-accordion">
+                                <div class="single-accordion blog-accordion">
+                                    <h5>
+                                        <a role="button" class="collapse show text-uppercase d-block p-3"
+                                            data-toggle="collapse" href="#accordion0">Your Company name
+                                        </a>
+                                    </h5>
+                                    <!-- Category Widget Content -->
+                                    <div id="accordion0" class="accordion-content widget-content collapse show"
+                                        data-parent="#cat-accordion">
+                                        <!-- Category Widget Items -->
+                                        <ul class="widget-items">
+                                            <li><a href="#" class="d-flex p-3"><span>Jobs applications</span><span
+                                                        class="ml-auto">(14)</span></a></li>
+                                            <li><a href="#" class="d-flex p-3"><span>Events notifications</span><span
+                                                        class="ml-auto">(32)</span></a></li>
+                                            <li><a href="#" class="d-flex p-3"><span>Initiatives notifications</span><span
+                                                        class="ml-auto">(23)</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Widget -->
+                        <div class="single-widget">
+                            <!-- Category Widget -->
+                            <div class="accordions widget catagory-widget" id="cat-accordion">
+                                <div class="single-accordion blog-accordion">
+                                    <h5>
+                                        <a role="button" class="collapse show text-uppercase d-block p-3"
+                                            data-toggle="collapse" href="#accordion1">Categories
+                                        </a>
+                                    </h5>
+                                    <!-- Category Widget Content -->
+                                    <div id="accordion1" class="accordion-content widget-content collapse show"
+                                        data-parent="#cat-accordion">
+                                        <!-- Category Widget Items -->
+                                        <ul class="widget-items">
+                                            <li><a href="#" class="d-flex p-3"><span>Web Design</span><span
+                                                        class="ml-auto">(14)</span></a></li>
+                                            <li><a href="#" class="d-flex p-3"><span>App Landing</span><span
+                                                        class="ml-auto">(32)</span></a></li>
+                                            <li><a href="#" class="d-flex active p-3"><span>Wordpress</span><span
+                                                        class="ml-auto">(27)</span></a></li>
+                                            <li><a href="#" class="d-flex p-3"><span>UI Design</span><span
+                                                        class="ml-auto">(18)</span></a></li>
+                                            <li><a href="#" class="d-flex p-3"><span>Bootstrap</span><span
+                                                        class="ml-auto">(15)</span></a></li>
+                                            <li><a href="#" class="d-flex p-3"><span>Web Template</span><span
+                                                        class="ml-auto">(29)</span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <!-- Create a new item -->
+                    <div class="mt-4">
+                        <mmb-web-app-user-item-generator></mmb-web-app-user-item-generator>
+                    </div>
+                    <!-- Feed -->
+                    <div *ngIf="feeds" class="col-md-12 mt-4" infiniteScroll [infiniteScrollDistance]="0"
+                        [infiniteScrollThrottle]="150" (scrolled)="onScroll()">
+
+                        <div class="mb-3 border"
+                            [ngClass]="{'border-dark shadow my-6 rounded border-dashed' : feed.isSponsored, 'shadow-sm bg-white': !feed.isSponsored}"
+                            *ngFor="let feed of feeds">
+                            <ng-container *ngIf="feed.activity_type === 'article'">
+                                <div class="px-3 py-1 border-bottom small cursor-pointer">
+                                    <div><strong (click)="onRedirectUser(feed.user.handle)">{{ feed.user.name }}</strong> created this article</div>
+                                </div>
+                                <mmb-web-app-article-item [feed]="feed"></mmb-web-app-article-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'post'">
+                                <div class="px-3 py-1 border-bottom small cursor-pointer">
+                                    <div><strong (click)="onRedirectUser(feed.user.handle)">{{ feed.user.name }}</strong> created a post</div>
+                                </div>
+                                <mmb-web-app-post-item [feed]="feed"></mmb-web-app-post-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'initiative'">
+                                <div class="px-3 py-1 border-bottom small">
+                                    <div><strong class="cursor-pointer" (click)="onRedirectOrg(feed.organisation.handle)">{{ feed.organisation.name }}</strong> supports this initiative</div>
+                                </div>
+                                <mmb-web-app-initiative-item [feed]="feed"></mmb-web-app-initiative-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'event'">
+                                <div class="px-3 py-1 border-bottom small">
+                                    <div><strong class="cursor-pointer" (click)="onRedirectOrg(feed.organisation.handle)">{{ feed.organisation.name }}</strong> created this event</div>
+                                </div>
+                                <mmb-web-app-event-item [feed]="feed"></mmb-web-app-event-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'career'">
+                                <div class="px-3 py-1 border-bottom small">
+                                    <div><strong class="cursor-pointer" (click)="onRedirectOrg(feed.organisation.handle)">{{ feed.organisation.name }}</strong> posted this job</div>
+                                </div>
+                                <mmb-web-app-career-item [feed]="feed"></mmb-web-app-career-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'opportunity'">
+                                <div class="px-3 py-1 border-bottom small cursor-pointer">
+                                    <div><strong (click)="onRedirectUser(feed.user.handle)">{{ feed.user.name }}</strong> created this opportunity</div>
+                                </div>
+                                <mmb-web-app-opportunity-item [feed]="feed"></mmb-web-app-opportunity-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'forum_answer'">
+                                <div class="px-3 py-1 border-bottom small cursor-pointer">
+                                    <div><strong (click)="onRedirectUser(feed.user.handle)">{{ feed.user.name }}</strong> answered this</div>
+                                </div>
+                                <mmb-web-app-forum-answer-item [feed]="feed"></mmb-web-app-forum-answer-item>
+                            </ng-container>
+
+                            <ng-container *ngIf="feed.activity_type === 'forum_question'">
+                                <div class="px-3 py-1 border-bottom small cursor-pointer">
+                                    <div><strong (click)="onRedirectUser(feed.user.handle)">{{ feed.user.name }}</strong> asked this question</div>
+                                </div>
+                                <mmb-web-app-forum-question-item [feed]="feed"></mmb-web-app-forum-question-item>
+                            </ng-container>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center py-2 mt-4" *ngIf="isLoading">
+                        <mmb-ui-inline-loader text="More exciting African updates will be with you in just a second...">
+                        </mmb-ui-inline-loader>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <aside class="sidebar sticky-top t-navbar-height">
+                        <!-- Single Widget -->
+                        <div class="single-widget">
+                            <!-- Post Widget -->
+                            <div class="accordions widget post-widget" id="post-accordion">
+                                <div class="single-accordion">
+                                    <h5>
+                                        <a role="button" class="collapse show text-uppercase d-block p-3"
+                                            data-toggle="collapse" href="#accordion2">Popular Post
+                                        </a>
+                                    </h5>
+                                    <!-- Post Widget Content -->
+                                    <div id="accordion2" class="accordion-content widget-content collapse show"
+                                        data-parent="#post-accordion">
+                                        <!-- Post Widget Items -->
+                                        <ul class="widget-items">
+                                            <li>
+                                                <a href="#"
+                                                    class="single-post align-items-center align-items-lg-start media p-3">
+                                                    <!-- Post Thumb -->
+                                                    <div class="post-thumb avatar-md">
+                                                        <img class="align-self-center" src="assets/img/avatar-1.png"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="post-content media-body pl-3">
+                                                        <p class="post-date mb-2">05 Feb, 2018</p>
+                                                        <h6>Promote Your Apps With sApp</h6>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="single-post align-items-center align-items-lg-start media p-3">
+                                                    <!-- Post Thumb -->
+                                                    <div class="post-thumb avatar-md">
+                                                        <img class="align-self-center" src="assets/img/avatar-2.png"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="post-content media-body pl-3">
+                                                        <p class="post-date mb-2">09 Apr, 2018</p>
+                                                        <h6>Sell Your Product Like Never Before</h6>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="single-post align-items-center align-items-lg-start media p-3">
+                                                    <!-- Post Thumb -->
+                                                    <div class="post-thumb avatar-md">
+                                                        <img class="align-self-center" src="assets/img/avatar-3.png"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="post-content media-body pl-3">
+                                                        <p class="post-date mb-2">13 Jul, 2018</p>
+                                                        <h6>Built For Passionate People</h6>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#"
+                                                    class="single-post align-items-center align-items-lg-start media p-3">
+                                                    <!-- Post Thumb -->
+                                                    <div class="post-thumb avatar-md">
+                                                        <img class="align-self-center" src="assets/img/avatar-4.png"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="post-content media-body pl-3">
+                                                        <p class="post-date mb-2">03 Oct, 2018</p>
+                                                        <h6>Get Unlimited Offers &amp; Plans</h6>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Widget -->
+                        <div class="single-widget">
+                            <!-- Tags Widget -->
+                            <div class="accordions widget tags-widget" id="tags-accordion">
+                                <div class="single-accordion blog-accordion">
+                                    <h5>
+                                        <a role="button" class="collapse show text-uppercase d-block p-3"
+                                            data-toggle="collapse" href="#accordion3">Popular Tags
+                                        </a>
+                                    </h5>
+                                    <!-- Tags Widget Content -->
+                                    <div id="accordion3" class="accordion-content widget-content collapse show"
+                                        data-parent="#tags-accordion">
+                                        <!-- Tags Widget Items -->
+                                        <div class="widget-content tags-widget-items pt-2">
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">sApp</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Bootstrap</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">IOS</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Android</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Landing Page</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Business</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Fashion</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Media</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Lifestyle</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Wordpress</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Web Design</a>
+                                            <a href="#" class="d-inline-block mt-2 mr-1 px-2 py-1">Mobile App</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

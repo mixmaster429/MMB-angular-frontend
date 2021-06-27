@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutGap="20px">
+    <img class="rounded-circle border object-fit-contain img-lg cursor-pointer" [src]="userImage" alt=""
+        onerror="this.src='assets/img/mmb-placeholder.jpg';" (click)="onRedirect(userHandle)"/>
+
+        <button class="btn sApp-btn btn-sm mt-2" *ngIf="!userMapper" (click)="onFollowUser()">Follow</button>
+        <button class="btn sApp-btn btn-sm mt-2" *ngIf="userMapper" (click)="onUnfollowUser()">Unfollow</button>
+</div>
+<h5 class="pt-3 pb-2 cursor-pointer" (click)="onRedirect(userHandle)">{{name}}</h5>
+
+<div [innerHTML]="summary"></div>

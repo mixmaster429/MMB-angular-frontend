@@ -1,0 +1,31 @@
+.navbar-dark.navbar-sticky-on {
+    background: $primary;
+    .navbar-nav .nav-link {
+        color: $white;
+    }
+}
+
+.navbar-nav {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.navmenu--active {
+    background-color: #5c94ba;
+    border-radius: 1rem;
+    color: $white;
+    padding: 8px 16px;
+}
+
+.navbar-toggler-icon {
+    background: $white;
+    &::after, &::before {
+        background: $white;
+    }
+}
+
+.nav-link--highlighted {
+    background-color: #113c5a;
+    border-radius: 1rem;
+    padding: 8px 16px;
+}

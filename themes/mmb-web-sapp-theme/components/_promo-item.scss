@@ -1,0 +1,39 @@
+.promo-tile {
+    @extend .border-radius--top-sm;
+    @extend .border-radius--bottom-sm;
+
+    &.promo-tile--sm {
+        min-height: 105px;
+        .promo-tile-card-image {
+            height: 80px;
+            object-fit: cover;
+        }
+    }
+
+    &:not(.promo-tile--sm){
+        min-height: 140px;
+
+        .promo-tile-card-image {
+            height: 115px;
+            object-fit: cover;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid $secondary-300;
+        @extend .text-secondary-300;
+    }
+
+    &.promo-tile--selected {
+        display: flex;
+        justify-content: center;
+        background-color: $notification-affirmative;
+        color: $white;
+
+        .promo-tile-title {
+            align-self: center;
+            font-family: $font-family-bold;
+        }
+    }
+}

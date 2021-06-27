@@ -1,0 +1,6 @@
+<ng-content *ngIf="!(isLoading | async); else spinner"></ng-content>
+<ng-template #spinner>
+    <div class="spinner-border text-info page-loader" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+</ng-template>

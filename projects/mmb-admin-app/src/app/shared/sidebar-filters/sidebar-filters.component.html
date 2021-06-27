@@ -1,0 +1,118 @@
+<form [formGroup]="filters">
+    <mat-card class="p-0">
+        <div class="px-8 pt-16">
+            <div class="secondary-text">Keywords</div>
+            <mat-form-field class="w-100-p border-0" appearance="outline">
+                <mat-chip-list #keywordsChipList aria-label="Keywords selection">
+                    <mat-chip *ngFor="let keyword of keywords" (removed)="remove(keyword, 'keywords')">
+                        {{ keyword }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Keywords" [matChipInputFor]="keywordsChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event, 'keywords')">
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+        <hr class="m-0" *ngIf="isProjectMode" />
+
+        <div class="px-8 pt-16" *ngIf="isProjectMode">
+            <div class="secondary-text">
+                <span>Score</span>
+            </div>
+            <mat-form-field class="w-100-p">
+                <mat-select placeholder="Score" [formControl]="scores" multiple>
+                    <mat-select-trigger>
+                        {{scores.value ? scores.value[0] : ''}}
+                        <span *ngIf="scores.value?.length > 1" class="example-additional-selection">
+                            (+{{scores.value.length - 1}} {{scores.value?.length === 2 ? 'other' : 'others'}})
+                        </span>
+                    </mat-select-trigger>
+                    <mat-option *ngFor="let option of scoreOptions" [value]="option.viewValue">{{option.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+        </div>
+
+        <hr class="m-0" />
+
+        <div class="px-8 pt-16">
+            <div class="secondary-text">Job titles</div>
+            <mat-form-field class="w-100-p border-0" appearance="outline">
+                <mat-chip-list #jobTitlesChipList aria-label="Job titles selection">
+                    <mat-chip *ngFor="let jobTitle of jobTitles" (removed)="remove(jobTitle, 'jobTitles')">
+                        {{ jobTitle }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Job titles" [matChipInputFor]="jobTitlesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event, 'jobTitles')">
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+
+        <hr class="m-0" />
+        <div class="px-8  pt-16">
+            <div class="secondary-text">Locations</div>
+            <mat-form-field class="w-100-p border-0" appearance="outline">
+                <mat-chip-list #locationsChipList aria-label="Locations selection">
+                    <mat-chip *ngFor="let location of locations" (removed)="remove(location, 'locations')">
+                        {{ location }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Candidate geographic locations" [matChipInputFor]="locationsChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event, 'locations')">
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+
+        <hr class="m-0" />
+        <div class="px-8  pt-16">
+            <div class="secondary-text">Skills / Excellence Level</div>
+
+            <mat-form-field class="w-100-p border-0" appearance="outline">
+                <mat-select placeholder="Skills / Excellence Level" formControlName="excellenceLevelFilter">
+                    <mat-option *ngFor="let excellenceLevel of skillsExcellenceLevels" [value]="excellenceLevel.value">
+                        {{excellenceLevel.viewValue}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <hr class="m-0" />
+        <div class="px-8  pt-16">
+            <div class="secondary-text">Companies</div>
+
+            <mat-form-field class="w-100-p border-0" appearance="outline">
+                <mat-chip-list #companiesChipList aria-label="Companies selection">
+                    <mat-chip *ngFor="let company of companies" (removed)="remove(company, 'companies')">
+                        {{ company }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Companies" [matChipInputFor]="companiesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event, 'companies')">
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+
+        <hr class="m-0" />
+        <div class="px-8  pt-16">
+            <div class="secondary-text">Employment Type</div>
+
+            <mat-form-field class="w-100-p border-0" appearance="outline">
+                <mat-chip-list #employmentTypesChipList aria-label="Employment Types selection">
+                    <mat-chip *ngFor="let type of employmentTypes" (removed)="remove(type, 'employmentTypes')">
+                        {{ type }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ May be open to these types" [matChipInputFor]="employmentTypesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true"
+                        (matChipInputTokenEnd)="add($event, 'employmentTypes')">
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+    </mat-card>
+</form>

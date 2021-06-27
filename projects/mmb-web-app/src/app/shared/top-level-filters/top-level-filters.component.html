@@ -1,0 +1,36 @@
+<form [formGroup]="filtersForm">
+    <div class="text-center search-filters px-3">
+        <!-- <input type="text" class="d-inline w-200 m-2 shadow-none border" [placeholder]="getPlaceholder()"
+            formControlName="keyword"> -->
+        <select class="d-inline w-200 m-2 shadow-none border mmb-select" formControlName="country">
+            <option value="">Select Country</option>
+            <option *ngFor="let country of countries" [value]="country.code">{{ country.name }}</option>
+        </select>
+        <select *ngIf="entityType === 'career'" class="d-inline w-200 m-2 shadow-none border"
+            formControlName="careerType">
+            <option value="">Select Career Type</option>
+            <option *ngFor="let careerType of careerTypes" [value]="careerType.value">{{ careerType.viewValue }}
+            </option>
+        </select>
+        <select *ngIf="entityType === 'event'" class="d-inline w-200 m-2 shadow-none border"
+            formControlName="eventType">
+            <option value="">Select Event Type</option>
+            <option *ngFor="let eventType of eventTypes" [value]="eventType.value">{{ eventType.viewValue }}
+            </option>
+        </select>
+        <select *ngIf="entityType === 'initiative'" class="d-inline w-200 m-2 shadow-none border"
+            formControlName="initiativeType">
+            <option value="">Select Type</option>
+            <option *ngFor="let initiativeType of initiativeTypes" [value]="initiativeType.value">{{ initiativeType.viewValue }}
+            </option>
+        </select>
+        <select class="d-inline w-200 m-2 shadow-none border" formControlName="function">
+            <option value="">Select Function</option>
+            <option *ngFor="let function of functions" [value]="function.value">{{ function.name }}</option>
+        </select>
+        <select class="d-inline w-200 m-2 shadow-none border" formControlName="industry">
+            <option value="">Select Industry</option>
+            <option *ngFor="let industry of industries" [value]="industry.value">{{ industry.name }}</option>
+        </select>
+    </div>
+</form>

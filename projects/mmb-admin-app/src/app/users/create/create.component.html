@@ -1,0 +1,132 @@
+<div id="user" class="page-layout carded fullwidth inner-scroll">
+
+    <!-- TOP BACKGROUND -->
+    <div class="top-bg accent"></div>
+    <!-- / TOP BACKGROUND -->
+
+    <!-- CENTER -->
+    <div class="center">
+
+        <!-- HEADER -->
+        <div class="header accent" fxLayout="row" fxLayoutAlign="space-between center">
+
+            <!-- APP TITLE -->
+            <div fxLayout="row" fxLayoutAlign="start center">
+
+                <button mat-icon-button class="mr-0 mr-sm-16" [routerLink]="'/users/management'">
+                    <mat-icon>arrow_back</mat-icon>
+                </button>
+
+                <div class="product-image mr-8 mr-sm-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    <!-- <img *ngIf="user.avatar" [src]="user.avatar"> -->
+                </div>
+
+                <div fxLayout="column" fxLayoutAlign="start start"
+                    [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    <div class="h2" *ngIf="pageType ==='edit'">
+                        {{product.name}}
+                    </div>
+                    <div class="h2" *ngIf="pageType ==='new'">
+                        New User
+                    </div>
+                    <div class="subtitle secondary-text">
+                        <span>User Detail</span>
+                    </div>
+                </div>
+            </div>
+            <!-- / APP TITLE -->
+
+            <button mat-raised-button class="save-product-button" [disabled]="userForm.invalid"
+                *ngIf="pageType ==='new'" (click)="addProduct()">
+                <span>ADD</span>
+            </button>
+
+            <button mat-raised-button class="save-product-button" [disabled]="userForm.invalid || userForm.pristine"
+                *ngIf="pageType ==='edit'" (click)="saveProduct()">
+                <span>SAVE</span>
+            </button>
+        </div>
+        <!-- / HEADER -->
+
+        <!-- CONTENT CARD -->
+        <div class="content-card">
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <form name="userForm" [formGroup]="userForm" class="user w-100-p" fxLayout="column" fxFlex>
+
+                    <mat-tab-group>
+
+                        <mat-tab label="Basic Info">
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+                                <div class="mb-32">
+                                    <input class="hide" id="input-file-id" type="file" />
+                                    <label mat-button matRipple for="input-file-id" class="accent p-8 mat-elevation-z1">
+                                        Choose your profile picture
+                                    </label>
+                                </div>
+
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                    <mat-label>User's Name</mat-label>
+                                    <input matInput placeholder="Enter the name" name="name" formControlName="name"
+                                        required>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+                                    <mat-label>Location</mat-label>
+                                    <input matInput placeholder="Current location" name="location"
+                                        formControlName="location" required>
+                                </mat-form-field>
+
+                                <mat-form-field appearance="outline" floatLabel="always" class="w-100-p">
+
+                                    <mat-label>Languages</mat-label>
+
+                                    <mat-chip-list #languageList name="languages" formControlName="languages">
+
+                                        <mat-chip *ngFor="let language of user.languages" [removable]="true"
+                                            (removed)="user.removeLanguage(language)">
+                                            {{language}}
+                                            <mat-icon matChipRemove>cancel</mat-icon>
+                                        </mat-chip>
+
+                                        <input [matChipInputFor]="languageList" [matChipInputAddOnBlur]="true"
+                                            (matChipInputTokenEnd)="user.addLanguage($event)" />
+
+                                    </mat-chip-list>
+
+                                </mat-form-field>
+                            </div>
+                        </mat-tab>
+
+                        <mat-tab label="Educational History">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+                                test
+
+                            </div>
+
+                        </mat-tab>
+
+                        <mat-tab label="Professional History">
+
+                            <div class="tab-content p-24" fusePerfectScrollbar>
+                                test
+                            </div>
+
+                        </mat-tab>
+                    </mat-tab-group>
+
+                </form>
+
+            </div>
+            <!-- / CONTENT -->
+
+        </div>
+        <!-- / CONTENT CARD -->
+
+    </div>
+    <!-- / CENTER -->
+
+</div>

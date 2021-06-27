@@ -1,0 +1,60 @@
+<div class="navbar-top" [ngClass]="fuseConfig.layout.navbar.secondaryBackground">
+
+    <div class="logo">
+        <button mat-button [routerLink]="''" class="p-0">
+            <img class="logo-icon" src="assets/images/logos/mmb.png">
+            <strong class="logo-text secondary-text">Movemeback</strong>
+        </button>
+    </div>
+
+    <div class="buttons">
+
+        <button mat-icon-button class="toggle-sidebar-folded" (click)="toggleSidebarFolded()" fxHide.lt-lg>
+            <mat-icon class="secondary-text" *ngIf="arrowBack">arrow_forward</mat-icon>
+            <mat-icon class="secondary-text" *ngIf="!arrowBack">arrow_back</mat-icon>
+        </button>
+
+        <button mat-icon-button class="toggle-sidebar-opened" (click)="toggleSidebarOpened()" fxHide.gt-md>
+            <mat-icon class="secondary-text">arrow_back</mat-icon>
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="navbar-scroll-container" [ngClass]="fuseConfig.layout.navbar.primaryBackground" fusePerfectScrollbar
+    [fusePerfectScrollbarOptions]="{suppressScrollX: true}">
+
+    <div *ngIf="user" class="user" fxLayout="column" [ngClass]="fuseConfig.layout.navbar.secondaryBackground">
+
+        <div class="h3 username" *ngIf="user">{{ user.first_name }} {{ user.last_name }}</div>
+        <div class="h5 email hint-text mt-8">{{ user.email }}</div>
+        <div class="avatar-container" [ngClass]="fuseConfig.layout.navbar.primaryBackground">
+            <img class="avatar" onerror="this.src='assets/images/avatars/Portrait_Placeholder.png';"
+                [src]="user.profile_image">
+        </div>
+
+    </div>
+
+    <div class="navbar-content">
+        <fuse-navigation class="material2" layout="vertical"></fuse-navigation>
+    </div>
+
+    <div class="material2">
+        <div class="nav">
+            <div class="nav-item" fxLayout="row" fxLayoutAlign="center">
+                <a class="nav-link" (click)="onLogout()">
+                    <mat-icon class="nav-link-icon mat-icon mr-8">exit_to_app</mat-icon>
+                    <span class="nav-link-title">Logout</span>
+                </a>
+            </div>
+        </div>
+        <div class="help-text text-center">
+            <a mat-button>
+                &copy; Movemeback 2021
+            </a>
+        </div>
+    </div>
+
+</div>

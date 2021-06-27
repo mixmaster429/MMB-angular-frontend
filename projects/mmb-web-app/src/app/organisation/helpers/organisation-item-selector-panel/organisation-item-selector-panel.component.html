@@ -1,0 +1,16 @@
+<div class="bg-white px-4 py-3" fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px">
+        <div class="p-2 cursor-pointer" [ngClass]="{'tab-menu--active': activeView === 0}" (click)="onSetActiveView(0)">
+            Careers
+        </div>
+        <div class="p-2 cursor-pointer" [ngClass]="{'tab-menu--active': activeView === 1}" (click)="onSetActiveView(1)">
+            Events
+        </div>
+        <div class="p-2 cursor-pointer" [ngClass]="{'tab-menu--active': activeView === 2}" (click)="onSetActiveView(2)">
+            Experiences
+        </div>
+    </div>
+    <div>
+        <span class="medium">Include closed</span>
+    </div>
+</div>

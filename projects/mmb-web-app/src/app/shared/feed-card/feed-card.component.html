@@ -1,0 +1,9 @@
+<div class="pb-2">
+    <img class="mb-2 card-img card-img-top w-100" *ngIf="image" [src]="image" alt="">
+    <h6 class="font-weight-strong mb-3 px-3 pt-2">
+        <a [routerLink]="url">{{ title }}</a>
+    </h6>
+    <p class="text-dark px-3 mt-3" *ngIf="summary" [innerHTML]="summary"></p>
+    <p class="text-dark px-3 mt-3" *ngIf="description" [innerHTML]="description"></p>
+    <p class="mt-n2 text-muted pb-3" *ngIf="location">{{ location }}</p>
+</div>

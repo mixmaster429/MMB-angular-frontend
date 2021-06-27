@@ -1,0 +1,31 @@
+<div class="p-3" *ngIf="feed.user as user">
+    <mmb-web-app-user-summary-info [image]="user.profile_image" [name]="user.name"
+        [professionalTitle]="user.professional_title" [createdOnDate]="feed.created"
+        [id]="user.id" [popoverSummary]="user.professional_title" [isUser]="true"
+        [userUrl]="user.handle">
+    </mmb-web-app-user-summary-info>
+</div>
+<div fxLayout="row" fxLayoutAlign="start start">
+    <div fxFlex="50px">
+        <mmb-web-app-voting-panel (upvote)="onForumAnswerUpvoteClicked($event, feed)"
+            (downvote)="onForumAnswerDownvoteClicked($event, feed)"
+            [score]="feed.votes_total"
+            [isUpvoteSelected]="feed.voted && feed.voted.vote === 1"
+            [isDownvoteSelected]="feed.voted && feed.voted.vote === -1">
+        </mmb-web-app-voting-panel>
+    </div>
+    <div>
+        <mmb-web-app-feed-card url="/community/{{feed.slug}}" [image]="feed.cover"
+            [author]="feed.user.name" [avatarImage]="feed.user.profile_image"
+            [title]="feed.title" [icon]="'fas fa-question-circle'"
+            [summary]="feed.answer" [date]="feed.created"
+            [subtitle]="feed.user.professional_title">
+        </mmb-web-app-feed-card>
+    </div>
+</div>
+
+<mmb-web-app-interaction-tools [reactions]="feed.reactions_summary?.total"
+    [reacted]="feed.reacted" [isReactionsEnabled]="true" [comments]="feed.comments"
+    (reactionUpdated)="onForumAnswerReactionUpdated(feed, $event)"
+    (commentAdded)="onForumAnswerCommentAdded(feed, $event)">
+</mmb-web-app-interaction-tools>

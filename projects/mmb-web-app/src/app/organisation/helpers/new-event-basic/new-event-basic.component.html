@@ -1,0 +1,89 @@
+<form [formGroup]="eventForm">
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Event title</div>
+        <input formControlName="title" class="shadow-none border px-2 py-1 w-500" type="text"
+            placeholder="Enter event title" />
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Headline</div>
+        <div>
+            <input formControlName="headline" class="shadow-none border px-2 py-1 w-750" type="text"
+                placeholder="Enter event headline" />
+            <div class="small text-muted">Used for listing card and page header summaries</div>
+        </div>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Website redirect url</div>
+        <input formControlName="redirectUrl" class="shadow-none border px-2 py-1 w-500" type="text"
+            placeholder="http://mycompany.com/event" />
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Event type</div>
+        <select formControlName="eventType" class="shadow-none border w-750 p-2">
+            <option [ngValue]="null">---</option>
+            <option *ngFor="let option of eventTypes" [value]="option.value">{{ option.viewValue }}</option>
+        </select>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Theme</div>
+        <select formControlName="theme" class="shadow-none border w-750 p-2">
+            <option [ngValue]="null">---</option>
+            <option *ngFor="let option of themeOptions" [value]="option.value">{{ option.viewValue }}</option>
+        </select>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Price</div>
+        <select formControlName="price" class="shadow-none border w-750 p-2">
+            <option [ngValue]="null">---</option>
+            <option *ngFor="let option of priceOptions" [value]="option.value">{{ option.viewValue }}</option>
+        </select>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Industries</div>
+        <mmb-web-app-event-listing-industries-input (industriesSelected)="onIndustriesSelected($event)"></mmb-web-app-event-listing-industries-input>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Locations</div>
+        <mmb-web-app-multi-location (locationsUpdated)="onLocationsUpdated($event)"></mmb-web-app-multi-location>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Event tickets</div>
+        <mmb-web-app-event-ticket-price (ticketPricesUpdated)="onTicketPricesUpdated($event)"></mmb-web-app-event-ticket-price>
+    </div>
+
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Summary</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="summary" [editor]="Editor" data=""
+            [config]="{placeholder: 'Enter the event summary'}">
+        </ckeditor>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Description</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="description" [editor]="Editor" data=""
+            [config]="{placeholder: 'Enter the event description'}">
+        </ckeditor>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Criteria</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="criteria" [editor]="Editor" data=""
+            [config]="{placeholder: 'What\'s the event criteria'}">
+        </ckeditor>
+    </div>
+    <div class="mb-2" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px">Benefits</div>
+        <ckeditor class="w-750" ngbAutofocus formControlName="benefits" [editor]="Editor" data=""
+            [config]="{placeholder: 'About the benefits offered in the event'}">
+        </ckeditor>
+    </div>
+    <div class="my-4" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+        <div class="text-right" fxFlex="150px"></div>
+        <div class="w-750 text-right">
+            <button type="button" class="btn sApp-btn btn-sm">
+                Cancel
+            </button>
+            <button (click)="onSave()" [disabled]="eventForm.invalid" type="button" class="btn sApp-btn btn-sm ml-2">
+                Save
+            </button>
+        </div>
+    </div>
+</form>

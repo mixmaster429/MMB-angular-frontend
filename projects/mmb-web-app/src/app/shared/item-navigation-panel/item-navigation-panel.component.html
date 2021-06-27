@@ -1,0 +1,31 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+    <div>
+        <button class="btn mmb-secondary-light-button mmb-button--lightest" fxLayout="row" fxLayoutAlign="center center"
+            fxLayoutGap="8px" routerLink="{{ listPageUrl }}">
+            <div class="icon--primary" fxLayour="row" fxLayoutAlign="center center">
+                <i class="material-icons">arrow_back</i>
+            </div>
+            <span class="medium text-dark-100">Back to results</span>
+        </button>
+    </div>
+    <div class="text-dark-100 medium cursor-pointer" *ngIf="isBackToTopVisible" (click)="goToTop()">
+        Back to top
+    </div>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+        <button class="btn mmb-secondary-light-button mmb-button--lightest" fxLayout="row" fxLayoutAlign="center center"
+            fxLayoutGap="8px" [routerLink]="previous">
+            <div class="icon--primary" fxLayour="row" fxLayoutAlign="center center">
+                <i class="material-icons">arrow_back</i>
+            </div>
+            <span class="medium text-dark-100">Previous</span>
+        </button>
+        <button class="btn mmb-secondary-light-button mmb-button--lightest" fxLayout="row" fxLayoutAlign="center center"
+            fxLayoutGap="8px" [routerLink]="next">
+            <span class="medium text-dark-100">Next</span>
+
+            <div class="icon--primary" fxLayour="row" fxLayoutAlign="center center">
+                <i class="material-icons">arrow_forward</i>
+            </div>
+        </button>
+    </div>
+</div>

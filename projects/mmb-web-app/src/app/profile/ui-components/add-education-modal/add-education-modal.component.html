@@ -1,0 +1,51 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="addEducationModalTitle" *ngIf="!isEditMode">Add education</h5>
+        <h5 class="modal-title" id="addEducationModalTitle" *ngIf="isEditMode">Edit education</h5>
+        <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form [formGroup]="editProfileForm">
+            <div class="row mb-2">
+                <div class="col">
+                    <label>School</label>
+                    <!-- <input type="text" class="form-control my-1 shadow-none border" formControlName="school"> -->
+                    <input type="text" formControlName="school" [ngbTypeahead]="currentOrganisationSearch"
+                    [resultFormatter]="resultFormatOrganisationValue" [inputFormatter]="inputFormatOrganisationValue"
+                    class="form-control my-1 shadow-none border">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Field of study</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="field">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Start date</label>
+                    <input type="date" class="form-control my-1 shadow-none border" formControlName="startDate">
+                </div>
+                <div class="col">
+                    <label>End date</label>
+                    <input type="date" class="form-control my-1 shadow-none border" formControlName="endDate">
+                </div>
+            </div>
+            <div class="row mb-2">
+                <div class="col">
+                    <label>Description</label>
+                    <input type="text" class="form-control my-1 shadow-none border" formControlName="description">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer" *ngIf="!isEditMode">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="createEducation()" data-dismiss="modal">Save changes</button>
+    </div>
+    <div class="modal-footer justify-content-between" *ngIf="isEditMode">
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="deleteEducation()" data-dismiss="modal">Delete</button>
+        <button type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="editEducation()" data-dismiss="modal">Save</button>
+    </div>
+</div>

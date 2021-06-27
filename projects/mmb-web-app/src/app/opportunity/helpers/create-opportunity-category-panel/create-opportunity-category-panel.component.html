@@ -1,0 +1,32 @@
+<div class="mb-5">
+    <h6 class="mmb-perm-title mb-3 text-transform-inherit font-size-18 mb-4">
+        Select a category for your opportunity
+    </h6>
+
+    <div class="row">
+        <ng-container *ngFor="let category of categories; let i = index">
+            <div class="col-lg-3 mb-4" *ngIf="category.value !== '0'" (click)="setOpportunityCategory(category)">
+                <div [attr.data-type]="category.class" (mouseover)="isOpportunityCardActive[i]=true"
+                    (mouseout)="isOpportunityCardActive[i]=false"
+                    [ngClass]="{'opportunity-card--active': form.controls['category'].value === category.value}"
+                    class="opportunity-type-card bg-white p-4 border-radius-8 cursor-pointer opacity-90">
+                    <div>
+                        <i class="material-icons text-white font-size-32 py-3 px-4 mb-3 border-radius-8 category-icon"
+                            [ngClass]="category.class">{{ category.icon }}</i>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <h6>{{ category.viewValue }}</h6>
+
+                        <div class="text-right text-white">
+                            <input type="radio"
+                                *ngIf="!isOpportunityCardActive[i] && form.controls['category'].value !== category.value" />
+                            <i class="card-selector material-icons border-radius p-1"
+                                *ngIf="isOpportunityCardActive[i] || form.controls['category'].value === category.value"
+                                [ngClass]="category.class">check</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

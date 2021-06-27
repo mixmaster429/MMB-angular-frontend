@@ -1,0 +1,23 @@
+.avatar-thumb-container {
+    border: 1px solid $border-color--light;
+    padding: $spacer;
+}
+
+.avatar-xs {
+    width: 2rem;
+    height: 2rem;
+}
+
+img.rounded-circle {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    &.img-sm {
+        width: 36px;
+        height: 36px;
+    }
+    &.img-lg {
+        width: 72px;
+        height: 72px;
+    }
+}

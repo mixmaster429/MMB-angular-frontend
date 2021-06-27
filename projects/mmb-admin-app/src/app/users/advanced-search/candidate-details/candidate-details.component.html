@@ -1,0 +1,69 @@
+<!-- Candidate Details -->
+<mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div class="secondary-text">Candidate Details</div>
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="row wrap" fxFlexFill fxLayoutGap="10px grid">
+            <mat-form-field fxFlex="50">
+                <mat-chip-list #firstNamesChipList aria-label="First names selection">
+                    <mat-chip *ngFor="let firstName of firstNames" (removed)="remove(firstName, 'firstNames')">
+                        {{ firstName }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ First names" [matChipInputFor]="firstNamesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event, 'firstNames')">
+                </mat-chip-list>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="50">
+                <mat-chip-list #lastNamesChipList aria-label="Last names selection">
+                    <mat-chip *ngFor="let lastName of lastNames" (removed)="remove(lastName, 'lastNames')">
+                        {{ lastName }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Last names" [matChipInputFor]="lastNamesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event, 'lastNames')">
+                </mat-chip-list>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="50">
+                <mat-chip-list #zipCodesChipList aria-label="Zipcodes selection">
+                    <mat-chip *ngFor="let postalCode of postalCodes" (removed)="remove(postalCode, 'postalCodes')">
+                        {{ postalCode }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Postal code / Zip code" [matChipInputFor]="zipCodesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event, 'postalCodes')">
+                </mat-chip-list>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="50">
+                <mat-chip-list #profileLanguagesChipList aria-label="Profile languages selection">
+                    <mat-chip *ngFor="let profileLanguage of profileLanguages" (removed)="remove(profileLanguage, 'profileLanguages')">
+                        {{ profileLanguage }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Profile Languages" [matChipInputFor]="profileLanguagesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event, 'profileLanguages')">
+                </mat-chip-list>
+            </mat-form-field>
+
+            <mat-form-field fxFlex="50">
+                <mat-chip-list #spokenLanguagesChipList aria-label="Profile languages selection">
+                    <mat-chip *ngFor="let spokenLanguage of spokenLanguages" (removed)="remove(spokenLanguage, 'spokenLanguages')">
+                        {{ spokenLanguage }}
+                        <mat-icon matChipRemove>cancel</mat-icon>
+                    </mat-chip>
+                    <input placeholder="+ Spoken Languages" [matChipInputFor]="spokenLanguagesChipList"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="add($event, 'spokenLanguages')">
+                </mat-chip-list>
+            </mat-form-field>
+        </div>
+    </mat-expansion-panel>

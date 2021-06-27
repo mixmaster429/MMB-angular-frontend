@@ -1,0 +1,75 @@
+
+.vertical-card {
+	width: 100%;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+	padding: 0px;
+	transition:all 0.3s ease;
+}
+
+.vertical-card:hover {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+@media only screen and (max-width: 1230px) {
+	.vertical-card {
+		flex-direction: column;
+	}
+	.img-resources-cell {
+		max-height: 180px !important;
+		width: 100% !important;
+	}
+	.resources-cell {
+		width: 100% !important;
+		max-height: 180px !important;
+	  }
+}
+
+.img-resources-cell {
+	width: 360px;
+	max-height: 145px;
+	object-fit: cover;
+}
+
+.resources-cell {
+	display: table-cell;
+	width: 360px;
+	max-height: 145px;
+  }
+  
+.vertical-cards-content {
+	height: auto;
+	width: 60%;
+	background-color: #fff;
+	padding: 15px;
+	color: #1f6effe1;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+}
+
+.vertical-card-header {
+	font-size: 17px;
+	color: #1f6effe1;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+
+.vertical-card-subheader {
+	font-size: 15px;
+	color:#000
+}
+
+.vertical-card-img-container {
+	width: 30%;
+	background-color: #fff;
+}

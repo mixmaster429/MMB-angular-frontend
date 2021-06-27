@@ -1,0 +1,23 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar matDialogTitle class="mat-accent m-0">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">Unassign user from project?</span>
+            <button mat-icon-button (click)="matDialogRef.close('cancel')" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-16 primary-600-fg mat-body-1 h6">
+        Are you sure you want to unassign the user from the project?
+    </div>
+
+    <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+        <button (click)="matDialogRef.close('cancel')" mat-stroked-button color="accent" class="cancel-button" aria-label="CANCEL">
+            CANCEL
+        </button>
+        <button mat-stroked-button color="warn" class="yes-button" aria-label="YES" (click)="unassignUser()">
+            YES, I WANT TO REMOVE
+        </button>
+    </div>
+</div>

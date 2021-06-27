@@ -1,0 +1,23 @@
+<form [formGroup]="questionsForm" class="mb-4">
+    <ng-container *ngIf="questionsForm.get('question-0')">
+        <div class="card border-0 my-2" *ngFor="let item of _questions; let i = index">
+            <div class="card-header bg-inherit border-0 px-0">
+                <p class="mb-0">
+                    <span class="font-size-regular font-weight-normal">{{ item.question.question }}</span>
+                    <span class="text-muted font-size-regular font-weight-normal" *ngIf="!item.mandatory"
+                        i18n="Apply Career - label for optional label|Apply career label for optional@@applyCareerOptionalLabel">
+                        (optional)
+                    </span>
+                </p>
+            </div>
+
+            <div [ngClass]="{'show': i === 0}">
+                <!-- Card Body -->
+                <div class="card-body py-1 px-0">
+                    <textarea placeholder="Enter your answer here..." formControlName="question-{{i}}"
+                        class="form-control shadow-none border w-100"></textarea>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</form>

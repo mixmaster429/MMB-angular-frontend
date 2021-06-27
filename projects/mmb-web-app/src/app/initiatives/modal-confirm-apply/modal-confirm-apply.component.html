@@ -1,0 +1,17 @@
+<div class="modal-header">
+    <h4 class="modal-title" i18n="Initiatives modal title|Title for initiatives modal@@initiativesModalTitle">You are
+        about to leave Movemeback</h4>
+    <button type="button" class="close" aria-label="Close button" aria-describedby="modal-title" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <span i18n="Initiatives modal body text|Body text prefix for initiatives modal@@initiativesModalBodyPrefix">Select
+        continue to proceed to</span>
+    <span class="text-danger mx-1">{{ name }}</span>
+    <span i18n="Initiatives modal body text|Body text suffix for initiatives modal@@initiativesModalBodySuffix">website.</span>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" (click)="modal.dismiss()" i18n="Initiatives modal body cancel button|Cancel button for initiatives modal@@initiativesModalCancelButton">Cancel</button>
+    <button type="button" ngbAutofocus class="btn btn-danger" (click)="onContinue()" i18n="Initiatives modal body continue button|Continue button for initiatives modal@@initiativesModalContinueButton">Continue</button>
+</div>

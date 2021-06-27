@@ -1,0 +1,38 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-5">
+    <ng-container *ngIf="!applied">
+        <div fxLayout="row">
+            <img class="cursor-pointer avatar border" onerror="this.src='assets/images/avatars/not-found.png';"
+                [src]="details.organisation.logo">
+            <div class="ml-3" fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px">
+                <div fxLayoutAlign="center center"><i class="ri-building-line font-size-20 mr-2"></i>
+                    {{ details.organisation.name }}</div>
+                <div fxLayoutAlign="center center"><i class="ri-map-pin-line font-size-20 mr-2"></i>
+                    {{ details.location_summary }}</div>
+            </div>
+        </div>
+        <div class="column my-3">
+            <h3 class="font-size-24 my-3">{{ details.title }}</h3>
+            <p class="font-size-16 mb-3" [innerHTML]="details.summary"></p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                <button class="btn mmb-primary-button stroked-button btn--sm"><i class="ri-check-line"></i></button>
+                <div>You expressed interest on 12 Feb 2021</div>
+            </div>
+            <a href="careers/{{ details.slug }}" target="_blank">
+                <div class="text-primary">Open full details <i class="ri-share-box-fill"></i></div>
+            </a>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="applied">
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <img class="cursor-pointer avatar border" onerror="this.src='assets/images/avatars/not-found.png';"
+                [src]="details.organisation.logo">
+            <div class="column ml-4">
+                <h3 class="font-size-24 my-3">{{ details.title }}</h3>
+                <p class="font-size-16 mb-3" [innerHTML]="details.summary"></p>
+            </div>
+        </div>
+    </ng-container>
+</div>

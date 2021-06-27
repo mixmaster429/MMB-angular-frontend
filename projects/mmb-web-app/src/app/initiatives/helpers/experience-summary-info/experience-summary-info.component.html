@@ -1,0 +1,49 @@
+<div class="bg-white border-radius-8 p-4 text-dark mb-3">
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="text-dark-600 mb-4">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="25px">
+            <div class="cursor-pointer" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px"
+                routerLink="/organisation/profile/{{ experience.organisation.slug }}">
+                <i class="material-icons">work_outline</i>
+                <span class="medium">{{ experience.organisation.name }}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="5px">
+                <i class="material-icons">location_on</i>
+                <span class="medium">{{ experience.location_summary }}</span>
+            </div>
+            <div>
+                <span class="medium">Posted {{ experience.created | timeago }}</span>
+            </div>
+        </div>
+        <div class="text-dark" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="15px">
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">more_vert</i>
+            <i [ngbTooltip]="'Coming soon'" class="material-icons">share</i>
+            <i *ngIf="!experience.saved" class="material-icons cursor-pointer"
+                (click)="onAddToFavorites(experience)">bookmark_border</i>
+            <i *ngIf="experience.saved" class="material-icons text-primary cursor-pointer"
+                (click)="onRemoveFromFavorites(experience)">bookmark</i>
+        </div>
+    </div>
+    <h4 class="text-dark-100">{{ experience.title }}</h4>
+    <div [innerHTML]="experience.summary" class="pr-4 mt-2"></div>
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <button *ngIf="!experience.interested" class="btn mmb-primary-button stroked-button btn--sm mr-2"
+            (click)="onExpressInterest()">
+            <span>Express interest</span>
+        </button>
+        <button *ngIf="experience.interested" class="btn mmb-primary-button btn--sm mr-2 border-radius"
+            (click)="onRemoveInterest()">
+            <span>Expressed interest</span>
+        </button>
+
+        <button *ngIf="!experience.applied_external" (click)="onRegister()"
+            class="btn mmb-primary-button bg-black btn--sm">
+            <span>Apply</span>
+        </button>
+
+        <div class="text-success ml-2" *ngIf="experience.applied_external" fxLayout="row" fxLayoutAlign="sart center"
+            fxLayoutGap="8px">
+            <i class="material-icons">check</i>
+            <span>Applied externally</span>
+        </div>
+    </div>
+</div>

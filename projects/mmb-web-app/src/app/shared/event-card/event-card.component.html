@@ -1,0 +1,48 @@
+<div class="mb-2 cursor-pointer card-item" [routerLink]="event.slug">
+    <img [src]="coverImage" onerror="this.src='assets/img/mmb-placeholder.jpg'"
+        class="h-125px w-100 border-radius--top object-fit-cover" />
+
+    <div class="p-3 bg-white">
+        <div class="pl-2 pt-1 mb-3" fxLayout="row" fxLayoutAlign="space-between center">
+            <div class="mb-0 small text-dark" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons">business</i>
+                <span>{{ author }}</span>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons" [ngbTooltip]="'Coming soon'">share</i>
+                <i class="material-icons cursor-pointer" *ngIf="!isSaved"
+                    (click)="onAddToFavorites($event)">bookmark_border</i>
+                <i class="material-icons text-primary-500 cursor-pointer" *ngIf="isSaved"
+                    (click)="onRemoveFromFavorites($event)">bookmark</i>
+                <i class="material-icons" [ngbTooltip]="'Coming soon'">more_vert</i>
+            </div>
+        </div>
+        <div class="h-80">
+            <h5 class="mt-2 mb-3"><span class="text-dark small">{{ title | truncate: 70 }}</span></h5>
+        </div>
+        <div class="px-1 text-dark-300 mb-3">
+            <div class="mb-1 small" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+                <i class="material-icons">location_on</i>
+                <span>{{ location }}</span>
+            </div>
+            <div class="mb-1 small" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px" *ngIf="date">
+                <i class="material-icons">timer</i>
+                <span>{{ date | date:'fullDate' }}</span>
+            </div>
+        </div>
+
+        <div class="w-100">
+            <a [href]="event.website_redirect_url" target="_blank">
+                <button *ngIf="!event.applied_external" class="btn mmb-secondary-light-button w-100">
+                    <span>Register</span>
+                </button>
+
+            </a>
+        </div>
+        <div class="text-secondary-300 p-2 border-radius--bottom small" *ngIf="event.applied_external" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="8px">
+            <i class="material-icons">check</i>
+            <span>You applied externally</span>
+        </div>
+
+    </div>
+</div>

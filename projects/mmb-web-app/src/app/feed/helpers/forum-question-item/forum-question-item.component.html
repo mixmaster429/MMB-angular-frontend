@@ -1,0 +1,30 @@
+<div class="p-3" *ngIf="feed.user as user">
+    <mmb-web-app-user-summary-info [image]="user.profile_image" [name]="user.name"
+        [professionalTitle]="user.professional_title" [createdOnDate]="feed.created"
+        [popoverSummary]="user.professional_title" [isUser]="true" [id]="user.id" [userUrl]="user.handle">
+    </mmb-web-app-user-summary-info>
+</div>
+<div fxLayout="row" fxLayoutAlign="start start">
+    <div fxFlex="50px">
+        <mmb-web-app-voting-panel (upvote)="onForumQuestionUpvoteClicked($event, feed)"
+            (downvote)="onForumQuestionDownvoteClicked($event, feed)" [score]="feed.votes_total"
+            [isUpvoteSelected]="feed.voted && feed.voted.vote === 1"
+            [isDownvoteSelected]="feed.voted && feed.voted.vote === -1">
+        </mmb-web-app-voting-panel>
+
+        <!-- <mmb-web-app-forum-bookmark [request]="request">
+        </mmb-web-app-forum-bookmark> -->
+    </div>
+    <div>
+        <mmb-web-app-feed-card url="/forum/{{feed.slug}}" [image]="feed.cover" [author]="feed.user.name"
+            [avatarImage]="feed.user.profile_image" [title]="feed.title" [icon]="'fas fa-question-circle'"
+            [summary]="feed.question" [date]="feed.created" [subtitle]="feed.user.professional_title">
+        </mmb-web-app-feed-card>
+    </div>
+</div>
+
+<mmb-web-app-interaction-tools [reactions]="feed.reactions_summary?.total" [reacted]="feed.reacted"
+    [isReactionsEnabled]="true" [comments]="feed.comments"
+    (reactionUpdated)="onForumQuestionReactionUpdated(feed, $event)"
+    (commentAdded)="onForumQuestionCommentAdded(feed, $event)">
+</mmb-web-app-interaction-tools>

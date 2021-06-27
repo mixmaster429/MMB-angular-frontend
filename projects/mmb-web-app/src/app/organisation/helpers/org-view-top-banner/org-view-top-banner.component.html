@@ -1,0 +1,19 @@
+<div class="p-3 shadow-sm bg-white" fxLayout="row" fxLayoutAlign="space-between">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <img [src]="logo" width="100px" />
+        <h3 class="text-secondary">{{ name }}</h3>
+        <span class="badge badge-secondary" *ngIf="!isViewingAsMember">Admin view</span>
+        <span class="badge badge-secondary" *ngIf="isViewingAsMember">Member view</span>
+    </div>
+    <button *ngIf="!isViewingAsMember && isMainPage" type="button" class="btn sApp-btn btn-sm" (click)="onViewAsMember()">
+        View as member
+    </button>
+
+    <button *ngIf="isViewingAsMember && isMainPage" type="button" class="btn sApp-btn btn-sm" (click)="onViewAsAdmin()">
+        View as admin
+    </button>
+
+    <button *ngIf="!isMainPage" type="button" class="btn sApp-btn btn-sm" (click)="goBack()">
+        Back to organisation page
+    </button>
+</div>

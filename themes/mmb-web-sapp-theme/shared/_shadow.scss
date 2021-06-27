@@ -1,0 +1,11 @@
+.shadow-sm {
+  box-shadow: 0 $spacer $spacer 0 $shadow-color !important;
+}
+
+.shadow-md {
+  box-shadow: 0 $spacer*2 $spacer*2 0 $shadow-color !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 $spacer*3 $spacer*3 0 $shadow-color !important;
+}

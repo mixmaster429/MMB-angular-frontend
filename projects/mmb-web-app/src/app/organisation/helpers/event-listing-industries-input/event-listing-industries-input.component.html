@@ -1,0 +1,16 @@
+<form [formGroup]="industryForm">
+    <div class="input-group">
+        <input type="text" autocomplete="no" formControlName="industry" [ngbTypeahead]="industrySearch"
+            [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+            (selectItem)="onIndustrySelected($event)" placeholder="Industry" class="form-control my-1 shadow-none border"
+            class="shadow-none border p-2 w-500">
+    </div>
+</form>
+<div *ngFor="let industry of selectedIndustries; let i=index" class="mt-1 d-inline-block mr-1">
+    <span class="badge badge-primary p-1">
+        <span fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="px-2">{{ industry.name }}</span>
+            <i class="material-icons icon-font-sm cursor-pointer" (click)="onRemoveIndustry(i)">close</i>
+        </span>
+    </span>
+</div>

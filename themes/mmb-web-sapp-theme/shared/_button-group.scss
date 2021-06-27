@@ -1,0 +1,18 @@
+.btn-group .btn {
+    padding: $spacer * 2 $spacer *4;
+    background: $white;
+    color: $color-muted;
+    border: 1px solid;
+    border-radius: 1rem !important;
+
+    &.btn--active {
+        background-color: $secondary-1000;
+        color: $secondary-300;
+        font-weight: bold;
+        border: none;
+    }
+
+    &:not(.btn--active) {
+        border: none;
+    }
+}

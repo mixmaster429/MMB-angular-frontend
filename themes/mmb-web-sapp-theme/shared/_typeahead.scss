@@ -1,0 +1,8 @@
+ngb-typeahead-window {
+    &.dropdown-menu {
+        transition: 0s;
+    }
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: $primary;
+    }
+}

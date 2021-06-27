@@ -1,0 +1,23 @@
+<div class="container my-1" *ngIf="user | async as user">
+    <div class="row">
+        <div class="col-md-8 mt-4">
+            <mmb-web-app-user-summary-profile-info [user]="user">
+            </mmb-web-app-user-summary-profile-info>
+            <mmb-web-app-user-about-info [user]="user" [aboutMe]="user?.credentials?.summary">
+            </mmb-web-app-user-about-info>
+            <mmb-web-app-user-dashboard-info [analyticsInfo]="user?.analyticsInfo"></mmb-web-app-user-dashboard-info>
+            <mmb-web-app-user-experience-info [user]="user" [experiences]="user?.experiences">
+            </mmb-web-app-user-experience-info>
+            <mmb-web-app-user-education-info [educations]="user?.education">
+            </mmb-web-app-user-education-info>
+            <mmb-web-app-user-skills [user]="user" [languages]="languages" [skills]="skills">
+            </mmb-web-app-user-skills>
+        </div>
+        <div class="col-md-4">
+            <div class="sidebar sticky-top t-navbar-height">
+                <mmb-web-app-related-items-list [type]="'trending'" [title]="'trending'">
+                </mmb-web-app-related-items-list>
+            </div>
+        </div>
+    </div>
+</div>

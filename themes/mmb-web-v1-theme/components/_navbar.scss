@@ -1,0 +1,121 @@
+header {
+  background-color: $text-black;
+
+  .navbar {
+    position: relative;
+    height: 72px;
+    background-color: $text-black;
+
+    .navbar-toggler {
+      border: none;
+      outline: none;
+      box-shadow: none;
+
+      &[aria-expanded='false'] {
+        img.fold {
+          display: none;
+        }
+      }
+      &[aria-expanded='true'] {
+        img.show {
+          display: none;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      .navbar-nav {
+        margin-left: 100px;
+
+        .nav-item {
+          .nav-link {
+            font-family: Opensans;
+            color: $page-text-white;
+            font-size: 16px;
+            line-height: 24px;
+            margin-right: 20px;
+          }
+        }
+
+        @include at-query($max, $large) {
+          margin-left: 0;
+
+          .nav-item {
+            .nav-link {
+              margin-right: 0;
+              padding: 0 10px;
+              font-size: 15px;
+            }
+          }
+        }
+
+        @include at-query($max, $medium) {
+          .nav-item {
+            .nav-link {
+              font-size: 16px;
+              line-height: 2.5;
+            }
+          }
+        }
+      }
+
+      .auth {
+        display: flex;
+
+        @include at-query($max, $medium) {
+          display: none;
+        }
+
+        .nav-link {
+          font-family: Opensans-Semibold;
+          color: $page-text-white;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 24px;
+
+          &.auth-login {
+            @include at-query($max, $xlarge) {
+              border-radius: 20px;
+              border: 1px solid $page-text-white;
+            }
+          }
+
+          &.auth-join {
+            margin-left: 20px;
+
+            @include at-query($max, $xlarge) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      @include at-query($max, $medium) {
+        background-color: #1d1d1d;
+        // margin: 0 -30px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 56px;
+
+        .navbar-nav {
+          margin-left: 20px;
+          padding: 20px 0;
+
+          .nav-item {
+            position: relative;
+            padding-left: 20px;
+
+            &::before {
+              @include whitetriangle;
+            }
+          }
+        }
+      }
+    }
+
+    @include at-query($max, $medium) {
+      height: 56px;
+    }
+  }
+}

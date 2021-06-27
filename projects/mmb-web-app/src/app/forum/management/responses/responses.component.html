@@ -1,0 +1,28 @@
+<div class="my-2" *ngIf="responses | async as responses">
+    <div class="text-darker text-right small">
+        <label class="mr-2" i18n="selected request title|Title for selected request in collaboration management@@selectedRequestTitleCollaborationsManagementPage">Selected Request:</label>
+        <strong class="text-info">{{ selectedRequestDetails.title }}</strong>
+    </div>
+    <div class="text-darker mt-n2 text-right small" i18n="Total responses label|Label for Total responses in collaboration management@@totalResponsesButtonTitleCollaborationsManagementPage">
+        Total Responses: <strong class="text-info">{{ responses.length }}</strong>
+    </div>
+    <div class="border shadow-sm my-4" *ngFor="let response of responses">
+        <div class="p-2">
+                <mmb-web-app-user-summary-info
+                [image]="response.owner.image"
+                [name]="response.owner.name"
+                [professionalTitle]="response.owner.professionalTitle"
+                [company]="response.owner.company"></mmb-web-app-user-summary-info>
+            <mmb-web-app-text></mmb-web-app-text>
+    
+            <div class="p-2" *ngFor="let answerItem of response.answer">
+                <mmb-web-app-item-renderer
+                    [type]="answerItem.type"
+                    [value]="answerItem.value"></mmb-web-app-item-renderer>
+            </div>
+        </div>
+        <div class="bg-light p-2">
+            <mmb-web-app-response-reply-tools></mmb-web-app-response-reply-tools>
+        </div>
+    </div>
+</div>

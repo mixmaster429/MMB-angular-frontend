@@ -1,0 +1,23 @@
+<div class="media">
+    <div class="avatar-md">
+        <img class="rounded-circle border" [src]="image" onerror="this.src='assets/placeholders/not-found.png';">
+    </div>
+    <div class="media-body ml-3">
+        <h5>
+            {{ title }}
+        </h5>
+        <div class="text-muted">{{ subTitle }}</div>
+        <div class="text-muted mt-0" *ngIf="startDate">
+            <span>{{ startDate | date }}</span>
+            -
+            <span *ngIf="endDate">{{ endDate | date }}</span>
+            <span *ngIf="!endDate">Present</span>
+        </div>
+        <div class="text-dark small">{{ location }}</div>
+        <div class="my-2" [innerHTML]="details"></div>
+    </div>
+    <button *ngIf="isEditMode" type="button" class="btn btn-outline-primary icon-button text-primary"
+        data-toggle="modal" data-target="#editExperienceModal" (click)="onEditClicked()">
+        <i class="material-icons">edit</i>
+    </button>
+</div>

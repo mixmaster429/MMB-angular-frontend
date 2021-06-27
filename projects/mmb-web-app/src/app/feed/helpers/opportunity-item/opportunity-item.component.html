@@ -1,0 +1,29 @@
+<div class="p-3" *ngIf="feed.user as user">
+    <mmb-web-app-user-summary-info [image]="user.profile_image" [name]="user.name"
+        [professionalTitle]="user.professional_title" [createdOnDate]="feed.created"
+        [popoverSummary]="user.professional_title" [isUser]="true" [id]="user.id" [userUrl]="user.handle">
+    </mmb-web-app-user-summary-info>
+</div>
+<!-- <div fxLayout="row" fxLayoutAlign="start start">
+    <div fxFlex="50px">
+        <mmb-web-app-voting-panel (upvote)="onUpvoteClicked($event, request)"
+            [score]="feed.votes_total"
+            (downvote)="onDownvoteClicked($event, request)"
+            [isUpvoteSelected]="feed.voted && feed.voted.vote === 1"
+            [isDownvoteSelected]="feed.voted && feed.voted.vote === -1">
+        </mmb-web-app-voting-panel>
+
+        <mmb-web-app-opportunity-bookmark [request]="request">
+        </mmb-web-app-opportunity-bookmark>
+    </div>
+</div> -->
+<mmb-web-app-feed-card url="/connect/{{feed.slug}}" [title]="feed.title" [avatarImage]="feed.user.profile_image"
+    [author]="feed.user.name" [image]="feed.cover" [icon]="'fas fa-handshake'" [summary]="feed.opportunity"
+    [date]="feed.created">
+</mmb-web-app-feed-card>
+
+<mmb-web-app-interaction-tools [reactions]="feed.reactions_summary?.total" [reacted]="feed.reacted"
+    [isReactionsEnabled]="true" [comments]="feed.comments"
+    (reactionUpdated)="onOpportunityReactionUpdated(feed, $event)"
+    (commentAdded)="onOpportunityCommentAdded(feed, $event)">
+</mmb-web-app-interaction-tools>

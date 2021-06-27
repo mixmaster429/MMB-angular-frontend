@@ -1,0 +1,39 @@
+body.theme-default .mat-button-toggle-checked,
+body.theme-default .mat-button-toggle:hover {
+    i[class*="ri"] {
+        color: map-get($map: $fuse-white, $key: 500);
+        opacity: 1;
+        font-size: 22px;
+    }
+
+    &.strong-no {
+        @extend .red-900-bg;
+        @extend .fuse-white-fg;
+    }
+
+    &.no {
+        @extend .red-400-bg;
+        @extend .fuse-white-fg;
+    }
+
+    &.undecided {
+        @extend .orange-bg;
+        @extend .fuse-white-fg;
+    }
+
+    &.yes {
+        @extend .green-400-bg;
+        @extend .fuse-white-fg;
+    }
+
+    &.strong-yes {
+        @extend .green-900-bg;
+        @extend .fuse-white-fg;
+    }
+}
+
+
+body.theme-default .mat-button-toggle-checked.mat-button-toggle-disabled {
+    @extend .accent-bg;
+    @extend .fuse-white-fg;
+}

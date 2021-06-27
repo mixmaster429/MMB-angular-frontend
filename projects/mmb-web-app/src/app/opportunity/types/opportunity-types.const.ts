@@ -1,0 +1,45 @@
+export const OPPORTUNITY_TYPES = [{
+    value: '0',
+    viewValue: 'All',
+    class: 'all'
+}, {
+    value: '1',
+    viewValue: 'Co-Founder',
+    icon: 'attach_money',
+    class: 'co-founder'
+}, {
+    value: '2',
+    viewValue: 'Partnership',
+    icon: 'people',
+    class: 'partnership'
+}, {
+    value: '3',
+    viewValue: 'Expertise & Advice',
+    icon: 'military_tech',
+    class: 'expert-advice'
+}, {
+    value: '4',
+    viewValue: 'Mentor',
+    icon: 'school',
+    class: 'mentor'
+}, {
+    value: '5',
+    viewValue: 'Connection',
+    icon: 'connect_without_contact',
+    class: 'connection'
+}, {
+    value: '6',
+    viewValue: 'Volunteer',
+    icon: 'emoji_people',
+    class: 'volunteer'
+}, {
+    value: '7',
+    viewValue: 'Investment',
+    icon: 'attach_money',
+    class: 'investment'
+}, {
+    value: '8',
+    viewValue: 'Other',
+    icon: 'light_mode',
+    class: 'other'
+}];

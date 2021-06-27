@@ -1,0 +1,100 @@
+<div class="col-lg-8 offset-lg-2 mt-4" *ngIf="details | async as details">
+    <div class="row">
+        <!-- Promo categories -->
+        <div class="col-md-4 my-6">
+            <ul class="list-group sticky-top t-navbar-height">
+                <li class="list-group-item" *ngFor="let category of promoCategories | async">
+                    <a class="text-dark"
+                        routerLink="/collaborations/category/{{ category.slug }}">{{ category.value }}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-8 my-6">
+            <div class="shadow-sm border bg-white">
+                <div class="px-2 pt-3" *ngIf="details.user as user">
+                    <mmb-web-app-user-summary-info [image]="user.user_pic_url" [name]="user.name"
+                        [professionalTitle]="user.professional_title" [createdOnDate]="details.created">
+                    </mmb-web-app-user-summary-info>
+                </div>
+                <div class="px-2" fxLayout="row" fxLayoutAlign="start start">
+                    <div fxFlex="50px" class="pt-2">
+                        <mmb-web-app-voting-panel [score]="details.votes_total"
+                            (upvote)="onUpvoteClicked($event, details)" (downvote)="onDownvoteClicked($event, details)"
+                            [isUpvoteSelected]="details.voted && details.voted.vote === 1"
+                            [isDownvoteSelected]="details.voted && details.voted.vote === -1">
+                        </mmb-web-app-voting-panel>
+
+                        <mmb-web-app-forum-bookmark [request]="details">
+                        </mmb-web-app-forum-bookmark>
+                    </div>
+
+                    <div class="mt-4">
+                        <mmb-web-app-card-summary [coverImage]="details.cover" [isDetailsView]="true"
+                            [title]="details.title" [description]="details.question">
+                        </mmb-web-app-card-summary>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <mmb-web-app-interaction-tools [isCommentActive]="!answers || answers.count===0"
+                            [reactions]="details.reactions_summary?.total" [isReactionsEnabled]="true"
+                            [isAnswerEnabled]="true" [reacted]="details.reacted" [comments]="details.comments"
+                            [answers]="details.answers?.length" (answerClicked)="onAnswerClicked()"
+                            (commentAdded)="onCommentAdded($event, details)"
+                            (reactionUpdated)="onReactionUpdated($event, details)"></mmb-web-app-interaction-tools>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lazy loaded answers -->
+                        <div class="single-comments shadow-sm border bg-white col-12 p-0 my-2" *ngFor="let item of details.answers">
+                            <div class="media pt-3 px-3 pb-1">
+                                <!-- Comments Thumb -->
+                                <div class="comments-thumb avatar-sm">
+                                    <img class="rounded-circle" [src]="item.user.user_pic_url" alt=""
+                                        onerror="this.src='assets/images/avatars/not-found.png';">
+                                </div>
+                                <!-- Comments Content -->
+                                <div class="comments-content media-body pl-3">
+                                    <div class="d-flex mb-0">
+                                        <strong>{{ item.user.name }}</strong>
+                                    </div>
+                                    <div class="text-muted font-size-sm mb-2">posted {{ item.created | timeago }}</div>
+                                </div>
+                            </div>
+                            <div fxLayout="row" fxLayoutAlign="start start">
+                                <div fxFlex="50px">
+                                    <mmb-web-app-voting-panel (upvote)="onAnswerUpvoteClicked($event, item)"
+                                        (downvote)="onAnswerDownvoteClicked($event, item)" [score]="item.votes_total"
+                                        [isUpvoteSelected]="item.voted && item.voted.vote === 1"
+                                        [isDownvoteSelected]="item.voted && item.voted.vote === -1">
+                                    </mmb-web-app-voting-panel>
+                                </div>
+                                <p class="px-1 mb-2 mt-1" [innerHTML]="item.answer"></p>
+                            </div>
+
+                            <div>
+                                <mmb-web-app-interaction-tools [reactions]="item.reactions_summary?.total"
+                                    [isReactionsEnabled]="true" [reacted]="item.reacted" [comments]="item.comments"
+                                    (commentAdded)="onAnswerCommentAdded($event, item)"
+                                    (reactionUpdated)="onAnswerReactionUpdated($event, item)">
+                                </mmb-web-app-interaction-tools>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 text-center py-2" *ngIf="isLoading">
+                        <ng-content *ngTemplateOutlet="loading"></ng-content>
+                    </div>
+                </div>
+            </div>
+
+<ng-template #loading>
+    <div class="text-center my-4" *ngIf="isLoading">
+        <mmb-ui-inline-loader text="Loading answers..."
+            i18n-text="Loading answers label|Label for loading answers in collaborations@@loadingAnswersLabelCollaborationsDetailsPage">
+        </mmb-ui-inline-loader>
+    </div>
+</ng-template>

@@ -1,0 +1,21 @@
+<div class="widget my-2" *ngIf="analyticsInfo">
+    <div class="single-accordion p-2 px-4">
+        <h5>
+            <a class="collapse show text-uppercase d-block p-3" data-toggle="collapse" href="#dashboardSection"
+                role="button"
+                i18n="Your dashboard title|Title for dashboard in user's profile page@@userProfileDashboardTitle">Your
+                Dashboard</a>
+        </h5>
+        <div id="dashboardSection" class="text-muted mt-n1 small"
+            i18n="dashboard subtitle|Subtitle for dashboard in user's profile page@@userProfileDashboardSubTitle">
+            Private to you</div>
+        <div class="my-2 row">
+            <div class="col-6" *ngFor="let item of analyticsInfo">
+                <div class="bg-white p-2 border shadow-sm">
+                    <h4 class="text-info">{{ item.value }}</h4>
+                    <div>{{ item.label }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

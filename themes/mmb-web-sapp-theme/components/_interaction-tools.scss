@@ -1,0 +1,40 @@
+
+.reaction-options.dropdown-menu {
+    width: 450px;
+}
+
+.flaticon {
+    width: 24px;
+    height: 24px;
+    &:hover {
+        transform: scale(1.3);
+        transition: all 0.3s;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.90);
+    }
+}
+
+.btn-flaticon {
+    border-width: 0px;
+    background: transparent;
+}
+
+.fill-dark {
+    // fill: $dark;
+}
+
+.fill-primary {
+    fill: $primary;
+}
+
+.fill-danger {
+    fill: $danger;
+}
+
+.fill-warning {
+    fill: $warning;
+}
+
+.fill-success {
+    fill: $success;
+}

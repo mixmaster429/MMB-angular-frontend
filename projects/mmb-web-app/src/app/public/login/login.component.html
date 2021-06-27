@@ -1,0 +1,60 @@
+<div class="mmb-background login-page-bg d-flex justify-content-center align-items-center h-100vh-navbar-adjust w-100">
+  <div class="bg-white border-radius-12 col-lg-3 col-md-6 col-sm-12 p-5">
+    <form name="loginForm" [formGroup]="loginForm" novalidate>
+      <h5 class="mb-5 text-dark-300">Log in to Movemeback</h5>
+      <div class="row">
+        <div class="col-12">
+          <div class="form-group">
+            <label for="email" class="text-dark-300 medium">Email address</label>
+            <div class="input-group">
+              <input formControlName="email" type="email" class="form-control border" name="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="text-dark-300 medium">Password</label>
+            <div class="input-group">
+              <input type="password" formControlName="password" class="form-control border" name="password">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 red-fg" *ngFor="let error of errorMessage">
+          {{ error }}
+        </div>
+        <div class="col-12">
+          <button [ngClass]="{ 'btn--disabled': loginForm.invalid }"
+            class="btn w-100 mt-3 btn mmb-secondary-light-button mmb-secondary-light-button--dark" type="submit"
+            (click)="onLogin()">
+            Log in
+          </button>
+          <div class="d-flex justify-content-end">
+            <span class="d-block pt-4 medium">
+              <a fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="12px" class="text-secondary-300"
+                [routerLink]="'/forgot-password'">
+                Forgotten password <i class="ri-arrow-right-s-line"></i>
+              </a>
+            </span>
+          </div>
+
+          <div class="mt-4 mb-1" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="20px">
+            <div fxFlex class="horizontal-separator"></div>
+            <div>or</div>
+            <div fxFlex class="horizontal-separator"></div>
+          </div>
+
+          <div>
+            <button type="button" (click)="signInWithGoogle()"
+              class="btn w-100 mt-1 btn mmb-secondary-light-button">
+              <img src="assets/logos/google-logo.png" class="w-32px pr-2" />
+              <span>Log in with Google</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 mt-4">
+          <span class="d-block pt-2 text-center text-dark-300">New to Movemeback? <a
+              class="text-secondary-300" [routerLink]="'/register'">Join now ›</a></span>
+        </div>
+      </div>
+    </form>
+    <p class="form-message"></p>
+  </div>
+</div>

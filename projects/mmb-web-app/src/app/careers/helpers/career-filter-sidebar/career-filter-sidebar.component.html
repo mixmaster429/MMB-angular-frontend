@@ -1,0 +1,58 @@
+<div class="px-3 py-4 bg-light h-100 mmb-filter-menu">
+    <h5 class="mb-4">
+        <span class="text-dark">Applications</span>
+    </h5>
+    <div *ngFor="let option of applicationsOptions; let i =index" fxLayout="row" fxLayoutAlign="space-between center"
+        class="my-2">
+        <div class="custom-control custom-checkbox" fxLayout="row" fxLayoutAlign="start center">
+            <input type="checkbox" class="form-control custom-control-input"
+                [(ngModel)]="option.isChecked" id="applications{{i}}">
+            <label for="applications{{i}}" class="pl-3 mb-0 custom-control-label">
+                <span *ngIf="option.isSubFilter" class="separator-line-inline"></span>
+                <span>{{ option.text }}</span>
+            </label>
+        </div>
+        <div class="badge badge-secondary p-1" [ngClass]="{'badge--unselected': !option.isChecked}">{{ option.value }}
+        </div>
+    </div>
+
+    <hr class="mb-2" />
+
+    <h6 class="my-4">
+        <span class="text-muted small">LOCATION</span>
+    </h6>
+    <div class="input-group mb-4">
+        <div class="input-group-prepend">
+            <span class="input-group-text">
+                <img src="assets/images/icon-grey-search.svg" />
+            </span>
+        </div>
+        <input class="form-control mmb-text-input" type="text" placeholder="Search" />
+    </div>
+    <h6 class="my-4">
+        <span class="text-muted small">SENIORITY</span>
+    </h6>
+    <div fxLayout="row" class="my-2" fxLayoutAlign="space-between center"
+        *ngFor="let option of seniorityOptions; let i =index">
+        <div class="custom-control custom-checkbox" fxLayout="row" fxLayoutAlign="start center">
+            <input class="form-control custom-control-input" [(ngModel)]="option.isChecked" type="checkbox"
+                id="seniority{{i}}">
+            <label for="seniority{{i}}" class="pl-3 mb-0 custom-control-label">{{ option.text }}</label>
+        </div>
+        <div class="badge badge-secondary p-1" [ngClass]="{'badge--unselected': !option.isChecked}">{{ option.value }}
+        </div>
+    </div>
+    <h6 class="my-4">
+        <span class="text-muted small">TYPE</span>
+    </h6>
+    <div fxLayout="row" class="my-2" fxLayoutAlign="space-between center"
+        *ngFor="let option of contractTypes; let i =index">
+        <div class="custom-control custom-checkbox" fxLayout="row" fxLayoutAlign="start center">
+            <input class="form-control custom-control-input" [(ngModel)]="option.isChecked" type="checkbox"
+                id="contract{{i}}">
+            <label for="contract{{i}}" class="pl-3 mb-0 custom-control-label">{{ option.text }}</label>
+        </div>
+        <div class="badge badge-secondary p-1" [ngClass]="{'badge--unselected': !option.isChecked}">{{ option.value }}
+        </div>
+    </div>
+</div>

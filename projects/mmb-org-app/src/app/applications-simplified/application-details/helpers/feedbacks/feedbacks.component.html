@@ -1,0 +1,168 @@
+<!-- Other tabs (Not interested)-->
+<div *ngIf="!isInterestedTabActive">
+    <div class="my-8 p-4 pb-8">
+        <div>
+            <!-- Organisations section -->
+            <div class="border-bottom py-8" *ngIf="feedback.career.organisation.name as organisationName">
+                <h4 class="accent-900-fg">{{ organisationName }} Updates</h4>
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Application Stage</div>
+                    <div class="mat-body-1" *ngIf="getStage(feedback.stage) as feedbackStage">
+                        {{ feedbackStage[0]?.viewValue }}</div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center" *ngIf="feedback.status_employee">
+                    <div fxFlex="250px" class="secondary-text">{{ organisationName }} Status</div>
+                    <div class="mat-body-1">{{ getEmployeeStatus(feedback.status_employee).viewValue }}</div>
+                </div>
+
+                <div class="my-12" fxLayout="row" fxLayoutAlign="start start">
+                    <div fxFlex="250px" class="secondary-text">{{ organisationName }} Score</div>
+                    <mmb-org-app-employee-rating-control [suitability]="feedback.suitability_profile_employee"
+                        [isMinimalViewActive]="true" (valueChanged)="updateFeedback($event)">
+                    </mmb-org-app-employee-rating-control>
+
+                </div>
+                <div class="my-16" fxLayout="row" fxLayoutAlign="start stretch">
+                    <div fxFlex="250px" class="secondary-text pt-4">{{ organisationName }} Comments</div>
+                    <div class="w-100p">
+                        <div [formGroup]="form" class="mb-16">
+                            <ckeditor [config]="editorConfig" [editor]="Editor" formControlName="comments">
+                            </ckeditor>
+                        </div>
+                        <div fxLayoutAlign="end center">
+                            <button mat-flat-button color="accent" (click)="postComment()">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recuriter section -->
+            <div class="border-bottom py-8">
+                <h4 class="accent-900-fg">Recruiter Updates</h4>
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Recruiter Status</div>
+                    <div class="mat-body-1">{{ getAdminStatus(feedback.status_admin).viewValue }}</div>
+                </div>
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Recruiter Score</div>
+                    <div class="mat-body-1"
+                        *ngIf="getSuitability(feedback.suitability_profile_admin) as feedbackSuitability">
+                        {{ feedbackSuitability[0]?.viewValue }}</div>
+                </div>
+                <div class="mb-16" fxLayout="row" fxLayoutAlign="start start">
+                    <div fxFlex="250px" class="secondary-text">Recruiter Summary</div>
+                    <div class="mat-body-1 recruiter-summary" *ngIf="feedback.recruiter_summary"
+                        [innerHTML]="feedback.recruiter_summary"></div>
+                    <div class="mat-body-1" *ngIf="!feedback.recruiter_summary">
+                        No summary available
+                    </div>
+                </div>
+            </div>
+
+            <!-- Candidate details section -->
+            <div class="border-bottom py-8">
+                <h4 class="accent-900-fg">Candidate Details</h4>
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Status</div>
+                    <div class="mat-body-1">{{ getCandidateStatus(feedback.status_candidate).viewValue }}</div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Current Title</div>
+                    <div class="mat-body-1">{{ feedback.user.professional_title }}</div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Linkedin</div>
+                    <div class="mat-body-1">
+                        <a [href]="feedback.user.linkedin" target="_blank" rel="noopener noreferrer">{{
+                            feedback.user.linkedin }}</a>
+                    </div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Current Location</div>
+                    <div class="mat-body-1">
+                        <span *ngIf="feedback.role_city_current">{{ feedback.role_city_current }}</span>
+                        <span *ngIf="!feedback.role_city_current && feedback.role_city_custom_current">{{
+                            feedback.role_city_custom_current }}</span>
+                        <span
+                            *ngIf="(feedback.role_city_current || feedback.role_city_current) && feedback.role_country_current">,
+                        </span>
+                        <span *ngIf="feedback.role_country_current">{{ feedback.role_country_current }}</span>
+                    </div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Preferred Location</div>
+                    <div class="mat-body-1">
+                        <span *ngIf="feedback.role_city_target">{{ feedback.role_city_target }}</span>
+                        <span *ngIf="!feedback.role_city_target && feedback.role_city_custom_target">{{
+                            feedback.role_city_custom_target }}</span>
+                        <span
+                            *ngIf="(feedback.role_city_target || feedback.role_city_target) && feedback.role_country_target">,
+                        </span>
+                        <span *ngIf="feedback.role_country_target">{{ feedback.role_country_target }}</span>
+                    </div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Target Compensation</div>
+                    <div class="mat-body-1">
+                        <span>{{ feedback.compensation_currency_target }} {{
+                            feedback.compensation_base_target | number }}</span>
+                        <span *ngIf="feedback.compensation_benefits_target">
+                            (plus {{ feedback.compensation_currency_target }} {{ feedback.compensation_benefits_target |
+                            number}}
+                            in benefits)
+                        </span>
+                    </div>
+                </div>
+
+                <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+                    <div fxFlex="250px" class="secondary-text">Candidate Compensation Notes</div>
+                    <div class="mat-body-1">
+                        {{ feedback.compensation_notes }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-32">
+            <ng-container *ngIf="!isInterestedTabActive">
+                <h3>Candidate Answers</h3>
+                <mmb-org-app-question-answer [questions]="questions">
+                </mmb-org-app-question-answer>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+<!-- Interested tab-->
+<div class="my-32" *ngIf="isInterestedTabActive">
+    <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex="250px" class="secondary-text">Candidate Linkedin</div>
+        <div class="mat-body-1"><a [href]="feedback.user.linkedin" target="_blank" rel="noopener noreferrer">{{
+                feedback.user.linkedin }}</a></div>
+    </div>
+
+    <div class="my-8" fxLayout="row" fxLayoutAlign="start center">
+        <div fxFlex="250px" class="secondary-text">Employee Score</div>
+        <mmb-org-app-employee-rating-control [suitability]="feedback.suitability_employee" [isMinimalViewActive]="true"
+            (valueChanged)="updateFeedback($event)">
+        </mmb-org-app-employee-rating-control>
+
+    </div>
+    <div class="my-16" fxLayout="row" fxLayoutAlign="start stretch">
+        <div fxFlex="250px" class="secondary-text pt-4">Employee Comments</div>
+        <div fxFlex class="w-100p">
+            <div [formGroup]="form" class="mb-16">
+                <ckeditor [config]="editorConfig" [editor]="Editor" formControlName="comments"></ckeditor>
+            </div>
+            <div fxLayoutAlign="end center">
+                <button mat-flat-button color="accent" (click)="postComment()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

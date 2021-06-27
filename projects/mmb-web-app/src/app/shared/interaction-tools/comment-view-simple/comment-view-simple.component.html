@@ -1,0 +1,8 @@
+<div class="px-2 mh-75p overflow-auto">
+    <div class="small d-flex" *ngFor="let comment of comments | slice:0:commentsLimit">
+        <div class="w-50p mnw-50p">
+            <strong>{{ comment.owner.name }}</strong>
+        </div>
+        <span class="ml-2 text-italic">{{ comment.value }}</span>
+    </div>
+</div>

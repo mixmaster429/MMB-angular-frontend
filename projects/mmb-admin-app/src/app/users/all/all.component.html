@@ -1,0 +1,73 @@
+<div class="page-layout carded inner-scroll">
+
+    <!-- HEADER -->
+    <div class="header accent p-16 p-sm-12" fxLayout="column" fxLayoutAlign="start" fxLayout.gt-xs="row"
+        fxLayoutAlign.gt-xs="space-between center">
+
+        <!-- APP TITLE -->
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-icon-button class="sidebar-toggle mr-8" fxHide.gt-md (click)="toggleSidebar('filters-sidebar')">
+                <mat-icon>menu</mat-icon>
+            </button>
+
+            <div class="logo" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="logo-icon mr-16" [@animate]="{value:'*',params:{delay:'50ms',scale:'0.2'}}">
+                    account_circle
+                </mat-icon>
+                <span class="logo-text h1" [@animate]="{value:'*',params:{delay:'100ms',x:'-25px'}}">
+                    Users
+                </span>
+            </div>
+
+        </div>
+        <!-- / APP TITLE -->
+
+        <!-- SEARCH -->
+        <div class="ml-sm-32" fxLayout="row" fxLayoutAlign="center center" fxFlex>
+
+            <div class="search-wrapper mt-16 mt-sm-0">
+
+                <div class="search" fxFlex fxLayout="row" fxLayoutAlign="start center">
+                    <mat-icon>search</mat-icon>
+                    <input [formControl]="searchInput" placeholder="Search for a user">
+                </div>
+
+            </div>
+
+        </div>
+        <!-- / SEARCH -->
+
+    </div>
+    <!-- / HEADER -->
+
+    <!-- Toolbar -->
+    <div class="py-8 px-24 mat-elevation-z1 text-right z-index-10000">
+        <button class="mx-8" mat-stroked-button color="accent" (click)="saveUsersToProjects()">
+            <mat-icon>save</mat-icon>
+            Save user(s) to project(s)
+        </button>
+    </div>
+    <!--/ Toolbar -->
+
+    <!-- CONTENT -->
+    <div class="content" fusePerfectScrollbar infiniteScroll [infiniteScrollDistance]="5" [infiniteScrollThrottle]="150"
+        (scrolled)="onScroll()" [scrollWindow]="false">
+        <div fxLayout="row" class="px-32 py-16">
+            <!-- Filters -->
+            <fuse-sidebar class="my-8 mat-elevation-z1" name="filters-sidebar" position="left" lockedOpen="gt-md">
+                <div>
+                    <mmb-admin-app-sidebar-filters [separatorKeysCodes]="separatorKeysCodes"
+                        (filtersUpdated)="onFiltersUpdated($event)">
+                    </mmb-admin-app-sidebar-filters>
+                </div>
+            </fuse-sidebar>
+            <div class="ml-8" fxFlex>
+                <mmb-admin-app-users-list [isSelectAllEnabled]="isSelectAllEnabled" [page]="page" [filter]="filter"
+                    [searchInput]="searchInput" (selectedUsersUpdated)="onSelectedUsersUpdated($event)">
+                </mmb-admin-app-users-list>
+            </div>
+        </div>
+    </div>
+    <!-- / CONTENT-->
+
+</div>

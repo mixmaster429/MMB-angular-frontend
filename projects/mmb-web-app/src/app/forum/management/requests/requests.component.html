@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row border" *ngIf="requests | async as requests">
+        <!--  Requests view -->
+        <div class="col-lg-3 col-md-6 col-sm-12 border border-light p-0">
+            <div class="sticky-top mh-100-navbar-adjustment">
+                <h5 class="border-bottom bg-light p-2 text-uppercase text-center border-right"
+                    i18n="Requests heading|Title for requests heading in collaboration management@@requestsTitleCollaborationsManagementPage">
+                    Requests</h5>
+                <div class="my-2 p-2 position-relative" [ngClass]="{'inactive': request.id !== selectedRequest.id}"
+                    *ngFor="let request of requests">
+                    <div class="border shadow-sm badge badge-success position-absolute right-3 top-3 z-idx-1050 circle">
+                        {{ request.responses.length }}</div>
+                    <div class="bg-white border" [ngClass]="{'shadow': request.id === selectedRequest.id}">
+                        <mmb-web-app-card-summary (click)="onSelectedRequest(request)" [title]="request.title"
+                            [slug]="request.slug"></mmb-web-app-card-summary>
+
+                        <div class="row">
+                            <div class="col-12 px-6 py-2">
+                                <mmb-web-app-management-tools></mmb-web-app-management-tools>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Responses view -->
+        <div class="col-lg-9 col-md-6 col-sm-12 border border-light border-left-0 p-0">
+            <div class="sticky-top mh-100-navbar-adjustment">
+                <h5 class="border-bottom bg-light p-2 text-uppercase text-center"
+                    i18n="Responses heading|Title for Responses heading in collaboration management@@responsesTitleCollaborationsManagementPage">
+                    Responses</h5>
+                <div class="p-2">
+                    <mmb-web-app-responses [selectedRequestDetails]="selectedRequest"
+                        [selectedRequestId]="selectedRequest.id"></mmb-web-app-responses>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

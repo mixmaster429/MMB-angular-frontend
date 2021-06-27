@@ -1,0 +1,20 @@
+<mat-form-field class="w-200 mx-8">
+    <mat-label>Locations</mat-label>
+    <mat-select [formControl]="locationFilters" multiple>
+        <mat-option *ngFor="let location of locationsList" [value]="location">{{location}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field class="w-200 mx-8">
+    <mat-label>Status</mat-label>
+    <mat-select [formControl]="statusFilters" multiple>
+        <mat-option *ngFor="let status of statusList" [value]="status">{{status}}</mat-option>
+    </mat-select>
+</mat-form-field>
+
+<mat-form-field class="w-200 mx-8">
+    <mat-label>Department</mat-label>
+    <mat-select [formControl]="departmentFilters" multiple>
+        <mat-option *ngFor="let department of departmentList" [value]="department">{{department}}</mat-option>
+    </mat-select>
+</mat-form-field>

@@ -1,0 +1,35 @@
+<mmb-web-app-interaction-tools [reactions]="selectedCareerDetails.reactions_summary?.total"
+    [reacted]="selectedCareerDetails.reacted" [isReactionsEnabled]="true" (commentAdded)="onCommentAdded($event)"
+    [comments]="selectedCareerDetails.comments" (reactionUpdated)="onReactionUpdated($event)">
+</mmb-web-app-interaction-tools>
+
+<div class="mt-2 d-flex">
+    <button
+        *ngIf="!selectedCareerDetails.applied && !selectedCareerDetails.applied_external && !selectedCareerDetails.interested.interested"
+        type="button" class="btn sApp-btn btn-sm mb-3" (click)="onExpressInterest()">I'm Interested!</button>
+    <button type="button" class="btn btn-sm mb-3 border-radius" (click)="onRemoveInterest()" ngbTooltip="Expressed Interest {{ selectedCareerDetails.interested.created | timeago }}"
+        *ngIf="selectedCareerDetails.interested.interested && !selectedCareerDetails.applied && !selectedCareerDetails.applied_external">
+        Expressed Interest
+    </button>
+    <a *ngIf="!isJobExternal(selectedCareerDetails.listing_type) && !selectedCareerDetails.applied" type="button"
+        class="btn sApp-btn btn-sm mb-3 ml-2" (click)="onEasyApply()">
+        <img src="assets/logos/mmb-logo.png" class="logo-icon" />
+        Easy Apply
+    </a>
+    <span *ngIf="!isJobExternal(selectedCareerDetails.listing_type) && selectedCareerDetails.applied"
+        class="mb-3 text-success d-flex">
+        <i class="material-icons">check</i>
+        <span class="ml-1 font-weight-light-bold mb-0">Applied
+            {{ selectedCareerDetails.applied.created | timeago }}</span>
+    </span>
+
+    <a *ngIf="isJobExternal(selectedCareerDetails.listing_type) && !selectedCareerDetails.applied_external"
+        type="button" class="btn sApp-btn btn-sm mb-3 ml-2" (click)="onExternalApply()">Apply</a>
+
+    <span *ngIf="isJobExternal(selectedCareerDetails.listing_type) && selectedCareerDetails.applied_external"
+        class="mb-3 text-success d-flex">
+        <i class="material-icons">check</i>
+        <span class="ml-1 font-weight-light-bold mb-0">Applied externally
+            {{ selectedCareerDetails.applied_external.created | timeago }}</span>
+    </span>
+</div>

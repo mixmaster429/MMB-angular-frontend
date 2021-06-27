@@ -1,0 +1,12 @@
+<label class="link--pointer mmb-avatar-uploader" [for]="id">
+    <img class="rounded-circle img-lg" [src]="user?.profile_image" alt="User image"
+        onerror="this.src='assets/placeholders/not-found.png';">
+    <span *ngIf="isEditMode" class="avatar-uploader-text">
+        <span>Please upload the image</span>
+    </span>
+    <span class="avatar-uploader-upload-progress" *ngIf="isImageUploading && isEditMode">
+        <img src="assets/images/loader.gif" />
+    </span>
+</label>
+
+<input class="display-none" [id]="id" type='file' (change)="onImageChange($event)" [disabled]="!isEditMode">

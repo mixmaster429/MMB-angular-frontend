@@ -1,0 +1,8 @@
+<div class="container py-2" [hidden]="isLoading">
+    <div class="editable mh-100-navbar-adjustment border bg-white px-4 py-4 mb-3"></div>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+        <i class="material-icons text-primary" role="button" (click)="showHelp()"
+            ngbTooltip="How to use #moveme article feature">help</i>
+        <button class="btn sApp-btn btn-sm" (click)="onPublish()">Publish</button>
+    </div>
+</div>

@@ -1,0 +1,189 @@
+<mmb-web-app-reaction-icons></mmb-web-app-reaction-icons>
+
+<!-- Stats -->
+<div class="pl-3" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <div class="text-primary">
+        <span class="d-flex">
+            <i class="material-icons-outlined mt-1 icon-font-sm material-icon-circle-xs">thumb_up</i>
+            <i class="material-icons-outlined mr-1 mt-1 icon-font-sm material-icon-circle-xs bg-danger">thumb_down</i>
+            <span class="text-muted font-size-sm" *ngIf="reactions">{{ reactions }}</span>
+            <span class="text-muted font-size-sm" *ngIf="!reactions">0</span>
+        </span>
+    </div>
+    <div class="item-separator" fxLayout="row" fxLayoutAlign="center center">|</div>
+    <div class="text-primary" (click)="isCommentActive= true">
+        <span class="text-muted font-size-sm link--hover">{{ comments? comments.length : 0 }} comments</span>
+    </div>
+    <div class="item-separator" fxLayout="row" fxLayoutAlign="center center" *ngIf="answers || answers === 0">|</div>
+    <div class="text-primary" *ngIf="answers || answers === 0">
+        <span class="text-muted font-size-sm link--hover">{{ answers? answers : 0 }} answers</span>
+    </div>
+</div>
+
+<hr class="my-1" />
+
+<!-- Button panel -->
+<div class="text-muted">
+    <div class="px-3 pb-2">
+        <div class="d-flex">
+            <div class="mr-auto">
+                <!-- Reactions panel -->
+                <div *ngIf="isReactionsEnabled" class="d-inline" ngbDropdown #reactionOptions="ngbDropdown">
+                    <button class="btn btn-outline-primary icon-button p-1 mr-2 h--auto" id="reactionOptions"
+                        (mouseover)="$event.stopPropagation(); reactionOptions.open();" ngbDropdownToggle>
+                        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px" *ngIf="!reacted">
+                            <i class="material-icons-outlined">thumb_up_alt</i>
+                            <span class="icon-text"> Like</span>
+                        </span>
+                        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px"
+                            *ngIf="reacted && reacted.reaction_type">
+                            <ng-container [ngTemplateOutlet]="selectedReaction"
+                                [ngTemplateOutletContext]="{reaction:getSelectedReaction(reacted.reaction_type)}">
+                            </ng-container>
+
+                            <ng-template #selectedReaction let-reaction="reaction">
+                                <svg class="flaticon icon" [ngClass]="reaction.iconClass">
+                                    <use [attr.xlink:href]="reaction.icon" />
+                                </svg>
+                                <span class="icon-text" [ngClass]="reaction.iconClass">
+                                    {{ reaction.viewValue }}</span>
+                            </ng-template>
+                        </span>
+                    </button>
+
+                    <div class="reaction-options" ngbDropdownMenu aria-labelledby="reactionOptions"
+                        (mouseleave)="$event.stopPropagation(); reactionOptions.close();">
+                        <span *ngFor="let reaction of availableReactions" class="px-2 py-1">
+                            <button (click)="onReactionIconClicked(reaction)" class="btn-flaticon" placement="top"
+                                [ngbTooltip]="reaction.viewValue">
+                                <svg class="flaticon icon" [ngClass]="reaction.iconClass">
+                                    <use [attr.xlink:href]="reaction.icon" />
+                                </svg>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Voting panel -->
+                <div *ngIf="isVotingEnabled" class="d-inline" ngbDropdown #votingOptions="ngbDropdown">
+                    <button class="btn btn-outline-primary icon-button p-1 mr-2 h--auto" id="votingOptions"
+                        [ngClass]="{'text-primary': isVoted && isVoted.vote === 1, 'text-danger': isVoted && isVoted.vote === -1}"
+                        (mouseover)="$event.stopPropagation(); votingOptions.open();" ngbDropdownToggle>
+                        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px"
+                            *ngIf="(isVoted && isVoted.vote === 1) || !isVoted">
+                            <i class="material-icons-outlined">thumb_up_alt</i>
+                            <span class="icon-text"> Upvote</span>
+                        </span>
+                        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px"
+                            *ngIf="isVoted && isVoted.vote === -1">
+                            <i class="material-icons-outlined">thumb_down_alt</i>
+                            <span class="icon-text"> Downvote</span>
+                        </span>
+                    </button>
+
+                    <div class="voting-options" ngbDropdownMenu aria-labelledby="votingOptions"
+                        (mouseleave)="$event.stopPropagation(); votingOptions.close();">
+                        <button
+                            class="px-2 btn btn-outline-primary icon-button p-1 mr-2 h--auto font-weight-light-bold opacity-75"
+                            [ngClass]="{'text-primary opacity-100 font-weight-bold': isVoted && isVoted.vote === 1}"
+                            (click)="votingOptions.close();onUpvoteClicked()" ngbDropdownItem>
+                            <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                                <i class="material-icons-outlined">thumb_up_alt</i>
+                                <span class="icon-text"> Upvote</span>
+                            </span>
+                        </button>
+                        <button
+                            class="px-2 btn btn-outline-primary icon-button p-1 mr-2 h--auto font-weight-light-bold opacity-75"
+                            [ngClass]="{'text-danger opacity-100 font-weight-bold': isVoted && isVoted.vote === -1}"
+                            (click)="votingOptions.close();onDownvoteClicked()" ngbDropdownItem>
+                            <span fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                                <i class="material-icons-outlined">thumb_down_alt</i>
+                                <span class="icon-text"> Downvote</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+
+                <button (click)="isCommentActive=true;" class="btn btn-outline-primary icon-button p-1 mr-2 h--auto"
+                    type="button">
+                    <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                        <i class="material-icons-outlined">comment</i>
+                        <span class="icon-text"> Comment</span>
+                    </span>
+                </button>
+
+                <div class="d-inline" *ngIf="isAnswerEnabled">
+                    <button class="btn btn-outline-primary icon-button p-1 mr-2 h--auto" (click)="onAnswerClicked()">
+                        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                            <i class="material-icons-outlined">question_answer</i>
+                            <span class="icon-text"> Answer</span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="d-inline" ngbDropdown #shareOptions="ngbDropdown">
+                    <button class="btn btn-outline-primary icon-button p-1 mr-2 h--auto" id="shareOptions"
+                        (click)="$event.stopPropagation(); shareOptions.open();" ngbDropdownToggle>
+                        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="10px">
+                            <i class="material-icons-outlined">share</i>
+                            <span class="icon-text"> Share</span>
+                        </span>
+                    </button>
+
+                    <div class="share-options" ngbDropdownMenu aria-labelledby="shareOptions">
+                        <share-buttons theme="outline"></share-buttons>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Comment functionality -->
+<hr class="my-1" *ngIf="isCommentActive" />
+<div class="d-flex justify-content-center align-items-centerm mt-4">
+    <div class="row align-items-center justify-content-between col-8" *ngIf="interest">
+        <div class="column">
+            <h3 class="icon-font-sm">Ready to respond?</h3>
+            <p class="font-size-12">Express interest to show your intention to collaborate.</p>
+        </div>
+        <button *ngIf="!selectedOpportunityDetails.interested.interested" type="button" class="btn sApp-btn btn-sm mb-3"
+            (click)="onExpressInterest()">I'm Interested!</button>
+        <button type="button" class="btn btn-sm mb-3 border-radius" (click)="onRemoveInterest()"
+            ngbTooltip="Expressed Interest {{ selectedOpportunityDetails.interested.created | timeago }}"
+            *ngIf="selectedOpportunityDetails.interested.interested">
+            Expressed Interest
+        </button>
+    </div>
+</div>
+<div class="px-3 pt-2" *ngIf="isCommentActive">
+    <div class="media mb-3">
+        <div class="admin-thumb avatar-sm"><img alt="" class="rounded-circle"
+                onerror="this.src='assets/images/avatars/not-found.png';" src="assets/images/avatars/not-found.png">
+        </div>
+        <div class="admin-content media-body pl-3 pt-1">
+            <textarea [(ngModel)]="comment" (keypress)="onCommentKeyPress($event)"
+                class="form-control shadow-none border" placeholder="Add a comment..."></textarea>
+        </div>
+    </div>
+</div>
+
+<!-- View comments -->
+<div class="px-3 o-y-auto" *ngIf="isCommentActive" [ngClass]="{'mx-h-300': isCommentMaxHeightEnabled}">
+    <div *ngFor="let comment of comments">
+        <div class="media mb-3">
+            <div class="admin-thumb avatar-sm mt-2 mr-2"><img alt="" class="rounded-circle"
+                    onerror="this.src='assets/images/avatars/not-found.png';" [src]="comment.user.profile_image">
+            </div>
+            <div class="admin-content media-body pl-3 pt-1 comment-view border">
+                <strong>{{ comment.user.name }}</strong>
+                <div class="text-muted font-size-sm">{{ comment.user.professional_title }}</div>
+                <div>{{ comment.comment }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="text-muted p-2 small" *ngIf="relationshipType === 'request' && (!answers || answers === 0)">
+    No responses yet. Be the first to respond...
+</div> -->

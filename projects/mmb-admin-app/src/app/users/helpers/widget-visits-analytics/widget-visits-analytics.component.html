@@ -1,0 +1,45 @@
+<fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget">
+
+    <!-- Front -->
+    <div class="fuse-widget-front">
+        <div class="pl-16 pr-8 h-32" fxLayout="row" fxLayoutAlign="end center">
+            <button mat-icon-button fuseWidgetToggle aria-label="more">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+        </div>
+        <div class="pt-8 pb-16" fxLayout="column" fxLayoutAlign="center center">
+            <div class="orange-fg font-size-72 line-height-72">
+                {{ visitsAnalytics.total }}
+            </div>
+            <div class="h3 secondary-text font-weight-500">
+                Visited African Cities
+            </div>
+        </div>
+
+        <div class="p-16 border-top" fxLayout="row" fxLayoutAlign="start center">
+            <span class="h4 secondary-text text-truncate">
+                Last 6 months
+            </span>
+            <span class="h4 ml-8">
+                {{ visitsAnalytics.last6Months }} cities
+            </span>
+        </div>
+    </div>
+    <!-- / Front -->
+    <!-- Back -->
+    <div class="fuse-widget-back p-16 pt-32">
+        <button mat-icon-button fuseWidgetToggle class="fuse-widget-flip-button" aria-label="Flip widget">
+            <mat-icon class="s-16">close</mat-icon>
+        </button>
+
+        <div>
+            <div class="h3">Recent Visits</div>
+            <div class="mt-8">
+                <div *ngFor="let city of visitsAnalytics.recent">
+                    <strong>{{ city }}</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- / Back -->
+</fuse-widget>

@@ -1,0 +1,23 @@
+<div *ngIf="!isLoading">
+    <mmb-web-app-org-view-top-banner [logo]="organisationDetails.logo_small" [name]="organisationDetails.name"
+        [slug]="slug" [isMainPage]="false">
+
+    </mmb-web-app-org-view-top-banner>
+    <ngb-tabset [destroyOnHide]="false">
+        <ngb-tab title="Basic details">
+            <ng-template ngbTabContent>
+                <div class="p-3">
+                    <mmb-web-app-new-job-basic [slug]="slug" [organisationId]="organisationDetails.id"></mmb-web-app-new-job-basic>
+                </div>
+            </ng-template>
+        </ngb-tab>
+        <ngb-tab [disabled]="true">
+            <ng-template ngbTabTitle>Advanced settings</ng-template>
+            <ng-template ngbTabContent>
+                <div class="p-3">
+                    <mmb-web-app-new-job-advanced></mmb-web-app-new-job-advanced>
+                </div>
+            </ng-template>
+        </ngb-tab>
+    </ngb-tabset>
+</div>

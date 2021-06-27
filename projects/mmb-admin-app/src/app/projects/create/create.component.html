@@ -1,0 +1,56 @@
+<div class="dialog-content-wrapper">
+    <mat-toolbar matDialogTitle class="mat-accent m-0">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+            <span class="title dialog-title">{{dialogTitle}}</span>
+            <button mat-icon-button (click)="matDialogRef.close()" aria-label="Close dialog">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div mat-dialog-content class="p-24 pb-0 m-0" fusePerfectScrollbar>
+
+        <form [formGroup]="projectForm">
+
+            <div fxLayout="row" fxLayoutAlign="start start">
+                <mat-form-field appearance="outline" fxFlex>
+                    <mat-label>Name</mat-label>
+                    <mat-icon matSuffix class="secondary-text">account_circle</mat-icon>
+                    <input name="name" formControlName="name" matInput required>
+                </mat-form-field>
+            </div>
+
+            <div fxLayout="row" class="textarea-wrapper" fxLayoutAlign="start start">
+                <mat-form-field appearance="outline" fxFlex>
+                    <mat-label>Description</mat-label>
+                    <textarea name="description" formControlName="description" matInput type="text"
+                        max-rows="4"></textarea>
+                </mat-form-field>
+            </div>
+
+        </form>
+
+    </div>
+
+    <div mat-dialog-actions class="m-0 p-16" fxLayout="row" fxLayoutAlign="end center">
+        <div class="p-24" *ngIf="isLoading">
+            <mat-spinner diameter="25" [color]="'accent'"></mat-spinner>
+        </div>
+        
+        <button *ngIf="action === 'edit'" mat-button class="mr-8" (click)="matDialogRef.close(['delete', projectForm])"
+            aria-label="Delete" matTooltip="Delete">
+            DELETE
+        </button>
+
+        <button *ngIf="action !== 'edit'" mat-button class="save-button" (click)="createProject()"
+            [disabled]="projectForm.invalid" aria-label="SAVE">
+            ADD
+        </button>
+
+        <button *ngIf="action === 'edit'" mat-button class="save-button" (click)="updateProject()"
+            [disabled]="projectForm.invalid" aria-label="SAVE">
+            SAVE
+        </button>
+
+    </div>
+</div>

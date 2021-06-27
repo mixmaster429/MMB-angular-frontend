@@ -1,0 +1,19 @@
+.admin-panel-html-renderer {
+    ul {
+        padding: 0 30px;
+        margin-bottom: 20px;
+        li {
+            list-style: square;
+            &::marker {
+                color: $primary;
+            }
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        strong {
+            font-family: $font-family;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<div class="fuse-card w-100-p mb-20" *ngFor="let questionAnswer of questions | sortBy:'asc':'order'">
+    <div class="h4 blue-grey-50-bg primary-500-fg p-16 border-bottom">{{ questionAnswer.saved_question }}</div>
+
+    <div class="line-height-1.75 p-16" *ngIf="questionAnswer.answer" [innerHTML]="questionAnswer.answer"></div>
+    <div class="p-16" *ngIf="!questionAnswer.answer">-</div>
+</div>

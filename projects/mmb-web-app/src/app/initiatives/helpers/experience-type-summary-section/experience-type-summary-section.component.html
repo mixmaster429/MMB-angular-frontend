@@ -1,0 +1,11 @@
+<div class="bg-lightest border-radius-8 p-4 text-dark mb-3">
+    <h6 class="medium text-uppercase">Experience Summary</h6>
+    <div class="admin-panel-html-renderer">
+        <ul class="medium">
+            <li>{{ getExperienceType(experience.initiative_type)[0].viewValue }}</li>
+            <li>{{ getOrgPrimaryType(experience.organisation.type_primary)[0].viewValue }}</li>
+            <li *ngIf="experience.organisation.type_secondary">
+                {{ getOrgPrimaryType(experience.organisation.type_secondary)[0].viewValue }}</li>
+        </ul>
+    </div>
+</div>

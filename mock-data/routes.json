@@ -1,0 +1,25 @@
+
+{
+    "/api/*": "/$1",
+    "/owners": "/owners",
+    "/collaborations/requests": "/requests?_expand=owner&_embed=answers&_embed=comments&_sort=createdOn&_order=desc&_embed=upvotes&_embed=downvotes&_embed=responses",
+    "/collaborations/requests\\?ownerId=:ownerId": "/requests?ownerId=:ownerId&_expand=owner&_embed=answers&_embed=comments&_sort=createdOn&_order=desc&_embed=upvotes&_embed=downvotes&_embed=responses",
+    "/collaborations/requests/:slug": "/requests?slug=:slug&_expand=owner&_embed=comments&_embed=upvotes&_embed=downvotes&_embed=responses",
+    "/collaborations/answers": "/answers?_expand=owner&_embed=comments&_sort=createdOn&_order=desc",
+    "/collaborations/responses": "/responses?_expand=owner&_embed=comments&_sort=createdOn&_order=desc",
+    "/collaborations/requests/:slug/answers\\?_page=:pageId&_sort=createdOn&_order=desc": "/requests/:slug/answers?requestId=:slug&_page=:pageId&_sort=createdOn&_order=desc&_expand=owner&_embed=comments",
+    "/collaborations/responses/:slug": "/responses?requestId=:slug&_expand=owner&_embed=comments&_sort=createdOn&_order=desc",
+    "/collaborations/requests/answers/:slug\\?_page=:pageId&_sort=createdOn&_order=desc": "/requests/:slug/answers?requestId=:slug&_page=:pageId&_sort=createdOn&_order=desc&_expand=owner&_embed=comments",
+    "/promo-categories": "/promo-categories",
+    "/feeds\\?_page=:pageId&_limit=:limit": "/feeds?_expand=owner&_page=:pageId&_limit=:limit&_sort=createdOn&_order=desc",
+    "/careers-feed": "/careers-feed",
+    "/collaborations-feed": "/collaborations-feed",
+    "/events-feed": "/events-feed",
+    "/initiatives-feed": "/initiatives-feed",
+    "/comments": "/comments?_embed=comments&_expand=owner",
+    "/upvotes": "/upvotes",
+    "/downvotes": "/downvotes",
+    "/project-details": "/project-details?_expand=project&_expand=users-details",
+    "/project-details/:id": "/project-details?projectId=:id&_expand=project&_expand=users-details",
+    "/user-profile": "/user-profile"
+}

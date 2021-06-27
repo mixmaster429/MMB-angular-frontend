@@ -1,0 +1,22 @@
+/* Theme file to write custom styles for SAPP theme */
+@import "variables";
+@import "typography";
+@import "utilities";
+@import "components";
+@import "shared/avatar";
+@import "shared/typography";
+@import "shared/buttons";
+@import "shared/button-group";
+@import "shared/stepper";
+@import "shared/typeahead";
+@import "shared/loader";
+@import "shared/select";
+@import "shared/shadow";
+@import "shared/card-hover";
+@import "shared/input";
+@import "shared/checkbox";
+@import "shared/switch";
+@import "shared/badge";
+@import "shared/material-icons";
+@import "overrides";
+@import '~ngx-sharebuttons/themes/outline/outline-theme';

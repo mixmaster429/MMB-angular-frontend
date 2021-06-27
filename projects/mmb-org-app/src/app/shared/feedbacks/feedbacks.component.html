@@ -1,0 +1,48 @@
+<mat-table #table [dataSource]="feedbacks">
+
+    <!-- Avatar Column -->
+    <ng-container matColumnDef="avatar">
+        <mat-header-cell fxFlex="96px" *matHeaderCellDef></mat-header-cell>
+        <mat-cell fxFlex="96px" *matCellDef="let feedback">
+            <img class="avatar" *ngIf="feedback.employee.user.profile_image"
+                [src]="feedback.employee.user.profile_image" />
+        </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="stage">
+        <mat-header-cell *matHeaderCellDef>Stage</mat-header-cell>
+        <mat-cell *matCellDef="let feedback">
+            <p class="text-truncate font-weight-600" *ngIf="getStage(feedback.stage) as feedbackStage">
+                {{ feedbackStage[0]?.viewValue }}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="suitability">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-sm>Suitability
+        </mat-header-cell>
+        <mat-cell *matCellDef="let feedback" fxHide fxShow.gt-sm>
+            <p class="position text-truncate"
+                *ngIf="getSuitability(feedback.suitability_profile) as feedbackSuitability">
+                {{ feedbackSuitability[0]?.viewValue }}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <!-- Office Column -->
+    <ng-container matColumnDef="feedback">
+        <mat-header-cell *matHeaderCellDef fxHide fxShow.gt-md>Private Feedback
+        </mat-header-cell>
+        <mat-cell *matCellDef="let feedback" fxHide fxShow.gt-md>
+            <p class="office text-truncate">
+                {{feedback.feedback_private}}
+            </p>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="feedbackTableColumns"></mat-header-row>
+    <mat-row *matRowDef="let contact; columns: feedbackTableColumns;">
+    </mat-row>
+</mat-table>

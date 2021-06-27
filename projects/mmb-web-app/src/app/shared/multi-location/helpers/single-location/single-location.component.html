@@ -1,0 +1,16 @@
+<form [formGroup]="locationForm" fxLayout="row">
+    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <div class="input-group" *ngIf="!isRegionActive">
+            <input type="text" autocomplete="no" formControlName="country" [ngbTypeahead]="countriesSearch"
+                [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                (selectItem)="onCountrySelected($event)" placeholder="Country" class="shadow-none border p-2 w-250">
+        </div>
+        <div class="input-group" *ngIf="!isRegionActive">
+            <input type="text" autocomplete="no" formControlName="city" [ngbTypeahead]="citySearch"
+                [attr.disabled]="isCountryValueExists(locationForm.controls['country'].value)"
+                [resultFormatter]="resultFormatCountryValue" [inputFormatter]="inputFormatCountryValue"
+                (valueChanges)="onCityValueChanges($event)" (selectItem)="onCitySelected($event)" placeholder="City"
+                class="shadow-none border p-2 w-250">
+        </div>
+    </div>
+</form>
